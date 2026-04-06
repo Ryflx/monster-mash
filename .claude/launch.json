@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "monster-mash",
+      "runtimeExecutable": "/Users/liamcoates/monster-mash/.claude/start-dev.sh",
+      "runtimeArgs": [],
+      "port": 5173
+    }
+  ]
+}

@@ -3,6 +3,7 @@ import {
   useEffect,
   useState,
   useCallback,
+  useMemo,
   type FC,
 } from 'react';
 import type { Workout } from '../types/workout';
@@ -16,162 +17,183 @@ interface SpinWheelProps {
   onUnmark: (id: string) => void;
 }
 
-// 8 alternating dark segment colours
-const SEGMENT_COLOURS = [
-  '#1F1F1F',
-  '#2A1A1A',
-  '#1A1A2A',
-  '#1A2A1A',
-  '#251A1A',
-  '#1A2525',
-  '#25201A',
-  '#201A25',
+// Visually distinct segment colors — alternating warm/cool darks
+const SEGMENT_FILLS = [
+  '#1C1416', '#161A1C', '#1A1614', '#14181C',
+  '#1C1618', '#161C18', '#1A1418', '#181C16',
+  '#1C1A14', '#141C1A', '#181416', '#1C181A',
 ];
 
-const ACCENT_COLOURS = [
-  '#E63946',
-  '#F4A261',
-  '#E63946',
-  '#F4A261',
-  '#E63946',
-  '#F4A261',
-  '#E63946',
-  '#F4A261',
-];
+const ACCENT_COLORS = ['#E63946', '#F4A261'];
 
-const CANVAS_SIZE = 320;
-const CENTER = CANVAS_SIZE / 2;
-const RADIUS = CENTER - 16;
+const WHEEL_SLOTS = 12; // Always show 12 segments for readability
+const DPR = typeof window !== 'undefined' ? Math.min(window.devicePixelRatio || 1, 2) : 1;
+const CANVAS_CSS = 340;
+const CANVAS_PX = Math.round(CANVAS_CSS * DPR);
+
+// ─── Easing: dramatic deceleration ────────────────────────────────────────────
+// Custom curve: fast start, long suspenseful tail
+function easeOutExpo(t: number): number {
+  // Blend of exponential and quintic for a "clicking to a stop" feel
+  const expo = t === 1 ? 1 : 1 - Math.pow(2, -12 * t);
+  const quint = 1 - Math.pow(1 - t, 5);
+  return 0.6 * expo + 0.4 * quint;
+}
+
+// ─── Drawing ──────────────────────────────────────────────────────────────────
 
 function drawWheel(
   ctx: CanvasRenderingContext2D,
-  workouts: Workout[],
+  slots: { label: string; sublabel: string }[],
   rotation: number,
+  highlightIdx: number | null,
 ) {
-  ctx.clearRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
-
-  const count = workouts.length;
-  if (count === 0) {
-    // Empty state ring
-    ctx.beginPath();
-    ctx.arc(CENTER, CENTER, RADIUS, 0, Math.PI * 2);
-    ctx.strokeStyle = '#2A2A2A';
-    ctx.lineWidth = 2;
-    ctx.stroke();
-    ctx.fillStyle = '#1A1A1A';
-    ctx.fill();
-    ctx.fillStyle = '#333';
-    ctx.font = 'bold 14px "Barlow Condensed", sans-serif';
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    ctx.fillText('No workouts', CENTER, CENTER);
-    return;
-  }
-
+  ctx.save();
+  ctx.scale(DPR, DPR);
+  const cx = CANVAS_CSS / 2;
+  const cy = CANVAS_CSS / 2;
+  const r = (CANVAS_CSS / 2) - 20;
+  const ir = 30;
+  const count = slots.length;
   const sliceAngle = (2 * Math.PI) / count;
 
-  workouts.forEach((workout, i) => {
+  ctx.clearRect(0, 0, CANVAS_CSS, CANVAS_CSS);
+
+  // Outer shadow
+  ctx.save();
+  ctx.beginPath();
+  ctx.arc(cx, cy, r + 6, 0, Math.PI * 2);
+  ctx.shadowColor = 'rgba(230, 57, 70, 0.12)';
+  ctx.shadowBlur = 30;
+  ctx.fillStyle = 'transparent';
+  ctx.fill();
+  ctx.restore();
+
+  slots.forEach((slot, i) => {
     const startAngle = rotation + i * sliceAngle - Math.PI / 2;
     const endAngle = startAngle + sliceAngle;
+    const isHighlighted = highlightIdx === i;
 
     // Segment fill
     ctx.beginPath();
-    ctx.moveTo(CENTER, CENTER);
-    ctx.arc(CENTER, CENTER, RADIUS, startAngle, endAngle);
+    ctx.moveTo(cx, cy);
+    ctx.arc(cx, cy, r, startAngle, endAngle);
     ctx.closePath();
-    ctx.fillStyle = SEGMENT_COLOURS[i % SEGMENT_COLOURS.length];
+    ctx.fillStyle = isHighlighted
+      ? '#2A1A1A'
+      : SEGMENT_FILLS[i % SEGMENT_FILLS.length];
     ctx.fill();
 
     // Segment border
-    ctx.strokeStyle = '#0D0D0D';
-    ctx.lineWidth = 1.5;
+    ctx.strokeStyle = '#0A0A0A';
+    ctx.lineWidth = 1;
     ctx.stroke();
 
-    // Accent arc at rim
+    // Accent rim arc
     ctx.beginPath();
-    ctx.arc(CENTER, CENTER, RADIUS - 4, startAngle + 0.02, endAngle - 0.02);
-    ctx.strokeStyle = ACCENT_COLOURS[i % ACCENT_COLOURS.length];
-    ctx.lineWidth = 2;
-    ctx.globalAlpha = 0.35;
+    ctx.arc(cx, cy, r - 3, startAngle + 0.03, endAngle - 0.03);
+    ctx.strokeStyle = ACCENT_COLORS[i % 2];
+    ctx.lineWidth = 2.5;
+    ctx.globalAlpha = isHighlighted ? 0.6 : 0.2;
     ctx.stroke();
     ctx.globalAlpha = 1;
 
-    // Label
+    // Labels
     const midAngle = startAngle + sliceAngle / 2;
-    const labelRadius = RADIUS * 0.65;
-    const lx = CENTER + Math.cos(midAngle) * labelRadius;
-    const ly = CENTER + Math.sin(midAngle) * labelRadius;
+    const labelR = r * 0.62;
+    const lx = cx + Math.cos(midAngle) * labelR;
+    const ly = cy + Math.sin(midAngle) * labelR;
 
     ctx.save();
     ctx.translate(lx, ly);
     ctx.rotate(midAngle + Math.PI / 2);
 
-    const label = workout.date.slice(5); // MM-DD
-    ctx.fillStyle = '#CCCCCC';
-    ctx.font = `bold ${count > 20 ? 8 : count > 12 ? 9 : 11}px "Barlow Condensed", sans-serif`;
+    // Title line
+    ctx.fillStyle = isHighlighted ? '#FFFFFF' : '#BBBBBB';
+    ctx.font = `bold 11px "Barlow Condensed", sans-serif`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText(label, 0, 0);
+    ctx.fillText(slot.label, 0, -5);
+
+    // Sublabel (date)
+    ctx.fillStyle = isHighlighted ? '#F4A261' : '#666666';
+    ctx.font = `600 8px "Barlow Condensed", sans-serif`;
+    ctx.fillText(slot.sublabel, 0, 6);
+
     ctx.restore();
   });
 
-  // Center circle
+  // Inner ring (dark center disc)
+  const grad = ctx.createRadialGradient(cx, cy, ir * 0.3, cx, cy, ir);
+  grad.addColorStop(0, '#1A1A1A');
+  grad.addColorStop(1, '#0D0D0D');
   ctx.beginPath();
-  ctx.arc(CENTER, CENTER, 24, 0, Math.PI * 2);
-  ctx.fillStyle = '#0D0D0D';
+  ctx.arc(cx, cy, ir, 0, Math.PI * 2);
+  ctx.fillStyle = grad;
   ctx.fill();
   ctx.strokeStyle = '#E63946';
   ctx.lineWidth = 2;
   ctx.stroke();
 
-  // Center MM text
+  // Center text
   ctx.fillStyle = '#E63946';
-  ctx.font = 'bold 11px "Barlow Condensed", sans-serif';
+  ctx.font = `900 13px "Barlow Condensed", sans-serif`;
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
-  ctx.fillText('MM', CENTER, CENTER);
+  ctx.fillText('MM', cx, cy);
 
   // Outer ring
   ctx.beginPath();
-  ctx.arc(CENTER, CENTER, RADIUS, 0, Math.PI * 2);
-  ctx.strokeStyle = '#2A2A2A';
-  ctx.lineWidth = 2;
+  ctx.arc(cx, cy, r, 0, Math.PI * 2);
+  ctx.strokeStyle = '#1A1A1A';
+  ctx.lineWidth = 3;
   ctx.stroke();
+
+  ctx.restore();
 }
 
 function drawPointer(ctx: CanvasRenderingContext2D) {
-  // Arrow pointing down into the top of the wheel
-  const tipX = CENTER;
-  const tipY = 10;
-  const baseY = tipY + 20;
-  const halfBase = 10;
+  ctx.save();
+  ctx.scale(DPR, DPR);
+  ctx.clearRect(0, 0, CANVAS_CSS, CANVAS_CSS);
+  const cx = CANVAS_CSS / 2;
 
+  // Drop shadow
+  ctx.shadowColor = 'rgba(230, 57, 70, 0.5)';
+  ctx.shadowBlur = 12;
+  ctx.shadowOffsetY = 2;
+
+  // Pointer triangle
   ctx.beginPath();
-  ctx.moveTo(tipX, tipY);
-  ctx.lineTo(tipX - halfBase, baseY);
-  ctx.lineTo(tipX + halfBase, baseY);
+  ctx.moveTo(cx, 4);
+  ctx.lineTo(cx - 12, 28);
+  ctx.lineTo(cx + 12, 28);
   ctx.closePath();
   ctx.fillStyle = '#E63946';
   ctx.fill();
-  ctx.shadowColor = '#E63946';
-  ctx.shadowBlur = 10;
-  ctx.fill();
+
+  // White inner highlight
   ctx.shadowBlur = 0;
+  ctx.beginPath();
+  ctx.moveTo(cx, 9);
+  ctx.lineTo(cx - 5, 22);
+  ctx.lineTo(cx + 5, 22);
+  ctx.closePath();
+  ctx.fillStyle = 'rgba(255,255,255,0.15)';
+  ctx.fill();
+
+  ctx.restore();
 }
 
-function getWinnerIndex(workouts: Workout[], finalRotation: number): number {
-  const count = workouts.length;
+function getWinnerIndex(count: number, finalRotation: number): number {
   if (count === 0) return 0;
   const sliceAngle = (2 * Math.PI) / count;
-  // Pointer is at top = -PI/2 from east = angle 0 in our system
-  // We need to find which segment is at top after rotation
-  // At rotation R, segment i occupies [R + i*slice - PI/2, R + (i+1)*slice - PI/2]
-  // Top = 0 from east offset = -PI/2 + PI/2 = 0 normalized
   const normalised = ((finalRotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
-  // The segment at top: rotate back
   const idx = Math.floor(((2 * Math.PI - normalised) % (2 * Math.PI)) / sliceAngle);
   return idx % count;
 }
+
+// ─── Component ────────────────────────────────────────────────────────────────
 
 const SpinWheel: FC<SpinWheelProps> = ({
   workouts,
@@ -186,76 +208,110 @@ const SpinWheel: FC<SpinWheelProps> = ({
   const rotationRef = useRef(0);
 
   const [spinning, setSpinning] = useState(false);
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(3);
   const [selected, setSelected] = useState<Workout[]>([]);
   const [phase, setPhase] = useState<'idle' | 'spinning' | 'done'>('idle');
+  const [highlightIdx, setHighlightIdx] = useState<number | null>(null);
 
-  // Draw wheel on canvas whenever workouts or rotation changes
-  const redrawWheel = useCallback((rotation: number) => {
+  // Pick a random sample of WHEEL_SLOTS workouts for the wheel display
+  const wheelSample = useMemo(() => {
+    if (workouts.length <= WHEEL_SLOTS) return workouts;
+    const shuffled = [...workouts].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, WHEEL_SLOTS);
+  }, [workouts]);
+
+  const slots = useMemo(() =>
+    wheelSample.map(w => {
+      const title = w.title.length > 16 ? w.title.slice(0, 14) + '...' : w.title;
+      const date = new Date(w.date + 'T00:00:00').toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: '2-digit' });
+      return { label: title, sublabel: date };
+    }),
+  [wheelSample]);
+
+  // Draw wheel
+  const redrawWheel = useCallback((rotation: number, highlight: number | null = null) => {
     const canvas = wheelCanvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-    drawWheel(ctx, workouts, rotation);
-  }, [workouts]);
+    drawWheel(ctx, slots, rotation, highlight);
+  }, [slots]);
 
-  // Initial draw
+  // Initial draw + pointer
   useEffect(() => {
     redrawWheel(rotationRef.current);
   }, [redrawWheel]);
 
-  // Draw pointer once
   useEffect(() => {
     const canvas = pointerCanvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-    ctx.clearRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
     drawPointer(ctx);
   }, []);
 
-  const spinOnce = useCallback(
-    (currentRotation: number): Promise<{ finalRotation: number; winner: Workout }> => {
-      return new Promise((resolve) => {
-        if (workouts.length === 0) return;
+  // Idle drift animation
+  useEffect(() => {
+    if (spinning) return;
+    let raf = 0;
+    let start = performance.now();
+    function drift(now: number) {
+      const elapsed = (now - start) / 1000;
+      const idleRotation = rotationRef.current + Math.sin(elapsed * 0.3) * 0.005;
+      redrawWheel(idleRotation, highlightIdx);
+      raf = requestAnimationFrame(drift);
+    }
+    raf = requestAnimationFrame(drift);
+    return () => cancelAnimationFrame(raf);
+  }, [spinning, redrawWheel, highlightIdx]);
 
-        // Random total spin: 5-9 full turns + random landing
-        const extraTurns = (5 + Math.floor(Math.random() * 4)) * 2 * Math.PI;
+  const spinOnce = useCallback(
+    (currentRotation: number): Promise<{ finalRotation: number; winnerIdx: number }> => {
+      return new Promise((resolve) => {
+        if (wheelSample.length === 0) return;
+
+        // 7-12 full turns + random landing = dramatic spin
+        const extraTurns = (7 + Math.floor(Math.random() * 5)) * 2 * Math.PI;
         const randomAngle = Math.random() * 2 * Math.PI;
         const totalDelta = extraTurns + randomAngle;
         const finalRotation = currentRotation + totalDelta;
 
-        const duration = 3500 + Math.random() * 1000; // 3.5–4.5s
+        const duration = 5000 + Math.random() * 1500; // 5–6.5s — longer for suspense
         const startTime = performance.now();
         const startRotation = currentRotation;
-
-        function easeOut(t: number): number {
-          // Cubic ease-out
-          return 1 - Math.pow(1 - t, 3);
-        }
+        let lastSliceIdx = -1;
 
         function frame(now: number) {
           const elapsed = now - startTime;
           const t = Math.min(elapsed / duration, 1);
-          const easedT = easeOut(t);
+          const easedT = easeOutExpo(t);
           const currentAngle = startRotation + totalDelta * easedT;
           rotationRef.current = currentAngle;
-          redrawWheel(currentAngle);
+
+          // Tick highlight: detect when passing a segment boundary
+          const currentIdx = getWinnerIndex(wheelSample.length, currentAngle);
+          if (currentIdx !== lastSliceIdx) {
+            lastSliceIdx = currentIdx;
+            setHighlightIdx(currentIdx);
+          }
+
+          redrawWheel(currentAngle, currentIdx);
 
           if (t < 1) {
             animFrameRef.current = requestAnimationFrame(frame);
           } else {
             rotationRef.current = finalRotation;
-            redrawWheel(finalRotation);
-            const winnerIdx = getWinnerIndex(workouts, finalRotation);
-            resolve({ finalRotation, winner: workouts[winnerIdx] });
+            const winnerIdx = getWinnerIndex(wheelSample.length, finalRotation);
+            setHighlightIdx(winnerIdx);
+            redrawWheel(finalRotation, winnerIdx);
+            resolve({ finalRotation, winnerIdx });
           }
         }
 
         animFrameRef.current = requestAnimationFrame(frame);
       });
     },
-    [workouts, redrawWheel],
+    [wheelSample, redrawWheel],
   );
 
   const handleSpin = useCallback(async () => {
@@ -263,23 +319,27 @@ const SpinWheel: FC<SpinWheelProps> = ({
     setSpinning(true);
     setSelected([]);
     setPhase('spinning');
+    setHighlightIdx(null);
 
     const winners: Workout[] = [];
     let currentRotation = rotationRef.current;
-    const available = [...workouts];
 
     for (let i = 0; i < Math.min(count, workouts.length); i++) {
-      // Rebuild wheel with remaining options if picking multiple
-      // (simplified: always spin from all workouts, just pick non-repeat)
       const result = await spinOnce(currentRotation);
       currentRotation = result.finalRotation;
-      // Avoid duplicates: find winner from available
-      const winnerIdx = getWinnerIndex(available, currentRotation % (2 * Math.PI));
-      const winner = available[winnerIdx % available.length] ?? result.winner;
-      winners.push(winner);
-      // Brief pause between spins
+      const winner = wheelSample[result.winnerIdx];
+      if (winner && !winners.find(w => w.id === winner.id)) {
+        winners.push(winner);
+      } else {
+        // Fallback: pick a random workout not already selected
+        const available = workouts.filter(w => !winners.find(s => s.id === w.id));
+        if (available.length > 0) {
+          winners.push(available[Math.floor(Math.random() * available.length)]);
+        }
+      }
+      // Brief pause between multiple picks
       if (i < count - 1) {
-        await new Promise((r) => setTimeout(r, 800));
+        await new Promise((r) => setTimeout(r, 1200));
       }
     }
 
@@ -287,9 +347,9 @@ const SpinWheel: FC<SpinWheelProps> = ({
     onSelect(winners);
     setSpinning(false);
     setPhase('done');
-  }, [spinning, workouts, count, spinOnce, onSelect]);
+  }, [spinning, workouts, wheelSample, count, spinOnce, onSelect]);
 
-  // Cleanup on unmount
+  // Cleanup
   useEffect(() => {
     return () => {
       if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current);
@@ -306,11 +366,11 @@ const SpinWheel: FC<SpinWheelProps> = ({
             onClick={() => { setCount(n); setSelected([]); setPhase('idle'); }}
             disabled={spinning}
             className={[
-              'px-4 py-2 rounded-lg font-display text-sm font-800 uppercase tracking-widest border transition-all duration-150',
+              'px-5 py-2.5 rounded-lg font-display text-sm font-800 uppercase tracking-widest border transition-all duration-200',
               count === n
-                ? 'bg-[#E63946] border-[#E63946] text-white'
+                ? 'bg-[#E63946] border-[#E63946] text-white shadow-[0_0_20px_rgba(230,57,70,0.3)]'
                 : 'bg-transparent border-[#2A2A2A] text-[#555] hover:border-[#E63946]/40 hover:text-white',
-              spinning ? 'opacity-40 cursor-not-allowed' : '',
+              spinning ? 'opacity-30 cursor-not-allowed' : '',
             ].join(' ')}
           >
             Pick {n}
@@ -319,50 +379,43 @@ const SpinWheel: FC<SpinWheelProps> = ({
       </div>
 
       {/* Wheel container */}
-      <div className="relative" style={{ width: CANVAS_SIZE, height: CANVAS_SIZE }}>
-        {/* Wheel canvas */}
+      <div className="relative" style={{ width: CANVAS_CSS, height: CANVAS_CSS }}>
         <canvas
           ref={wheelCanvasRef}
-          width={CANVAS_SIZE}
-          height={CANVAS_SIZE}
+          width={CANVAS_PX}
+          height={CANVAS_PX}
+          style={{ width: CANVAS_CSS, height: CANVAS_CSS }}
           className="absolute inset-0"
         />
-        {/* Pointer canvas (on top) */}
         <canvas
           ref={pointerCanvasRef}
-          width={CANVAS_SIZE}
-          height={CANVAS_SIZE}
+          width={CANVAS_PX}
+          height={CANVAS_PX}
+          style={{ width: CANVAS_CSS, height: CANVAS_CSS }}
           className="absolute inset-0 pointer-events-none"
         />
 
         {/* Glow ring when spinning */}
         {spinning && (
           <div
-            className="absolute inset-0 rounded-full pointer-events-none"
+            className="absolute inset-[-8px] rounded-full pointer-events-none"
             style={{
-              background: 'transparent',
-              boxShadow: '0 0 40px rgba(230, 57, 70, 0.3), 0 0 80px rgba(230, 57, 70, 0.1)',
+              boxShadow: '0 0 50px rgba(230, 57, 70, 0.25), 0 0 100px rgba(230, 57, 70, 0.08)',
+              transition: 'box-shadow 0.5s',
             }}
           />
         )}
       </div>
-
-      {/* Empty state */}
-      {workouts.length === 0 && (
-        <p className="text-[#555] font-display text-sm font-600 uppercase tracking-widest text-center">
-          No workouts available to spin
-        </p>
-      )}
 
       {/* Spin button */}
       <button
         onClick={handleSpin}
         disabled={spinning || workouts.length === 0}
         className={[
-          'w-48 py-4 rounded-xl font-display text-xl font-900 uppercase tracking-widest transition-all duration-200',
+          'w-52 py-4 rounded-xl font-display text-xl font-900 uppercase tracking-[0.2em] transition-all duration-200',
           spinning || workouts.length === 0
-            ? 'bg-[#2A2A2A] text-[#444] cursor-not-allowed'
-            : 'bg-[#E63946] text-white hover:bg-[#c62d39] glow-pulse active:scale-95',
+            ? 'bg-[#1A1A1A] text-[#333] cursor-not-allowed border border-[#2A2A2A]'
+            : 'bg-[#E63946] text-white hover:bg-[#c62d39] glow-pulse active:scale-95 shadow-[0_4px_30px_rgba(230,57,70,0.4)]',
         ].join(' ')}
       >
         {spinning ? (
@@ -371,22 +424,27 @@ const SpinWheel: FC<SpinWheelProps> = ({
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
               <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
             </svg>
-            Spinning
+            Spinning...
           </span>
         ) : (
           'SPIN'
         )}
       </button>
 
+      {/* Pool info */}
+      <p className="text-[10px] font-display font-600 uppercase tracking-[0.2em] text-[#333]">
+        {workouts.length} workouts in the pool
+      </p>
+
       {/* Results */}
       {phase === 'done' && selected.length > 0 && (
-        <div className="w-full space-y-3">
+        <div className="w-full space-y-3 animate-slide-up">
           <div className="flex items-center gap-3">
-            <div className="flex-1 h-px bg-[#2A2A2A]" />
-            <span className="font-display text-xs font-700 uppercase tracking-widest text-[#E63946]">
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[#E63946]/40 to-transparent" />
+            <span className="font-display text-xs font-800 uppercase tracking-[0.2em] text-[#E63946]">
               {selected.length === 1 ? "Today's WOD" : `Your ${selected.length} WODs`}
             </span>
-            <div className="flex-1 h-px bg-[#2A2A2A]" />
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[#E63946]/40 to-transparent" />
           </div>
           {selected.map((workout) => (
             <WorkoutCard

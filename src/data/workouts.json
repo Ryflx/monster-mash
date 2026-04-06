@@ -4058,19 +4058,31 @@
     "title": "MM #484",
     "segments": [
       {
-        "format": "Workout",
+        "format": "Death by",
         "description": "Death by:\nThruster, 52/34kg",
-        "movements": []
+        "movements": [
+          {
+            "name": "Thruster"
+          }
+        ]
       },
       {
-        "format": "Workout",
+        "format": "Death by",
         "description": "Death by:\nStrict Pull-up",
-        "movements": []
+        "movements": [
+          {
+            "name": "Pull-Up"
+          }
+        ]
       },
       {
-        "format": "Workout",
+        "format": "Death by",
         "description": "Death by:\nBar-facing Burpee",
-        "movements": []
+        "movements": [
+          {
+            "name": "Burpee"
+          }
+        ]
       },
       {
         "format": "Rest period",
@@ -4080,7 +4092,6 @@
     ],
     "movements": [
       "Thruster",
-      "Strict Pull-Up",
       "Pull-Up",
       "Burpee"
     ],
@@ -19365,116 +19376,16 @@
     "segments": [
       {
         "format": "Workout",
-        "description": "11.24.14  | Monster Mash",
-        "movements": []
-      },
-      {
-        "format": "AMRAP 3 min",
-        "description": "AMRAP 3 minutes:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "5 Back Squats 115.5/75kg\n5 Bar Muscle-ups",
-        "movements": []
-      },
-      {
-        "format": "AMRAP 3 min",
-        "description": "AMRAP 3 minutes:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "40 Double-unders\n4 Clean & Jerks 70.5/47.5kg",
-        "movements": []
-      },
-      {
-        "format": "AMRAP 3 min",
-        "description": "AMRAP 3 minutes:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "7 Hang Power Snatch 43/29.5kg\n14 Air Squats",
-        "movements": []
-      },
-      {
-        "format": "AMRAP 3 min",
-        "description": "AMRAP 3 minutes:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "14/10 Calories Rowing\n7 Burpees over the rower",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 3 minutes between AMRAPs\n*Do all 4 AMRAPs, then repeat.",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "11.17.14  | Monster Mash",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "With a continuously running clock:\nFor time:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "21 Deadlifts 102/70.5kg\n200m Shuttle run(50m out & back, x2)\n15 Deadlifts\n200m Shuttle run\n9 Deadlifts\n200m Shuttle run",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "Rest 5 minutes & repeat, but:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Change Deadlift to Thruster 43/29.5kg",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "Rest 5 minutes & repeat, but:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Change Thruster to Power Snatch 34/25kg",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Stop the clock.",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "← 1 … 116 117 118 119 120 … 126 →",
-        "movements": []
+        "description": "Odd minutes: Row for Calories 9/7kg\nEven minutes: 1 Round of Cindy",
+        "movements": [
+          {
+            "name": "Row"
+          }
+        ]
       }
     ],
     "movements": [
-      "Clean & Jerk",
-      "Power Snatch",
-      "Back Squat",
-      "Air Squat",
-      "Deadlift",
-      "Thruster",
-      "Bar Muscle-Up",
-      "Muscle-Up",
-      "Burpee",
-      "Double-Under",
-      "Run",
-      "Row",
-      "Snatch",
-      "Clean",
-      "Jerk"
+      "Row"
     ],
     "sourceUrl": "https://crossfitlinchpin.com/blogs/monster-mash/17683356-12-01-14-monster-mash"
   },
@@ -19779,56 +19690,48 @@
     "segments": [
       {
         "format": "Workout",
-        "description": "Start at 0:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "21 Thrusters 43/29.5kg\n7 Muscle-ups\n15 Thrusters\n5 Muscle-ups\n9 Thrusters\n3 Muscle-ups",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Start at 20:00",
-        "movements": []
-      },
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "15 Overhead Squats 61/43kg\n20 Toes to bar\n2 Rope Climbs",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Start at 40:00",
-        "movements": []
-      },
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "21 Kettlebell Swings 24/16kg\n15 Box jumps 24″/20″\n9 Clean & Jerks 61/43kg",
-        "movements": []
+        "description": "21 Thrusters 43/29.5kg\n7 Muscle-ups\n15 Thrusters\n5 Muscle-ups\n9 Thrusters\n3 Muscle-ups\n15 Overhead Squats 61/43kg\n20 Toes to bar\n2 Rope Climbs\n21 Kettlebell Swings 24/16kg\n15 Box jumps 24″/20″\n9 Clean & Jerks 61/43kg",
+        "movements": [
+          {
+            "name": "Clean & Jerk"
+          },
+          {
+            "name": "Overhead Squat"
+          },
+          {
+            "name": "Thruster"
+          },
+          {
+            "name": "Clean"
+          },
+          {
+            "name": "Jerk"
+          },
+          {
+            "name": "Muscle-Up"
+          },
+          {
+            "name": "Rope Climb"
+          },
+          {
+            "name": "Box Jump"
+          },
+          {
+            "name": "Kettlebell Swing"
+          }
+        ]
       }
     ],
     "movements": [
       "Clean & Jerk",
       "Overhead Squat",
       "Thruster",
-      "Muscle-Up",
-      "Toes-to-Bar",
-      "Rope Climb",
-      "KB Swing",
-      "Box Jump",
       "Clean",
-      "Jerk"
+      "Jerk",
+      "Muscle-Up",
+      "Rope Climb",
+      "Box Jump",
+      "Kettlebell Swing"
     ],
     "sourceUrl": "https://crossfitlinchpin.com/blogs/monster-mash/17683580-10-13-14-monster-mash"
   },
@@ -19839,51 +19742,55 @@
     "segments": [
       {
         "format": "Workout",
-        "description": "Begin at 0:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "80 Wall ball shots 20/14\n60 Push-ups\n40 Pistols, alternating legs\n20 Overhead Squats 70.5/47.5kg",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 20:00",
-        "movements": []
-      },
-      {
-        "format": "2 Rounds for time",
-        "description": "2 Rounds for time:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "25 Deadlifts 111/75kg\n35 GHD sit-ups\n75 Foot Handstand Walk",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 40:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "15 Bench Press 61/38.5kg\n15 Calories Rowing\n60 Double-unders",
-        "movements": []
+        "description": "80 Wall ball shots 20/14\n60 Push-ups\n40 Pistols, alternating legs\n20 Overhead Squats 70.5/47.5kg\n25 Deadlifts 111/75kg\n35 GHD sit-ups\n75 Foot Handstand Walk\n15 Bench Press 61/38.5kg\n15 Calories Rowing\n60 Double-unders",
+        "movements": [
+          {
+            "name": "Overhead Squat"
+          },
+          {
+            "name": "Pistol Squat"
+          },
+          {
+            "name": "Wall Ball"
+          },
+          {
+            "name": "Deadlift"
+          },
+          {
+            "name": "Bench Press"
+          },
+          {
+            "name": "GHD Sit-Up"
+          },
+          {
+            "name": "Sit-Up"
+          },
+          {
+            "name": "Handstand Walk"
+          },
+          {
+            "name": "Push-Up"
+          },
+          {
+            "name": "Double-Under"
+          },
+          {
+            "name": "Row"
+          }
+        ]
       }
     ],
     "movements": [
       "Overhead Squat",
+      "Pistol Squat",
+      "Wall Ball",
       "Deadlift",
-      "Handstand Walk",
       "Bench Press",
       "GHD Sit-Up",
       "Sit-Up",
+      "Handstand Walk",
       "Push-Up",
       "Double-Under",
-      "Wall Ball",
-      "Pistol",
       "Row"
     ],
     "sourceUrl": "https://crossfitlinchpin.com/blogs/monster-mash/17683608-10-06-14-monster-mash"
@@ -19895,42 +19802,50 @@
     "segments": [
       {
         "format": "Workout",
-        "description": "Sept 29, 2014",
-        "movements": []
+        "description": "In an 18 minute window:\nRun 2 miles\nMax reps Snatch 70.5/47.5kg in remaining time",
+        "movements": [
+          {
+            "name": "Snatch"
+          },
+          {
+            "name": "Run"
+          }
+        ]
       },
       {
-        "format": "Workout",
-        "description": "Begin at 0:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "In an 18 minute window:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 28:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 50:00",
-        "movements": []
+        "format": "For time",
+        "description": "For time:\n40 Chest to bar pull-ups\n20 Back Squats 102/66kg (use a rack)\n1 Mile run",
+        "movements": [
+          {
+            "name": "Back Squat"
+          },
+          {
+            "name": "Pull-Up"
+          },
+          {
+            "name": "Run"
+          }
+        ]
       },
       {
         "format": "2 Rounds for time",
-        "description": "2 Rounds for time:",
-        "movements": []
+        "description": "2 Rounds for time:\n800m Run\n8 Rope Climbs",
+        "movements": [
+          {
+            "name": "Rope Climb"
+          },
+          {
+            "name": "Run"
+          }
+        ]
       }
     ],
     "movements": [
       "Back Squat",
-      "Chest-to-Bar",
+      "Snatch",
       "Pull-Up",
       "Rope Climb",
-      "Run",
-      "Snatch"
+      "Run"
     ],
     "sourceUrl": "https://crossfitlinchpin.com/blogs/monster-mash/17683640-09-29-14-monster-mash"
   },
@@ -19940,57 +19855,76 @@
     "title": "MM #23",
     "segments": [
       {
-        "format": "Workout",
-        "description": "Sept 22, 2014",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Start at 0:00",
-        "movements": []
-      },
-      {
         "format": "3 Rounds for time",
-        "description": "3 Rounds for time:",
-        "movements": []
+        "description": "3 Rounds for time:\n1 Big Clean Complex\n400m run",
+        "movements": [
+          {
+            "name": "Clean"
+          },
+          {
+            "name": "Run"
+          }
+        ]
       },
       {
         "format": "Workout",
-        "description": "Start at 25:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "21-15-9-6-3 reps of:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Start at 45:00",
-        "movements": []
+        "description": "21-15-9-6-3 reps of:\nDumbbell Deadlifts 34/25kg\nUnder Overs 24″",
+        "movements": [
+          {
+            "name": "Deadlift"
+          },
+          {
+            "name": "Double-Under"
+          }
+        ]
       },
       {
         "format": "AMRAP 10 min",
-        "description": "AMRAP 10 minutes of:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "*One “Big Clean Complex” is as follows: a high hang squat clean, a hang squat clean, a full clean, push press. Then a high hang squat clean, a hang squat clean, a full clean, push jerk. Then a high...",
-        "movements": []
+        "description": "AMRAP 10 minutes of:\nBurpee and Pull-up Ladder\n2/2, then 4/4, then 6/6, etc, etc\nContinue until you hit 10 minutes\n*One “Big Clean Complex” is as follows: a high hang squat clean, a hang squat clean, a full clean, push press. Then a high hang squat clean, a hang squat clean, a full clean, push jerk. Then a high hang squat clean, a hang squat clean, a full clean, split jerk.\n*If you can’t hold on to the barbell the entire time the only place you are allowed to drop it is from overhead.",
+        "movements": [
+          {
+            "name": "Hang Squat Clean"
+          },
+          {
+            "name": "Squat Clean"
+          },
+          {
+            "name": "Push Press"
+          },
+          {
+            "name": "Push Jerk"
+          },
+          {
+            "name": "Split Jerk"
+          },
+          {
+            "name": "Clean"
+          },
+          {
+            "name": "Jerk"
+          },
+          {
+            "name": "Pull-Up"
+          },
+          {
+            "name": "Burpee"
+          }
+        ]
       }
     ],
     "movements": [
       "Hang Squat Clean",
       "Squat Clean",
       "Deadlift",
-      "Push Jerk",
       "Push Press",
+      "Push Jerk",
+      "Split Jerk",
+      "Clean",
+      "Jerk",
       "Pull-Up",
       "Burpee",
-      "Run",
-      "Clean",
-      "Jerk"
+      "Double-Under",
+      "Run"
     ],
     "sourceUrl": "https://crossfitlinchpin.com/blogs/monster-mash/17683648-09-22-14-monster-mash"
   },
@@ -20001,52 +19935,68 @@
     "segments": [
       {
         "format": "Workout",
-        "description": "Sept 15, 2014",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Start at 0:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "15-12-9-6-3 reps of:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Start at 25:00",
-        "movements": []
+        "description": "15-12-9-6-3 reps of:\nSquat Clean 52/34kg\nHSPU kipping\nBurpee over barbell, lateral",
+        "movements": [
+          {
+            "name": "Squat Clean"
+          },
+          {
+            "name": "Clean"
+          },
+          {
+            "name": "Handstand Push-Up"
+          },
+          {
+            "name": "Burpee"
+          }
+        ]
       },
       {
         "format": "3 Rounds for time",
-        "description": "3 Rounds for time:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Start at 50:00",
-        "movements": []
+        "description": "3 Rounds for time:\n50 Double-unders\n400m run\n25 Hang Power Snatch 29.5/20.5kg",
+        "movements": [
+          {
+            "name": "Power Snatch"
+          },
+          {
+            "name": "Snatch"
+          },
+          {
+            "name": "Double-Under"
+          },
+          {
+            "name": "Run"
+          }
+        ]
       },
       {
         "format": "4 Rounds for time",
-        "description": "4 Rounds for time:",
-        "movements": []
+        "description": "4 Rounds for time:\n25 ft handstand walk\n20 Wall Ball Shots 20/14\n15 Knees to Elbows\n10 Shoulder to Overhead 70.5/47.5kg",
+        "movements": [
+          {
+            "name": "Wall Ball"
+          },
+          {
+            "name": "Shoulder-to-Overhead"
+          },
+          {
+            "name": "Handstand Walk"
+          }
+        ]
       }
     ],
     "movements": [
       "Squat Clean",
       "Power Snatch",
+      "Wall Ball",
       "Shoulder-to-Overhead",
+      "Snatch",
+      "Clean",
       "Handstand Push-Up",
       "Handstand Walk",
       "Burpee",
       "Double-Under",
-      "Wall Ball",
-      "Run",
-      "Snatch",
-      "Clean"
+      "Run"
     ],
     "sourceUrl": "https://crossfitlinchpin.com/blogs/monster-mash/17683652-09-15-14-monster-mash"
   },
@@ -20057,34 +20007,52 @@
     "segments": [
       {
         "format": "Workout",
-        "description": "Sept 8, 2014",
-        "movements": []
+        "description": "21-15-9\nThruster 43/29.5kg\nKettlebell Swing 32/24kg\nToes-to-bar",
+        "movements": [
+          {
+            "name": "Thruster"
+          },
+          {
+            "name": "Kettlebell Swing"
+          }
+        ]
       },
       {
         "format": "Workout",
-        "description": "Begin at 0:00",
-        "movements": []
+        "description": "12 Rounds\n12 Medball cleans 20/14\n12 Push-ups",
+        "movements": [
+          {
+            "name": "Clean"
+          },
+          {
+            "name": "Push-Up"
+          }
+        ]
       },
       {
         "format": "Workout",
-        "description": "Begin at 20:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 45:00",
-        "movements": []
+        "description": "9-6-3\nFront Squat 102/66kg (no-rack)\nBar Muscle-up",
+        "movements": [
+          {
+            "name": "Front Squat"
+          },
+          {
+            "name": "Muscle-Up"
+          },
+          {
+            "name": "Bar Muscle-Up"
+          }
+        ]
       }
     ],
     "movements": [
       "Front Squat",
       "Thruster",
-      "Bar Muscle-Up",
+      "Clean",
       "Muscle-Up",
-      "Toes-to-Bar",
+      "Bar Muscle-Up",
       "Push-Up",
-      "KB Swing",
-      "Clean"
+      "Kettlebell Swing"
     ],
     "sourceUrl": "https://crossfitlinchpin.com/blogs/monster-mash/17683656-09-08-14-monster-mash"
   },
@@ -20094,54 +20062,57 @@
     "title": "MM #20",
     "segments": [
       {
-        "format": "Workout",
-        "description": "Sept 1, 2014",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 0:00",
-        "movements": []
-      },
-      {
         "format": "For time",
-        "description": "For Time\n 10 down to 1 reps of:\n HSPU, deficet (6″,4″)",
-        "movements": []
+        "description": "For Time 10 down to 1 reps of: HSPU, deficet (6″,4″)\n*After each round of HSPU, do 1 legless rope climp. Start in seated position.",
+        "movements": [
+          {
+            "name": "Handstand Push-Up"
+          },
+          {
+            "name": "Legless Rope Climb"
+          }
+        ]
       },
       {
         "format": "Workout",
-        "description": "*After each round of HSPU, do 1 legless rope climp. Start in seated position.",
-        "movements": []
+        "description": "5 Rounds 15 Kettlebell swings 32/24kg 15 Burpees",
+        "movements": [
+          {
+            "name": "Burpee"
+          },
+          {
+            "name": "Kettlebell Swing"
+          }
+        ]
       },
       {
         "format": "Workout",
-        "description": "Begin at 20:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "5 Rounds\n 15 Kettlebell swings 32/24kg\n 15 Burpees",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 40:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "3 Rounds\n 5 Muscle-Ups\n 10 Squat Cleans 61/43kg\n 20 Box Jumps 24″/20″",
-        "movements": []
+        "description": "3 Rounds 5 Muscle-Ups 10 Squat Cleans 61/43kg 20 Box Jumps 24″/20″",
+        "movements": [
+          {
+            "name": "Squat Clean"
+          },
+          {
+            "name": "Clean"
+          },
+          {
+            "name": "Muscle-Up"
+          },
+          {
+            "name": "Box Jump"
+          }
+        ]
       }
     ],
     "movements": [
       "Squat Clean",
-      "Handstand Push-Up",
+      "Clean",
       "Muscle-Up",
-      "Burpee",
-      "KB Swing",
+      "Handstand Push-Up",
+      "Legless Rope Climb",
       "Box Jump",
-      "Clean"
+      "Burpee",
+      "Kettlebell Swing"
     ],
     "sourceUrl": "https://crossfitlinchpin.com/blogs/monster-mash/17683660-09-01-14-monster-mash"
   },
@@ -20266,48 +20237,72 @@
     "segments": [
       {
         "format": "Workout",
-        "description": "August 4, 2014",
-        "movements": []
+        "description": "15, 12, 9 reps of:\nSquat Clean 61/43kg\nPush Jerk 61/43kg",
+        "movements": [
+          {
+            "name": "Squat Clean"
+          },
+          {
+            "name": "Push Jerk"
+          },
+          {
+            "name": "Clean"
+          },
+          {
+            "name": "Jerk"
+          }
+        ]
       },
       {
         "format": "Workout",
-        "description": "Begin at 0:00",
-        "movements": []
+        "description": "Four Rounds:\n21 Wall Ball Shots 20/14\n18 Pull-ups\n15 Kettlebell Swings 32/24kg\n12 HSPU",
+        "movements": [
+          {
+            "name": "Wall Ball"
+          },
+          {
+            "name": "Pull-Up"
+          },
+          {
+            "name": "Handstand Push-Up"
+          },
+          {
+            "name": "Kettlebell Swing"
+          }
+        ]
       },
       {
         "format": "Workout",
-        "description": "15, 12, 9 reps of:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 20:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Four Rounds:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 45:00",
-        "movements": []
+        "description": "3 rounds:\n10 Power Snatch 61/43kg\n20 Pistols, alternate legs\n30 Double-unders",
+        "movements": [
+          {
+            "name": "Power Snatch"
+          },
+          {
+            "name": "Pistol Squat"
+          },
+          {
+            "name": "Snatch"
+          },
+          {
+            "name": "Double-Under"
+          }
+        ]
       }
     ],
     "movements": [
       "Squat Clean",
       "Power Snatch",
-      "Handstand Push-Up",
-      "Push Jerk",
-      "Pull-Up",
-      "Double-Under",
-      "KB Swing",
+      "Pistol Squat",
       "Wall Ball",
-      "Pistol",
+      "Push Jerk",
       "Snatch",
       "Clean",
-      "Jerk"
+      "Jerk",
+      "Pull-Up",
+      "Handstand Push-Up",
+      "Double-Under",
+      "Kettlebell Swing"
     ],
     "sourceUrl": "https://crossfitlinchpin.com/blogs/monster-mash/17683676-08-04-14-monster-mash"
   },
@@ -20317,183 +20312,94 @@
     "title": "MM #15",
     "segments": [
       {
-        "format": "Workout",
-        "description": "July 28, 2014",
-        "movements": []
+        "format": "10 Intervals (2 min cap each)",
+        "description": "There are 10 work intervals. Each work interval has a 2 minute cap. Take 2 minutes rest between each work interval.\n\nInterval #1: 250m Row, 10 Thrusters 61/43kg, Max reps Pull-ups\nInterval #2: 2 Rounds of \"Cindy\", Max reps Clean and Jerk 61/43kg\nInterval #3: 20 Burpees, Max Reps Overhead Squat 61/43kg\nInterval #4: 12 Squat Cleans 61/43kg, Max Reps HSPU\nInterval #5: Max Reps Squat Snatch 61/43kg\nInterval #6: Run 400m, Max Reps Hang Power Clean 61/43kg\nInterval #7: 15 Front Squats 61/43kg, Max Reps Muscle-ups\nInterval #8: 50 Air Squats, Max Reps Push Jerk 61/43kg\nInterval #9: 50 Box Jumps 20\", Max reps Deadlift 61/43kg\nInterval #10: 25 Knees to Elbows, Max Reps Hang Power Snatch 61/43kg",
+        "movements": [
+          {
+            "name": "Row"
+          },
+          {
+            "name": "Thruster"
+          },
+          {
+            "name": "Pull-Up"
+          },
+          {
+            "name": "Clean & Jerk"
+          },
+          {
+            "name": "Burpee"
+          },
+          {
+            "name": "Overhead Squat"
+          },
+          {
+            "name": "Squat Clean"
+          },
+          {
+            "name": "Handstand Push-Up"
+          },
+          {
+            "name": "Squat Snatch"
+          },
+          {
+            "name": "Run"
+          },
+          {
+            "name": "Hang Power Clean"
+          },
+          {
+            "name": "Front Squat"
+          },
+          {
+            "name": "Muscle-Up"
+          },
+          {
+            "name": "Air Squat"
+          },
+          {
+            "name": "Push Jerk"
+          },
+          {
+            "name": "Box Jump"
+          },
+          {
+            "name": "Deadlift"
+          },
+          {
+            "name": "Knees-to-Elbows"
+          },
+          {
+            "name": "Hang Power Snatch"
+          }
+        ]
       },
       {
         "format": "Rest period",
-        "description": "There are 10 work intervals. Each work interval has a 2 minute cap. Take 2 minutes rest between each work interval. Start at #1 and end on #10. Your score is the “max reps” portion from each interval.",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Interval #1:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Interval #2:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "2 Rounds of “Cindy”",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Interval #3:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Interval #4:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Interval #5:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "July 21, 2014",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 0:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 25:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 45:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "9, 6, 3 reps of:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "July 14, 2014",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 0:00",
-        "movements": []
-      },
-      {
-        "format": "AMRAP 10 min",
-        "description": "Amrap 10 minutes:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 20:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "21-15-9 reps of:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 40:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "July 7, 2014",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 0:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "In a 10 minute window:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 20:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "15-12-9 reps of:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 40:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "3 rounds of:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "June 30, 2014",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 0:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 25:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 50:00",
+        "description": "*Rest 2 minutes between intervals",
         "movements": []
       }
     ],
     "movements": [
-      "Hang Power Clean",
-      "Power Clean",
-      "Squat Clean",
-      "Clean & Jerk",
-      "Squat Snatch",
-      "Overhead Squat",
-      "Back Squat",
-      "Air Squat",
-      "Deadlift",
-      "Handstand Push-Up",
-      "Push Jerk",
-      "Thruster",
-      "Bar Muscle-Up",
-      "Muscle-Up",
-      "Strict Pull-Up",
-      "Pull-Up",
-      "L-Sit",
-      "Burpee",
-      "Double-Under",
-      "Wall Ball",
-      "Box Jump",
-      "Run",
       "Row",
-      "Snatch",
-      "Clean",
-      "Jerk"
+      "Thruster",
+      "Pull-Up",
+      "Clean & Jerk",
+      "Burpee",
+      "Overhead Squat",
+      "Squat Clean",
+      "Handstand Push-Up",
+      "Squat Snatch",
+      "Run",
+      "Hang Power Clean",
+      "Front Squat",
+      "Muscle-Up",
+      "Air Squat",
+      "Push Jerk",
+      "Box Jump",
+      "Deadlift",
+      "Knees-to-Elbows",
+      "Hang Power Snatch"
     ],
     "sourceUrl": "https://crossfitlinchpin.com/blogs/monster-mash/17683680-07-28-14-monster-mash"
   },
@@ -20503,29 +20409,52 @@
     "title": "MM #14",
     "segments": [
       {
-        "format": "Workout",
-        "description": "July 21, 2014",
-        "movements": []
+        "format": "For time",
+        "description": "For time:\n21 Thrusters 43/29.5kg\n400m run\n21 Pull-ups\n21 Overhead Squats 43/29.5kg\n21 Pull-ups\n400m run\n21 Thrusters 43/29.5kg",
+        "movements": [
+          {
+            "name": "Overhead Squat"
+          },
+          {
+            "name": "Thruster"
+          },
+          {
+            "name": "Pull-Up"
+          },
+          {
+            "name": "Run"
+          }
+        ]
       },
       {
         "format": "Workout",
-        "description": "Begin at 0:00",
-        "movements": []
+        "description": "5 rounds:\n25 second L-sit\n3 Clean and Jerks 93/61kg",
+        "movements": [
+          {
+            "name": "Clean & Jerk"
+          },
+          {
+            "name": "Clean"
+          },
+          {
+            "name": "Jerk"
+          }
+        ]
       },
       {
         "format": "Workout",
-        "description": "Begin at 25:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 45:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "9, 6, 3 reps of:",
-        "movements": []
+        "description": "9, 6, 3 reps of:\nHang Squat Snatch 61/43kg\nBox Jump 30″/24″",
+        "movements": [
+          {
+            "name": "Squat Snatch"
+          },
+          {
+            "name": "Snatch"
+          },
+          {
+            "name": "Box Jump"
+          }
+        ]
       }
     ],
     "movements": [
@@ -20533,13 +20462,12 @@
       "Squat Snatch",
       "Overhead Squat",
       "Thruster",
-      "Pull-Up",
-      "L-Sit",
-      "Box Jump",
-      "Run",
       "Snatch",
       "Clean",
-      "Jerk"
+      "Jerk",
+      "Pull-Up",
+      "Box Jump",
+      "Run"
     ],
     "sourceUrl": "https://crossfitlinchpin.com/blogs/monster-mash/17683684-07-21-14-monster-mash"
   },
@@ -20549,44 +20477,53 @@
     "title": "MM #13",
     "segments": [
       {
-        "format": "Workout",
-        "description": "July 14, 2014",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 0:00",
-        "movements": []
-      },
-      {
         "format": "AMRAP 10 min",
-        "description": "Amrap 10 minutes:",
-        "movements": []
+        "description": "Amrap 10 minutes:\n20 Back Squats 84/61kg (no rack)\n10 Muscle-ups",
+        "movements": [
+          {
+            "name": "Back Squat"
+          },
+          {
+            "name": "Muscle-Up"
+          }
+        ]
       },
       {
         "format": "Workout",
-        "description": "Begin at 20:00",
-        "movements": []
+        "description": "21-15-9 reps of:\nPower Clean 61/43kg\nBurpees over the bar (lateral)",
+        "movements": [
+          {
+            "name": "Power Clean"
+          },
+          {
+            "name": "Clean"
+          },
+          {
+            "name": "Burpee"
+          }
+        ]
       },
       {
         "format": "Workout",
-        "description": "21-15-9 reps of:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 40:00",
-        "movements": []
+        "description": "5 rounds:\n10 Deadlift 102/70.5kg\n20 Wall Ball Shots 20/14",
+        "movements": [
+          {
+            "name": "Wall Ball"
+          },
+          {
+            "name": "Deadlift"
+          }
+        ]
       }
     ],
     "movements": [
       "Power Clean",
       "Back Squat",
-      "Deadlift",
-      "Muscle-Up",
-      "Burpee",
       "Wall Ball",
-      "Clean"
+      "Deadlift",
+      "Clean",
+      "Muscle-Up",
+      "Burpee"
     ],
     "sourceUrl": "https://crossfitlinchpin.com/blogs/monster-mash/17683688-07-14-14-monster-mash"
   },
@@ -20597,38 +20534,45 @@
     "segments": [
       {
         "format": "Workout",
-        "description": "July 7, 2014",
-        "movements": []
+        "description": "In a 10 minute window:\nRun 1 mile\nMax reps hang power cleans 70.5/47.5kg",
+        "movements": [
+          {
+            "name": "Hang Power Clean"
+          },
+          {
+            "name": "Power Clean"
+          },
+          {
+            "name": "Clean"
+          },
+          {
+            "name": "Run"
+          }
+        ]
       },
       {
         "format": "Workout",
-        "description": "Begin at 0:00",
-        "movements": []
+        "description": "15-12-9 reps of:\nDeadlift 143/93kg\nBox jump 36″/30″",
+        "movements": [
+          {
+            "name": "Deadlift"
+          },
+          {
+            "name": "Box Jump"
+          }
+        ]
       },
       {
         "format": "Workout",
-        "description": "In a 10 minute window:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 20:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "15-12-9 reps of:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 40:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "3 rounds of:",
-        "movements": []
+        "description": "3 rounds of:\n15 strict pull-ups\n30 shoulder press 34/25kg\n100 air squats",
+        "movements": [
+          {
+            "name": "Air Squat"
+          },
+          {
+            "name": "Pull-Up"
+          }
+        ]
       }
     ],
     "movements": [
@@ -20636,11 +20580,10 @@
       "Power Clean",
       "Air Squat",
       "Deadlift",
-      "Strict Pull-Up",
+      "Clean",
       "Pull-Up",
       "Box Jump",
-      "Run",
-      "Clean"
+      "Run"
     ],
     "sourceUrl": "https://crossfitlinchpin.com/blogs/monster-mash/17683692-07-07-14-monster-mash"
   },
@@ -20651,37 +20594,68 @@
     "segments": [
       {
         "format": "Workout",
-        "description": "June 30, 2014",
-        "movements": []
+        "description": "3 rounds:\n400m run\n14 one-arm kettlebell snatches 32/24kg\n7 Bar muscle-ups",
+        "movements": [
+          {
+            "name": "Snatch"
+          },
+          {
+            "name": "Muscle-Up"
+          },
+          {
+            "name": "Bar Muscle-Up"
+          },
+          {
+            "name": "Run"
+          }
+        ]
+      },
+      {
+        "format": "For time",
+        "description": "For time:\n250 Double-unders\n25 Squat cleans 84/56.5kg",
+        "movements": [
+          {
+            "name": "Squat Clean"
+          },
+          {
+            "name": "Clean"
+          },
+          {
+            "name": "Double-Under"
+          }
+        ]
       },
       {
         "format": "Workout",
-        "description": "Begin at 0:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 25:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 50:00",
-        "movements": []
+        "description": "4 rounds:\n15 calories rowing\n10 burpees over the rower\n5 push jerks 84/56.5kg",
+        "movements": [
+          {
+            "name": "Push Jerk"
+          },
+          {
+            "name": "Jerk"
+          },
+          {
+            "name": "Burpee"
+          },
+          {
+            "name": "Row"
+          }
+        ]
       }
     ],
     "movements": [
       "Squat Clean",
       "Push Jerk",
-      "Bar Muscle-Up",
-      "Muscle-Up",
-      "Burpee",
-      "Double-Under",
-      "Run",
-      "Row",
       "Snatch",
       "Clean",
-      "Jerk"
+      "Jerk",
+      "Muscle-Up",
+      "Bar Muscle-Up",
+      "Burpee",
+      "Double-Under",
+      "Row",
+      "Run"
     ],
     "sourceUrl": "https://crossfitlinchpin.com/blogs/monster-mash/17683696-06-30-14-monster-mash"
   },
@@ -20691,29 +20665,46 @@
     "title": "MM #10",
     "segments": [
       {
-        "format": "Workout",
-        "description": "June 23, 2014",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 0:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "21-15-9 reps of:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "*Immediately run 1 mile, then:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "*Immediately run 1 mile, then:",
-        "movements": []
+        "format": "For time",
+        "description": "21-15-9 reps of:\nPower clean 52/36.5kg\nOverhead Squat 52/36.5kg\nToes to Bar\n*Immediately run 1 mile, then:\nFor time:\n100 Double-unders\n75 Abmat sit-ups\n50 Push press (no jerks) 43/29.5kg\n25 calories rowing\n*Immediately run 1 mile, then:\n4 rounds:\n7 deadlifts 124.5/84kg\n14 box jumps 24″/20″\n21 pull-ups (no butterfly)",
+        "movements": [
+          {
+            "name": "Power Clean"
+          },
+          {
+            "name": "Overhead Squat"
+          },
+          {
+            "name": "Deadlift"
+          },
+          {
+            "name": "Push Press"
+          },
+          {
+            "name": "Clean"
+          },
+          {
+            "name": "Jerk"
+          },
+          {
+            "name": "Pull-Up"
+          },
+          {
+            "name": "Sit-Up"
+          },
+          {
+            "name": "Box Jump"
+          },
+          {
+            "name": "Double-Under"
+          },
+          {
+            "name": "Row"
+          },
+          {
+            "name": "Run"
+          }
+        ]
       }
     ],
     "movements": [
@@ -20721,15 +20712,14 @@
       "Overhead Squat",
       "Deadlift",
       "Push Press",
-      "Pull-Up",
-      "Toes-to-Bar",
-      "Sit-Up",
-      "Double-Under",
-      "Box Jump",
-      "Run",
-      "Row",
       "Clean",
-      "Jerk"
+      "Jerk",
+      "Pull-Up",
+      "Sit-Up",
+      "Box Jump",
+      "Double-Under",
+      "Row",
+      "Run"
     ],
     "sourceUrl": "https://crossfitlinchpin.com/blogs/monster-mash/17683700-06-23-14-monster-mash"
   },
@@ -20740,23 +20730,60 @@
     "segments": [
       {
         "format": "Workout",
-        "description": "June 16, 2014",
-        "movements": []
+        "description": "3 rounds:\n25 GHD sit-ups\n5 Clean and jerks 93/66kg",
+        "movements": [
+          {
+            "name": "Clean & Jerk"
+          },
+          {
+            "name": "Clean"
+          },
+          {
+            "name": "Jerk"
+          },
+          {
+            "name": "GHD Sit-Up"
+          },
+          {
+            "name": "Sit-Up"
+          }
+        ]
       },
       {
-        "format": "Workout",
-        "description": "Begin at 0:00",
-        "movements": []
+        "format": "For time",
+        "description": "For time:\n50 air squats\n40′ handstand walk\n30 pull-ups\n20 burpees\n10 power snatch 52/36.5kg",
+        "movements": [
+          {
+            "name": "Power Snatch"
+          },
+          {
+            "name": "Air Squat"
+          },
+          {
+            "name": "Snatch"
+          },
+          {
+            "name": "Pull-Up"
+          },
+          {
+            "name": "Handstand Walk"
+          },
+          {
+            "name": "Burpee"
+          }
+        ]
       },
       {
-        "format": "Workout",
-        "description": "Begin at 20:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 45:00",
-        "movements": []
+        "format": "For time",
+        "description": "For time:\n80 Double-unders\n40 toes to bar\n20 front squats 84/56.5kg (no rack)",
+        "movements": [
+          {
+            "name": "Front Squat"
+          },
+          {
+            "name": "Double-Under"
+          }
+        ]
       }
     ],
     "movements": [
@@ -20764,16 +20791,15 @@
       "Power Snatch",
       "Front Squat",
       "Air Squat",
-      "Handstand Walk",
-      "Pull-Up",
-      "Toes-to-Bar",
-      "GHD Sit-Up",
-      "Sit-Up",
-      "Burpee",
-      "Double-Under",
       "Snatch",
       "Clean",
-      "Jerk"
+      "Jerk",
+      "Pull-Up",
+      "GHD Sit-Up",
+      "Sit-Up",
+      "Handstand Walk",
+      "Burpee",
+      "Double-Under"
     ],
     "sourceUrl": "https://crossfitlinchpin.com/blogs/monster-mash/17683704-06-16-14-monster-mash"
   },
@@ -20784,49 +20810,103 @@
     "segments": [
       {
         "format": "Workout",
-        "description": "June 9, 2014",
-        "movements": []
-      },
-      {
-        "format": "Workout",
         "description": "Today’s Monster Mash is all about maximal intensity. The inspiration was “if you pace, you lose”. Hit each one of these short workouts as hard and fast as you can. Time each one separately. Add all the times together at the end for your total time.",
         "movements": []
       },
       {
         "format": "Workout",
-        "description": "Begin at 0:00",
-        "movements": []
+        "description": "21 thrusters 43/29.5kg\n21 pull-ups",
+        "movements": [
+          {
+            "name": "Thruster"
+          },
+          {
+            "name": "Pull-Up"
+          }
+        ]
       },
       {
         "format": "Workout",
-        "description": "Begin at 5:00",
-        "movements": []
+        "description": "21 deadlifts 102/70.5kg\n21 burpees over the bar",
+        "movements": [
+          {
+            "name": "Deadlift"
+          },
+          {
+            "name": "Burpee"
+          }
+        ]
       },
       {
         "format": "Workout",
-        "description": "Begin at 10:00",
-        "movements": []
+        "description": "9 muscle-ups\n9 clean and jerks 61/43kg",
+        "movements": [
+          {
+            "name": "Clean & Jerk"
+          },
+          {
+            "name": "Clean"
+          },
+          {
+            "name": "Jerk"
+          },
+          {
+            "name": "Muscle-Up"
+          }
+        ]
       },
       {
         "format": "Workout",
-        "description": "Begin at 15:00",
-        "movements": []
+        "description": "15 thrusters 43/29.5kg\n15 pull-ups",
+        "movements": [
+          {
+            "name": "Thruster"
+          },
+          {
+            "name": "Pull-Up"
+          }
+        ]
       },
       {
         "format": "Workout",
-        "description": "Begin at 20:00",
-        "movements": []
+        "description": "15 deadlifts 102/70.5kg\n15 burpees over the bar",
+        "movements": [
+          {
+            "name": "Deadlift"
+          },
+          {
+            "name": "Burpee"
+          }
+        ]
+      },
+      {
+        "format": "Workout",
+        "description": "9 muscle-ups\n9 clean and jerks 61/43kg",
+        "movements": [
+          {
+            "name": "Clean & Jerk"
+          },
+          {
+            "name": "Clean"
+          },
+          {
+            "name": "Jerk"
+          },
+          {
+            "name": "Muscle-Up"
+          }
+        ]
       }
     ],
     "movements": [
       "Clean & Jerk",
-      "Deadlift",
       "Thruster",
-      "Muscle-Up",
-      "Pull-Up",
-      "Burpee",
+      "Deadlift",
       "Clean",
-      "Jerk"
+      "Jerk",
+      "Pull-Up",
+      "Muscle-Up",
+      "Burpee"
     ],
     "sourceUrl": "https://crossfitlinchpin.com/blogs/monster-mash/17707320-06-09-14-monster-mash"
   },
@@ -20836,40 +20916,76 @@
     "title": "MM #7",
     "segments": [
       {
-        "format": "Workout",
-        "description": "June 2, 2014",
-        "movements": []
+        "format": "For time",
+        "description": "For time:\n100 Double-unders\n80 Wall ball shots 20/14\n60 push-ups\n400m run\n20 HSPU\n10 Power cleans 84/56.5kg\n5 Muscle-ups",
+        "movements": [
+          {
+            "name": "Power Clean"
+          },
+          {
+            "name": "Wall Ball"
+          },
+          {
+            "name": "Clean"
+          },
+          {
+            "name": "Muscle-Up"
+          },
+          {
+            "name": "Handstand Push-Up"
+          },
+          {
+            "name": "Push-Up"
+          },
+          {
+            "name": "Double-Under"
+          },
+          {
+            "name": "Run"
+          }
+        ]
       },
       {
         "format": "Workout",
-        "description": "Begin at 0:00",
-        "movements": []
+        "description": "3 rounds:\n10 front squats 84/56.5kg (no rack)\n20 chest to bar pull-ups\n50 double-unders",
+        "movements": [
+          {
+            "name": "Front Squat"
+          },
+          {
+            "name": "Pull-Up"
+          },
+          {
+            "name": "Double-Under"
+          }
+        ]
       },
       {
-        "format": "Workout",
-        "description": "Begin at 30:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 50:00",
-        "movements": []
+        "format": "For time",
+        "description": "For time:\n100 overhead squats 43/29.5kg\n*every minute on the minute perform 3 burpees and 7 knees to elbows",
+        "movements": [
+          {
+            "name": "Overhead Squat"
+          },
+          {
+            "name": "Burpee"
+          }
+        ]
       }
     ],
     "movements": [
       "Power Clean",
       "Overhead Squat",
       "Front Squat",
-      "Handstand Push-Up",
-      "Muscle-Up",
-      "Chest-to-Bar",
+      "Wall Ball",
+      "Clean",
       "Pull-Up",
+      "Muscle-Up",
+      "Handstand Push-Up",
       "Push-Up",
       "Burpee",
       "Double-Under",
-      "Wall Ball",
-      "Run",
-      "Clean"
+      "Run"
     ],
     "sourceUrl": "https://crossfitlinchpin.com/blogs/monster-mash/17707324-06-02-14-monster-mash"
   },
@@ -20879,35 +20995,57 @@
     "title": "MM #6",
     "segments": [
       {
-        "format": "Workout",
-        "description": "May 26, 2014",
-        "movements": []
+        "format": "For time",
+        "description": "For time:\n100 double-unders\n50 kettlebell swings 24/16kg\n25 thrusters 43/29.5kg",
+        "movements": [
+          {
+            "name": "Thruster"
+          },
+          {
+            "name": "Double-Under"
+          },
+          {
+            "name": "Kettlebell Swing"
+          }
+        ]
       },
       {
         "format": "Workout",
-        "description": "Begin at 0:00",
-        "movements": []
+        "description": "2 rounds:\n10 front squats 93/66kg (no rack)\n10 burpee muscle-ups",
+        "movements": [
+          {
+            "name": "Front Squat"
+          },
+          {
+            "name": "Muscle-Up"
+          },
+          {
+            "name": "Burpee"
+          }
+        ]
       },
       {
-        "format": "Workout",
-        "description": "Begin at 15:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 35:00",
-        "movements": []
+        "format": "For time",
+        "description": "For time:\n30 power snatch 43/29.5kg",
+        "movements": [
+          {
+            "name": "Power Snatch"
+          },
+          {
+            "name": "Snatch"
+          }
+        ]
       }
     ],
     "movements": [
       "Power Snatch",
       "Front Squat",
       "Thruster",
+      "Snatch",
       "Muscle-Up",
       "Burpee",
       "Double-Under",
-      "KB Swing",
-      "Snatch"
+      "Kettlebell Swing"
     ],
     "sourceUrl": "https://crossfitlinchpin.com/blogs/monster-mash/17707328-05-26-14-monster-mash"
   },
@@ -20917,54 +21055,85 @@
     "title": "MM #5",
     "segments": [
       {
-        "format": "Workout",
-        "description": "May 19, 2014",
-        "movements": []
+        "format": "For time",
+        "description": "For time:\n30 Bear Complexes 52/34kg\nFor this workout a “bear complex” will consist of:\nPower clean\nFront squat\nPush press or Push jerk\nBack squat\nPush press or Push Jerk\n*Note, you may combine the 1st 3 parts into a “squat clean thruster”\n*You can “rest” in the hang, front rack, overhead, or back rack\n*IF YOU DROP THE BAR you must perform 3 burpees, 6 toes to bar, and 9 wall ball shots 20/14 before picking up the barbell again",
+        "movements": [
+          {
+            "name": "Power Clean"
+          },
+          {
+            "name": "Squat Clean"
+          },
+          {
+            "name": "Front Squat"
+          },
+          {
+            "name": "Back Squat"
+          },
+          {
+            "name": "Thruster"
+          },
+          {
+            "name": "Wall Ball"
+          },
+          {
+            "name": "Push Press"
+          },
+          {
+            "name": "Push Jerk"
+          },
+          {
+            "name": "Clean"
+          },
+          {
+            "name": "Jerk"
+          },
+          {
+            "name": "Burpee"
+          }
+        ]
+      },
+      {
+        "format": "For time",
+        "description": "For time:\n30 pull-ups\n15 overhead squats 61/43kg\n20 pull-ups\n10 overhead squats 61/43kg\n10 pull-ups\n5 overhead squats 61/43kg",
+        "movements": [
+          {
+            "name": "Overhead Squat"
+          },
+          {
+            "name": "Pull-Up"
+          }
+        ]
       },
       {
         "format": "Workout",
-        "description": "Begin at 0:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "For this workout a “bear complex” will consist of:",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "*Note, you may combine the 1st 3 parts into a “squat clean thruster”",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*You can “rest” in the hang, front rack, overhead, or back rack",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "*IF YOU DROP THE BAR you must perform 3 burpees, 6 toes to bar, and 9 wall ball shots 20/14 before picking up the barbell again",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 25:00",
-        "movements": []
+        "description": "4 rounds:\n20 abmat sit-ps\n10 hspu\n5 deadlifts 152/102kg",
+        "movements": [
+          {
+            "name": "Deadlift"
+          },
+          {
+            "name": "Handstand Push-Up"
+          }
+        ]
       }
     ],
     "movements": [
       "Power Clean",
       "Squat Clean",
+      "Overhead Squat",
       "Front Squat",
       "Back Squat",
-      "Push Jerk",
-      "Push Press",
       "Thruster",
-      "Toes-to-Bar",
-      "Burpee",
       "Wall Ball",
+      "Deadlift",
+      "Push Press",
+      "Push Jerk",
       "Clean",
-      "Jerk"
+      "Jerk",
+      "Pull-Up",
+      "Handstand Push-Up",
+      "Burpee"
     ],
     "sourceUrl": "https://crossfitlinchpin.com/blogs/monster-mash/17707332-05-19-14-monster-mash"
   },
@@ -21053,32 +21222,50 @@
     "title": "MM #3",
     "segments": [
       {
-        "format": "Workout",
-        "description": "May 5, 2014",
-        "movements": []
+        "format": "For time",
+        "description": "For time:\n10 thrusters 70.5/47.5kg\n10 burpee muscle-ups\n10 thrusters 70.5/47.5kg\n10 burpee muscle-ups\n10 thrusters 70.5/47.5kg\n10 burpee muscle-ups\n10 thrusters 70.5/47.5kg",
+        "movements": [
+          {
+            "name": "Thruster"
+          },
+          {
+            "name": "Muscle-Up"
+          },
+          {
+            "name": "Burpee"
+          }
+        ]
       },
       {
         "format": "Workout",
-        "description": "Begin at 0:00",
-        "movements": []
+        "description": "3 rounds:\n14 hspu\n7 deadlift 143/93kg",
+        "movements": [
+          {
+            "name": "Deadlift"
+          },
+          {
+            "name": "Handstand Push-Up"
+          }
+        ]
       },
       {
         "format": "Workout",
-        "description": "Begin at 30:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 45:00",
-        "movements": []
+        "description": "2 rounds:\n250m row\n75 double-unders\n25 toes to bar",
+        "movements": [
+          {
+            "name": "Double-Under"
+          },
+          {
+            "name": "Row"
+          }
+        ]
       }
     ],
     "movements": [
-      "Deadlift",
-      "Handstand Push-Up",
       "Thruster",
+      "Deadlift",
       "Muscle-Up",
-      "Toes-to-Bar",
+      "Handstand Push-Up",
       "Burpee",
       "Double-Under",
       "Row"
@@ -21091,39 +21278,52 @@
     "title": "MM #2",
     "segments": [
       {
-        "format": "Workout",
-        "description": "April 28, 2014",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 0:00",
-        "movements": []
-      },
-      {
         "format": "AMRAP 12 min",
-        "description": "Amrap 12 minutes of:",
+        "description": "Amrap 12 minutes of:\n1 round of “Mary”\n1 round of “DT”",
         "movements": []
       },
       {
-        "format": "Workout",
-        "description": "Begin at 25:00",
-        "movements": []
+        "format": "For time",
+        "description": "For time:\n400m run\n30 calories rowing\n20 burpees over the rower",
+        "movements": [
+          {
+            "name": "Burpee"
+          },
+          {
+            "name": "Row"
+          },
+          {
+            "name": "Run"
+          }
+        ]
       },
       {
         "format": "Workout",
-        "description": "Begin at 45:00",
-        "movements": []
+        "description": "4 rounds:\n3 squat cleans 93/61kg\n15 kettlebell swings 24/16kg\n45 double-unders",
+        "movements": [
+          {
+            "name": "Squat Clean"
+          },
+          {
+            "name": "Clean"
+          },
+          {
+            "name": "Double-Under"
+          },
+          {
+            "name": "Kettlebell Swing"
+          }
+        ]
       }
     ],
     "movements": [
       "Squat Clean",
+      "Clean",
       "Burpee",
       "Double-Under",
-      "KB Swing",
-      "Run",
+      "Kettlebell Swing",
       "Row",
-      "Clean"
+      "Run"
     ],
     "sourceUrl": "https://crossfitlinchpin.com/blogs/monster-mash/17707352-04-28-14-monster-mash"
   },
@@ -21134,40 +21334,56 @@
     "segments": [
       {
         "format": "Workout",
-        "description": "April 21, 2014",
-        "movements": []
+        "description": "2 rounds:\n30 deadlifts 84/61kg\n20 burpees over the bar\n10 muscle-ups",
+        "movements": [
+          {
+            "name": "Deadlift"
+          },
+          {
+            "name": "Muscle-Up"
+          },
+          {
+            "name": "Burpee"
+          }
+        ]
       },
       {
         "format": "Workout",
-        "description": "Begin at 0:00",
-        "movements": []
+        "description": "3 rounds:\n400m run\n20 toes to bar\n10 back squats 102/70.5kg",
+        "movements": [
+          {
+            "name": "Back Squat"
+          },
+          {
+            "name": "Run"
+          }
+        ]
       },
       {
-        "format": "Workout",
-        "description": "Begin at 25:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Begin at 50:00",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Every 2 minute on the 2 minute until failure:",
-        "movements": []
+        "format": "EMOM",
+        "description": "Every 2 minute on the 2 minute until failure:\n250m row\n8 power snatch 52/36.5kg",
+        "movements": [
+          {
+            "name": "Power Snatch"
+          },
+          {
+            "name": "Snatch"
+          },
+          {
+            "name": "Row"
+          }
+        ]
       }
     ],
     "movements": [
       "Power Snatch",
       "Back Squat",
       "Deadlift",
+      "Snatch",
       "Muscle-Up",
-      "Toes-to-Bar",
       "Burpee",
-      "Run",
       "Row",
-      "Snatch"
+      "Run"
     ],
     "sourceUrl": "https://crossfitlinchpin.com/blogs/monster-mash/17707356-04-21-14-monster-mash"
   }

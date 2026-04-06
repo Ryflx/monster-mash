@@ -17,34 +17,31 @@ interface SpinWheelProps {
   onUnmark: (id: string) => void;
 }
 
-// Visually distinct segment colors — alternating warm/cool darks
+// Visual segment colors
 const SEGMENT_FILLS = [
   '#1C1416', '#161A1C', '#1A1614', '#14181C',
   '#1C1618', '#161C18', '#1A1418', '#181C16',
   '#1C1A14', '#141C1A', '#181416', '#1C181A',
 ];
-
 const ACCENT_COLORS = ['#E63946', '#F4A261'];
+const WHEEL_SLOTS = 12;
 
-const WHEEL_SLOTS = 12; // Always show 12 segments for readability
 const DPR = typeof window !== 'undefined' ? Math.min(window.devicePixelRatio || 1, 2) : 1;
 const CANVAS_CSS = 340;
 const CANVAS_PX = Math.round(CANVAS_CSS * DPR);
 
-// ─── Easing: dramatic deceleration ────────────────────────────────────────────
-// Custom curve: fast start, long suspenseful tail
+// Dramatic deceleration: fast start, long suspenseful tail
 function easeOutExpo(t: number): number {
-  // Blend of exponential and quintic for a "clicking to a stop" feel
   const expo = t === 1 ? 1 : 1 - Math.pow(2, -12 * t);
   const quint = 1 - Math.pow(1 - t, 5);
   return 0.6 * expo + 0.4 * quint;
 }
 
-// ─── Drawing ──────────────────────────────────────────────────────────────────
+// ─── Canvas drawing ───────────────────────────────────────────────────────────
 
 function drawWheel(
   ctx: CanvasRenderingContext2D,
-  slots: { label: string; sublabel: string }[],
+  slots: string[],
   rotation: number,
   highlightIdx: number | null,
 ) {
@@ -59,17 +56,7 @@ function drawWheel(
 
   ctx.clearRect(0, 0, CANVAS_CSS, CANVAS_CSS);
 
-  // Outer shadow
-  ctx.save();
-  ctx.beginPath();
-  ctx.arc(cx, cy, r + 6, 0, Math.PI * 2);
-  ctx.shadowColor = 'rgba(230, 57, 70, 0.12)';
-  ctx.shadowBlur = 30;
-  ctx.fillStyle = 'transparent';
-  ctx.fill();
-  ctx.restore();
-
-  slots.forEach((slot, i) => {
+  slots.forEach((label, i) => {
     const startAngle = rotation + i * sliceAngle - Math.PI / 2;
     const endAngle = startAngle + sliceAngle;
     const isHighlighted = highlightIdx === i;
@@ -79,12 +66,8 @@ function drawWheel(
     ctx.moveTo(cx, cy);
     ctx.arc(cx, cy, r, startAngle, endAngle);
     ctx.closePath();
-    ctx.fillStyle = isHighlighted
-      ? '#2A1A1A'
-      : SEGMENT_FILLS[i % SEGMENT_FILLS.length];
+    ctx.fillStyle = isHighlighted ? '#2A1A1A' : SEGMENT_FILLS[i % SEGMENT_FILLS.length];
     ctx.fill();
-
-    // Segment border
     ctx.strokeStyle = '#0A0A0A';
     ctx.lineWidth = 1;
     ctx.stroke();
@@ -98,32 +81,22 @@ function drawWheel(
     ctx.stroke();
     ctx.globalAlpha = 1;
 
-    // Labels
+    // Label
     const midAngle = startAngle + sliceAngle / 2;
-    const labelR = r * 0.62;
-    const lx = cx + Math.cos(midAngle) * labelR;
-    const ly = cy + Math.sin(midAngle) * labelR;
-
+    const lx = cx + Math.cos(midAngle) * r * 0.62;
+    const ly = cy + Math.sin(midAngle) * r * 0.62;
     ctx.save();
     ctx.translate(lx, ly);
     ctx.rotate(midAngle + Math.PI / 2);
-
-    // Title line
-    ctx.fillStyle = isHighlighted ? '#FFFFFF' : '#BBBBBB';
+    ctx.fillStyle = isHighlighted ? '#FFFFFF' : '#999999';
     ctx.font = `bold 11px "Barlow Condensed", sans-serif`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText(slot.label, 0, -5);
-
-    // Sublabel (date)
-    ctx.fillStyle = isHighlighted ? '#F4A261' : '#666666';
-    ctx.font = `600 8px "Barlow Condensed", sans-serif`;
-    ctx.fillText(slot.sublabel, 0, 6);
-
+    ctx.fillText(label, 0, 0);
     ctx.restore();
   });
 
-  // Inner ring (dark center disc)
+  // Center disc
   const grad = ctx.createRadialGradient(cx, cy, ir * 0.3, cx, cy, ir);
   grad.addColorStop(0, '#1A1A1A');
   grad.addColorStop(1, '#0D0D0D');
@@ -134,8 +107,6 @@ function drawWheel(
   ctx.strokeStyle = '#E63946';
   ctx.lineWidth = 2;
   ctx.stroke();
-
-  // Center text
   ctx.fillStyle = '#E63946';
   ctx.font = `900 13px "Barlow Condensed", sans-serif`;
   ctx.textAlign = 'center';
@@ -157,13 +128,9 @@ function drawPointer(ctx: CanvasRenderingContext2D) {
   ctx.scale(DPR, DPR);
   ctx.clearRect(0, 0, CANVAS_CSS, CANVAS_CSS);
   const cx = CANVAS_CSS / 2;
-
-  // Drop shadow
   ctx.shadowColor = 'rgba(230, 57, 70, 0.5)';
   ctx.shadowBlur = 12;
   ctx.shadowOffsetY = 2;
-
-  // Pointer triangle
   ctx.beginPath();
   ctx.moveTo(cx, 4);
   ctx.lineTo(cx - 12, 28);
@@ -171,8 +138,6 @@ function drawPointer(ctx: CanvasRenderingContext2D) {
   ctx.closePath();
   ctx.fillStyle = '#E63946';
   ctx.fill();
-
-  // White inner highlight
   ctx.shadowBlur = 0;
   ctx.beginPath();
   ctx.moveTo(cx, 9);
@@ -181,16 +146,14 @@ function drawPointer(ctx: CanvasRenderingContext2D) {
   ctx.closePath();
   ctx.fillStyle = 'rgba(255,255,255,0.15)';
   ctx.fill();
-
   ctx.restore();
 }
 
-function getWinnerIndex(count: number, finalRotation: number): number {
+function getWinnerIndex(count: number, rotation: number): number {
   if (count === 0) return 0;
   const sliceAngle = (2 * Math.PI) / count;
-  const normalised = ((finalRotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
-  const idx = Math.floor(((2 * Math.PI - normalised) % (2 * Math.PI)) / sliceAngle);
-  return idx % count;
+  const normalised = ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
+  return Math.floor(((2 * Math.PI - normalised) % (2 * Math.PI)) / sliceAngle) % count;
 }
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -213,35 +176,25 @@ const SpinWheel: FC<SpinWheelProps> = ({
   const [phase, setPhase] = useState<'idle' | 'spinning' | 'done'>('idle');
   const [highlightIdx, setHighlightIdx] = useState<number | null>(null);
 
-  // Pick a random sample of WHEEL_SLOTS workouts for the wheel display
-  const wheelSample = useMemo(() => {
-    if (workouts.length <= WHEEL_SLOTS) return workouts;
-    const shuffled = [...workouts].sort(() => Math.random() - 0.5);
-    return shuffled.slice(0, WHEEL_SLOTS);
-  }, [workouts]);
+  // Wheel always shows 12 decorative slots — purely visual
+  const slotLabels = useMemo(() => {
+    const labels = [];
+    for (let i = 0; i < WHEEL_SLOTS; i++) {
+      labels.push(`MM #${Math.floor(Math.random() * 619) + 1}`);
+    }
+    return labels;
+  }, []);
 
-  const slots = useMemo(() =>
-    wheelSample.map(w => {
-      const title = w.title.length > 16 ? w.title.slice(0, 14) + '...' : w.title;
-      const date = new Date(w.date + 'T00:00:00').toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: '2-digit' });
-      return { label: title, sublabel: date };
-    }),
-  [wheelSample]);
-
-  // Draw wheel
   const redrawWheel = useCallback((rotation: number, highlight: number | null = null) => {
     const canvas = wheelCanvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-    drawWheel(ctx, slots, rotation, highlight);
-  }, [slots]);
+    drawWheel(ctx, slotLabels, rotation, highlight);
+  }, [slotLabels]);
 
   // Initial draw + pointer
-  useEffect(() => {
-    redrawWheel(rotationRef.current);
-  }, [redrawWheel]);
-
+  useEffect(() => { redrawWheel(rotationRef.current); }, [redrawWheel]);
   useEffect(() => {
     const canvas = pointerCanvasRef.current;
     if (!canvas) return;
@@ -250,11 +203,11 @@ const SpinWheel: FC<SpinWheelProps> = ({
     drawPointer(ctx);
   }, []);
 
-  // Idle drift animation
+  // Idle drift
   useEffect(() => {
     if (spinning) return;
     let raf = 0;
-    let start = performance.now();
+    const start = performance.now();
     function drift(now: number) {
       const elapsed = (now - start) / 1000;
       const idleRotation = rotationRef.current + Math.sin(elapsed * 0.3) * 0.005;
@@ -265,54 +218,36 @@ const SpinWheel: FC<SpinWheelProps> = ({
     return () => cancelAnimationFrame(raf);
   }, [spinning, redrawWheel, highlightIdx]);
 
-  const spinOnce = useCallback(
-    (currentRotation: number): Promise<{ finalRotation: number; winnerIdx: number }> => {
-      return new Promise((resolve) => {
-        if (wheelSample.length === 0) return;
+  // Animate the wheel spin (visual only — doesn't determine the result)
+  const spinWheel = useCallback((): Promise<void> => {
+    return new Promise((resolve) => {
+      const extraTurns = (7 + Math.floor(Math.random() * 5)) * 2 * Math.PI;
+      const randomAngle = Math.random() * 2 * Math.PI;
+      const totalDelta = extraTurns + randomAngle;
+      const duration = 5000 + Math.random() * 1500;
+      const startTime = performance.now();
+      const startRotation = rotationRef.current;
+      let lastIdx = -1;
 
-        // 7-12 full turns + random landing = dramatic spin
-        const extraTurns = (7 + Math.floor(Math.random() * 5)) * 2 * Math.PI;
-        const randomAngle = Math.random() * 2 * Math.PI;
-        const totalDelta = extraTurns + randomAngle;
-        const finalRotation = currentRotation + totalDelta;
-
-        const duration = 5000 + Math.random() * 1500; // 5–6.5s — longer for suspense
-        const startTime = performance.now();
-        const startRotation = currentRotation;
-        let lastSliceIdx = -1;
-
-        function frame(now: number) {
-          const elapsed = now - startTime;
-          const t = Math.min(elapsed / duration, 1);
-          const easedT = easeOutExpo(t);
-          const currentAngle = startRotation + totalDelta * easedT;
-          rotationRef.current = currentAngle;
-
-          // Tick highlight: detect when passing a segment boundary
-          const currentIdx = getWinnerIndex(wheelSample.length, currentAngle);
-          if (currentIdx !== lastSliceIdx) {
-            lastSliceIdx = currentIdx;
-            setHighlightIdx(currentIdx);
-          }
-
-          redrawWheel(currentAngle, currentIdx);
-
-          if (t < 1) {
-            animFrameRef.current = requestAnimationFrame(frame);
-          } else {
-            rotationRef.current = finalRotation;
-            const winnerIdx = getWinnerIndex(wheelSample.length, finalRotation);
-            setHighlightIdx(winnerIdx);
-            redrawWheel(finalRotation, winnerIdx);
-            resolve({ finalRotation, winnerIdx });
-          }
+      function frame(now: number) {
+        const t = Math.min((now - startTime) / duration, 1);
+        const currentAngle = startRotation + totalDelta * easeOutExpo(t);
+        rotationRef.current = currentAngle;
+        const idx = getWinnerIndex(WHEEL_SLOTS, currentAngle);
+        if (idx !== lastIdx) { lastIdx = idx; setHighlightIdx(idx); }
+        redrawWheel(currentAngle, idx);
+        if (t < 1) {
+          animFrameRef.current = requestAnimationFrame(frame);
+        } else {
+          rotationRef.current = startRotation + totalDelta;
+          setHighlightIdx(idx);
+          redrawWheel(startRotation + totalDelta, idx);
+          resolve();
         }
-
-        animFrameRef.current = requestAnimationFrame(frame);
-      });
-    },
-    [wheelSample, redrawWheel],
-  );
+      }
+      animFrameRef.current = requestAnimationFrame(frame);
+    });
+  }, [redrawWheel]);
 
   const handleSpin = useCallback(async () => {
     if (spinning || workouts.length === 0) return;
@@ -321,39 +256,27 @@ const SpinWheel: FC<SpinWheelProps> = ({
     setPhase('spinning');
     setHighlightIdx(null);
 
-    const winners: Workout[] = [];
-    let currentRotation = rotationRef.current;
+    // Spin the wheel (visual animation)
+    await spinWheel();
 
-    for (let i = 0; i < Math.min(count, workouts.length); i++) {
-      const result = await spinOnce(currentRotation);
-      currentRotation = result.finalRotation;
-      const winner = wheelSample[result.winnerIdx];
-      if (winner && !winners.find(w => w.id === winner.id)) {
-        winners.push(winner);
-      } else {
-        // Fallback: pick a random workout not already selected
-        const available = workouts.filter(w => !winners.find(s => s.id === w.id));
-        if (available.length > 0) {
-          winners.push(available[Math.floor(Math.random() * available.length)]);
-        }
-      }
-      // Brief pause between multiple picks
-      if (i < count - 1) {
-        await new Promise((r) => setTimeout(r, 1200));
-      }
+    // Pick random workouts from the FULL pool — wheel is decorative
+    const picks: Workout[] = [];
+    const available = [...workouts];
+    const numPicks = Math.min(count, available.length);
+    for (let i = 0; i < numPicks; i++) {
+      const idx = Math.floor(Math.random() * available.length);
+      picks.push(available[idx]);
+      available.splice(idx, 1); // no duplicates
     }
 
-    setSelected(winners);
-    onSelect(winners);
+    setSelected(picks);
+    onSelect(picks);
     setSpinning(false);
     setPhase('done');
-  }, [spinning, workouts, wheelSample, count, spinOnce, onSelect]);
+  }, [spinning, workouts, count, spinWheel, onSelect]);
 
-  // Cleanup
   useEffect(() => {
-    return () => {
-      if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current);
-    };
+    return () => { if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current); };
   }, []);
 
   return (
@@ -378,32 +301,15 @@ const SpinWheel: FC<SpinWheelProps> = ({
         ))}
       </div>
 
-      {/* Wheel container */}
+      {/* Wheel */}
       <div className="relative" style={{ width: CANVAS_CSS, height: CANVAS_CSS }}>
-        <canvas
-          ref={wheelCanvasRef}
-          width={CANVAS_PX}
-          height={CANVAS_PX}
-          style={{ width: CANVAS_CSS, height: CANVAS_CSS }}
-          className="absolute inset-0"
-        />
-        <canvas
-          ref={pointerCanvasRef}
-          width={CANVAS_PX}
-          height={CANVAS_PX}
-          style={{ width: CANVAS_CSS, height: CANVAS_CSS }}
-          className="absolute inset-0 pointer-events-none"
-        />
-
-        {/* Glow ring when spinning */}
+        <canvas ref={wheelCanvasRef} width={CANVAS_PX} height={CANVAS_PX}
+          style={{ width: CANVAS_CSS, height: CANVAS_CSS }} className="absolute inset-0" />
+        <canvas ref={pointerCanvasRef} width={CANVAS_PX} height={CANVAS_PX}
+          style={{ width: CANVAS_CSS, height: CANVAS_CSS }} className="absolute inset-0 pointer-events-none" />
         {spinning && (
-          <div
-            className="absolute inset-[-8px] rounded-full pointer-events-none"
-            style={{
-              boxShadow: '0 0 50px rgba(230, 57, 70, 0.25), 0 0 100px rgba(230, 57, 70, 0.08)',
-              transition: 'box-shadow 0.5s',
-            }}
-          />
+          <div className="absolute inset-[-8px] rounded-full pointer-events-none"
+            style={{ boxShadow: '0 0 50px rgba(230, 57, 70, 0.25), 0 0 100px rgba(230, 57, 70, 0.08)' }} />
         )}
       </div>
 
@@ -426,12 +332,9 @@ const SpinWheel: FC<SpinWheelProps> = ({
             </svg>
             Spinning...
           </span>
-        ) : (
-          'SPIN'
-        )}
+        ) : 'SPIN'}
       </button>
 
-      {/* Pool info */}
       <p className="text-[10px] font-display font-600 uppercase tracking-[0.2em] text-[#333]">
         {workouts.length} workouts in the pool
       </p>

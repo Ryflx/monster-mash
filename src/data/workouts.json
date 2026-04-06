@@ -2,33 +2,11 @@
   {
     "id": "2026-04-06-linchpin-test-10",
     "date": "2026-04-06",
-    "title": "Linchpin Test 10",
+    "title": "MM #619 — Linchpin Test 10",
     "segments": [
       {
         "format": "5 Rounds for time",
         "description": "Linchpin Test 10\n5 Rounds for time of:\n15 Wallballs, 20/14\n15 Power Cleans, 43/29.5kg",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n1200m Air Bike\n500m Row\n400m Run",
-        "movements": []
-      },
-      {
-        "format": "4 Rounds for time",
-        "description": "4 Rounds for time of:\n10 L-sit Pull-ups\n30 V-ups\n40 Push-ups",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "5 Rounds for time",
-        "description": "5 Rounds for time of:\n15 Wallballs, 20/14\n15 Dumbbell Power Cleans, 22.5/16kg",
         "movements": []
       },
       {
@@ -64,7 +42,7 @@
   {
     "id": "2026-03-30-linchpin-test-11",
     "date": "2026-03-30",
-    "title": "Linchpin Test 11",
+    "title": "MM #618 — Linchpin Test 11",
     "segments": [
       {
         "format": "For time",
@@ -74,28 +52,6 @@
       {
         "format": "3 Rounds for time",
         "description": "3 Rounds for time of:\n12m Handstand Walk\n20m Front Rack Lunge, 43/29.5kg",
-        "movements": []
-      },
-      {
-        "format": "5 Rounds for time",
-        "description": "5 Rounds for time of:\n75 Double-unders\n15 Toes-to-bar",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "For time",
-        "description": "For time:\n20 Dumbbell Squat Snatch, 22.5/16kg\n11 Ring Muscle-ups\n100 Double-unders\n11 Ring Muscle-ups\n20 Dumbbell Squat Snatch, 22.5/16kg",
-        "movements": []
-      },
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time of:\n12m Handstand Walk\n20m Front Rack Lunge, 22.5/16kg",
         "movements": []
       },
       {
@@ -125,33 +81,11 @@
   {
     "id": "2026-03-23-s-carry-70",
     "date": "2026-03-23",
-    "title": "s Carry, 70",
+    "title": "MM #617",
     "segments": [
       {
         "format": "4 Rounds for time",
         "description": "Linchpin Test 7\n4 Rounds for time of:\n4 Power Cleans, 93/66kg\n4 Front Squats, 93/66kg\n4 Shoulder-to-Overhead, 93/66kg",
-        "movements": []
-      },
-      {
-        "format": "5 Rounds for time",
-        "description": "5 Rounds for time of:\n200m Run\n2 Legless Rope Climbs, 15 ft.",
-        "movements": []
-      },
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time of:\n30 GHD Sit-ups\n60m KB Farmer's Carry, 32/24kg",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "4 Rounds for time",
-        "description": "4 Rounds for time of:\n10 Dumbbell Power Cleans, 22.5/16kg\n10 Dumbbell Squats, 22.5/16kg\n10 Dumbbell S2OH, 22.5/16kg",
         "movements": []
       },
       {
@@ -187,33 +121,11 @@
   {
     "id": "2026-03-16-linchpin-test-1",
     "date": "2026-03-16",
-    "title": "Linchpin Test 1",
+    "title": "MM #616 — Linchpin Test 1",
     "segments": [
       {
         "format": "For time",
         "description": "Linchpin Test 1\nFor time:\n400m run\nFran 34/25kg\n400m run\nFran 34/25kg\n400m run",
-        "movements": []
-      },
-      {
-        "format": "Descending reps for time",
-        "description": "9-15-21 reps for time of:\nKettlebell Swing, 32/24kg\nBurpee",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n100 Unbroken Double-unders\n1000m Row",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "For time",
-        "description": "For time:\n400m run\nDumbbell Fran, 16/11.5kg\n400m run\nDumbbell Fran , 16/11.5kg\n400m run",
         "movements": []
       },
       {
@@ -244,7 +156,7 @@
   {
     "id": "2026-03-09-nasty-girls",
     "date": "2026-03-09",
-    "title": "Nasty Girls",
+    "title": "MM #615 — Nasty Girls",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -254,28 +166,6 @@
       {
         "format": "3 Rounds for time",
         "description": "3 Rounds for time of:\n400m Run\n15 Push Jerks, 70.5/47.5kg",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n500m Row\n25 Box Jumps, 24\"/20\"\n25 Toes-to-bar\n25 Box Jumps, 24\"/20\"\n500m Row",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "3 Rounds for time",
-        "description": "3 rounds for time of:\n50 Air Squats\n7 Ring Muscle-ups\n13 Dumbbell Hang Power Cleans, 22.5/16kg",
-        "movements": []
-      },
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time of:\n400m Run\n21 Dumbbell Push Jerks, 22.5/16kg",
         "movements": []
       },
       {
@@ -308,23 +198,11 @@
   {
     "id": "2026-03-02-emom-60-minutes-of-",
     "date": "2026-03-02",
-    "title": "EMOM 60 minutes of:",
+    "title": "MM #614",
     "segments": [
       {
         "format": "Rest period",
         "description": "EMOM 60 minutes of:\nMin 1: 1 Full Clean & Jerk, 102/70.5kg\nMin 2: Calories, Air Bike\nMin 3: Rest",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "*Score is total calories",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "Rest period",
-        "description": "EMOM 60 minutes of:\nMin 1: 5 Dumbbell Clusters, 22.5/16kg\nMin 2: Calories, Air Bike\nMin 3: Rest",
         "movements": []
       },
       {
@@ -344,7 +222,7 @@
   {
     "id": "2026-02-23-death-by-",
     "date": "2026-02-23",
-    "title": "Death by:",
+    "title": "MM #613",
     "segments": [
       {
         "format": "Workout",
@@ -377,33 +255,11 @@
   {
     "id": "2026-02-16-s-carry-70",
     "date": "2026-02-16",
-    "title": "s Carry, 70",
+    "title": "MM #612",
     "segments": [
       {
         "format": "2 Rounds for time",
         "description": "2 Rounds for time of:\n30 Wallball Shots, 20/14\n15 Deadlifts, 102/70.5kg\n12 Pull-ups",
-        "movements": []
-      },
-      {
-        "format": "AMRAP 10 min",
-        "description": "Amrap 10 minutes of:\n100m Run\n5m Handstand Walk",
-        "movements": []
-      },
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time of:\n125 Double-unders\n75m Farmer's Carry, 32/24kg",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "2 Rounds for time",
-        "description": "2 Rounds for time of:\n12 Dumbbell Thrusters, 22.5/16kg\n30 Dumbbell Deadlifts, 22.5/16kg\n12 Pull-ups",
         "movements": []
       },
       {
@@ -437,33 +293,11 @@
   {
     "id": "2026-02-09-monster-mash",
     "date": "2026-02-09",
-    "title": "Monster Mash",
+    "title": "MM #611",
     "segments": [
       {
         "format": "3 Rounds for time",
         "description": "2010 NW Regional Event 1\n3 Rounds for time, or not:\n10 Overhead Squats, 61/43kg\n50 Double-unders",
-        "movements": []
-      },
-      {
-        "format": "5 Rounds for time",
-        "description": "5 Rounds for time of:\n400m Run\n21 Russian Kettlebell Swings, 32/24kg\n12 Knees-to-elbows",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n1000m Row\n50 Push-ups\n500m Row\n25 Push-ups\n250m Row",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "3 Rounds for time",
-        "description": "3 rounds for time of:\n10 L-arm DB OHS, 22.5/16kg lbs\n10 R-arm DB OHS, 22.5/16kg lbs\n50 Double-Unders",
         "movements": []
       },
       {
@@ -496,33 +330,11 @@
   {
     "id": "2026-02-02--20",
     "date": "2026-02-02",
-    "title": "/20",
+    "title": "MM #610",
     "segments": [
       {
         "format": "Descending reps for time",
         "description": "15-12-9 reps for time of:\nDeadlift, 124.5/84kg\nBox Jump, 24\"/20\"",
-        "movements": []
-      },
-      {
-        "format": "5 Rounds for time",
-        "description": "5 Rounds for time of:\n20 Sec. L-sit\n10 Strict Deficit HSPU, 4\"/2\"",
-        "movements": []
-      },
-      {
-        "format": "Descending reps for time",
-        "description": "50-40-30-20-10 reps for time:\nWallball Shots, 20/14\nCalories, Air Bike",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "For time",
-        "description": "For time:\n40 Dumbbell Deadlifts, 22.5/16kg\n15 Box Jump, 24\"/20\"\n30 Dumbbell Deadlifts, 22.5/16kg\n12 Box Jump, 24\"/20\"\n20 Dumbbell Deadlifts, 22.5/16kg\n9 Box Jump, 24\"/20\"",
         "movements": []
       },
       {
@@ -554,33 +366,11 @@
   {
     "id": "2026-01-26-monster-mash",
     "date": "2026-01-26",
-    "title": "Monster Mash",
+    "title": "MM #609",
     "segments": [
       {
         "format": "For time",
         "description": "For time:\n9 Squat Snatch, 61/43kg\n15 Thrusters, 61/43kg\n21 Clean & Jerks, 61/43kg",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n800m Run\n15 Ring Muscle-ups\n800m Run\n15 Bar Muscle-ups\n800m Run\n15 Pullups, strict\n800m Run",
-        "movements": []
-      },
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time of:\n20 Toes-to-bar\n20 Burpees",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "For time",
-        "description": "For time:\n12 DB Squat Snatch R, 22.5/16kg\n12 DB Squat Snatch L, 22.5/16kg\n20 Dumbbell Thrusters, 22.5/16kg\n25 Dumbbell Clean & Jerks, 22.5/16kg",
         "movements": []
       },
       {
@@ -618,7 +408,7 @@
   {
     "id": "2026-01-19-s-carry-50",
     "date": "2026-01-19",
-    "title": "s Carry, 50",
+    "title": "MM #608",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -633,28 +423,6 @@
       {
         "format": "For time",
         "description": "For time:\n400m Run\n30 Deadlifts, 84/61kg\n9/7kg Calories, Air Bike",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time of:\n100 Double-unders\n100m Farmer's Carry, 22.5/16kg\n10m Handstand Walk",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n40m DB Front Rack Lunge, 22.5/16kg\nImmediately into...\n21-15-9 reps of:\nDumbbell Push Press, 22.5/16kg\nPull-ups",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n400m Run\n50 Dumbbell Deadlifts, 22.5/16kg\n9/7kg Calories, Air Bike",
         "movements": []
       },
       {
@@ -680,33 +448,11 @@
   {
     "id": "2026-01-12-j-t",
     "date": "2026-01-12",
-    "title": "J.T",
+    "title": "MM #607 — J.T",
     "segments": [
       {
         "format": "4 Rounds for time",
         "description": "Linchpin Test 7\n4 Rounds for time of:\n4 Power Cleans, 93/66kg\n4 Front Squats, 93/66kg\n4 Shoulder to OH, 93/66kg",
-        "movements": []
-      },
-      {
-        "format": "5 Rounds for time",
-        "description": "5 Rounds for time of:\n25m Walking Lunge\n5 Bar Muscle-ups",
-        "movements": []
-      },
-      {
-        "format": "Descending reps for time",
-        "description": "Strict \"J.T\"\n21-15-9 reps for time of:\nStrict Handstand Push-ups\nStrict Ring Dips\nPush-ups",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "4 Rounds for time",
-        "description": "4 Rounds for time of:\n10 DB Power Cleans, 22.5/16kg\n10 DB Squats, 22.5/16kg\n10 DB Shoulder to OH, 22.5/16kg",
         "movements": []
       },
       {
@@ -743,7 +489,7 @@
   {
     "id": "2026-01-05--20",
     "date": "2026-01-05",
-    "title": "/20",
+    "title": "MM #606",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -758,28 +504,6 @@
       {
         "format": "Descending reps for time",
         "description": "21-15-9 reps for time of:\nHang Power Snatch, 34/25kg\nCalories, Bike",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "5 Rounds for time",
-        "description": "5 Rounds for time of:\n9 Dumbbell Clusters, 22.5/16kg\n7 L-sit Pull-up",
-        "movements": []
-      },
-      {
-        "format": "5 Rounds for time",
-        "description": "5 Rounds for time of:\n50 Doube-unders\n10 Burpee Box Jump Overs, 24\"/20\"",
-        "movements": []
-      },
-      {
-        "format": "Descending reps for time",
-        "description": "20-15-10 reps for time of:\nDB Hang Power Snatch, 22.5/16kg\nCalories, Bike",
         "movements": []
       },
       {
@@ -804,7 +528,7 @@
   {
     "id": "2025-12-29-chelsea",
     "date": "2025-12-29",
-    "title": "Chelsea",
+    "title": "MM #605 — Chelsea",
     "segments": [
       {
         "format": "For time",
@@ -819,28 +543,6 @@
       {
         "format": "For time",
         "description": "For time:\n20 Power Cleans, 70.5/47.5kg\n400m Run",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts.",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "For time",
-        "description": "For time:\n50 ft R-arm DB OH Lunge, 22.5/16kg\n22.5/16kg Calories Air Bike\n50 ft L-arm DB OH Lunge, 22.5/16kg",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "\"Chelsea\"\nEMOM 30 min of:\n5 Pull-ups\n10 Push-ups\n15 Air Squats",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n30 Dumbbell Power Cleans, 22.5/16kg\n400m Run",
         "movements": []
       },
       {
@@ -864,7 +566,7 @@
   {
     "id": "2025-12-22-monster-mash",
     "date": "2025-12-22",
-    "title": "Monster Mash",
+    "title": "MM #604",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -887,28 +589,6 @@
         "movements": []
       }
     ],
-    "dumbbell": [
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time of:\n13 Dumbbell Clean & Jerks, 22.5/16kg\n5m Handstand Walk",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n42 Dumbbell Deadlifts, 22.5/16kg\n5m Handstand Walk\n30 Dumbbell Deadlifts, 22.5/16kg\n5m Handstand Walk\n18 Dumbbell Deadlifts, 22.5/16kg\n5m Handstand Walk",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n40 Dumbbell Hang Squat Cleans, 22.5/16kg\n15m Handstand Walk",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts.",
-        "movements": []
-      }
-    ],
     "movements": [
       "Hang Squat Clean",
       "Squat Clean",
@@ -923,7 +603,7 @@
   {
     "id": "2025-12-15-s-35",
     "date": "2025-12-15",
-    "title": "s/35",
+    "title": "MM #603",
     "segments": [
       {
         "format": "2 Rounds for time",
@@ -933,28 +613,6 @@
       {
         "format": "2 Rounds for time",
         "description": "2 Rounds for time:\n30 Wall Ball Shots, 20/14\n15 Burpees\n15 Pull-ups",
-        "movements": []
-      },
-      {
-        "format": "2 Rounds for time",
-        "description": "2 Rounds for time of:\n30 Kettlebell Swings, 24/16kg\n15 Toes-to-bar\n15/10 Calories, Air Bike",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts.",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "2 Rounds for time",
-        "description": "2 Rounds for time:\n30 Med Ball Cleans, 20/14\n15 Dumbbell Push Press, 22.5/16kg\n15 Pull-ups",
-        "movements": []
-      },
-      {
-        "format": "2 Rounds for time",
-        "description": "2 Rounds for time of:\n10 1-arm Dumbbell Thrusters, R-arm, 22.5/16kg\n10 1-arm Dumbbell Thrusters, L-arm, 22.5/16kg\n15 Burpees\n15 Pull-ups",
         "movements": []
       },
       {
@@ -984,33 +642,11 @@
   {
     "id": "2025-12-08-power-clean-155-105",
     "date": "2025-12-08",
-    "title": "Power Clean, 155/105",
+    "title": "MM #602",
     "segments": [
       {
         "format": "Descending reps for time",
         "description": "12-9-6 reps for time of:\nPower Clean, 70.5/47.5kg\nOverhead Squat, 70.5/47.5kg",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "10 down to 1 reps, for time of:\nL-sit Pull-ups\nStrict Ring Dips",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n1200m Air Bike\n500m Row\n400m Run",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts.",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time of:\n18 Dumbbell Power Clean, 22.5/16kg\n15 Dumbbell Overhead Squats, 22.5/16kg (R)\n15 Dumbbell Overhead Squats, 22.5/16kg (L)",
         "movements": []
       },
       {
@@ -1046,33 +682,11 @@
   {
     "id": "2025-12-01-s-carry-50",
     "date": "2025-12-01",
-    "title": "s Carry, 50",
+    "title": "MM #601",
     "segments": [
       {
         "format": "3 Rounds for time",
         "description": "3 Rounds for time of:\n21 Wallball Shots, 20/14\n15 Pull-ups\n9 Deadlifts, 102/70.5kg",
-        "movements": []
-      },
-      {
-        "format": "5 Rounds for time",
-        "description": "5 Rounds for time of:\n75 Double-unders\n15 V-ups\n5m Handstand Walk",
-        "movements": []
-      },
-      {
-        "format": "10 Rounds for time",
-        "description": "10 Rounds for time of:\n100m Run\n50m Farmer's Carry, 22.5/16kg\n7 Dumbbell Floor Press, 22.5/16kg",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts.",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time of:\n21 Wallball Shots, 20/14\n15 Pull-ups\n21 Dumbbell Deadlifts, 22.5/16kg",
         "movements": []
       },
       {
@@ -1106,18 +720,11 @@
   {
     "id": "2025-11-24-monster-mash",
     "date": "2025-11-24",
-    "title": "Monster Mash",
+    "title": "MM #600",
     "segments": [
       {
         "format": "For time",
         "description": "For time:\n600m Run\n60 Burpees\n400m Run\n40 Pull-ups\n200m Run\n20 Clean & Jerks, 84/61kg\n200m Run\n40 Pull-ups\n400m Run\n60 Burpees\n600m Run",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "For time",
-        "description": "For time:\n600m Run\n60 Burpees\n400m Run\n40 Pull-ups\n200m Run\n40 Dumbbell Clean & Jerks, 22.5/16kg\n200m Run\n40 Pull-ups\n400m Run\n60 Burpees\n600m Run",
         "movements": []
       }
     ],
@@ -1134,7 +741,7 @@
   {
     "id": "2025-11-17-isabel",
     "date": "2025-11-17",
-    "title": "Isabel",
+    "title": "MM #599 — Isabel",
     "segments": [
       {
         "format": "For time",
@@ -1157,28 +764,6 @@
         "movements": []
       }
     ],
-    "dumbbell": [
-      {
-        "format": "For time",
-        "description": "For time:\n80 Dumbbell Power Snatch, 22.5/16kg",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n1000m Row\n50 1-arm Dumbbell Thrusters, 22.5/16kg\n30 Pull-ups",
-        "movements": []
-      },
-      {
-        "format": "5 Rounds for time",
-        "description": "5 Rounds for time of:\n400m Run\n20 1-arm Overhead Squats, 22.5/16kg",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts.",
-        "movements": []
-      }
-    ],
     "movements": [
       "Power Snatch",
       "Overhead Squat",
@@ -1193,7 +778,7 @@
   {
     "id": "2025-11-10-monster-mash",
     "date": "2025-11-10",
-    "title": "Monster Mash",
+    "title": "MM #598",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -1216,28 +801,6 @@
         "movements": []
       }
     ],
-    "dumbbell": [
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time of:\n5 Dumbbell Clean & Jerk, 22.5/16kg\n50 Double-unders",
-        "movements": []
-      },
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time of:\n8 Clean & Jerks, 93/66kg\n50 Running Step Singles",
-        "movements": []
-      },
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time of:\n11 Clean & Jerks, 84/61kg\n50 Single unders",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts.",
-        "movements": []
-      }
-    ],
     "movements": [
       "Clean & Jerk",
       "Double-Under",
@@ -1250,7 +813,7 @@
   {
     "id": "2025-11-03-jerry",
     "date": "2025-11-03",
-    "title": "Jerry",
+    "title": "MM #597 — Jerry",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -1265,28 +828,6 @@
       {
         "format": "5 Rounds for time",
         "description": "5 Rounds for time of:\n20 Wallball Shots, 20/14\n7 Push Jerks, 61/43kg",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts.",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time of:\n15 Dumbbell Deadlifts, 22.5/16kg\n15 Burpees\n5 Ring Muscle-ups",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "Half \"Jerry\"\nFor time:\n800m Run\n1k Row\n800m Run",
-        "movements": []
-      },
-      {
-        "format": "5 Rounds for time",
-        "description": "5 Rounds for time of:\n20 Wallball Shots, 20/14\n10 Dumbbell Push Jerks, 22.5/16kg",
         "movements": []
       },
       {
@@ -1311,18 +852,11 @@
   {
     "id": "2025-10-27-monster-mash",
     "date": "2025-10-27",
-    "title": "Monster Mash",
+    "title": "MM #596",
     "segments": [
       {
         "format": "For time",
         "description": "For time:\n600m Run\n21 Thrusters, 43/29.5kg\n21 Pull-ups\n18 Power Snatch, 43/29.5kg\n18 Pull-ups\n15 Thrusters, 43/29.5kg\n15 Pull-ups\n12 Power Snatch, 43/29.5kg\n12 Pull-ups\n9 Thrusters, 43/29.5kg\n9 Pull-ups\n6 Power Snatch, 43/29.5kg\n6 Pull-ups\n3 Thrusters, 43/29.5kg\n3 Pull-ups\n600m Run",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "For time",
-        "description": "For time:\n600m Run\n21 Dumbbell Thrusters, 22.5/16kg\n21 Pull-ups\n42 Dumbbell Power Snatch, 22.5/16kg\n18 Pull-ups\n15 Dumbbell Thrusters, 22.5/16kg\n15 Pull-ups\n24 Dumbbell Power Snatch, 22.5/16kg\n12 Pull-ups\n9 Dumbbell Thrusters, 22.5/16kg\n9 Pull-ups\n12 Dumbbell Power Snatch, 22.5/16kg\n6 Pull-ups\n3 Dumbbell Thrusters, 22.5/16kg\n3 Pull-ups\n600m Run",
         "movements": []
       }
     ],
@@ -1338,33 +872,11 @@
   {
     "id": "2025-10-20-monster-mash",
     "date": "2025-10-20",
-    "title": "Monster Mash",
+    "title": "MM #595",
     "segments": [
       {
         "format": "5 Rounds for time",
         "description": "5 Rounds for time of:\n5 Clean & Jerks, 70.5/47.5kg\n5m Handstand Walk",
-        "movements": []
-      },
-      {
-        "format": "AMRAP 40 min",
-        "description": "Amrap 40 minutes of:\n800m Run\n1 L-sit Rope Climb, 15 ft.",
-        "movements": []
-      },
-      {
-        "format": "AMRAP 2 min",
-        "description": "Amrap 2 minutes of:\nBurpees",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts.",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "5 Rounds for time",
-        "description": "5 Rounds for time of:\n10 Dumbbell Clean & Jerks, 22.5/16kg\n5m Handstand Walk",
         "movements": []
       },
       {
@@ -1398,7 +910,7 @@
   {
     "id": "2025-10-13-s-35",
     "date": "2025-10-13",
-    "title": "s/35",
+    "title": "MM #594",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -1435,7 +947,7 @@
   {
     "id": "2025-10-06-monster-mash",
     "date": "2025-10-06",
-    "title": "Monster Mash",
+    "title": "MM #593",
     "segments": [
       {
         "format": "For time",
@@ -1458,28 +970,6 @@
         "movements": []
       }
     ],
-    "dumbbell": [
-      {
-        "format": "For time",
-        "description": "For time:\n20 Dumbbell Squat Snatch, 22.5/16kg\n1 Mile Run",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n30 Dumbbell Squat Snatch, 22.5/16kg\n800m Run",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n50 Dumbbell Squat Snatch, 22.5/16kg\n400m Run",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts.",
-        "movements": []
-      }
-    ],
     "movements": [
       "Squat Snatch",
       "Run",
@@ -1490,7 +980,7 @@
   {
     "id": "2025-09-29-diane",
     "date": "2025-09-29",
-    "title": "Diane",
+    "title": "MM #592 — Diane",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -1505,28 +995,6 @@
       {
         "format": "For time",
         "description": "For time:\n15 Ring Muscle-ups\n25 Back Squats, 84/61kg\n15 Ring Muscle-ups",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts.",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "Descending reps for time",
-        "description": "21-15-9 reps for time of:\nDumbbell Hang Power Cleans, 22.5/16kg\nCalories, Air Bike",
-        "movements": []
-      },
-      {
-        "format": "5 Rounds for time",
-        "description": "5 Rounds for time of:\n20 Dumbbell Deadlift, 22.5/16kg\n9 Strict Handstand Push-ups",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n15 Ring Muscle-ups\n45 Dumbbell Squats, 22.5/16kg\n15 Ring Muscle-ups",
         "movements": []
       },
       {
@@ -1552,7 +1020,7 @@
   {
     "id": "2025-09-22-helen",
     "date": "2025-09-22",
-    "title": "Helen",
+    "title": "MM #591 — Helen",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -1562,28 +1030,6 @@
       {
         "format": "For time",
         "description": "\"Grace\"\nFor time:\n30 Clean & Jerks, 61/43kg",
-        "movements": []
-      },
-      {
-        "format": "Descending reps for time",
-        "description": "\"Annie\"\n50-40-30-20-10 reps for time of:\nDouble-unders\nSit-ups",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts.",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "3 Rounds for time",
-        "description": "\"Helen\"\n3 Rounds for time of:\n400m run\n21 Kettlebell Swings, 24/16kg\n12 Pull-ups",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n40 Dumbbell Clean & Jerks, 22.5/16kg",
         "movements": []
       },
       {
@@ -1612,7 +1058,7 @@
   {
     "id": "2025-09-15-monster-mash",
     "date": "2025-09-15",
-    "title": "Monster Mash",
+    "title": "MM #590",
     "segments": [
       {
         "format": "AMRAP 20 min",
@@ -1622,23 +1068,6 @@
       {
         "format": "AMRAP 20 min",
         "description": "Amrap 20 minutes of:\n200m Run\n5 Deadlifts, 102/70.5kg\n5m Handstand Walk",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts.",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "AMRAP 20 min",
-        "description": "Amrap 20 minutes of:\n200m Run\n5 Dumbbell Thrusters, 22.5/16kg\n5 Pull-ups",
-        "movements": []
-      },
-      {
-        "format": "AMRAP 20 min",
-        "description": "Amrap 20 minutes of:\n200m Run\n10 Dumbbell Deadlifts, 22.5/16kg\n5m Handstand Walk",
         "movements": []
       },
       {
@@ -1659,7 +1088,7 @@
   {
     "id": "2025-09-08-cindy",
     "date": "2025-09-08",
-    "title": "Cindy",
+    "title": "MM #589 — Cindy",
     "segments": [
       {
         "format": "For time",
@@ -1669,28 +1098,6 @@
       {
         "format": "Descending reps for time",
         "description": "15-12-9 reps for time of:\nPower Clean, 84/61kg\nStrict Deficit HSPU, 4\"/2\"",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n100m Suitcase Carry, R, 32/24kg\n100 Heavy Rope Single-unders\n100m Suitcase Carry, L, 32/24kg\n100 Double-unders\n100m Farmer's Carry, 32/24kg",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts.",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "For time",
-        "description": "For time:\n10 Rounds of \"Cindy\"\n1 Mile Run",
-        "movements": []
-      },
-      {
-        "format": "4 Rounds for time",
-        "description": "4 Rounds for time of:\n16 Dumbbell Power Cleans, 22.5/16kg\n9 Strict Deficit HSPU, 4\"/2\"",
         "movements": []
       },
       {
@@ -1718,7 +1125,7 @@
   {
     "id": "2025-09-01--20",
     "date": "2025-09-01",
-    "title": "/20",
+    "title": "MM #588",
     "segments": [
       {
         "format": "For time",
@@ -1728,28 +1135,6 @@
       {
         "format": "For time",
         "description": "For time:\n15 Back Squats, 102/70.5kg\n15 Strict Chin-ups\n400m Run",
-        "movements": []
-      },
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time of:\n12m Handstand Walk\n15 Box Jumps, 24\"/20\"\n18/12 Calories, Air Bike",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts.",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "For time",
-        "description": "10 down to 1 reps for time of:\nDumbbell Clean & Jerk, 22.5/16kg\nBurpees",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n35 Dumbbell Squats, 22.5/16kg\n15 Strict Chin-ups\n400m Run",
         "movements": []
       },
       {
@@ -1780,7 +1165,7 @@
   {
     "id": "2025-08-25-monster-mash",
     "date": "2025-08-25",
-    "title": "Monster Mash",
+    "title": "MM #587",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -1803,28 +1188,6 @@
         "movements": []
       }
     ],
-    "dumbbell": [
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time of:\n12 Burpees\n12/8 Calories, Air Bike",
-        "movements": []
-      },
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time of:\n400m Run\n15 Dumbbell Thrusters, 22.5/16kg\n15 Pull-ups",
-        "movements": []
-      },
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time of:\n40 Dumbbell Deadlifts, 22.5/16kg\n15 Strict Deficit HSPU, 4\"/2\"",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts.",
-        "movements": []
-      }
-    ],
     "movements": [
       "Deadlift",
       "Handstand Push-Up",
@@ -1839,7 +1202,7 @@
   {
     "id": "2025-08-18--20",
     "date": "2025-08-18",
-    "title": "/20",
+    "title": "MM #586",
     "segments": [
       {
         "format": "2 Rounds for time",
@@ -1881,7 +1244,7 @@
   {
     "id": "2025-08-11-death-by-",
     "date": "2025-08-11",
-    "title": "Death by:",
+    "title": "MM #585",
     "segments": [
       {
         "format": "Workout",
@@ -1915,7 +1278,7 @@
   {
     "id": "2025-08-04-monster-mash",
     "date": "2025-08-04",
-    "title": "Monster Mash",
+    "title": "MM #584",
     "segments": [
       {
         "format": "For time",
@@ -1925,28 +1288,6 @@
       {
         "format": "For time",
         "description": "For time:\n15 Push Jerks, 61/43kg\n300m Run\n12 Push Jerks, 70.5/47.5kg\n300m Run\n9 Push Jerks, 84/61kg\n300m Run",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n15 Ring Muscle-ups\n200m Run\n12 Ring Muscle-ups\n200m Run\n9 Ring Muscle-ups\n200m Run",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "For time",
-        "description": "For time:\n40 Dumbbell Deadlifts, 22.5/16kg\n400m Run\n30 Dumbbell Deadlifts, 22.5/16kg\n400m Run\n20 Dumbbell Deadlifts, 22.5/16kg\n400m Run",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n20 Dumbell Push Jerks, 22.5/16kg\n300m Run\n15 Dumbell Push Jerks, 22.5/16kg\n300m Run\n10 Dumbell Push Jerks, 22.5/16kg\n300m Run",
         "movements": []
       },
       {
@@ -1973,7 +1314,7 @@
   {
     "id": "2025-07-28--20",
     "date": "2025-07-28",
-    "title": "/20",
+    "title": "MM #583",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -1983,28 +1324,6 @@
       {
         "format": "AMRAP 9 min",
         "description": "AMRAP 9 minutes of:\n1 Power Clean, 102/70.5kg\n5 Box Jumps, 24\"/20\"\n15 Push-ups",
-        "movements": []
-      },
-      {
-        "format": "4 Rounds for time",
-        "description": "4 Rounds for time of:\n30 V-ups\n3 Rope Climbs, 15 ft.",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time of:\n400m Run\n18 Dumbbell Thrusters, 22.5/16kg\n9 Bar Muscle-ups",
-        "movements": []
-      },
-      {
-        "format": "AMRAP 9 min",
-        "description": "AMRAP 9 minutes of:\n3 Dumbbell Power Cleans, 22.5/16kg\n5 Box Jumps, 24\"/20\"\n15 Push-ups",
         "movements": []
       },
       {
@@ -2035,7 +1354,7 @@
   {
     "id": "2025-07-21-power-clean-jerk-155-105",
     "date": "2025-07-21",
-    "title": "Power Clean & Jerk, 155/105",
+    "title": "MM #582",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -2050,28 +1369,6 @@
       {
         "format": "Descending reps for time",
         "description": "5-4-3-2-1 reps for time of:\nBack Squat, 75% 1RM\n*100 Heavy Rope Singles after each set",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "Descending reps for time",
-        "description": "20-18-15-12-9 reps for time of:\nDB Power Clean & Jerk, 22.5/16kg\n*200m run after each set",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "1 up to 10 reps for time of:\nL-sit Pull-up\nRing Dip, strict",
-        "movements": []
-      },
-      {
-        "format": "5 Rounds for time",
-        "description": "5 Rounds for time of:\n15 Dumbbell Squats, 22.5/16kg\n100 Heavy Rope Singles",
         "movements": []
       },
       {
@@ -2097,7 +1394,7 @@
   {
     "id": "2025-07-14-s-carry-70",
     "date": "2025-07-14",
-    "title": "s Carry, 70",
+    "title": "MM #581",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -2107,28 +1404,6 @@
       {
         "format": "5 Rounds for time",
         "description": "5 Rounds for time of:\n50m KB Farmer's Carry, 32/24kg\n5 Ring Muscle-ups",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n50 Wall Ball Shots, 20/14\n22.5/16kg Calorie Row",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "5 Rounds for time",
-        "description": "5 Rounds for time of:\n10m Handstand Walk\n10 Dumbbell Squat Cleans, 22.5/16kg",
-        "movements": []
-      },
-      {
-        "format": "5 Rounds for time",
-        "description": "5 Rounds for time of:\n70m DB Farmer's Carry, 22.5/16kg\n5 Ring Muscle-ups",
         "movements": []
       },
       {
@@ -2157,7 +1432,7 @@
   {
     "id": "2025-07-07--20",
     "date": "2025-07-07",
-    "title": "/20",
+    "title": "MM #580",
     "segments": [
       {
         "format": "AMRAP 5 min",
@@ -2172,28 +1447,6 @@
       {
         "format": "For time",
         "description": "For time:\n20 Clean & Jerks, 93/66kg\n30 Bar Muscle-ups\n18/13.5kg Calories, Air Bike",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "AMRAP 5 min",
-        "description": "AMRAP 5 min of:\nBurpee Box Jump Overs, 24\"/20\"",
-        "movements": []
-      },
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time of:\n500m Row\n150 Running Step Singles\n15  Dumbbell Thrusters, 22.5/16kg",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n50 Dumbbell Clean & Jerks, 22.5/16kg\n30 Bar Muscle-ups\n18/13.5kg Calories, Air Bike",
         "movements": []
       },
       {
@@ -2220,33 +1473,11 @@
   {
     "id": "2025-06-30-s-carry-50",
     "date": "2025-06-30",
-    "title": "s Carry, 50",
+    "title": "MM #579",
     "segments": [
       {
         "format": "For time",
         "description": "For time\n75 Pull-ups\n75 Push-ups \n75 Front Squats, 34/25kg\n75 Hang Power Cleans, 34/25kg\n75 Push Press, 34/25kg\n75 GHD Sit-ups \n75 Double-Unders",
-        "movements": []
-      },
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time of:\n400m Run\n100m Dumbbell Farmer's Carry, 22.5/16kg",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "For Max Calories:\n1 minute on the Air Bike",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "For time",
-        "description": "For time\n75 Pull-ups\n75 Push-ups \n55 Dumbbell Squats, 22.5/16kg\n55 Dumbbell Hang Power Cleans, 22.5/16kg\n55 Dumbbell Push Press, 22.5/16kg\n75 GHD Sit-ups \n75 Double-Unders",
         "movements": []
       },
       {
@@ -2285,7 +1516,7 @@
   {
     "id": "2025-06-23-deadlift-225-155",
     "date": "2025-06-23",
-    "title": "Deadlift, 225/155",
+    "title": "MM #578",
     "segments": [
       {
         "format": "Workout",
@@ -2308,28 +1539,6 @@
         "movements": []
       }
     ],
-    "dumbbell": [
-      {
-        "format": "Workout",
-        "description": "3 Rounds:\n21 Knees to elbows \n24 Dumbbell Squats, 22.5/16kg\n15 Strict Handstand Push-ups",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n1.5 Mile Run",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n45 Dumbbell Deadlift, 22.5/16kg\n21 Bar-facing Burpees\n30 Dumbbell Deadlift, 22.5/16kg\n15 Bar-facing Burpees\n20 Dumbbell Deadlift, 22.5/16kg\n9 Bar-facing Burpees",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts",
-        "movements": []
-      }
-    ],
     "movements": [
       "Front Squat",
       "Deadlift",
@@ -2343,7 +1552,7 @@
   {
     "id": "2025-06-16-monster-mash",
     "date": "2025-06-16",
-    "title": "Monster Mash",
+    "title": "MM #577",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -2366,28 +1575,6 @@
         "movements": []
       }
     ],
-    "dumbbell": [
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time:\n800m run\n35 Dumbbell Squats, 22.5/16kg",
-        "movements": []
-      },
-      {
-        "format": "7 Rounds for time",
-        "description": "7 Rounds for time:\n15 GHD sit-ups\n5 Muscle-ups",
-        "movements": []
-      },
-      {
-        "format": "2 Rounds for time",
-        "description": "2 Rounds for time:\n40 Dumbbell Push Press, 22.5/16kg\n13.5/9kg Calories, Air Bike",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts",
-        "movements": []
-      }
-    ],
     "movements": [
       "Back Squat",
       "Push Press",
@@ -2402,33 +1589,11 @@
   {
     "id": "2025-06-09-monster-mash",
     "date": "2025-06-09",
-    "title": "Monster Mash",
+    "title": "MM #576",
     "segments": [
       {
         "format": "5 Rounds for time",
         "description": "5 rounds for time:\n6 Power Snatches, 61/43kg\n2 Rounds of Cindy",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n1 Mile sled drag, 61/43kg",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n25m Handstand Walk\n75 V-ups\n25m Handstand Walk",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "5 Rounds for time",
-        "description": "5 rounds for time:\n16 Dumbbell Power Snatch, 22.5/16kg\n2 Rounds of Cindy",
         "movements": []
       },
       {
@@ -2458,33 +1623,11 @@
   {
     "id": "2025-06-02-monster-mash",
     "date": "2025-06-02",
-    "title": "Monster Mash",
+    "title": "MM #575",
     "segments": [
       {
         "format": "For time",
         "description": "For time:\n10 Clean & Jerks, 111/75kg\n20 Bar Muscle-ups\n13.5/9kg Cals, Air Bike",
-        "movements": []
-      },
-      {
-        "format": "5 Rounds for time",
-        "description": "5 Rounds for time of:\n100m Suitcase Carry, 32/24kg\n20 V-ups\n10m Handstand Walk",
-        "movements": []
-      },
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time of:\n30 Wallball Shots, 20/14\n2 min of Running Step Singles",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "For time",
-        "description": "For time:\n40 Dumbbell Clean & Jerks, 22.5/16kg\n20 Bar Muscle-ups\n13.5/9kg Cals, Air Bike",
         "movements": []
       },
       {
@@ -2521,7 +1664,7 @@
   {
     "id": "2025-05-26-monster-mash",
     "date": "2025-05-26",
-    "title": "Monster Mash",
+    "title": "MM #574",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -2544,28 +1687,6 @@
         "movements": []
       }
     ],
-    "dumbbell": [
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time of:\n12 Dumbbell-facing Burpees\n9 Dumbbell Thrusters, 22.5/16kg\n6 Ring Muscle-ups",
-        "movements": []
-      },
-      {
-        "format": "AMRAP 7 min",
-        "description": "Amrap 7 minutes of:\n10 Dumbbell Swings, 22.5/16kg\n7/5 Calories, Air bike",
-        "movements": []
-      },
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time of:\n50 Air Squats\n25 V-ups\n15 Dumbbell Deadlifts, 22.5/16kg",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts.",
-        "movements": []
-      }
-    ],
     "movements": [
       "Air Squat",
       "Deadlift",
@@ -2582,7 +1703,7 @@
   {
     "id": "2025-05-19--compare-to-01-10-2022",
     "date": "2025-05-19",
-    "title": "*Compare to 01.10.2022",
+    "title": "MM #573",
     "segments": [
       {
         "format": "2 Rounds for time",
@@ -2605,28 +1726,6 @@
         "movements": []
       }
     ],
-    "dumbbell": [
-      {
-        "format": "2 Rounds for time",
-        "description": "2 Rounds for time of:\n25 Deadlifts, 102/70.5kg\n25 Bar-facing Burpees",
-        "movements": []
-      },
-      {
-        "format": "2 Rounds for time",
-        "description": "2 Rounds for time of:\n20 Overhead Squats, 61/43kg\n20 Bar-facing Burpees",
-        "movements": []
-      },
-      {
-        "format": "2 Rounds for time",
-        "description": "2 Rounds for time of:\n15 Push Jerks, 70.5/47.5kg\n15 Bar-facing Burpees",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts.",
-        "movements": []
-      }
-    ],
     "movements": [
       "Overhead Squat",
       "Deadlift",
@@ -2639,7 +1738,7 @@
   {
     "id": "2025-05-12--compare-to-01-18-2021",
     "date": "2025-05-12",
-    "title": "*Compare to 01.18.2021",
+    "title": "MM #572",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -2662,28 +1761,6 @@
         "movements": []
       }
     ],
-    "dumbbell": [
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time of:\n12m Handstand Walk\n10m DB Front Rack Lunge, 22.5/16kg\n16 DB Hang Power Snatch, 22.5/16kg",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n800m Run\n25 Dumbbell Squats, 22.5/16kg\n600m run\n20 Dumbbell Squats, 22.5/16kg\n400m run\n15 Dumbbell Squats, 22.5/16kg",
-        "movements": []
-      },
-      {
-        "format": "4 Rounds for time",
-        "description": "4 Rounds for time of:\n60 Double-unders\n30 Push-ups\n15 Pull-ups",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts.",
-        "movements": []
-      }
-    ],
     "movements": [
       "Power Snatch",
       "Front Squat",
@@ -2701,7 +1778,7 @@
   {
     "id": "2025-05-05-monster-mash",
     "date": "2025-05-05",
-    "title": "Monster Mash",
+    "title": "MM #571",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -2711,28 +1788,6 @@
       {
         "format": "For time",
         "description": "For time:\n30 Thrusters, 34/25kg\n3 Rope Climbs, 15 ft.\n20 Thrusters, 34/25kg\n2 Rope Climbs, 15 ft.\n10 Thrusters, 34/25kg\n1 Rope Climbs, 15 ft.",
-        "movements": []
-      },
-      {
-        "format": "2 Rounds for time",
-        "description": "2 Rounds for time of:\n500m Row\n400m Run",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts.",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time of:\n15 Dumbbell Deadlifts, 22.5/16kg\n10 Burpees\n5 Ring Muscle-ups",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n20 Dumbbell Thrusters, 22.5/16kg\n3 Rope Climbs, 15 ft.\n15 Dumbbell Thrusters, 22.5/16kg\n2 Rope Climbs, 15 ft.\n10 Dumbbell Thrusters, 22.5/16kg\n1 Rope Climbs, 15 ft.",
         "movements": []
       },
       {
@@ -2761,7 +1816,7 @@
   {
     "id": "2025-04-28-monster-mash",
     "date": "2025-04-28",
-    "title": "Monster Mash",
+    "title": "MM #570",
     "segments": [
       {
         "format": "AMRAP 20 min",
@@ -2771,28 +1826,6 @@
       {
         "format": "3 Rounds for time",
         "description": "3 Rounds for time of:\n400m Run\n50m KB Suitcase Carry, L 32/24kg\n10m Handstand Walk\n50m KB Suitcase Carry, R 32/24kg\n10m Handstand Walk",
-        "movements": []
-      },
-      {
-        "format": "4 Rounds for time",
-        "description": "4 Rounds for time of:\n1 min Running Step Singles\n25 V-ups",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts.",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "AMRAP 20 min",
-        "description": "Amrap 20 min of:\n2 DB Clean & Jerk, 22.5/16kg\n5 Pull-ups\n10 Push-ups\n15 Air Squats",
-        "movements": []
-      },
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time of:\n400m Run\n50m DB Suitcase Carry, L 22.5/16kg\n10m Handstand Walk\n50m DB Suitcase Carry, R 22.5/16kg\n10m Handstand Walk",
         "movements": []
       },
       {
@@ -2823,7 +1856,7 @@
   {
     "id": "2025-04-21--20",
     "date": "2025-04-21",
-    "title": "/20",
+    "title": "MM #569",
     "segments": [
       {
         "format": "For time",
@@ -2870,43 +1903,11 @@
   {
     "id": "2025-04-14-isabel",
     "date": "2025-04-14",
-    "title": "Isabel",
+    "title": "MM #568 — Isabel",
     "segments": [
       {
         "format": "For time",
         "description": "For time:\n\"DT\"\n1 Mile Run\n\"Isabel\"\n1 Mile Run\n\"Grace\"",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "For time",
-        "description": "For time:\n5 Rounds of:\n15 DB Deadlifts, 22.5/16kg\n12 DB Hang Power Cleans, 22.5/16kg\n9 DB Push Jerks, 22.5/16kg",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "then...\n1 Mile Run",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "then...\n70 DB Power Snatches, 22.5/16kg",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "then...\n1 Mile Run",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "then...\n40 DB Clean & Jerks, 22.5/16kg",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*No rest between each part",
         "movements": []
       }
     ],
@@ -2927,7 +1928,7 @@
   {
     "id": "2025-04-07-monster-mash",
     "date": "2025-04-07",
-    "title": "Monster Mash",
+    "title": "MM #567",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -2937,28 +1938,6 @@
       {
         "format": "For time",
         "description": "For time:\n30 Deadlifts, 124.5/84kg\n20 Front Squats, 84/61kg\n10 Squat Snatch, 61/43kg",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n60 V-ups\n30m Handstand Walk",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts.",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time, or not:\n800m Run\n8 Bar Muscle-ups\n60 Air Squats",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n75 Dumbbell Deadlifts, 22.5/16kg\n50m Front Rack Lunge, 22.5/16kg\n25 Dumbbell Thrusters, 22.5/16kg",
         "movements": []
       },
       {
@@ -2992,7 +1971,7 @@
   {
     "id": "2025-03-31-amanda",
     "date": "2025-03-31",
-    "title": "Amanda",
+    "title": "MM #565 — Amanda",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -3016,7 +1995,7 @@
   {
     "id": "2025-03-31-s-35",
     "date": "2025-03-31",
-    "title": "s/35",
+    "title": "MM #566",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -3039,28 +2018,6 @@
         "movements": []
       }
     ],
-    "dumbbell": [
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time of:\n100 Heavy Rope single-unders\n15 Dumbbell Push Press, 22.5/16kg\n30 Dumbbell Deadlifts, 22.5/16kg",
-        "movements": []
-      },
-      {
-        "format": "5 Rounds for time",
-        "description": "5 Rounds for time of:\n30 Wallball Shots, 20/14\n1 L-sit Rope Climb, 15 ft.",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n25 Dumbbell-facing Burpees\n11.5/8kg Calories, Air Bike",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts.",
-        "movements": []
-      }
-    ],
     "movements": [
       "Deadlift",
       "Push Press",
@@ -3075,33 +2032,11 @@
   {
     "id": "2025-03-24--20",
     "date": "2025-03-24",
-    "title": "/20",
+    "title": "MM #564",
     "segments": [
       {
         "format": "3 Rounds for time",
         "description": "3 Round for time of:\n12 Hang Power Cleans, 52/34kg\n9 Thrusters, 52/34kg\n6 Ring Muscle-ups",
-        "movements": []
-      },
-      {
-        "format": "9 Rounds for time",
-        "description": "9 Rounds for time, or not:\n12 Dumbbell Power Snatch, 22.5/16kg\n100m Run\n8 Box Jumps, 24\"/20\"\n6 Toes-to-bar",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n100m Dumbbell Farmer's Carry, 22.5/16kg\n1000m Air Bike\n100m Dumbbell Farmer's Carry, 22.5/16kg",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts.",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Round for time of:\n12 Dumbbell Hang Power Cleans, 22.5/16kg\n9 Dumbbell Thrusters, 22.5/16kg\n6 Ring Muscle-ups",
         "movements": []
       },
       {
@@ -3140,7 +2075,7 @@
   {
     "id": "2025-03-20-get-out-of-the-gym-",
     "date": "2025-03-20",
-    "title": "Get out of the gym.",
+    "title": "MM #563",
     "segments": [
       {
         "format": "Rest period",
@@ -3154,7 +2089,7 @@
   {
     "id": "2025-03-17-s-35",
     "date": "2025-03-17",
-    "title": "s/35",
+    "title": "MM #562",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -3164,28 +2099,6 @@
       {
         "format": "For time",
         "description": "For time:\n400m Run\n15 Back Squats, 102/70.5kg\n400m Run\n12 Back Squats, 102/70.5kg\n400m Run\n9 Back Squats, 102/70.5kg",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n55 Strict Chest-to-bar Chin-ups",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts.",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "Descending reps for time",
-        "description": "10-8-6-4-2 reps for time of:\nDumbbell Clean & Jerks, 22.5/16kg\nBurpees",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n400m Run\n30 Dumbbell Squats, 22.5/16kg\n400m Run\n25 Dumbbell Squats, 22.5/16kg\n400m Run\n20 Dumbbell Squats, 22.5/16kg",
         "movements": []
       },
       {
@@ -3213,7 +2126,7 @@
   {
     "id": "2025-03-10-the-chief",
     "date": "2025-03-10",
-    "title": "The Chief",
+    "title": "MM #561",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -3237,7 +2150,7 @@
   {
     "id": "2025-03-03--20",
     "date": "2025-03-03",
-    "title": "/20",
+    "title": "MM #560",
     "segments": [
       {
         "format": "AMRAP 10 min",
@@ -3267,7 +2180,7 @@
   {
     "id": "2025-02-24-s-carry-50",
     "date": "2025-02-24",
-    "title": "s Carry, 50",
+    "title": "MM #559",
     "segments": [
       {
         "format": "AMRAP 16 min",
@@ -3291,7 +2204,7 @@
   {
     "id": "2025-02-17-s-35",
     "date": "2025-02-17",
-    "title": "s/35",
+    "title": "MM #558",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -3310,7 +2223,7 @@
   {
     "id": "2025-02-10-monster-mash",
     "date": "2025-02-10",
-    "title": "Monster Mash",
+    "title": "MM #557",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -3336,7 +2249,7 @@
   {
     "id": "2025-02-03-monster-mash",
     "date": "2025-02-03",
-    "title": "Monster Mash",
+    "title": "MM #556",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -3358,7 +2271,7 @@
   {
     "id": "2025-01-27-cindy",
     "date": "2025-01-27",
-    "title": "Cindy",
+    "title": "MM #555 — Cindy",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -3382,7 +2295,7 @@
   {
     "id": "2025-01-20-s-35",
     "date": "2025-01-20",
-    "title": "s/35",
+    "title": "MM #554",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -3392,23 +2305,6 @@
       {
         "format": "Descending reps for time",
         "description": "5-4-3-2-1 reps for time:\nDeadlift, 165.5/115.5kg\n*10m Handstand Walk after each set",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n30 Dumbbell Burpees, 22.5/16kg\n13.5/9kg Calories, Air Bike",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts.",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time of:\n15 Dumbbell Thrusters, 22.5/16kg\n10 Ring Muscle-ups22-20-18-16-14 reps for time:\nDumbbell Hang Power Cleans, 22.5/16kg\n*10m Handstand Walk after each set",
         "movements": []
       },
       {
@@ -3439,7 +2335,7 @@
   {
     "id": "2025-01-13-s-35",
     "date": "2025-01-13",
-    "title": "s/35",
+    "title": "MM #553",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -3462,7 +2358,7 @@
   {
     "id": "2025-01-06-murph",
     "date": "2025-01-06",
-    "title": "Murph",
+    "title": "MM #552 — Murph",
     "segments": [
       {
         "format": "AMRAP 15 min",
@@ -3489,7 +2385,7 @@
   {
     "id": "2024-12-30-monster-mash",
     "date": "2024-12-30",
-    "title": "Monster Mash",
+    "title": "MM #551",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -3506,7 +2402,7 @@
   {
     "id": "2024-12-23--compare-to-01-25-2021",
     "date": "2024-12-23",
-    "title": "*Compare to 01.25.2021",
+    "title": "MM #550",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -3549,7 +2445,7 @@
   {
     "id": "2024-12-16-power-clean-135-95",
     "date": "2024-12-16",
-    "title": "Power Clean, 135/95",
+    "title": "MM #549",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -3572,7 +2468,7 @@
   {
     "id": "2024-12-09-monster-mash",
     "date": "2024-12-09",
-    "title": "Monster Mash",
+    "title": "MM #548",
     "segments": [
       {
         "format": "2 Rounds for time",
@@ -3595,7 +2491,7 @@
   {
     "id": "2024-12-02-s-carry-50",
     "date": "2024-12-02",
-    "title": "s Carry, 50",
+    "title": "MM #547",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -3621,7 +2517,7 @@
   {
     "id": "2024-11-25-monster-mash",
     "date": "2024-11-25",
-    "title": "Monster Mash",
+    "title": "MM #546",
     "segments": [
       {
         "format": "For time",
@@ -3644,7 +2540,7 @@
   {
     "id": "2024-11-18-s-25",
     "date": "2024-11-18",
-    "title": "s/25",
+    "title": "MM #545",
     "segments": [
       {
         "format": "AMRAP 7 min",
@@ -3670,7 +2566,7 @@
   {
     "id": "2024-11-11-monster-mash",
     "date": "2024-11-11",
-    "title": "Monster Mash",
+    "title": "MM #544",
     "segments": [
       {
         "format": "For time",
@@ -3691,7 +2587,7 @@
   {
     "id": "2024-11-04--you-choose-load-",
     "date": "2024-11-04",
-    "title": "*You choose load.",
+    "title": "MM #543",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -3712,7 +2608,7 @@
   {
     "id": "2024-10-28-jackie",
     "date": "2024-10-28",
-    "title": "Jackie",
+    "title": "MM #542 — Jackie",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -3738,7 +2634,7 @@
   {
     "id": "2024-10-21-isabel",
     "date": "2024-10-21",
-    "title": "Isabel",
+    "title": "MM #541 — Isabel",
     "segments": [
       {
         "format": "For time",
@@ -3759,7 +2655,7 @@
   {
     "id": "2024-10-14--20",
     "date": "2024-10-14",
-    "title": "/20",
+    "title": "MM #540",
     "segments": [
       {
         "format": "4 Rounds for time",
@@ -3784,7 +2680,7 @@
   {
     "id": "2024-10-07-j-t",
     "date": "2024-10-07",
-    "title": "J.T",
+    "title": "MM #539 — J.T",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -3809,7 +2705,7 @@
   {
     "id": "2024-09-30-monster-mash",
     "date": "2024-09-30",
-    "title": "Monster Mash",
+    "title": "MM #538",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -3833,7 +2729,7 @@
   {
     "id": "2024-09-23-cindy",
     "date": "2024-09-23",
-    "title": "Cindy",
+    "title": "MM #537 — Cindy",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -3853,7 +2749,7 @@
   {
     "id": "2024-09-16-monster-mash",
     "date": "2024-09-16",
-    "title": "Monster Mash",
+    "title": "MM #536",
     "segments": [
       {
         "format": "AMRAP 20 min",
@@ -3877,7 +2773,7 @@
   {
     "id": "2024-09-09--20",
     "date": "2024-09-09",
-    "title": "/20",
+    "title": "MM #535",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -3904,7 +2800,7 @@
   {
     "id": "2024-09-02-e4mom-x-40-minutes-of-",
     "date": "2024-09-02",
-    "title": "E4MOM x 40 minutes of:",
+    "title": "MM #534",
     "segments": [
       {
         "format": "Workout",
@@ -3922,7 +2818,7 @@
   {
     "id": "2024-08-26-different-diane",
     "date": "2024-08-26",
-    "title": "Different Diane",
+    "title": "MM #533",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -3943,7 +2839,7 @@
   {
     "id": "2024-08-19-jerry",
     "date": "2024-08-19",
-    "title": "Jerry",
+    "title": "MM #532 — Jerry",
     "segments": [
       {
         "format": "4 Rounds for time",
@@ -3964,7 +2860,7 @@
   {
     "id": "2024-08-12-j-t-",
     "date": "2024-08-12",
-    "title": "J.T.",
+    "title": "MM #531 — J.T.",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -3994,7 +2890,7 @@
   {
     "id": "2024-08-11-cindy",
     "date": "2024-08-11",
-    "title": "Cindy",
+    "title": "MM #530 — Cindy",
     "segments": [
       {
         "format": "AMRAP 60 min",
@@ -4013,7 +2909,7 @@
   {
     "id": "2024-07-29-monster-mash",
     "date": "2024-07-29",
-    "title": "Monster Mash",
+    "title": "MM #529",
     "segments": [
       {
         "format": "10 Rounds for time",
@@ -4036,7 +2932,7 @@
   {
     "id": "2024-07-22-cleans-farmer-s-carry-",
     "date": "2024-07-22",
-    "title": "Cleans & Farmer's Carry:",
+    "title": "MM #528",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -4059,7 +2955,7 @@
   {
     "id": "2024-07-15-s-35",
     "date": "2024-07-15",
-    "title": "s/35",
+    "title": "MM #527",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -4079,7 +2975,7 @@
   {
     "id": "2024-07-08-grace",
     "date": "2024-07-08",
-    "title": "Grace",
+    "title": "MM #526 — Grace",
     "segments": [
       {
         "format": "For time",
@@ -4102,7 +2998,7 @@
   {
     "id": "2024-07-01--20",
     "date": "2024-07-01",
-    "title": "/20",
+    "title": "MM #525",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -4128,7 +3024,7 @@
   {
     "id": "2024-06-24-thrusters-95-65",
     "date": "2024-06-24",
-    "title": "Thrusters, 95/65",
+    "title": "MM #524",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -4147,7 +3043,7 @@
   {
     "id": "2024-06-17-power-clean-115-75",
     "date": "2024-06-17",
-    "title": "Power Clean, 115/75",
+    "title": "MM #523",
     "segments": [
       {
         "format": "30 Rounds for time",
@@ -4169,7 +3065,7 @@
   {
     "id": "2024-06-10-monster-mash",
     "date": "2024-06-10",
-    "title": "Monster Mash",
+    "title": "MM #522",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -4191,7 +3087,7 @@
   {
     "id": "2024-06-03-kettlebell-swing-70-53",
     "date": "2024-06-03",
-    "title": "Kettlebell Swing, 70/53",
+    "title": "MM #521",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -4209,23 +3105,6 @@
         "movements": []
       }
     ],
-    "dumbbell": [
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time of:\n20 Dumbbell Bench Press, 22.5/16kg\n9/7kg Calories, Rower",
-        "movements": []
-      },
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time of:\n800m Run\n18 Dumbbell Squat Cleans, 22.5/16kg",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts.",
-        "movements": []
-      }
-    ],
     "movements": [
       "Squat Clean",
       "Bench Press",
@@ -4240,7 +3119,7 @@
   {
     "id": "2024-05-27-monster-mash",
     "date": "2024-05-27",
-    "title": "Monster Mash",
+    "title": "MM #520",
     "segments": [
       {
         "format": "For time",
@@ -4268,28 +3147,6 @@
         "movements": []
       }
     ],
-    "dumbbell": [
-      {
-        "format": "3 Rounds for time",
-        "description": "3 Rounds for time of:\n15 Dumbbell Thrusters, 22.5/16kg\n2 Rope Climbs, 15 ft.",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n1 Mile Dumbbell Farmer's Carry",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "Men: Two 50-lb dumbbells\nWomen: Two 35-lb dumbbells",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes...",
-        "movements": []
-      }
-    ],
     "movements": [
       "Deadlift",
       "Handstand Walk",
@@ -4302,33 +3159,11 @@
   {
     "id": "2024-05-20-death-by-",
     "date": "2024-05-20",
-    "title": "Death by:",
+    "title": "MM #519",
     "segments": [
       {
         "format": "Workout",
         "description": "\"Death by:\"\nClean & Jerk, 70.5/47.5kg",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "\"Death by:\"\nCalories, Air Bike",
-        "movements": []
-      },
-      {
-        "format": "Workout",
-        "description": "\"Death by:\"\nBurpees",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts.",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "Workout",
-        "description": "\"Death by:\"\nDumbbell Clean & Jerk, 22.5/16kg",
         "movements": []
       },
       {
@@ -4359,7 +3194,7 @@
   {
     "id": "2024-05-13-monster-mash",
     "date": "2024-05-13",
-    "title": "Monster Mash",
+    "title": "MM #518",
     "segments": [
       {
         "format": "For time",
@@ -4374,28 +3209,6 @@
       {
         "format": "For time",
         "description": "For time:\n5:00 Plank Hold\n25 Deadstop Deadlifts, 143/93kg",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "For time",
-        "description": "For time:\n50 L-sit Pull-ups\n50 Dumbbell Hang Squat Cleans, 22.5/16kg",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n50 Strict Ring Dips\n50 Dumbbell Push Jerks, 22.5/16kg",
-        "movements": []
-      },
-      {
-        "format": "For time",
-        "description": "For time:\n5:00 Plank Hold\n75 Dumbbell Deadlifts, 22.5/16kg",
-        "movements": []
-      },
-      {
-        "format": "Rest period",
-        "description": "*Rest 5 minutes between workouts.",
         "movements": []
       }
     ],
@@ -4416,7 +3229,7 @@
   {
     "id": "2024-05-06-hang-power-clean-155-105",
     "date": "2024-05-06",
-    "title": "Hang Power Clean, 155/105",
+    "title": "MM #517",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -4438,7 +3251,7 @@
   {
     "id": "2024-04-29--20",
     "date": "2024-04-29",
-    "title": "/20",
+    "title": "MM #516",
     "segments": [
       {
         "format": "AMRAP 12 min",
@@ -4467,7 +3280,7 @@
   {
     "id": "2024-04-22--24",
     "date": "2024-04-22",
-    "title": "/24",
+    "title": "MM #515",
     "segments": [
       {
         "format": "10 Rounds for time",
@@ -4489,7 +3302,7 @@
   {
     "id": "2024-04-15-burpees",
     "date": "2024-04-15",
-    "title": "Burpees",
+    "title": "MM #514",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -4514,7 +3327,7 @@
   {
     "id": "2024-04-08-s-35",
     "date": "2024-04-08",
-    "title": "s/35",
+    "title": "MM #513",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -4541,7 +3354,7 @@
   {
     "id": "2024-04-01-mary",
     "date": "2024-04-01",
-    "title": "Mary",
+    "title": "MM #512 — Mary",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -4566,7 +3379,7 @@
   {
     "id": "2024-03-25-power-clean-185-135",
     "date": "2024-03-25",
-    "title": "Power Clean, 185/135",
+    "title": "MM #511",
     "segments": [
       {
         "format": "AMRAP 10 min",
@@ -4591,7 +3404,7 @@
   {
     "id": "2024-03-18-monster-mash",
     "date": "2024-03-18",
-    "title": "Monster Mash",
+    "title": "MM #510",
     "segments": [
       {
         "format": "10 Rounds for time",
@@ -4612,7 +3425,7 @@
   {
     "id": "2024-03-11-heavy-fran",
     "date": "2024-03-11",
-    "title": "Heavy Fran",
+    "title": "MM #509",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -4635,7 +3448,7 @@
   {
     "id": "2024-03-04-j-t",
     "date": "2024-03-04",
-    "title": "J.T",
+    "title": "MM #508 — J.T",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -4666,7 +3479,7 @@
   {
     "id": "2024-02-26--you-choose-box-height-",
     "date": "2024-02-26",
-    "title": "*You choose box height.",
+    "title": "MM #507",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -4690,7 +3503,7 @@
   {
     "id": "2024-02-19-bar-muscle-ups",
     "date": "2024-02-19",
-    "title": "Bar Muscle-ups",
+    "title": "MM #506",
     "segments": [
       {
         "format": "2 Rounds for time",
@@ -4716,7 +3529,7 @@
   {
     "id": "2024-02-12-monster-mash",
     "date": "2024-02-12",
-    "title": "Monster Mash",
+    "title": "MM #505",
     "segments": [
       {
         "format": "For time",
@@ -4736,7 +3549,7 @@
   {
     "id": "2024-02-05-monster-mash",
     "date": "2024-02-05",
-    "title": "Monster Mash",
+    "title": "MM #504",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -4760,7 +3573,7 @@
   {
     "id": "2024-01-29-monster-mash",
     "date": "2024-01-29",
-    "title": "Monster Mash",
+    "title": "MM #503",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -4785,7 +3598,7 @@
   {
     "id": "2024-01-22-monster-mash",
     "date": "2024-01-22",
-    "title": "Monster Mash",
+    "title": "MM #502",
     "segments": [
       {
         "format": "AMRAP 12 min",
@@ -4807,7 +3620,7 @@
   {
     "id": "2024-01-15--compare-to-03-18-2019",
     "date": "2024-01-15",
-    "title": "*Compare to 03.18.2019",
+    "title": "MM #501",
     "segments": [
       {
         "format": "For time",
@@ -4828,7 +3641,7 @@
   {
     "id": "2024-01-08-rope-climb-15-ft",
     "date": "2024-01-08",
-    "title": "Rope Climb, 15 ft",
+    "title": "MM #500",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -4853,7 +3666,7 @@
   {
     "id": "2024-01-01-mary",
     "date": "2024-01-01",
-    "title": "Mary",
+    "title": "MM #499 — Mary",
     "segments": [
       {
         "format": "AMRAP 12 min",
@@ -4875,7 +3688,7 @@
   {
     "id": "2023-12-25--compare-to-12-26-2017",
     "date": "2023-12-25",
-    "title": "*Compare to 12.26.2017",
+    "title": "MM #498",
     "segments": [
       {
         "format": "For time",
@@ -4895,7 +3708,7 @@
   {
     "id": "2023-12-18--20",
     "date": "2023-12-18",
-    "title": "/20",
+    "title": "MM #497",
     "segments": [
       {
         "format": "For time",
@@ -4919,7 +3732,7 @@
   {
     "id": "2023-12-11-cindy",
     "date": "2023-12-11",
-    "title": "Cindy",
+    "title": "MM #496 — Cindy",
     "segments": [
       {
         "format": "AMRAP 5 min",
@@ -4941,7 +3754,7 @@
   {
     "id": "2023-12-04-linchpin-test-3",
     "date": "2023-12-04",
-    "title": "Linchpin Test 3",
+    "title": "MM #495 — Linchpin Test 3",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -4967,7 +3780,7 @@
   {
     "id": "2023-11-27--compare-to-12-28-2015",
     "date": "2023-11-27",
-    "title": "*Compare to 12.28.2015",
+    "title": "MM #494",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -5006,7 +3819,7 @@
   {
     "id": "2023-11-20-nate",
     "date": "2023-11-20",
-    "title": "Nate",
+    "title": "MM #493 — Nate",
     "segments": [
       {
         "format": "AMRAP 20 min",
@@ -5031,7 +3844,7 @@
   {
     "id": "2023-11-13-oh-lunge-",
     "date": "2023-11-13",
-    "title": "OH Lunge:",
+    "title": "MM #492",
     "segments": [
       {
         "format": "AMRAP 30 min",
@@ -5054,7 +3867,7 @@
   {
     "id": "2023-11-06-badger",
     "date": "2023-11-06",
-    "title": "Badger",
+    "title": "MM #491",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -5080,7 +3893,7 @@
   {
     "id": "2023-10-30--20",
     "date": "2023-10-30",
-    "title": "/20",
+    "title": "MM #490",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -5104,7 +3917,7 @@
   {
     "id": "2023-10-23--20",
     "date": "2023-10-23",
-    "title": "/20",
+    "title": "MM #489",
     "segments": [
       {
         "format": "4 Rounds for time",
@@ -5125,7 +3938,7 @@
   {
     "id": "2023-10-16--compare-to-02-01-2016",
     "date": "2023-10-16",
-    "title": "*Compare to 02.01.2016",
+    "title": "MM #488",
     "segments": [
       {
         "format": "AMRAP 8 min",
@@ -5152,18 +3965,11 @@
   {
     "id": "2023-10-09--compare-to-12-31-2018",
     "date": "2023-10-09",
-    "title": "*Compare to 12.31.2018",
+    "title": "MM #487",
     "segments": [
       {
         "format": "2 Rounds for time",
         "description": "2 Rounds for time of:\n50 Double-unders\n25 Hang Power Cleans, 43/29.5kg\n50 Double-unders\n25 Push Press, 43/29.5kg\n50 Double-unders\n25 Burpees\n2 Rounds for time of:\n25 Pull-ups, strict\n25 Handstand Push-ups, strict\n2 Rounds for time:\n18/13.5kg Calories, Rowing\n40 Push-ups, hand-release\n*Rest 5 minutes between workouts.\n*Compare to 12.31.2018",
-        "movements": []
-      }
-    ],
-    "dumbbell": [
-      {
-        "format": "2 Rounds for time",
-        "description": "2 Rounds for time of:\n50 Double-unders\n25 Dumbbell Hang Power...",
         "movements": []
       }
     ],
@@ -5184,7 +3990,7 @@
   {
     "id": "2023-10-02-emom-20-minutes-of-",
     "date": "2023-10-02",
-    "title": "EMOM 20 minutes of:",
+    "title": "MM #486",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -5206,7 +4012,7 @@
   {
     "id": "2023-09-25-s-35",
     "date": "2023-09-25",
-    "title": "s/35",
+    "title": "MM #485",
     "segments": [
       {
         "format": "For time",
@@ -5249,7 +4055,7 @@
   {
     "id": "2023-09-11-death-by-",
     "date": "2023-09-11",
-    "title": "Death by:",
+    "title": "MM #484",
     "segments": [
       {
         "format": "Workout",
@@ -5283,7 +4089,7 @@
   {
     "id": "2023-09-04-jerry",
     "date": "2023-09-04",
-    "title": "Jerry",
+    "title": "MM #483 — Jerry",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -5324,7 +4130,7 @@
   {
     "id": "2023-08-28--compare-to-01-07-2019",
     "date": "2023-08-28",
-    "title": "*Compare to 01.07.2019",
+    "title": "MM #482",
     "segments": [
       {
         "format": "2 Rounds for time",
@@ -5368,7 +4174,7 @@
   {
     "id": "2023-08-21-deadlift-315-205",
     "date": "2023-08-21",
-    "title": "Deadlift, 315/205",
+    "title": "MM #481",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -5406,7 +4212,7 @@
   {
     "id": "2023-08-07-linchpin-test-11",
     "date": "2023-08-07",
-    "title": "Linchpin Test 11",
+    "title": "MM #480 — Linchpin Test 11",
     "segments": [
       {
         "format": "For time",
@@ -5446,7 +4252,7 @@
   {
     "id": "2023-07-31--20",
     "date": "2023-07-31",
-    "title": "/20",
+    "title": "MM #479",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -5486,7 +4292,7 @@
   {
     "id": "2023-07-24--20",
     "date": "2023-07-24",
-    "title": "/20",
+    "title": "MM #478",
     "segments": [
       {
         "format": "For time",
@@ -5510,7 +4316,7 @@
   {
     "id": "2023-07-17-monster-mash",
     "date": "2023-07-17",
-    "title": "Monster Mash",
+    "title": "MM #477",
     "segments": [
       {
         "format": "15 Rounds for time",
@@ -5548,7 +4354,7 @@
   {
     "id": "2023-07-10-s-carry-50",
     "date": "2023-07-10",
-    "title": "s Carry, 50",
+    "title": "MM #476",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -5587,7 +4393,7 @@
   {
     "id": "2023-07-03--20",
     "date": "2023-07-03",
-    "title": "/20",
+    "title": "MM #475",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -5626,7 +4432,7 @@
   {
     "id": "2023-06-26-emom-20-minutes-of-",
     "date": "2023-06-26",
-    "title": "EMOM 20 minutes of:",
+    "title": "MM #474",
     "segments": [
       {
         "format": "Rest period",
@@ -5646,7 +4452,7 @@
   {
     "id": "2023-06-19-thrusters-95-65",
     "date": "2023-06-19",
-    "title": "Thrusters, 95/65",
+    "title": "MM #473",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -5682,7 +4488,7 @@
   {
     "id": "2023-06-12-push-jerk-155-105",
     "date": "2023-06-12",
-    "title": "Push Jerk, 155/105",
+    "title": "MM #472",
     "segments": [
       {
         "format": "For time",
@@ -5722,7 +4528,7 @@
   {
     "id": "2023-06-05-monster-mash",
     "date": "2023-06-05",
-    "title": "Monster Mash",
+    "title": "MM #471",
     "segments": [
       {
         "format": "For time",
@@ -5758,7 +4564,7 @@
   {
     "id": "2023-05-29-cindy",
     "date": "2023-05-29",
-    "title": "Cindy",
+    "title": "MM #470 — Cindy",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -5795,7 +4601,7 @@
   {
     "id": "2023-05-22--24",
     "date": "2023-05-22",
-    "title": "/24",
+    "title": "MM #469",
     "segments": [
       {
         "format": "AMRAP 10 min",
@@ -5834,7 +4640,7 @@
   {
     "id": "2023-05-15-s-carry-50",
     "date": "2023-05-15",
-    "title": "s Carry, 50",
+    "title": "MM #468",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -5874,7 +4680,7 @@
   {
     "id": "2023-05-08-angie",
     "date": "2023-05-08",
-    "title": "Angie",
+    "title": "MM #467 — Angie",
     "segments": [
       {
         "format": "For time",
@@ -5912,7 +4718,7 @@
   {
     "id": "2023-05-01-power-clean-115-75",
     "date": "2023-05-01",
-    "title": "Power Clean, 115/75",
+    "title": "MM #466",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -5953,7 +4759,7 @@
   {
     "id": "2023-04-24-s-35",
     "date": "2023-04-24",
-    "title": "s/35",
+    "title": "MM #465",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -5990,7 +4796,7 @@
   {
     "id": "2023-04-17-cindy",
     "date": "2023-04-17",
-    "title": "Cindy",
+    "title": "MM #464 — Cindy",
     "segments": [
       {
         "format": "Workout",
@@ -6008,7 +4814,7 @@
   {
     "id": "2023-04-10--20",
     "date": "2023-04-10",
-    "title": "/20",
+    "title": "MM #463",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -6049,7 +4855,7 @@
   {
     "id": "2023-04-03-linchpin-test-7",
     "date": "2023-04-03",
-    "title": "Linchpin Test 7",
+    "title": "MM #462 — Linchpin Test 7",
     "segments": [
       {
         "format": "4 Rounds for time",
@@ -6091,7 +4897,7 @@
   {
     "id": "2023-03-27-s-35",
     "date": "2023-03-27",
-    "title": "s/35",
+    "title": "MM #461",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -6134,7 +4940,7 @@
   {
     "id": "2023-03-20-death-by",
     "date": "2023-03-20",
-    "title": "Death by",
+    "title": "MM #460",
     "segments": [
       {
         "format": "Workout",
@@ -6172,7 +4978,7 @@
   {
     "id": "2023-03-13-isabel",
     "date": "2023-03-13",
-    "title": "Isabel",
+    "title": "MM #459 — Isabel",
     "segments": [
       {
         "format": "For time",
@@ -6196,7 +5002,7 @@
   {
     "id": "2023-03-06-deadlift-275-185",
     "date": "2023-03-06",
-    "title": "Deadlift, 275/185",
+    "title": "MM #458",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -6234,7 +5040,7 @@
   {
     "id": "2023-02-27--24",
     "date": "2023-02-27",
-    "title": "/24",
+    "title": "MM #457",
     "segments": [
       {
         "format": "AMRAP 7 min",
@@ -6275,7 +5081,7 @@
   {
     "id": "2023-02-20--20",
     "date": "2023-02-20",
-    "title": "/20",
+    "title": "MM #456",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -6312,7 +5118,7 @@
   {
     "id": "2023-02-13-cfg-open-workout-15-3",
     "date": "2023-02-13",
-    "title": "CFG Open workout 15.3",
+    "title": "MM #455",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -6347,7 +5153,7 @@
   {
     "id": "2023-01-30-monster-mash",
     "date": "2023-01-30",
-    "title": "Monster Mash",
+    "title": "MM #454",
     "segments": [
       {
         "format": "10 Rounds for time",
@@ -6386,7 +5192,7 @@
   {
     "id": "2023-01-23--20",
     "date": "2023-01-23",
-    "title": "/20",
+    "title": "MM #453",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -6425,7 +5231,7 @@
   {
     "id": "2023-01-16-devil-s-press",
     "date": "2023-01-16",
-    "title": "Devil's Press",
+    "title": "MM #452",
     "segments": [
       {
         "format": "AMRAP 15 min",
@@ -6466,7 +5272,7 @@
   {
     "id": "2023-01-09-annie",
     "date": "2023-01-09",
-    "title": "Annie",
+    "title": "MM #451 — Annie",
     "segments": [
       {
         "format": "For time",
@@ -6503,7 +5309,7 @@
   {
     "id": "2023-01-02-for-max-reps-",
     "date": "2023-01-02",
-    "title": "For max reps:",
+    "title": "MM #450",
     "segments": [
       {
         "format": "Workout",
@@ -6541,7 +5347,7 @@
   {
     "id": "2022-12-26-murph",
     "date": "2022-12-26",
-    "title": "Murph",
+    "title": "MM #449 — Murph",
     "segments": [
       {
         "format": "For time",
@@ -6583,7 +5389,7 @@
   {
     "id": "2022-12-19-deadlift-225-155",
     "date": "2022-12-19",
-    "title": "Deadlift, 225/155",
+    "title": "MM #448",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -6621,7 +5427,7 @@
   {
     "id": "2022-12-12-helen",
     "date": "2022-12-12",
-    "title": "Helen",
+    "title": "MM #447 — Helen",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -6659,7 +5465,7 @@
   {
     "id": "2022-12-05-jerry",
     "date": "2022-12-05",
-    "title": "Jerry",
+    "title": "MM #446 — Jerry",
     "segments": [
       {
         "format": "For time",
@@ -6693,7 +5499,7 @@
   {
     "id": "2022-11-28--20",
     "date": "2022-11-28",
-    "title": "/20",
+    "title": "MM #445",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -6731,7 +5537,7 @@
   {
     "id": "2022-11-21--compare-to-02-01-2016",
     "date": "2022-11-21",
-    "title": "*Compare to 02.01.2016",
+    "title": "MM #444",
     "segments": [
       {
         "format": "For time",
@@ -6773,7 +5579,7 @@
   {
     "id": "2022-11-14-bar-facing-burpees",
     "date": "2022-11-14",
-    "title": "Bar-facing burpees",
+    "title": "MM #443",
     "segments": [
       {
         "format": "AMRAP 3 min",
@@ -6818,7 +5624,7 @@
   {
     "id": "2022-11-07-s-35",
     "date": "2022-11-07",
-    "title": "s/35",
+    "title": "MM #442",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -6855,7 +5661,7 @@
   {
     "id": "2022-10-31-mary",
     "date": "2022-10-31",
-    "title": "Mary",
+    "title": "MM #441 — Mary",
     "segments": [
       {
         "format": "AMRAP 12 min",
@@ -6897,7 +5703,7 @@
   {
     "id": "2022-10-24-lynne",
     "date": "2022-10-24",
-    "title": "Lynne",
+    "title": "MM #440 — Lynne",
     "segments": [
       {
         "format": "Workout",
@@ -6933,7 +5739,7 @@
   {
     "id": "2022-10-17-jerry",
     "date": "2022-10-17",
-    "title": "Jerry",
+    "title": "MM #439 — Jerry",
     "segments": [
       {
         "format": "For time",
@@ -6971,7 +5777,7 @@
   {
     "id": "2022-10-10-linchpin-test-3",
     "date": "2022-10-10",
-    "title": "Linchpin Test 3",
+    "title": "MM #438 — Linchpin Test 3",
     "segments": [
       {
         "format": "Workout",
@@ -7012,7 +5818,7 @@
   {
     "id": "2022-10-03-elizabeth",
     "date": "2022-10-03",
-    "title": "Elizabeth",
+    "title": "MM #437 — Elizabeth",
     "segments": [
       {
         "format": "For time",
@@ -7052,7 +5858,7 @@
   {
     "id": "2022-09-26--compare-to-02-22-2016",
     "date": "2022-09-26",
-    "title": "*Compare to 02.22.2016",
+    "title": "MM #436",
     "segments": [
       {
         "format": "For time",
@@ -7078,7 +5884,7 @@
   {
     "id": "2022-09-19-monster-mash",
     "date": "2022-09-19",
-    "title": "Monster Mash",
+    "title": "MM #435",
     "segments": [
       {
         "format": "9 Rounds for time",
@@ -7118,7 +5924,7 @@
   {
     "id": "2022-09-12--20",
     "date": "2022-09-12",
-    "title": "/20",
+    "title": "MM #434",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -7157,7 +5963,7 @@
   {
     "id": "2022-09-05-monster-mash",
     "date": "2022-09-05",
-    "title": "Monster Mash",
+    "title": "MM #433",
     "segments": [
       {
         "format": "For time",
@@ -7175,7 +5981,7 @@
   {
     "id": "2022-08-29-s-35",
     "date": "2022-08-29",
-    "title": "s/35",
+    "title": "MM #432",
     "segments": [
       {
         "format": "Workout",
@@ -7236,7 +6042,7 @@
   {
     "id": "2022-08-22--20",
     "date": "2022-08-22",
-    "title": "/20",
+    "title": "MM #431",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -7263,7 +6069,7 @@
   {
     "id": "2022-08-08-linchpin-test-10",
     "date": "2022-08-08",
-    "title": "Linchpin Test 10",
+    "title": "MM #430 — Linchpin Test 10",
     "segments": [
       {
         "format": "Workout",
@@ -7302,7 +6108,7 @@
   {
     "id": "2022-08-01-cindy",
     "date": "2022-08-01",
-    "title": "Cindy",
+    "title": "MM #429 — Cindy",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -7335,7 +6141,7 @@
   {
     "id": "2022-07-25-j-t",
     "date": "2022-07-25",
-    "title": "J.T",
+    "title": "MM #428 — J.T",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -7373,7 +6179,7 @@
   {
     "id": "2022-07-18-monster-mash",
     "date": "2022-07-18",
-    "title": "Monster Mash",
+    "title": "MM #427",
     "segments": [
       {
         "format": "For time",
@@ -7411,7 +6217,7 @@
   {
     "id": "2022-07-11-monster-mash",
     "date": "2022-07-11",
-    "title": "Monster Mash",
+    "title": "MM #426",
     "segments": [
       {
         "format": "AMRAP 10 min",
@@ -7451,7 +6257,7 @@
   {
     "id": "2022-07-04-s-35",
     "date": "2022-07-04",
-    "title": "s/35",
+    "title": "MM #425",
     "segments": [
       {
         "format": "9 Rounds for time",
@@ -7475,7 +6281,7 @@
   {
     "id": "2022-06-27-s-35",
     "date": "2022-06-27",
-    "title": "s/35",
+    "title": "MM #424",
     "segments": [
       {
         "format": "4 Rounds for time",
@@ -7500,7 +6306,7 @@
   {
     "id": "2022-06-20-s-35",
     "date": "2022-06-20",
-    "title": "s/35",
+    "title": "MM #423",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -7528,7 +6334,7 @@
   {
     "id": "2022-06-13-s-35",
     "date": "2022-06-13",
-    "title": "s/35",
+    "title": "MM #422",
     "segments": [
       {
         "format": "AMRAP 6 min",
@@ -7556,7 +6362,7 @@
   {
     "id": "2022-06-06-monster-mash",
     "date": "2022-06-06",
-    "title": "Monster Mash",
+    "title": "MM #421",
     "segments": [
       {
         "format": "For time",
@@ -7595,7 +6401,7 @@
   {
     "id": "2022-05-30-monster-mash",
     "date": "2022-05-30",
-    "title": "Monster Mash",
+    "title": "MM #420",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -7633,7 +6439,7 @@
   {
     "id": "2022-05-23-cindy",
     "date": "2022-05-23",
-    "title": "Cindy",
+    "title": "MM #419 — Cindy",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -7671,7 +6477,7 @@
   {
     "id": "2022-05-16-s-35",
     "date": "2022-05-16",
-    "title": "s/35",
+    "title": "MM #418",
     "segments": [
       {
         "format": "Workout",
@@ -7694,7 +6500,7 @@
   {
     "id": "2022-05-09-the-seven",
     "date": "2022-05-09",
-    "title": "The Seven",
+    "title": "MM #417 — The Seven",
     "segments": [
       {
         "format": "7 Rounds for time",
@@ -7734,7 +6540,7 @@
   {
     "id": "2022-05-02--20",
     "date": "2022-05-02",
-    "title": "/20",
+    "title": "MM #416",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -7774,7 +6580,7 @@
   {
     "id": "2022-04-25-monster-mash",
     "date": "2022-04-25",
-    "title": "Monster Mash",
+    "title": "MM #415",
     "segments": [
       {
         "format": "For time",
@@ -7801,7 +6607,7 @@
   {
     "id": "2022-04-18-kelly",
     "date": "2022-04-18",
-    "title": "Kelly",
+    "title": "MM #414 — Kelly",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -7842,7 +6648,7 @@
   {
     "id": "2022-04-11-s-25",
     "date": "2022-04-11",
-    "title": "s/25",
+    "title": "MM #413",
     "segments": [
       {
         "format": "Workout",
@@ -7879,7 +6685,7 @@
   {
     "id": "2022-04-04-squat-snatch-155-105",
     "date": "2022-04-04",
-    "title": "Squat Snatch, 155/105",
+    "title": "MM #412",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -7919,7 +6725,7 @@
   {
     "id": "2022-03-28-monster-mash",
     "date": "2022-03-28",
-    "title": "Monster Mash",
+    "title": "MM #411",
     "segments": [
       {
         "format": "For time",
@@ -7956,7 +6762,7 @@
   {
     "id": "2022-03-21-monster-mash",
     "date": "2022-03-21",
-    "title": "Monster Mash",
+    "title": "MM #410",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -7998,7 +6804,7 @@
   {
     "id": "2022-03-14--20",
     "date": "2022-03-14",
-    "title": "/20",
+    "title": "MM #409",
     "segments": [
       {
         "format": "AMRAP 15 min",
@@ -8038,7 +6844,7 @@
   {
     "id": "2022-02-28-s-35",
     "date": "2022-02-28",
-    "title": "s/35",
+    "title": "MM #408",
     "segments": [
       {
         "format": "30 Rounds for time",
@@ -8060,7 +6866,7 @@
   {
     "id": "2022-02-21--compare-to-12-04-2017",
     "date": "2022-02-21",
-    "title": "*Compare to 12.04.2017",
+    "title": "MM #407",
     "segments": [
       {
         "format": "For time",
@@ -8086,7 +6892,7 @@
   {
     "id": "2022-02-14--compare-to-02-04-2019",
     "date": "2022-02-14",
-    "title": "*Compare to 02.04.2019",
+    "title": "MM #406",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -8125,7 +6931,7 @@
   {
     "id": "2022-02-07-s-35",
     "date": "2022-02-07",
-    "title": "s/35",
+    "title": "MM #405",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -8150,7 +6956,7 @@
   {
     "id": "2022-01-31-helen",
     "date": "2022-01-31",
-    "title": "Helen",
+    "title": "MM #404 — Helen",
     "segments": [
       {
         "format": "AMRAP 7 min",
@@ -8173,7 +6979,7 @@
   {
     "id": "2022-01-24-s-carry-50",
     "date": "2022-01-24",
-    "title": "s Carry, 50",
+    "title": "MM #403",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -8216,7 +7022,7 @@
   {
     "id": "2022-01-17-power-clean-185-135",
     "date": "2022-01-17",
-    "title": "Power Clean, 185/135",
+    "title": "MM #402",
     "segments": [
       {
         "format": "For time",
@@ -8256,7 +7062,7 @@
   {
     "id": "2022-01-10-monster-mash",
     "date": "2022-01-10",
-    "title": "Monster Mash",
+    "title": "MM #401",
     "segments": [
       {
         "format": "2 Rounds for time",
@@ -8291,7 +7097,7 @@
   {
     "id": "2022-01-03-s-35",
     "date": "2022-01-03",
-    "title": "s/35",
+    "title": "MM #400",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -8319,7 +7125,7 @@
   {
     "id": "2021-12-27-monster-mash",
     "date": "2021-12-27",
-    "title": "Monster Mash",
+    "title": "MM #399",
     "segments": [
       {
         "format": "AMRAP 50 min",
@@ -8341,7 +7147,7 @@
   {
     "id": "2021-12-20-s-35",
     "date": "2021-12-20",
-    "title": "s/35",
+    "title": "MM #398",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -8400,7 +7206,7 @@
   {
     "id": "2021-12-13-monster-mash",
     "date": "2021-12-13",
-    "title": "Monster Mash",
+    "title": "MM #397",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -8437,7 +7243,7 @@
   {
     "id": "2021-12-06--24",
     "date": "2021-12-06",
-    "title": "/24",
+    "title": "MM #396",
     "segments": [
       {
         "format": "4 Rounds for time",
@@ -8477,7 +7283,7 @@
   {
     "id": "2021-11-29-kettlebell-swing-70-53",
     "date": "2021-11-29",
-    "title": "Kettlebell Swing, 70/53",
+    "title": "MM #395",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -8516,7 +7322,7 @@
   {
     "id": "2021-11-22--24",
     "date": "2021-11-22",
-    "title": "/24",
+    "title": "MM #394",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -8543,7 +7349,7 @@
   {
     "id": "2021-11-15--20",
     "date": "2021-11-15",
-    "title": "/20",
+    "title": "MM #393",
     "segments": [
       {
         "format": "AMRAP 8 min",
@@ -8569,7 +7375,7 @@
   {
     "id": "2021-11-08-s-35",
     "date": "2021-11-08",
-    "title": "s/35",
+    "title": "MM #392",
     "segments": [
       {
         "format": "2 Rounds for time",
@@ -8593,7 +7399,7 @@
   {
     "id": "2021-11-01-s-35",
     "date": "2021-11-01",
-    "title": "s/35",
+    "title": "MM #391",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -8627,7 +7433,7 @@
   {
     "id": "2021-10-25-s-35",
     "date": "2021-10-25",
-    "title": "s/35",
+    "title": "MM #390",
     "segments": [
       {
         "format": "6 Rounds for time",
@@ -8656,7 +7462,7 @@
   {
     "id": "2021-10-18-s-35",
     "date": "2021-10-18",
-    "title": "s/35",
+    "title": "MM #389",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -8678,7 +7484,7 @@
   {
     "id": "2021-10-11--24",
     "date": "2021-10-11",
-    "title": "/24",
+    "title": "MM #388",
     "segments": [
       {
         "format": "10 Rounds for time",
@@ -8743,7 +7549,7 @@
   {
     "id": "2021-10-04-s-35",
     "date": "2021-10-04",
-    "title": "s/35",
+    "title": "MM #387",
     "segments": [
       {
         "format": "4 Rounds for time",
@@ -8771,7 +7577,7 @@
   {
     "id": "2021-09-27-s-35",
     "date": "2021-09-27",
-    "title": "s/35",
+    "title": "MM #386",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -8815,7 +7621,7 @@
   {
     "id": "2021-09-20-linchpin-test-8",
     "date": "2021-09-20",
-    "title": "Linchpin Test 8",
+    "title": "MM #385 — Linchpin Test 8",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -8855,7 +7661,7 @@
   {
     "id": "2021-09-06-monster-mash",
     "date": "2021-09-06",
-    "title": "Monster Mash",
+    "title": "MM #384",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -8894,7 +7700,7 @@
   {
     "id": "2021-08-30-overhead-squat-115-75",
     "date": "2021-08-30",
-    "title": "Overhead Squat, 115/75",
+    "title": "MM #383",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -8934,7 +7740,7 @@
   {
     "id": "2021-08-23--20",
     "date": "2021-08-23",
-    "title": "/20",
+    "title": "MM #382",
     "segments": [
       {
         "format": "AMRAP 12 min",
@@ -8973,7 +7779,7 @@
   {
     "id": "2021-08-16-monster-mash",
     "date": "2021-08-16",
-    "title": "Monster Mash",
+    "title": "MM #381",
     "segments": [
       {
         "format": "For time",
@@ -9010,7 +7816,7 @@
   {
     "id": "2021-08-09-s-35",
     "date": "2021-08-09",
-    "title": "s/35",
+    "title": "MM #380",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -9052,7 +7858,7 @@
   {
     "id": "2021-08-02-s-35",
     "date": "2021-08-02",
-    "title": "s/35",
+    "title": "MM #379",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -9078,7 +7884,7 @@
   {
     "id": "2021-07-26-s-35",
     "date": "2021-07-26",
-    "title": "s/35",
+    "title": "MM #378",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -9103,7 +7909,7 @@
   {
     "id": "2021-07-19-ring-dips-strict",
     "date": "2021-07-19",
-    "title": "Ring Dips, strict",
+    "title": "MM #377",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -9125,7 +7931,7 @@
   {
     "id": "2021-07-12-s-carry-50",
     "date": "2021-07-12",
-    "title": "s Carry, 50",
+    "title": "MM #376",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -9146,7 +7952,7 @@
   {
     "id": "2021-07-05-s-35",
     "date": "2021-07-05",
-    "title": "s/35",
+    "title": "MM #375",
     "segments": [
       {
         "format": "For time",
@@ -9215,7 +8021,7 @@
   {
     "id": "2021-06-28-linchpin-test-13",
     "date": "2021-06-28",
-    "title": "Linchpin Test 13",
+    "title": "MM #374",
     "segments": [
       {
         "format": "For time",
@@ -9242,7 +8048,7 @@
   {
     "id": "2021-06-21-s-35",
     "date": "2021-06-21",
-    "title": "s/35",
+    "title": "MM #373",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -9264,7 +8070,7 @@
   {
     "id": "2021-06-14--24",
     "date": "2021-06-14",
-    "title": "/24",
+    "title": "MM #372",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -9332,7 +8138,7 @@
   {
     "id": "2021-06-07-monster-mash",
     "date": "2021-06-07",
-    "title": "Monster Mash",
+    "title": "MM #371",
     "segments": [
       {
         "format": "AMRAP 10 min",
@@ -9357,7 +8163,7 @@
   {
     "id": "2021-05-31-monster-mash",
     "date": "2021-05-31",
-    "title": "Monster Mash",
+    "title": "MM #370",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -9393,7 +8199,7 @@
   {
     "id": "2021-05-24-bar-facing-burpees",
     "date": "2021-05-24",
-    "title": "Bar-facing Burpees",
+    "title": "MM #369",
     "segments": [
       {
         "format": "For time",
@@ -9432,7 +8238,7 @@
   {
     "id": "2021-05-17-pull-ups-strict",
     "date": "2021-05-17",
-    "title": "Pull-ups, strict",
+    "title": "MM #368",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -9473,7 +8279,7 @@
   {
     "id": "2021-05-10-monster-mash",
     "date": "2021-05-10",
-    "title": "Monster Mash",
+    "title": "MM #367",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -9513,7 +8319,7 @@
   {
     "id": "2021-05-03-monster-mash",
     "date": "2021-05-03",
-    "title": "Monster Mash",
+    "title": "MM #366",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -9551,7 +8357,7 @@
   {
     "id": "2021-04-26-annie",
     "date": "2021-04-26",
-    "title": "Annie",
+    "title": "MM #365 — Annie",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -9574,7 +8380,7 @@
   {
     "id": "2021-04-19-cindy",
     "date": "2021-04-19",
-    "title": "Cindy",
+    "title": "MM #364 — Cindy",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -9598,7 +8404,7 @@
   {
     "id": "2021-04-12--20",
     "date": "2021-04-12",
-    "title": "/20",
+    "title": "MM #363",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -9638,7 +8444,7 @@
   {
     "id": "2021-04-05--24",
     "date": "2021-04-05",
-    "title": "/24",
+    "title": "MM #362",
     "segments": [
       {
         "format": "For time",
@@ -9679,7 +8485,7 @@
   {
     "id": "2021-03-29-kettlebell-swings-70-53",
     "date": "2021-03-29",
-    "title": "Kettlebell Swings, 70/53",
+    "title": "MM #361",
     "segments": [
       {
         "format": "For time",
@@ -9719,7 +8525,7 @@
   {
     "id": "2021-03-22-s-35",
     "date": "2021-03-22",
-    "title": "s/35",
+    "title": "MM #360",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -9744,7 +8550,7 @@
   {
     "id": "2021-03-15-s-35",
     "date": "2021-03-15",
-    "title": "s/35",
+    "title": "MM #359",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -9766,7 +8572,7 @@
   {
     "id": "2021-03-08-sqt",
     "date": "2021-03-08",
-    "title": "SQT",
+    "title": "MM #358 — SQT",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -9791,7 +8597,7 @@
   {
     "id": "2021-03-01-s-35",
     "date": "2021-03-01",
-    "title": "s/35",
+    "title": "MM #357",
     "segments": [
       {
         "format": "4 Rounds for time",
@@ -9814,7 +8620,7 @@
   {
     "id": "2021-02-22-s-35",
     "date": "2021-02-22",
-    "title": "s/35",
+    "title": "MM #356",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -9844,7 +8650,7 @@
   {
     "id": "2021-02-15--20",
     "date": "2021-02-15",
-    "title": "/20",
+    "title": "MM #355",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -9874,7 +8680,7 @@
   {
     "id": "2021-02-08-s-35",
     "date": "2021-02-08",
-    "title": "s/35",
+    "title": "MM #354",
     "segments": [
       {
         "format": "AMRAP 12 min",
@@ -9901,7 +8707,7 @@
   {
     "id": "2021-02-01-s-35",
     "date": "2021-02-01",
-    "title": "s/35",
+    "title": "MM #353",
     "segments": [
       {
         "format": "4 Rounds for time",
@@ -9923,7 +8729,7 @@
   {
     "id": "2021-01-18-s-35",
     "date": "2021-01-18",
-    "title": "s/35",
+    "title": "MM #352",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -9948,7 +8754,7 @@
   {
     "id": "2021-01-11-s-35",
     "date": "2021-01-11",
-    "title": "s/35",
+    "title": "MM #351",
     "segments": [
       {
         "format": "AMRAP 7 min",
@@ -9972,7 +8778,7 @@
   {
     "id": "2020-12-28-s-35",
     "date": "2020-12-28",
-    "title": "s/35",
+    "title": "MM #350",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -9998,7 +8804,7 @@
   {
     "id": "2020-12-21-diane",
     "date": "2020-12-21",
-    "title": "Diane",
+    "title": "MM #349 — Diane",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -10022,7 +8828,7 @@
   {
     "id": "2020-12-14-linchpin-test-2",
     "date": "2020-12-14",
-    "title": "Linchpin Test 2",
+    "title": "MM #348 — Linchpin Test 2",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -10047,7 +8853,7 @@
   {
     "id": "2020-12-07-monster-mash",
     "date": "2020-12-07",
-    "title": "Monster Mash",
+    "title": "MM #347",
     "segments": [
       {
         "format": "For time",
@@ -10068,7 +8874,7 @@
   {
     "id": "2020-11-30-linchpin-test-1",
     "date": "2020-11-30",
-    "title": "Linchpin Test 1",
+    "title": "MM #346 — Linchpin Test 1",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -10088,7 +8894,7 @@
   {
     "id": "2020-11-23--20",
     "date": "2020-11-23",
-    "title": "/20",
+    "title": "MM #345",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -10114,7 +8920,7 @@
   {
     "id": "2020-11-16-crossfit-linchpin-test-6",
     "date": "2020-11-16",
-    "title": "CrossFit Linchpin Test 6",
+    "title": "MM #344",
     "segments": [
       {
         "format": "For time",
@@ -10139,7 +8945,7 @@
   {
     "id": "2020-11-09--20",
     "date": "2020-11-09",
-    "title": "/20",
+    "title": "MM #343",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -10165,7 +8971,7 @@
   {
     "id": "2020-11-02-amanda",
     "date": "2020-11-02",
-    "title": "Amanda",
+    "title": "MM #342 — Amanda",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -10192,7 +8998,7 @@
   {
     "id": "2020-10-26-row-calories",
     "date": "2020-10-26",
-    "title": "Row, Calories",
+    "title": "MM #341",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -10215,7 +9021,7 @@
   {
     "id": "2020-10-19--20",
     "date": "2020-10-19",
-    "title": "/20",
+    "title": "MM #340",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -10240,7 +9046,7 @@
   {
     "id": "2020-10-12-s-35",
     "date": "2020-10-12",
-    "title": "s/35",
+    "title": "MM #339",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -10265,7 +9071,7 @@
   {
     "id": "2020-10-05-front-squat-115-75",
     "date": "2020-10-05",
-    "title": "Front Squat, 115/75",
+    "title": "MM #338",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -10288,7 +9094,7 @@
   {
     "id": "2020-09-28-overhead-squat-135-95",
     "date": "2020-09-28",
-    "title": "Overhead Squat, 135/95",
+    "title": "MM #337",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -10313,7 +9119,7 @@
   {
     "id": "2020-09-21-knees-to-elbows",
     "date": "2020-09-21",
-    "title": "Knees-to-elbows",
+    "title": "MM #336",
     "segments": [
       {
         "format": "6 Rounds for time",
@@ -10333,7 +9139,7 @@
   {
     "id": "2020-09-14-linchpin-test-4",
     "date": "2020-09-14",
-    "title": "Linchpin Test 4",
+    "title": "MM #335 — Linchpin Test 4",
     "segments": [
       {
         "format": "2 Rounds for time",
@@ -10356,7 +9162,7 @@
   {
     "id": "2020-09-07-sqt",
     "date": "2020-09-07",
-    "title": "SQT",
+    "title": "MM #334 — SQT",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -10379,7 +9185,7 @@
   {
     "id": "2020-08-31-row-calories",
     "date": "2020-08-31",
-    "title": "Row, Calories",
+    "title": "MM #333",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -10402,7 +9208,7 @@
   {
     "id": "2020-08-24-s-35",
     "date": "2020-08-24",
-    "title": "s/35",
+    "title": "MM #332",
     "segments": [
       {
         "format": "7 Rounds for time",
@@ -10423,7 +9229,7 @@
   {
     "id": "2020-08-17-mary",
     "date": "2020-08-17",
-    "title": "Mary",
+    "title": "MM #331 — Mary",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -10442,7 +9248,7 @@
   {
     "id": "2020-08-10-hang-power-clean-135-95",
     "date": "2020-08-10",
-    "title": "Hang Power Clean, 135/95",
+    "title": "MM #330",
     "segments": [
       {
         "format": "AMRAP 7 min",
@@ -10466,7 +9272,7 @@
   {
     "id": "2020-08-03-s-35",
     "date": "2020-08-03",
-    "title": "s/35",
+    "title": "MM #329",
     "segments": [
       {
         "format": "2 Rounds for time",
@@ -10490,7 +9296,7 @@
   {
     "id": "2020-07-27-cindy",
     "date": "2020-07-27",
-    "title": "Cindy",
+    "title": "MM #328 — Cindy",
     "segments": [
       {
         "format": "AMRAP 7 min",
@@ -10514,7 +9320,7 @@
   {
     "id": "2020-07-20--20",
     "date": "2020-07-20",
-    "title": "/20",
+    "title": "MM #327",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -10538,7 +9344,7 @@
   {
     "id": "2020-07-13-deadlifts-275-185",
     "date": "2020-07-13",
-    "title": "Deadlifts, 275/185",
+    "title": "MM #326",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -10559,7 +9365,7 @@
   {
     "id": "2020-07-06-rope-climb-15-ft",
     "date": "2020-07-06",
-    "title": "Rope Climb, 15 ft",
+    "title": "MM #325",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -10584,7 +9390,7 @@
   {
     "id": "2020-06-29-burpees",
     "date": "2020-06-29",
-    "title": "Burpees",
+    "title": "MM #324",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -10603,7 +9409,7 @@
   {
     "id": "2020-06-22-monster-mash",
     "date": "2020-06-22",
-    "title": "Monster Mash",
+    "title": "MM #323",
     "segments": [
       {
         "format": "AMRAP 10 min",
@@ -10629,7 +9435,7 @@
   {
     "id": "2020-06-15-monster-mash",
     "date": "2020-06-15",
-    "title": "Monster Mash",
+    "title": "MM #322",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -10653,7 +9459,7 @@
   {
     "id": "2020-06-08-hang-squat-clean-135-95",
     "date": "2020-06-08",
-    "title": "Hang Squat Clean, 135/95",
+    "title": "MM #321",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -10679,7 +9485,7 @@
   {
     "id": "2020-06-01-calories-row",
     "date": "2020-06-01",
-    "title": "Calories, Row",
+    "title": "MM #320",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -10701,7 +9507,7 @@
   {
     "id": "2020-05-25-monster-mash",
     "date": "2020-05-25",
-    "title": "Monster Mash",
+    "title": "MM #319",
     "segments": [
       {
         "format": "7 Rounds for time",
@@ -10727,7 +9533,7 @@
   {
     "id": "2020-05-18-knees-to-elbows",
     "date": "2020-05-18",
-    "title": "Knees-to-elbows",
+    "title": "MM #318",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -10750,7 +9556,7 @@
   {
     "id": "2020-05-11-cindy",
     "date": "2020-05-11",
-    "title": "Cindy",
+    "title": "MM #317 — Cindy",
     "segments": [
       {
         "format": "AMRAP 5 min",
@@ -10775,7 +9581,7 @@
   {
     "id": "2020-05-04-monster-mash",
     "date": "2020-05-04",
-    "title": "Monster Mash",
+    "title": "MM #316",
     "segments": [
       {
         "format": "4 Rounds for time",
@@ -10797,7 +9603,7 @@
   {
     "id": "2020-04-27-thruster-65-45",
     "date": "2020-04-27",
-    "title": "Thruster, 65/45",
+    "title": "MM #315",
     "segments": [
       {
         "format": "2 Rounds for time",
@@ -10818,7 +9624,7 @@
   {
     "id": "2020-04-20-front-squat-205-145",
     "date": "2020-04-20",
-    "title": "Front Squat, 205/145",
+    "title": "MM #314",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -10844,7 +9650,7 @@
   {
     "id": "2020-04-13-power-clean-115-75",
     "date": "2020-04-13",
-    "title": "Power Clean, 115/75",
+    "title": "MM #313",
     "segments": [
       {
         "format": "AMRAP 20 min",
@@ -10868,7 +9674,7 @@
   {
     "id": "2020-04-06-burpees",
     "date": "2020-04-06",
-    "title": "Burpees",
+    "title": "MM #312",
     "segments": [
       {
         "format": "AMRAP 6 min",
@@ -10890,7 +9696,7 @@
   {
     "id": "2020-03-30-monster-mash",
     "date": "2020-03-30",
-    "title": "Monster Mash",
+    "title": "MM #311",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -10914,7 +9720,7 @@
   {
     "id": "2020-03-23-monster-mash",
     "date": "2020-03-23",
-    "title": "Monster Mash",
+    "title": "MM #310",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -10940,7 +9746,7 @@
   {
     "id": "2020-03-16-private-track",
     "date": "2020-03-16",
-    "title": "Private Track",
+    "title": "MM #309",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -10964,7 +9770,7 @@
   {
     "id": "2020-03-09-private-track",
     "date": "2020-03-09",
-    "title": "Private Track",
+    "title": "MM #308",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -10990,7 +9796,7 @@
   {
     "id": "2020-03-02-private-track",
     "date": "2020-03-02",
-    "title": "Private Track",
+    "title": "MM #307",
     "segments": [
       {
         "format": "2 Rounds for time",
@@ -11014,7 +9820,7 @@
   {
     "id": "2020-02-24-j-t",
     "date": "2020-02-24",
-    "title": "J.T",
+    "title": "MM #306 — J.T",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -11043,7 +9849,7 @@
   {
     "id": "2020-02-17-helen",
     "date": "2020-02-17",
-    "title": "Helen",
+    "title": "MM #305 — Helen",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -11068,7 +9874,7 @@
   {
     "id": "2020-02-10-private-track",
     "date": "2020-02-10",
-    "title": "Private Track",
+    "title": "MM #304",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -11095,7 +9901,7 @@
   {
     "id": "2020-02-03-private-track",
     "date": "2020-02-03",
-    "title": "Private Track",
+    "title": "MM #303",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -11117,7 +9923,7 @@
   {
     "id": "2020-01-27-private-track",
     "date": "2020-01-27",
-    "title": "Private Track",
+    "title": "MM #302",
     "segments": [
       {
         "format": "4 Rounds for time",
@@ -11141,7 +9947,7 @@
   {
     "id": "2020-01-20-nate",
     "date": "2020-01-20",
-    "title": "Nate",
+    "title": "MM #301 — Nate",
     "segments": [
       {
         "format": "AMRAP 20 min",
@@ -11174,7 +9980,7 @@
   {
     "id": "2020-01-13-private-track",
     "date": "2020-01-13",
-    "title": "Private Track",
+    "title": "MM #300",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -11197,7 +10003,7 @@
   {
     "id": "2020-01-06-private-track",
     "date": "2020-01-06",
-    "title": "Private Track",
+    "title": "MM #299",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -11222,7 +10028,7 @@
   {
     "id": "2020-01-05-private-track",
     "date": "2020-01-05",
-    "title": "Private Track",
+    "title": "MM #298",
     "segments": [
       {
         "format": "Workout",
@@ -11236,7 +10042,7 @@
   {
     "id": "2019-12-30-cindy",
     "date": "2019-12-30",
-    "title": "Cindy",
+    "title": "MM #297 — Cindy",
     "segments": [
       {
         "format": "AMRAP 15 min",
@@ -11259,7 +10065,7 @@
   {
     "id": "2019-12-23-private-track",
     "date": "2019-12-23",
-    "title": "Private Track",
+    "title": "MM #296",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -11282,7 +10088,7 @@
   {
     "id": "2019-12-16-private-track",
     "date": "2019-12-16",
-    "title": "Private Track",
+    "title": "MM #295",
     "segments": [
       {
         "format": "8 Rounds for time",
@@ -11307,7 +10113,7 @@
   {
     "id": "2019-12-09-helen",
     "date": "2019-12-09",
-    "title": "Helen",
+    "title": "MM #294 — Helen",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -11332,7 +10138,7 @@
   {
     "id": "2019-12-02-private-track",
     "date": "2019-12-02",
-    "title": "Private Track",
+    "title": "MM #293",
     "segments": [
       {
         "format": "2 Rounds for time",
@@ -11359,7 +10165,7 @@
   {
     "id": "2019-11-25--20",
     "date": "2019-11-25",
-    "title": "/20",
+    "title": "MM #292",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -11381,7 +10187,7 @@
   {
     "id": "2019-11-18-mary",
     "date": "2019-11-18",
-    "title": "Mary",
+    "title": "MM #291 — Mary",
     "segments": [
       {
         "format": "AMRAP 12 min",
@@ -11400,7 +10206,7 @@
   {
     "id": "2019-11-11-s-35",
     "date": "2019-11-11",
-    "title": "s/35",
+    "title": "MM #290",
     "segments": [
       {
         "format": "9 Rounds for time",
@@ -11443,7 +10249,7 @@
   {
     "id": "2019-11-04-private-track",
     "date": "2019-11-04",
-    "title": "Private Track",
+    "title": "MM #289",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -11482,7 +10288,7 @@
   {
     "id": "2019-10-28-s-35",
     "date": "2019-10-28",
-    "title": "s/35",
+    "title": "MM #288",
     "segments": [
       {
         "format": "Workout",
@@ -11520,7 +10326,7 @@
   {
     "id": "2019-10-21-private-track",
     "date": "2019-10-21",
-    "title": "Private Track",
+    "title": "MM #287",
     "segments": [
       {
         "format": "For time",
@@ -11545,7 +10351,7 @@
   {
     "id": "2019-10-14--20",
     "date": "2019-10-14",
-    "title": "/20",
+    "title": "MM #286",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -11586,7 +10392,7 @@
   {
     "id": "2019-10-07-private-track",
     "date": "2019-10-07",
-    "title": "Private Track",
+    "title": "MM #285",
     "segments": [
       {
         "format": "For time",
@@ -11611,7 +10417,7 @@
   {
     "id": "2019-09-30-private-track",
     "date": "2019-09-30",
-    "title": "Private Track",
+    "title": "MM #284",
     "segments": [
       {
         "format": "4 Rounds for time",
@@ -11649,7 +10455,7 @@
   {
     "id": "2019-09-23-private-track",
     "date": "2019-09-23",
-    "title": "Private Track",
+    "title": "MM #283",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -11689,7 +10495,7 @@
   {
     "id": "2019-09-16-private-track",
     "date": "2019-09-16",
-    "title": "Private Track",
+    "title": "MM #282",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -11726,7 +10532,7 @@
   {
     "id": "2019-09-09-private-track",
     "date": "2019-09-09",
-    "title": "Private Track",
+    "title": "MM #281",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -11767,7 +10573,7 @@
   {
     "id": "2019-09-02-jackie",
     "date": "2019-09-02",
-    "title": "Jackie",
+    "title": "MM #280 — Jackie",
     "segments": [
       {
         "format": "For time",
@@ -11806,7 +10612,7 @@
   {
     "id": "2019-08-26-private-track",
     "date": "2019-08-26",
-    "title": "Private Track",
+    "title": "MM #279",
     "segments": [
       {
         "format": "For time",
@@ -11831,7 +10637,7 @@
   {
     "id": "2019-08-19-private-track",
     "date": "2019-08-19",
-    "title": "Private Track",
+    "title": "MM #278",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -11872,7 +10678,7 @@
   {
     "id": "2019-08-12-amanda",
     "date": "2019-08-12",
-    "title": "Amanda",
+    "title": "MM #277 — Amanda",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -11914,7 +10720,7 @@
   {
     "id": "2019-08-05-private-track",
     "date": "2019-08-05",
-    "title": "Private Track",
+    "title": "MM #276",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -11953,7 +10759,7 @@
   {
     "id": "2019-07-29-private-track",
     "date": "2019-07-29",
-    "title": "Private Track",
+    "title": "MM #275",
     "segments": [
       {
         "format": "For time",
@@ -11972,7 +10778,7 @@
   {
     "id": "2019-07-22-helen",
     "date": "2019-07-22",
-    "title": "Helen",
+    "title": "MM #274 — Helen",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -12010,7 +10816,7 @@
   {
     "id": "2019-07-15-private-track",
     "date": "2019-07-15",
-    "title": "Private Track",
+    "title": "MM #273",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -12050,7 +10856,7 @@
   {
     "id": "2019-07-08-private-track",
     "date": "2019-07-08",
-    "title": "Private Track",
+    "title": "MM #272",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -12088,7 +10894,7 @@
   {
     "id": "2019-07-01-private-track",
     "date": "2019-07-01",
-    "title": "Private Track",
+    "title": "MM #271",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -12126,7 +10932,7 @@
   {
     "id": "2019-06-24-private-track",
     "date": "2019-06-24",
-    "title": "Private Track",
+    "title": "MM #270",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -12167,7 +10973,7 @@
   {
     "id": "2019-06-17-private-track",
     "date": "2019-06-17",
-    "title": "Private Track",
+    "title": "MM #269",
     "segments": [
       {
         "format": "Workout",
@@ -12209,7 +11015,7 @@
   {
     "id": "2019-06-10-nate",
     "date": "2019-06-10",
-    "title": "Nate",
+    "title": "MM #268 — Nate",
     "segments": [
       {
         "format": "For time",
@@ -12225,7 +11031,7 @@
   {
     "id": "2019-06-03-private-track",
     "date": "2019-06-03",
-    "title": "Private Track",
+    "title": "MM #267",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -12266,7 +11072,7 @@
   {
     "id": "2019-05-27-private-track",
     "date": "2019-05-27",
-    "title": "Private Track",
+    "title": "MM #266",
     "segments": [
       {
         "format": "2 Rounds for time",
@@ -12301,7 +11107,7 @@
   {
     "id": "2019-05-20-private-track",
     "date": "2019-05-20",
-    "title": "Private Track",
+    "title": "MM #265",
     "segments": [
       {
         "format": "For time",
@@ -12325,7 +11131,7 @@
   {
     "id": "2019-05-13-monster-mash",
     "date": "2019-05-13",
-    "title": "Monster Mash",
+    "title": "MM #264",
     "segments": [
       {
         "format": "AMRAP 7 min",
@@ -12368,7 +11174,7 @@
   {
     "id": "2019-05-06-private-track",
     "date": "2019-05-06",
-    "title": "Private Track",
+    "title": "MM #263",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -12407,7 +11213,7 @@
   {
     "id": "2019-04-29-private-track",
     "date": "2019-04-29",
-    "title": "Private Track",
+    "title": "MM #262",
     "segments": [
       {
         "format": "For time",
@@ -12447,7 +11253,7 @@
   {
     "id": "2019-04-22-private-track",
     "date": "2019-04-22",
-    "title": "Private Track",
+    "title": "MM #261",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -12487,7 +11293,7 @@
   {
     "id": "2019-04-15-private-track",
     "date": "2019-04-15",
-    "title": "Private Track",
+    "title": "MM #260",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -12527,7 +11333,7 @@
   {
     "id": "2019-04-08-elizabeth",
     "date": "2019-04-08",
-    "title": "Elizabeth",
+    "title": "MM #259 — Elizabeth",
     "segments": [
       {
         "format": "For time",
@@ -12544,7 +11350,7 @@
   {
     "id": "2019-04-01-private-track",
     "date": "2019-04-01",
-    "title": "Private Track",
+    "title": "MM #258",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -12584,7 +11390,7 @@
   {
     "id": "2019-03-25-monster-mash",
     "date": "2019-03-25",
-    "title": "Monster Mash",
+    "title": "MM #257",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -12624,7 +11430,7 @@
   {
     "id": "2019-03-18-private-track",
     "date": "2019-03-18",
-    "title": "Private Track",
+    "title": "MM #256",
     "segments": [
       {
         "format": "For time",
@@ -12645,7 +11451,7 @@
   {
     "id": "2019-03-11-mary",
     "date": "2019-03-11",
-    "title": "Mary",
+    "title": "MM #255 — Mary",
     "segments": [
       {
         "format": "AMRAP 12 min",
@@ -12682,7 +11488,7 @@
   {
     "id": "2019-03-04-private-track",
     "date": "2019-03-04",
-    "title": "Private Track",
+    "title": "MM #254",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -12719,7 +11525,7 @@
   {
     "id": "2019-02-25-cindy",
     "date": "2019-02-25",
-    "title": "Cindy",
+    "title": "MM #253 — Cindy",
     "segments": [
       {
         "format": "6 Rounds for time",
@@ -12759,7 +11565,7 @@
   {
     "id": "2019-02-18-private-track",
     "date": "2019-02-18",
-    "title": "Private Track",
+    "title": "MM #252",
     "segments": [
       {
         "format": "4 Rounds for time",
@@ -12799,7 +11605,7 @@
   {
     "id": "2019-02-11--20",
     "date": "2019-02-11",
-    "title": "/20",
+    "title": "MM #251",
     "segments": [
       {
         "format": "2 Rounds for time",
@@ -12837,7 +11643,7 @@
   {
     "id": "2019-02-04-monster-mash",
     "date": "2019-02-04",
-    "title": "Monster Mash",
+    "title": "MM #250",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -12876,7 +11682,7 @@
   {
     "id": "2019-01-28-private-track",
     "date": "2019-01-28",
-    "title": "Private Track",
+    "title": "MM #249",
     "segments": [
       {
         "format": "For time",
@@ -12896,7 +11702,7 @@
   {
     "id": "2019-01-21-s-35",
     "date": "2019-01-21",
-    "title": "s/35",
+    "title": "MM #248",
     "segments": [
       {
         "format": "AMRAP 15 min",
@@ -12938,7 +11744,7 @@
   {
     "id": "2019-01-14--20",
     "date": "2019-01-14",
-    "title": "/20",
+    "title": "MM #247",
     "segments": [
       {
         "format": "AMRAP 10 min",
@@ -12979,7 +11785,7 @@
   {
     "id": "2019-01-07-private-track",
     "date": "2019-01-07",
-    "title": "Private Track",
+    "title": "MM #246",
     "segments": [
       {
         "format": "2 Rounds for time",
@@ -13022,7 +11828,7 @@
   {
     "id": "2018-12-31-handstand-push-ups-stric",
     "date": "2018-12-31",
-    "title": "Handstand Push-ups, strict",
+    "title": "MM #245",
     "segments": [
       {
         "format": "2 Rounds for time",
@@ -13062,7 +11868,7 @@
   {
     "id": "2018-12-24-nancy",
     "date": "2018-12-24",
-    "title": "Nancy",
+    "title": "MM #244 — Nancy",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -13100,7 +11906,7 @@
   {
     "id": "2018-12-17-private-track",
     "date": "2018-12-17",
-    "title": "Private Track",
+    "title": "MM #243",
     "segments": [
       {
         "format": "4 Rounds for time",
@@ -13139,7 +11945,7 @@
   {
     "id": "2018-12-10-private-track",
     "date": "2018-12-10",
-    "title": "Private Track",
+    "title": "MM #242",
     "segments": [
       {
         "format": "For time",
@@ -13179,7 +11985,7 @@
   {
     "id": "2018-12-03-private-track",
     "date": "2018-12-03",
-    "title": "Private Track",
+    "title": "MM #241",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -13221,7 +12027,7 @@
   {
     "id": "2018-11-26-private-track",
     "date": "2018-11-26",
-    "title": "Private Track",
+    "title": "MM #240",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -13260,7 +12066,7 @@
   {
     "id": "2018-11-19-private-track",
     "date": "2018-11-19",
-    "title": "Private Track",
+    "title": "MM #239",
     "segments": [
       {
         "format": "For time",
@@ -13284,7 +12090,7 @@
   {
     "id": "2018-11-12-private-track",
     "date": "2018-11-12",
-    "title": "Private Track",
+    "title": "MM #238",
     "segments": [
       {
         "format": "For time",
@@ -13326,7 +12132,7 @@
   {
     "id": "2018-11-05-s-35",
     "date": "2018-11-05",
-    "title": "s/35",
+    "title": "MM #237",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -13364,7 +12170,7 @@
   {
     "id": "2018-10-29-private-track",
     "date": "2018-10-29",
-    "title": "Private Track",
+    "title": "MM #236",
     "segments": [
       {
         "format": "Workout",
@@ -13403,7 +12209,7 @@
   {
     "id": "2018-10-22-private-track",
     "date": "2018-10-22",
-    "title": "Private Track",
+    "title": "MM #235",
     "segments": [
       {
         "format": "For time",
@@ -13427,7 +12233,7 @@
   {
     "id": "2018-10-15-s-35",
     "date": "2018-10-15",
-    "title": "s/35",
+    "title": "MM #234",
     "segments": [
       {
         "format": "AMRAP 11 min",
@@ -13465,7 +12271,7 @@
   {
     "id": "2018-10-08-private-track",
     "date": "2018-10-08",
-    "title": "Private Track",
+    "title": "MM #233",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -13507,7 +12313,7 @@
   {
     "id": "2018-10-01-burpees",
     "date": "2018-10-01",
-    "title": "Burpees",
+    "title": "MM #232",
     "segments": [
       {
         "format": "Workout",
@@ -13545,7 +12351,7 @@
   {
     "id": "2018-09-24-monster-mash",
     "date": "2018-09-24",
-    "title": "Monster Mash",
+    "title": "MM #231",
     "segments": [
       {
         "format": "4 Rounds for time",
@@ -13587,7 +12393,7 @@
   {
     "id": "2018-09-17-front-squats-115-75",
     "date": "2018-09-17",
-    "title": "Front Squats, 115/75",
+    "title": "MM #230",
     "segments": [
       {
         "format": "For time",
@@ -13619,7 +12425,7 @@
   {
     "id": "2018-09-10-linchpin-test-7",
     "date": "2018-09-10",
-    "title": "Linchpin Test 7",
+    "title": "MM #229 — Linchpin Test 7",
     "segments": [
       {
         "format": "Workout",
@@ -13659,7 +12465,7 @@
   {
     "id": "2018-09-03-monster-mash",
     "date": "2018-09-03",
-    "title": "Monster Mash",
+    "title": "MM #228",
     "segments": [
       {
         "format": "For time",
@@ -13701,7 +12507,7 @@
   {
     "id": "2018-08-27-grace",
     "date": "2018-08-27",
-    "title": "Grace",
+    "title": "MM #227 — Grace",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -13740,7 +12546,7 @@
   {
     "id": "2018-08-20--20",
     "date": "2018-08-20",
-    "title": "/20",
+    "title": "MM #226",
     "segments": [
       {
         "format": "For time",
@@ -13776,7 +12582,7 @@
   {
     "id": "2018-08-13-power-clean-95-65",
     "date": "2018-08-13",
-    "title": "Power Clean, 95/65",
+    "title": "MM #225",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -13815,7 +12621,7 @@
   {
     "id": "2018-08-06--20",
     "date": "2018-08-06",
-    "title": "/20",
+    "title": "MM #224",
     "segments": [
       {
         "format": "4 Rounds for time",
@@ -13855,7 +12661,7 @@
   {
     "id": "2018-07-30-s-carry-50",
     "date": "2018-07-30",
-    "title": "s Carry, 50",
+    "title": "MM #223",
     "segments": [
       {
         "format": "15 Rounds for time",
@@ -13896,7 +12702,7 @@
   {
     "id": "2018-07-23-s-carry-50",
     "date": "2018-07-23",
-    "title": "s Carry, 50",
+    "title": "MM #222",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -13934,7 +12740,7 @@
   {
     "id": "2018-07-16-monster-mash",
     "date": "2018-07-16",
-    "title": "Monster Mash",
+    "title": "MM #221",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -13976,7 +12782,7 @@
   {
     "id": "2018-07-09-linchpin-test-11",
     "date": "2018-07-09",
-    "title": "Linchpin Test 11",
+    "title": "MM #220 — Linchpin Test 11",
     "segments": [
       {
         "format": "For time",
@@ -14015,7 +12821,7 @@
   {
     "id": "2018-07-02-monster-mash",
     "date": "2018-07-02",
-    "title": "Monster Mash",
+    "title": "MM #219",
     "segments": [
       {
         "format": "4 Rounds for time",
@@ -14054,7 +12860,7 @@
   {
     "id": "2018-06-25-etc-etc-etc-until-",
     "date": "2018-06-25",
-    "title": "etc, etc, etc, until...",
+    "title": "MM #218",
     "segments": [
       {
         "format": "For time",
@@ -14076,7 +12882,7 @@
   {
     "id": "2018-06-18-monster-mash",
     "date": "2018-06-18",
-    "title": "Monster Mash",
+    "title": "MM #217",
     "segments": [
       {
         "format": "2 Rounds for time",
@@ -14114,7 +12920,7 @@
   {
     "id": "2018-06-11--repeat-from-12-25-2017",
     "date": "2018-06-11",
-    "title": "*Repeat from 12.25.2017",
+    "title": "MM #216",
     "segments": [
       {
         "format": "AMRAP 6 min",
@@ -14158,7 +12964,7 @@
   {
     "id": "2018-06-04-bar-muscle-ups",
     "date": "2018-06-04",
-    "title": "Bar Muscle-ups",
+    "title": "MM #215",
     "segments": [
       {
         "format": "For time",
@@ -14196,7 +13002,7 @@
   {
     "id": "2018-05-28-pull-ups",
     "date": "2018-05-28",
-    "title": "Pull-ups",
+    "title": "MM #214",
     "segments": [
       {
         "format": "AMRAP 15 min",
@@ -14239,7 +13045,7 @@
   {
     "id": "2018-05-21-nancy",
     "date": "2018-05-21",
-    "title": "Nancy",
+    "title": "MM #213 — Nancy",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -14277,7 +13083,7 @@
   {
     "id": "2018-05-14-linchpin-test-9",
     "date": "2018-05-14",
-    "title": "Linchpin Test 9",
+    "title": "MM #212 — Linchpin Test 9",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -14302,7 +13108,7 @@
   {
     "id": "2018-05-07-linchpin-test-4",
     "date": "2018-05-07",
-    "title": "Linchpin Test 4",
+    "title": "MM #211 — Linchpin Test 4",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -14325,7 +13131,7 @@
   {
     "id": "2018-04-30-hang-squat-clean-185-135",
     "date": "2018-04-30",
-    "title": "Hang Squat Clean, 185/135",
+    "title": "MM #210",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -14367,7 +13173,7 @@
   {
     "id": "2018-04-23-monster-mash",
     "date": "2018-04-23",
-    "title": "Monster Mash",
+    "title": "MM #209",
     "segments": [
       {
         "format": "7 Rounds for time",
@@ -14405,7 +13211,7 @@
   {
     "id": "2018-04-16-linchpin-test-3",
     "date": "2018-04-16",
-    "title": "Linchpin Test 3",
+    "title": "MM #208 — Linchpin Test 3",
     "segments": [
       {
         "format": "4 Rounds for time",
@@ -14446,7 +13252,7 @@
   {
     "id": "2018-04-09-monster-mash",
     "date": "2018-04-09",
-    "title": "Monster Mash",
+    "title": "MM #207",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -14490,7 +13296,7 @@
   {
     "id": "2018-04-02-monster-mash",
     "date": "2018-04-02",
-    "title": "Monster Mash",
+    "title": "MM #206",
     "segments": [
       {
         "format": "For time",
@@ -14533,7 +13339,7 @@
   {
     "id": "2018-03-26-burpee-to-target-6-above",
     "date": "2018-03-26",
-    "title": "Burpee to target 6\" above reach",
+    "title": "MM #205",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -14571,7 +13377,7 @@
   {
     "id": "2018-03-19-jackie",
     "date": "2018-03-19",
-    "title": "Jackie",
+    "title": "MM #204 — Jackie",
     "segments": [
       {
         "format": "For time",
@@ -14611,7 +13417,7 @@
   {
     "id": "2018-03-12-nate",
     "date": "2018-03-12",
-    "title": "Nate",
+    "title": "MM #203 — Nate",
     "segments": [
       {
         "format": "AMRAP 20 min",
@@ -14657,7 +13463,7 @@
   {
     "id": "2018-03-05-power-clean-135-95",
     "date": "2018-03-05",
-    "title": "Power Clean, 135/95",
+    "title": "MM #202",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -14699,7 +13505,7 @@
   {
     "id": "2018-02-26-the-seven",
     "date": "2018-02-26",
-    "title": "The Seven",
+    "title": "MM #201 — The Seven",
     "segments": [
       {
         "format": "7 Rounds for time",
@@ -14747,7 +13553,7 @@
   {
     "id": "2018-02-19-monster-mash",
     "date": "2018-02-19",
-    "title": "Monster Mash",
+    "title": "MM #200",
     "segments": [
       {
         "format": "For time",
@@ -14769,7 +13575,7 @@
   {
     "id": "2018-02-12-clean-jerk-135-95",
     "date": "2018-02-12",
-    "title": "Clean & Jerk, 135/95",
+    "title": "MM #199",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -14799,7 +13605,7 @@
   {
     "id": "2018-02-05-calories-assault-bike",
     "date": "2018-02-05",
-    "title": "Calories, Assault Bike",
+    "title": "MM #198",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -14834,7 +13640,7 @@
   {
     "id": "2018-01-29-monster-mash",
     "date": "2018-01-29",
-    "title": "Monster Mash",
+    "title": "MM #197",
     "segments": [
       {
         "format": "AMRAP 5 min",
@@ -14872,7 +13678,7 @@
   {
     "id": "2018-01-22-s-35",
     "date": "2018-01-22",
-    "title": "s/35",
+    "title": "MM #196",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -14915,7 +13721,7 @@
   {
     "id": "2018-01-08-burpee-bar-facing",
     "date": "2018-01-08",
-    "title": "Burpee, bar-facing",
+    "title": "MM #195",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -14954,7 +13760,7 @@
   {
     "id": "2018-01-01-elizabeth",
     "date": "2018-01-01",
-    "title": "Elizabeth",
+    "title": "MM #194 — Elizabeth",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -14994,7 +13800,7 @@
   {
     "id": "2017-12-25--this-is-a-repeat-from-0",
     "date": "2017-12-25",
-    "title": "*This is a repeat from 09.21.2015",
+    "title": "MM #193",
     "segments": [
       {
         "format": "AMRAP 6 min",
@@ -15038,7 +13844,7 @@
   {
     "id": "2017-12-18-monster-mash",
     "date": "2017-12-18",
-    "title": "Monster Mash",
+    "title": "MM #192",
     "segments": [
       {
         "format": "For time",
@@ -15067,7 +13873,7 @@
   {
     "id": "2017-12-11-btwb",
     "date": "2017-12-11",
-    "title": "BTWB",
+    "title": "MM #191",
     "segments": [
       {
         "format": "4 Rounds for time",
@@ -15106,7 +13912,7 @@
   {
     "id": "2017-12-04-monster-mash",
     "date": "2017-12-04",
-    "title": "Monster Mash",
+    "title": "MM #190",
     "segments": [
       {
         "format": "For time",
@@ -15127,7 +13933,7 @@
   {
     "id": "2017-11-27-monster-mash",
     "date": "2017-11-27",
-    "title": "Monster Mash",
+    "title": "MM #189",
     "segments": [
       {
         "format": "2 Rounds for time",
@@ -15165,7 +13971,7 @@
   {
     "id": "2017-11-20-monster-mash",
     "date": "2017-11-20",
-    "title": "Monster Mash",
+    "title": "MM #188",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -15206,7 +14012,7 @@
   {
     "id": "2017-11-13--20",
     "date": "2017-11-13",
-    "title": "/20",
+    "title": "MM #187",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -15243,7 +14049,7 @@
   {
     "id": "2017-11-06--20",
     "date": "2017-11-06",
-    "title": "/20",
+    "title": "MM #186",
     "segments": [
       {
         "format": "AMRAP 6 min",
@@ -15287,7 +14093,7 @@
   {
     "id": "2017-10-30-monster-mash",
     "date": "2017-10-30",
-    "title": "Monster Mash",
+    "title": "MM #185",
     "segments": [
       {
         "format": "For time",
@@ -15312,7 +14118,7 @@
   {
     "id": "2017-10-23-s-carry-50",
     "date": "2017-10-23",
-    "title": "s Carry, 50",
+    "title": "MM #184",
     "segments": [
       {
         "format": "Workout",
@@ -15356,7 +14162,7 @@
   {
     "id": "2017-10-16-monster-mash",
     "date": "2017-10-16",
-    "title": "Monster Mash",
+    "title": "MM #183",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -15397,7 +14203,7 @@
   {
     "id": "2017-10-09-sqt",
     "date": "2017-10-09",
-    "title": "SQT",
+    "title": "MM #182 — SQT",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -15435,7 +14241,7 @@
   {
     "id": "2017-10-02-monster-mash",
     "date": "2017-10-02",
-    "title": "Monster Mash",
+    "title": "MM #181",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -15469,7 +14275,7 @@
   {
     "id": "2017-09-25--24",
     "date": "2017-09-25",
-    "title": "/24",
+    "title": "MM #180",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -15510,7 +14316,7 @@
   {
     "id": "2017-09-18-monster-mash",
     "date": "2017-09-18",
-    "title": "Monster Mash",
+    "title": "MM #179",
     "segments": [
       {
         "format": "2 Rounds for time",
@@ -15543,7 +14349,7 @@
   {
     "id": "2017-09-11-d-ball-cleans-100-70-che",
     "date": "2017-09-11",
-    "title": "D-ball Cleans, 100/70 Chest-to-bar",
+    "title": "MM #178",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -15583,7 +14389,7 @@
   {
     "id": "2017-09-04-heavy-fran",
     "date": "2017-09-04",
-    "title": "Heavy Fran",
+    "title": "MM #177",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -15621,7 +14427,7 @@
   {
     "id": "2017-08-28-in-a-5-minute-window-",
     "date": "2017-08-28",
-    "title": "In a 5-minute window:",
+    "title": "MM #176",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -15662,7 +14468,7 @@
   {
     "id": "2017-08-21-cleans",
     "date": "2017-08-21",
-    "title": "Cleans",
+    "title": "MM #175",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -15698,7 +14504,7 @@
   {
     "id": "2017-08-14-ghd-sit-up",
     "date": "2017-08-14",
-    "title": "GHD Sit-up",
+    "title": "MM #174",
     "segments": [
       {
         "format": "AMRAP 9 min",
@@ -15737,7 +14543,7 @@
   {
     "id": "2017-08-07-cindy",
     "date": "2017-08-07",
-    "title": "Cindy",
+    "title": "MM #173 — Cindy",
     "segments": [
       {
         "format": "AMRAP 5 min",
@@ -15772,7 +14578,7 @@
   {
     "id": "2017-07-31-randy",
     "date": "2017-07-31",
-    "title": "Randy",
+    "title": "MM #172 — Randy",
     "segments": [
       {
         "format": "For time",
@@ -15812,7 +14618,7 @@
   {
     "id": "2017-07-24-monster-mash",
     "date": "2017-07-24",
-    "title": "Monster Mash",
+    "title": "MM #171",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -15846,7 +14652,7 @@
   {
     "id": "2017-07-17-monster-mash",
     "date": "2017-07-17",
-    "title": "Monster Mash",
+    "title": "MM #170",
     "segments": [
       {
         "format": "2 Rounds for time",
@@ -15883,7 +14689,7 @@
   {
     "id": "2017-07-10-monster-mash",
     "date": "2017-07-10",
-    "title": "Monster Mash",
+    "title": "MM #169",
     "segments": [
       {
         "format": "For time",
@@ -15903,7 +14709,7 @@
   {
     "id": "2017-07-03--repeat-from-02-01-2016",
     "date": "2017-07-03",
-    "title": "*Repeat from 02.01.2016",
+    "title": "MM #168",
     "segments": [
       {
         "format": "For time",
@@ -15945,7 +14751,7 @@
   {
     "id": "2017-06-26-in-a-10-minute-window-",
     "date": "2017-06-26",
-    "title": "In a 10 minute window:",
+    "title": "MM #167",
     "segments": [
       {
         "format": "Workout",
@@ -15982,7 +14788,7 @@
   {
     "id": "2017-06-19-s-carry-50",
     "date": "2017-06-19",
-    "title": "s Carry 50",
+    "title": "MM #166",
     "segments": [
       {
         "format": "For time",
@@ -16028,7 +14834,7 @@
   {
     "id": "2017-06-12-isabel",
     "date": "2017-06-12",
-    "title": "Isabel",
+    "title": "MM #165 — Isabel",
     "segments": [
       {
         "format": "For time",
@@ -16067,7 +14873,7 @@
   {
     "id": "2017-06-05-monster-mash",
     "date": "2017-06-05",
-    "title": "Monster Mash",
+    "title": "MM #164",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -16108,7 +14914,7 @@
   {
     "id": "2017-05-29-cindy",
     "date": "2017-05-29",
-    "title": "Cindy",
+    "title": "MM #163 — Cindy",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -16145,7 +14951,7 @@
   {
     "id": "2017-05-22-overhead-squat-115-80",
     "date": "2017-05-22",
-    "title": "Overhead Squat 115/80",
+    "title": "MM #162",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -16175,7 +14981,7 @@
   {
     "id": "2017-05-15-kettlebell-swing-53-35",
     "date": "2017-05-15",
-    "title": "Kettlebell Swing 53/35",
+    "title": "MM #161",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -16214,7 +15020,7 @@
   {
     "id": "2017-05-08-deadlift-225-155",
     "date": "2017-05-08",
-    "title": "Deadlift 225/155",
+    "title": "MM #160",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -16247,7 +15053,7 @@
   {
     "id": "2017-05-01--20",
     "date": "2017-05-01",
-    "title": "/20",
+    "title": "MM #159",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -16284,7 +15090,7 @@
   {
     "id": "2017-04-24--1st-workout-courtesy-of",
     "date": "2017-04-24",
-    "title": "*1st Workout Courtesy of CrossFit",
+    "title": "MM #158",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -16321,7 +15127,7 @@
   {
     "id": "2017-04-17-calories-rowing",
     "date": "2017-04-17",
-    "title": "Calories, Rowing",
+    "title": "MM #157",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -16362,7 +15168,7 @@
   {
     "id": "2017-04-10--1st-workout-courtesy-of",
     "date": "2017-04-10",
-    "title": "*1st Workout Courtesy of Icon Athlete",
+    "title": "MM #156",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -16401,7 +15207,7 @@
   {
     "id": "2017-04-03--repeat-from-02-22-2016",
     "date": "2017-04-03",
-    "title": "*Repeat from 02.22.2016",
+    "title": "MM #155",
     "segments": [
       {
         "format": "For time",
@@ -16422,7 +15228,7 @@
   {
     "id": "2017-03-27-kettle-bell-swing-70-53",
     "date": "2017-03-27",
-    "title": "Kettle Bell Swing 70/53",
+    "title": "MM #154",
     "segments": [
       {
         "format": "10 Rounds for time",
@@ -16461,7 +15267,7 @@
   {
     "id": "2017-03-20-isabel",
     "date": "2017-03-20",
-    "title": "Isabel",
+    "title": "MM #153 — Isabel",
     "segments": [
       {
         "format": "For time",
@@ -16484,7 +15290,7 @@
   {
     "id": "2017-03-13-deadlift-225-155",
     "date": "2017-03-13",
-    "title": "Deadlift, 225/155",
+    "title": "MM #152",
     "segments": [
       {
         "format": "2 Rounds for time",
@@ -16523,7 +15329,7 @@
   {
     "id": "2017-03-06-monster-mash",
     "date": "2017-03-06",
-    "title": "Monster Mash",
+    "title": "MM #151",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -16563,7 +15369,7 @@
   {
     "id": "2017-02-27-elizabeth",
     "date": "2017-02-27",
-    "title": "Elizabeth",
+    "title": "MM #150 — Elizabeth",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -16602,7 +15408,7 @@
   {
     "id": "2017-02-20-rope-climb-15-ft",
     "date": "2017-02-20",
-    "title": "Rope Climb, 15 ft",
+    "title": "MM #149",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -16642,7 +15448,7 @@
   {
     "id": "2017-02-13-power-snatch-115-80",
     "date": "2017-02-13",
-    "title": "Power Snatch 115/80",
+    "title": "MM #148",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -16681,7 +15487,7 @@
   {
     "id": "2017-02-06-clean-jerks-155-105",
     "date": "2017-02-06",
-    "title": "Clean & Jerks 155/105",
+    "title": "MM #147",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -16721,7 +15527,7 @@
   {
     "id": "2017-01-30-thruster-135-95",
     "date": "2017-01-30",
-    "title": "Thruster 135/95",
+    "title": "MM #146",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -16759,7 +15565,7 @@
   {
     "id": "2017-01-23--repeat-from-12-07-15",
     "date": "2017-01-23",
-    "title": "*Repeat from 12.07.15",
+    "title": "MM #145",
     "segments": [
       {
         "format": "For time",
@@ -16802,7 +15608,7 @@
   {
     "id": "2017-01-16-monster-mash",
     "date": "2017-01-16",
-    "title": "Monster Mash",
+    "title": "MM #144",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -16842,7 +15648,7 @@
   {
     "id": "2017-01-09-power-clean-135-95",
     "date": "2017-01-09",
-    "title": "Power Clean 135/95",
+    "title": "MM #143",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -16878,7 +15684,7 @@
   {
     "id": "2017-01-02-crossfit-linchpin-test-4",
     "date": "2017-01-02",
-    "title": "CrossFit Linchpin: Test 4",
+    "title": "MM #142",
     "segments": [
       {
         "format": "2 Rounds for time",
@@ -16921,7 +15727,7 @@
   {
     "id": "2016-12-26-monster-mash",
     "date": "2016-12-26",
-    "title": "Monster Mash",
+    "title": "MM #141",
     "segments": [
       {
         "format": "For time",
@@ -16941,7 +15747,7 @@
   {
     "id": "2016-12-19-mary",
     "date": "2016-12-19",
-    "title": "Mary",
+    "title": "MM #140 — Mary",
     "segments": [
       {
         "format": "AMRAP 12 min",
@@ -16978,7 +15784,7 @@
   {
     "id": "2016-12-12-monster-mash",
     "date": "2016-12-12",
-    "title": "Monster Mash",
+    "title": "MM #139",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -17017,7 +15823,7 @@
   {
     "id": "2016-12-05-ghd-sit-ups",
     "date": "2016-12-05",
-    "title": "GHD Sit-ups",
+    "title": "MM #138",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -17060,7 +15866,7 @@
   {
     "id": "2016-11-28-cindy",
     "date": "2016-11-28",
-    "title": "Cindy",
+    "title": "MM #137 — Cindy",
     "segments": [
       {
         "format": "2 Rounds for time",
@@ -17096,7 +15902,7 @@
   {
     "id": "2016-11-21-wall-ball-shot-20-14",
     "date": "2016-11-21",
-    "title": "Wall Ball Shot 20/14",
+    "title": "MM #136",
     "segments": [
       {
         "format": "4 Rounds for time",
@@ -17138,7 +15944,7 @@
   {
     "id": "2016-11-14-monster-mash",
     "date": "2016-11-14",
-    "title": "Monster Mash",
+    "title": "MM #135",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -17178,7 +15984,7 @@
   {
     "id": "2016-11-07-overhead-squats-95-65",
     "date": "2016-11-07",
-    "title": "Overhead Squats 95/65",
+    "title": "MM #134",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -17219,7 +16025,7 @@
   {
     "id": "2016-10-31--20",
     "date": "2016-10-31",
-    "title": "/20",
+    "title": "MM #133",
     "segments": [
       {
         "format": "For time",
@@ -17257,7 +16063,7 @@
   {
     "id": "2016-10-24-monster-mash",
     "date": "2016-10-24",
-    "title": "Monster Mash",
+    "title": "MM #132",
     "segments": [
       {
         "format": "For time",
@@ -17280,7 +16086,7 @@
   {
     "id": "2016-10-17-l-sit-pull-up-strict",
     "date": "2016-10-17",
-    "title": "L-sit Pull-up, strict",
+    "title": "MM #131",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -17323,7 +16129,7 @@
   {
     "id": "2016-10-10-monster-mash",
     "date": "2016-10-10",
-    "title": "Monster Mash",
+    "title": "MM #130",
     "segments": [
       {
         "format": "AMRAP 7 min",
@@ -17363,7 +16169,7 @@
   {
     "id": "2016-10-03-monster-mash",
     "date": "2016-10-03",
-    "title": "Monster Mash",
+    "title": "MM #129",
     "segments": [
       {
         "format": "2 Rounds for time",
@@ -17403,7 +16209,7 @@
   {
     "id": "2016-09-26--20",
     "date": "2016-09-26",
-    "title": "/20",
+    "title": "MM #128",
     "segments": [
       {
         "format": "For time",
@@ -17431,7 +16237,7 @@
   {
     "id": "2016-09-19-helen",
     "date": "2016-09-19",
-    "title": "Helen",
+    "title": "MM #127 — Helen",
     "segments": [
       {
         "format": "4 Rounds for time",
@@ -17468,7 +16274,7 @@
   {
     "id": "2016-09-12-monster-mash",
     "date": "2016-09-12",
-    "title": "Monster Mash",
+    "title": "MM #126",
     "segments": [
       {
         "format": "4 Rounds for time",
@@ -17508,7 +16314,7 @@
   {
     "id": "2016-09-05--20",
     "date": "2016-09-05",
-    "title": "/20",
+    "title": "MM #125",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -17551,7 +16357,7 @@
   {
     "id": "2016-08-29-s-w-2x35",
     "date": "2016-08-29",
-    "title": "s, W=2x35",
+    "title": "MM #124",
     "segments": [
       {
         "format": "Workout",
@@ -17591,7 +16397,7 @@
   {
     "id": "2016-08-22-wallball-shot-20-14",
     "date": "2016-08-22",
-    "title": "Wallball Shot 20/14",
+    "title": "MM #123",
     "segments": [
       {
         "format": "For time",
@@ -17632,7 +16438,7 @@
   {
     "id": "2016-08-15-randy",
     "date": "2016-08-15",
-    "title": "Randy",
+    "title": "MM #122 — Randy",
     "segments": [
       {
         "format": "For time",
@@ -17669,7 +16475,7 @@
   {
     "id": "2016-08-08-wallball-shot-20-14",
     "date": "2016-08-08",
-    "title": "Wallball Shot 20/14",
+    "title": "MM #121",
     "segments": [
       {
         "format": "For time",
@@ -17709,7 +16515,7 @@
   {
     "id": "2016-08-01-monster-mash",
     "date": "2016-08-01",
-    "title": "Monster Mash",
+    "title": "MM #120",
     "segments": [
       {
         "format": "For time",
@@ -17734,7 +16540,7 @@
   {
     "id": "2016-07-25-monster-mash",
     "date": "2016-07-25",
-    "title": "Monster Mash",
+    "title": "MM #119",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -17773,7 +16579,7 @@
   {
     "id": "2016-07-18-nasty-girls",
     "date": "2016-07-18",
-    "title": "Nasty Girls",
+    "title": "MM #118 — Nasty Girls",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -17813,7 +16619,7 @@
   {
     "id": "2016-07-11-front-squat-185-135",
     "date": "2016-07-11",
-    "title": "Front Squat 185/135",
+    "title": "MM #117",
     "segments": [
       {
         "format": "For time",
@@ -17854,7 +16660,7 @@
   {
     "id": "2016-07-04-crossfit-linchpin-test-8",
     "date": "2016-07-04",
-    "title": "CrossFit Linchpin: Test 8",
+    "title": "MM #116",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -17892,7 +16698,7 @@
   {
     "id": "2016-06-27-cindy",
     "date": "2016-06-27",
-    "title": "Cindy",
+    "title": "MM #115 — Cindy",
     "segments": [
       {
         "format": "AMRAP 5 min",
@@ -17929,7 +16735,7 @@
   {
     "id": "2016-06-20-chest-to-bar-pull-ups",
     "date": "2016-06-20",
-    "title": "Chest-to-bar pull-ups",
+    "title": "MM #114",
     "segments": [
       {
         "format": "Workout",
@@ -17972,7 +16778,7 @@
   {
     "id": "2016-06-13-s-45",
     "date": "2016-06-13",
-    "title": "s/45",
+    "title": "MM #113",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -18010,7 +16816,7 @@
   {
     "id": "2016-06-06--20",
     "date": "2016-06-06",
-    "title": "/20",
+    "title": "MM #112",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -18051,7 +16857,7 @@
   {
     "id": "2016-05-30-icon-3",
     "date": "2016-05-30",
-    "title": "Icon 3",
+    "title": "MM #111",
     "segments": [
       {
         "format": "For time",
@@ -18093,7 +16899,7 @@
   {
     "id": "2016-05-23--no-rack-unless-necessar",
     "date": "2016-05-23",
-    "title": "*No rack unless necessary",
+    "title": "MM #110",
     "segments": [
       {
         "format": "For time",
@@ -18133,7 +16939,7 @@
   {
     "id": "2016-05-16-calories-assault-bike",
     "date": "2016-05-16",
-    "title": "Calories, Assault Bike",
+    "title": "MM #109",
     "segments": [
       {
         "format": "For time",
@@ -18175,7 +16981,7 @@
   {
     "id": "2016-05-09-squat-clean-thruster-155",
     "date": "2016-05-09",
-    "title": "Squat Clean Thruster 155/105",
+    "title": "MM #108",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -18215,7 +17021,7 @@
   {
     "id": "2016-05-02-monster-mash",
     "date": "2016-05-02",
-    "title": "Monster Mash",
+    "title": "MM #107",
     "segments": [
       {
         "format": "AMRAP 10 min",
@@ -18257,7 +17063,7 @@
   {
     "id": "2016-04-25-power-snatch-135-95",
     "date": "2016-04-25",
-    "title": "Power Snatch 135/95",
+    "title": "MM #106",
     "segments": [
       {
         "format": "AMRAP 15 min",
@@ -18297,7 +17103,7 @@
   {
     "id": "2016-04-18-monster-mash",
     "date": "2016-04-18",
-    "title": "Monster Mash",
+    "title": "MM #105",
     "segments": [
       {
         "format": "For time",
@@ -18334,7 +17140,7 @@
   {
     "id": "2016-04-11-helen",
     "date": "2016-04-11",
-    "title": "Helen",
+    "title": "MM #104 — Helen",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -18375,7 +17181,7 @@
   {
     "id": "2016-04-04-cindy",
     "date": "2016-04-04",
-    "title": "Cindy",
+    "title": "MM #103 — Cindy",
     "segments": [
       {
         "format": "For time",
@@ -18411,7 +17217,7 @@
   {
     "id": "2016-03-28--20",
     "date": "2016-03-28",
-    "title": "/20",
+    "title": "MM #102",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -18458,7 +17264,7 @@
   {
     "id": "2016-03-21-crossfit-linchpin-test-5",
     "date": "2016-03-21",
-    "title": "CrossFit Linchpin: Test 5",
+    "title": "MM #101",
     "segments": [
       {
         "format": "For time",
@@ -18496,7 +17302,7 @@
   {
     "id": "2016-03-14-utf-8",
     "date": "2016-03-14",
-    "title": "utf-8",
+    "title": "MM #100",
     "segments": [
       {
         "format": "Workout",
@@ -18531,7 +17337,7 @@
   {
     "id": "2016-03-07-kettlebell-swings-70-53",
     "date": "2016-03-07",
-    "title": "Kettlebell Swings 70/53",
+    "title": "MM #99",
     "segments": [
       {
         "format": "Rest period",
@@ -18555,7 +17361,7 @@
   {
     "id": "2016-02-22-monster-mash",
     "date": "2016-02-22",
-    "title": "Monster Mash",
+    "title": "MM #98",
     "segments": [
       {
         "format": "For time",
@@ -18581,7 +17387,7 @@
   {
     "id": "2016-02-08-sqt",
     "date": "2016-02-08",
-    "title": "SQT",
+    "title": "MM #97 — SQT",
     "segments": [
       {
         "format": "2 Rounds for time",
@@ -18607,7 +17413,7 @@
   {
     "id": "2016-02-01-monster-mash",
     "date": "2016-02-01",
-    "title": "Monster Mash",
+    "title": "MM #96",
     "segments": [
       {
         "format": "AMRAP 8 min",
@@ -18634,7 +17440,7 @@
   {
     "id": "2016-01-25--20",
     "date": "2016-01-25",
-    "title": "/20",
+    "title": "MM #95",
     "segments": [
       {
         "format": "For time",
@@ -18658,7 +17464,7 @@
   {
     "id": "2016-01-18-linchpin-test-3",
     "date": "2016-01-18",
-    "title": "Linchpin Test 3",
+    "title": "MM #94 — Linchpin Test 3",
     "segments": [
       {
         "format": "4 Rounds for time",
@@ -18685,7 +17491,7 @@
   {
     "id": "2016-01-11-crossfit-linchpin-test-7",
     "date": "2016-01-11",
-    "title": "CrossFit Linchpin: Test 7",
+    "title": "MM #93",
     "segments": [
       {
         "format": "4 Rounds for time",
@@ -18709,7 +17515,7 @@
   {
     "id": "2016-01-04-partner-monster-mash-",
     "date": "2016-01-04",
-    "title": "PARTNER MONSTER MASH!",
+    "title": "MM #92",
     "segments": [
       {
         "format": "AMRAP 14 min",
@@ -18747,7 +17553,7 @@
   {
     "id": "2015-12-28-monster-mash",
     "date": "2015-12-28",
-    "title": "Monster Mash",
+    "title": "MM #91",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -18771,7 +17577,7 @@
   {
     "id": "2015-12-21--20",
     "date": "2015-12-21",
-    "title": "/20",
+    "title": "MM #90",
     "segments": [
       {
         "format": "AMRAP 20 min",
@@ -18792,7 +17598,7 @@
   {
     "id": "2015-12-14--20",
     "date": "2015-12-14",
-    "title": "/20",
+    "title": "MM #89",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -18815,7 +17621,7 @@
   {
     "id": "2015-12-07-monster-mash",
     "date": "2015-12-07",
-    "title": "Monster Mash",
+    "title": "MM #88",
     "segments": [
       {
         "format": "For time",
@@ -18843,7 +17649,7 @@
   {
     "id": "2015-11-30-row-for-calories",
     "date": "2015-11-30",
-    "title": "Row for Calories",
+    "title": "MM #87",
     "segments": [
       {
         "format": "2 Rounds for time",
@@ -18870,7 +17676,7 @@
   {
     "id": "2015-11-23-jackie",
     "date": "2015-11-23",
-    "title": "Jackie",
+    "title": "MM #86 — Jackie",
     "segments": [
       {
         "format": "4 Rounds for time",
@@ -18897,7 +17703,7 @@
   {
     "id": "2015-11-16-monster-mash",
     "date": "2015-11-16",
-    "title": "Monster Mash",
+    "title": "MM #85",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -18924,7 +17730,7 @@
   {
     "id": "2015-11-09--20",
     "date": "2015-11-09",
-    "title": "/20",
+    "title": "MM #84",
     "segments": [
       {
         "format": "4 Rounds for time",
@@ -18947,7 +17753,7 @@
   {
     "id": "2015-11-02-chest-to-bar-pull-ups",
     "date": "2015-11-02",
-    "title": "Chest-to-bar Pull-ups",
+    "title": "MM #83",
     "segments": [
       {
         "format": "AMRAP 7 min",
@@ -18973,7 +17779,7 @@
   {
     "id": "2015-10-26--20",
     "date": "2015-10-26",
-    "title": "/20",
+    "title": "MM #82",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -18997,7 +17803,7 @@
   {
     "id": "2015-10-19--20",
     "date": "2015-10-19",
-    "title": "/20",
+    "title": "MM #81",
     "segments": [
       {
         "format": "For time",
@@ -19019,7 +17825,7 @@
   {
     "id": "2015-10-12-ascending-",
     "date": "2015-10-12",
-    "title": "Ascending ",
+    "title": "MM #80",
     "segments": [
       {
         "format": "4 Rounds for time",
@@ -19048,7 +17854,7 @@
   {
     "id": "2015-10-05-on-the-minute-for-24-min",
     "date": "2015-10-05",
-    "title": "On the minute for 24 minutes:",
+    "title": "MM #79",
     "segments": [
       {
         "format": "Workout",
@@ -19070,7 +17876,7 @@
   {
     "id": "2015-09-28-thruster-115-75",
     "date": "2015-09-28",
-    "title": "Thruster 115/75",
+    "title": "MM #78",
     "segments": [
       {
         "format": "AMRAP 7 min",
@@ -19096,7 +17902,7 @@
   {
     "id": "2015-09-25-calories-air-assault-bik",
     "date": "2015-09-25",
-    "title": "Calories, Air Assault bike",
+    "title": "MM #77",
     "segments": [
       {
         "format": "Rest period",
@@ -19113,7 +17919,7 @@
   {
     "id": "2015-09-21-monster-mash",
     "date": "2015-09-21",
-    "title": "Monster Mash",
+    "title": "MM #76",
     "segments": [
       {
         "format": "AMRAP 6 min",
@@ -19142,7 +17948,7 @@
   {
     "id": "2015-09-14-monster-mash",
     "date": "2015-09-14",
-    "title": "Monster Mash",
+    "title": "MM #75",
     "segments": [
       {
         "format": "AMRAP 5 min",
@@ -19170,7 +17976,7 @@
   {
     "id": "2015-09-07-bar-muscle-ups",
     "date": "2015-09-07",
-    "title": "Bar Muscle-ups",
+    "title": "MM #74",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -19209,7 +18015,7 @@
   {
     "id": "2015-08-31-monster-mash",
     "date": "2015-08-31",
-    "title": "Monster Mash",
+    "title": "MM #73",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -19233,7 +18039,7 @@
   {
     "id": "2015-08-24-attempt-unbroken-",
     "date": "2015-08-24",
-    "title": "Attempt unbroken.",
+    "title": "MM #72",
     "segments": [
       {
         "format": "For time",
@@ -19255,7 +18061,7 @@
   {
     "id": "2015-08-17-helen",
     "date": "2015-08-17",
-    "title": "Helen",
+    "title": "MM #71 — Helen",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -19276,7 +18082,7 @@
   {
     "id": "2015-08-12-monster-mash",
     "date": "2015-08-12",
-    "title": "Monster Mash",
+    "title": "MM #70",
     "segments": [
       {
         "format": "AMRAP 30 min",
@@ -19293,7 +18099,7 @@
   {
     "id": "2015-08-10-monster-mash",
     "date": "2015-08-10",
-    "title": "Monster Mash",
+    "title": "MM #69",
     "segments": [
       {
         "format": "AMRAP 7 min",
@@ -19322,7 +18128,7 @@
   {
     "id": "2015-08-03-max-reps-ohs-at-70-",
     "date": "2015-08-03",
-    "title": "Max Reps OHS at 70%",
+    "title": "MM #68",
     "segments": [
       {
         "format": "4 Rounds for time",
@@ -19344,7 +18150,7 @@
   {
     "id": "2015-07-27--24",
     "date": "2015-07-27",
-    "title": "/24",
+    "title": "MM #67",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -19370,7 +18176,7 @@
   {
     "id": "2015-07-20-l-pull-ups-strict",
     "date": "2015-07-20",
-    "title": "L Pull-ups, strict",
+    "title": "MM #66",
     "segments": [
       {
         "format": "2 Rounds for time",
@@ -19396,7 +18202,7 @@
   {
     "id": "2015-07-06-grace",
     "date": "2015-07-06",
-    "title": "Grace",
+    "title": "MM #65 — Grace",
     "segments": [
       {
         "format": "For time",
@@ -19422,7 +18228,7 @@
   {
     "id": "2015-06-29-cindy",
     "date": "2015-06-29",
-    "title": "Cindy",
+    "title": "MM #64 — Cindy",
     "segments": [
       {
         "format": "AMRAP 10 min",
@@ -19445,7 +18251,7 @@
   {
     "id": "2015-06-22-deadlift-225-135",
     "date": "2015-06-22",
-    "title": "Deadlift 225/135",
+    "title": "MM #63",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -19470,7 +18276,7 @@
   {
     "id": "2015-06-15-monster-mash",
     "date": "2015-06-15",
-    "title": "Monster Mash",
+    "title": "MM #62",
     "segments": [
       {
         "format": "For time",
@@ -19489,7 +18295,7 @@
   {
     "id": "2015-06-08-power-clean-185-135",
     "date": "2015-06-08",
-    "title": "Power Clean 185/135",
+    "title": "MM #61",
     "segments": [
       {
         "format": "AMRAP 6 min",
@@ -19516,7 +18322,7 @@
   {
     "id": "2015-06-01-front-squat-225-155",
     "date": "2015-06-01",
-    "title": "Front Squat 225/155",
+    "title": "MM #60",
     "segments": [
       {
         "format": "Rest period",
@@ -19541,7 +18347,7 @@
   {
     "id": "2015-05-25-for-minutes-1-20-",
     "date": "2015-05-25",
-    "title": "For Minutes 1-20:",
+    "title": "MM #59",
     "segments": [
       {
         "format": "Workout",
@@ -19563,7 +18369,7 @@
   {
     "id": "2015-05-18-monster-mash",
     "date": "2015-05-18",
-    "title": "Monster Mash",
+    "title": "MM #58",
     "segments": [
       {
         "format": "AMRAP 9 min",
@@ -19603,7 +18409,7 @@
   {
     "id": "2015-05-11--no-rack",
     "date": "2015-05-11",
-    "title": "-No rack",
+    "title": "MM #57",
     "segments": [
       {
         "format": "Workout",
@@ -19643,7 +18449,7 @@
   {
     "id": "2015-05-04-squat-clean-thruster-155",
     "date": "2015-05-04",
-    "title": "Squat Clean Thruster 155/105",
+    "title": "MM #56",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -19683,7 +18489,7 @@
   {
     "id": "2015-04-27--20",
     "date": "2015-04-27",
-    "title": "/20",
+    "title": "MM #55",
     "segments": [
       {
         "format": "For time",
@@ -19724,7 +18530,7 @@
   {
     "id": "2015-04-20--20",
     "date": "2015-04-20",
-    "title": "/20",
+    "title": "MM #54",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -19764,7 +18570,7 @@
   {
     "id": "2015-04-13-deadlift-205-145",
     "date": "2015-04-13",
-    "title": "Deadlift 205/145",
+    "title": "MM #53",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -19803,7 +18609,7 @@
   {
     "id": "2015-04-06-monster-mash",
     "date": "2015-04-06",
-    "title": "Monster Mash",
+    "title": "MM #52",
     "segments": [
       {
         "format": "For time",
@@ -19843,7 +18649,7 @@
   {
     "id": "2015-03-30-the-seven",
     "date": "2015-03-30",
-    "title": "The Seven",
+    "title": "MM #51 — The Seven",
     "segments": [
       {
         "format": "AMRAP 50 min",
@@ -19875,7 +18681,7 @@
   {
     "id": "2015-03-23-monster-mash",
     "date": "2015-03-23",
-    "title": "Monster Mash",
+    "title": "MM #50",
     "segments": [
       {
         "format": "Workout",
@@ -19916,7 +18722,7 @@
   {
     "id": "2015-03-16-monster-mash",
     "date": "2015-03-16",
-    "title": "Monster Mash",
+    "title": "MM #49",
     "segments": [
       {
         "format": "5 Rounds for time",
@@ -19942,7 +18748,7 @@
   {
     "id": "2015-03-09-begin-at-0-00",
     "date": "2015-03-09",
-    "title": "Begin at 0:00",
+    "title": "MM #48",
     "segments": [
       {
         "format": "Workout",
@@ -19986,7 +18792,7 @@
   {
     "id": "2015-03-02-monster-mash",
     "date": "2015-03-02",
-    "title": "Monster Mash",
+    "title": "MM #47",
     "segments": [
       {
         "format": "For time",
@@ -20030,7 +18836,7 @@
   {
     "id": "2015-02-23-monster-mash",
     "date": "2015-02-23",
-    "title": "Monster Mash",
+    "title": "MM #46",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -20068,7 +18874,7 @@
   {
     "id": "2015-02-16-monster-mash",
     "date": "2015-02-16",
-    "title": "Monster Mash",
+    "title": "MM #45",
     "segments": [
       {
         "format": "AMRAP 5 min",
@@ -20120,7 +18926,7 @@
   {
     "id": "2015-02-15-hang-power-clean-95-65",
     "date": "2015-02-15",
-    "title": "Hang Power Clean 95/65",
+    "title": "MM #44",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -20147,7 +18953,7 @@
   {
     "id": "2015-02-09-deadlift-225-155",
     "date": "2015-02-09",
-    "title": "Deadlift 225/155",
+    "title": "MM #43",
     "segments": [
       {
         "format": "For time",
@@ -20191,7 +18997,7 @@
   {
     "id": "2015-02-02--jackie-",
     "date": "2015-02-02",
-    "title": "“Jackie”",
+    "title": "MM #42",
     "segments": [
       {
         "format": "For time",
@@ -20227,7 +19033,7 @@
   {
     "id": "2015-01-26-box-jumps-24-20-",
     "date": "2015-01-26",
-    "title": "Box jumps 24″/20″",
+    "title": "MM #41",
     "segments": [
       {
         "format": "For time",
@@ -20267,7 +19073,7 @@
   {
     "id": "2015-01-19-note-the-3-rounder-is-fr",
     "date": "2015-01-19",
-    "title": "Note: The 3 Rounder is from Alex Nettey",
+    "title": "MM #40",
     "segments": [
       {
         "format": "For time",
@@ -20311,7 +19117,7 @@
   {
     "id": "2015-01-12-monster-mash",
     "date": "2015-01-12",
-    "title": "Monster Mash",
+    "title": "MM #39",
     "segments": [
       {
         "format": "4 Rounds for time",
@@ -20348,7 +19154,7 @@
   {
     "id": "2015-01-05-walking-lunge-front-rack",
     "date": "2015-01-05",
-    "title": "Walking Lunge, Front Rack 155/105",
+    "title": "MM #38",
     "segments": [
       {
         "format": "3 Rounds for time",
@@ -20395,7 +19201,7 @@
   {
     "id": "2014-12-29-overhead-squat-135-95",
     "date": "2014-12-29",
-    "title": "Overhead Squat 135/95",
+    "title": "MM #37",
     "segments": [
       {
         "format": "4 Rounds for time",
@@ -20437,7 +19243,7 @@
   {
     "id": "2014-12-22-row-1000m",
     "date": "2014-12-22",
-    "title": "Row 1000m",
+    "title": "MM #36",
     "segments": [
       {
         "format": "Workout",
@@ -20475,7 +19281,7 @@
   {
     "id": "2014-12-15-chest-to-bar-pull-ups",
     "date": "2014-12-15",
-    "title": "Chest to bar pull-ups",
+    "title": "MM #35",
     "segments": [
       {
         "format": "For time",
@@ -20516,7 +19322,7 @@
   {
     "id": "2014-12-08-squat-clean-165-110",
     "date": "2014-12-08",
-    "title": "Squat Clean 165/110",
+    "title": "MM #34",
     "segments": [
       {
         "format": "AMRAP 5 min",
@@ -20555,7 +19361,7 @@
   {
     "id": "2014-12-01-post-your-time-",
     "date": "2014-12-01",
-    "title": "Post Your Time →",
+    "title": "MM #33",
     "segments": [
       {
         "format": "Workout",
@@ -20675,7 +19481,7 @@
   {
     "id": "2014-11-24-monster-mash",
     "date": "2014-11-24",
-    "title": "Monster Mash",
+    "title": "MM #32",
     "segments": [
       {
         "format": "AMRAP 3 min",
@@ -20742,7 +19548,7 @@
   {
     "id": "2014-11-17-with-a-continuously-runn",
     "date": "2014-11-17",
-    "title": "With a continuously running clock:",
+    "title": "MM #31",
     "segments": [
       {
         "format": "For time",
@@ -20792,7 +19598,7 @@
   {
     "id": "2014-11-10-fran-75-55",
     "date": "2014-11-10",
-    "title": "Fran 75/55",
+    "title": "MM #30",
     "segments": [
       {
         "format": "Rest period",
@@ -20827,7 +19633,7 @@
   {
     "id": "2014-11-03-start-at-0-00",
     "date": "2014-11-03",
-    "title": "Start at 0:00",
+    "title": "MM #29",
     "segments": [
       {
         "format": "Workout",
@@ -20882,7 +19688,7 @@
   {
     "id": "2014-10-27-burpee-box-jump-24-20-",
     "date": "2014-10-27",
-    "title": "Burpee box jump 24″/20″",
+    "title": "MM #28",
     "segments": [
       {
         "format": "For time",
@@ -20943,7 +19749,7 @@
   {
     "id": "2014-10-20-start-at-0-00",
     "date": "2014-10-20",
-    "title": "Start at 0:00",
+    "title": "MM #27",
     "segments": [
       {
         "format": "Descending reps for time",
@@ -20969,7 +19775,7 @@
   {
     "id": "2014-10-13-start-at-0-00",
     "date": "2014-10-13",
-    "title": "Start at 0:00",
+    "title": "MM #26",
     "segments": [
       {
         "format": "Workout",
@@ -21029,7 +19835,7 @@
   {
     "id": "2014-10-06-begin-at-0-00",
     "date": "2014-10-06",
-    "title": "Begin at 0:00",
+    "title": "MM #25",
     "segments": [
       {
         "format": "Workout",
@@ -21085,7 +19891,7 @@
   {
     "id": "2014-09-29-sept-29-2014",
     "date": "2014-09-29",
-    "title": "Sept 29, 2014",
+    "title": "MM #24",
     "segments": [
       {
         "format": "Workout",
@@ -21131,7 +19937,7 @@
   {
     "id": "2014-09-22-monster-mash",
     "date": "2014-09-22",
-    "title": "Monster Mash",
+    "title": "MM #23",
     "segments": [
       {
         "format": "Workout",
@@ -21191,7 +19997,7 @@
   {
     "id": "2014-09-15-sept-15-2014",
     "date": "2014-09-15",
-    "title": "Sept 15, 2014",
+    "title": "MM #22",
     "segments": [
       {
         "format": "Workout",
@@ -21247,7 +20053,7 @@
   {
     "id": "2014-09-08-sept-8-2014",
     "date": "2014-09-08",
-    "title": "Sept 8, 2014",
+    "title": "MM #21",
     "segments": [
       {
         "format": "Workout",
@@ -21285,7 +20091,7 @@
   {
     "id": "2014-09-01-sept-1-2014",
     "date": "2014-09-01",
-    "title": "Sept 1, 2014",
+    "title": "MM #20",
     "segments": [
       {
         "format": "Workout",
@@ -21342,7 +20148,7 @@
   {
     "id": "2014-08-25-monster-mash",
     "date": "2014-08-25",
-    "title": "Monster Mash",
+    "title": "MM #19",
     "segments": [
       {
         "format": "For time",
@@ -21372,7 +20178,7 @@
   {
     "id": "2014-08-18-aug-18-2014",
     "date": "2014-08-18",
-    "title": "Aug 18, 2014",
+    "title": "MM #18",
     "segments": [
       {
         "format": "Workout",
@@ -21412,7 +20218,7 @@
   {
     "id": "2014-08-11-august-11-2014",
     "date": "2014-08-11",
-    "title": "August 11, 2014",
+    "title": "MM #17",
     "segments": [
       {
         "format": "Workout",
@@ -21456,7 +20262,7 @@
   {
     "id": "2014-08-04-august-4-2014",
     "date": "2014-08-04",
-    "title": "August 4, 2014",
+    "title": "MM #16",
     "segments": [
       {
         "format": "Workout",
@@ -21508,7 +20314,7 @@
   {
     "id": "2014-07-28-post-your-time-",
     "date": "2014-07-28",
-    "title": "Post Your Time →",
+    "title": "MM #15",
     "segments": [
       {
         "format": "Workout",
@@ -21694,7 +20500,7 @@
   {
     "id": "2014-07-21-july-21-2014",
     "date": "2014-07-21",
-    "title": "July 21, 2014",
+    "title": "MM #14",
     "segments": [
       {
         "format": "Workout",
@@ -21740,7 +20546,7 @@
   {
     "id": "2014-07-14-july-14-2014",
     "date": "2014-07-14",
-    "title": "July 14, 2014",
+    "title": "MM #13",
     "segments": [
       {
         "format": "Workout",
@@ -21787,7 +20593,7 @@
   {
     "id": "2014-07-07-july-7-2014",
     "date": "2014-07-07",
-    "title": "July 7, 2014",
+    "title": "MM #12",
     "segments": [
       {
         "format": "Workout",
@@ -21841,7 +20647,7 @@
   {
     "id": "2014-06-30-june-30-2014",
     "date": "2014-06-30",
-    "title": "June 30, 2014",
+    "title": "MM #11",
     "segments": [
       {
         "format": "Workout",
@@ -21882,7 +20688,7 @@
   {
     "id": "2014-06-23-june-23-2014",
     "date": "2014-06-23",
-    "title": "June 23, 2014",
+    "title": "MM #10",
     "segments": [
       {
         "format": "Workout",
@@ -21930,7 +20736,7 @@
   {
     "id": "2014-06-16-june-16-2014",
     "date": "2014-06-16",
-    "title": "June 16, 2014",
+    "title": "MM #9",
     "segments": [
       {
         "format": "Workout",
@@ -21974,7 +20780,7 @@
   {
     "id": "2014-06-09-monster-mash",
     "date": "2014-06-09",
-    "title": "Monster Mash",
+    "title": "MM #8",
     "segments": [
       {
         "format": "Workout",
@@ -22027,7 +20833,7 @@
   {
     "id": "2014-06-02-june-2-2014",
     "date": "2014-06-02",
-    "title": "June 2, 2014",
+    "title": "MM #7",
     "segments": [
       {
         "format": "Workout",
@@ -22070,7 +20876,7 @@
   {
     "id": "2014-05-26-may-26-2014",
     "date": "2014-05-26",
-    "title": "May 26, 2014",
+    "title": "MM #6",
     "segments": [
       {
         "format": "Workout",
@@ -22108,7 +20914,7 @@
   {
     "id": "2014-05-19-monster-mash",
     "date": "2014-05-19",
-    "title": "Monster Mash",
+    "title": "MM #5",
     "segments": [
       {
         "format": "Workout",
@@ -22165,7 +20971,7 @@
   {
     "id": "2014-05-12-monster-mash",
     "date": "2014-05-12",
-    "title": "Monster Mash",
+    "title": "MM #4",
     "segments": [
       {
         "format": "Workout",
@@ -22244,7 +21050,7 @@
   {
     "id": "2014-05-05-may-5-2014",
     "date": "2014-05-05",
-    "title": "May 5, 2014",
+    "title": "MM #3",
     "segments": [
       {
         "format": "Workout",
@@ -22282,7 +21088,7 @@
   {
     "id": "2014-04-28-april-28-2014",
     "date": "2014-04-28",
-    "title": "April 28, 2014",
+    "title": "MM #2",
     "segments": [
       {
         "format": "Workout",
@@ -22324,7 +21130,7 @@
   {
     "id": "2014-04-21-april-21-2014",
     "date": "2014-04-21",
-    "title": "April 21, 2014",
+    "title": "MM #1",
     "segments": [
       {
         "format": "Workout",

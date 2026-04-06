@@ -77,10 +77,7 @@ const WorkoutCard: FC<WorkoutCardProps> = ({
   completedAt,
 }) => {
   const [expanded, setExpanded] = useState(defaultExpanded);
-  const [showDumbbell, setShowDumbbell] = useState(false);
-
-  const hasDumbbell = !!workout.dumbbell && workout.dumbbell.length > 0;
-  const activeSegments = showDumbbell && hasDumbbell ? workout.dumbbell! : workout.segments;
+  const activeSegments = workout.segments;
 
   const previewDescription = workout.segments[0]?.description ?? '';
   const previewTruncated =
@@ -205,34 +202,6 @@ const WorkoutCard: FC<WorkoutCardProps> = ({
       {/* Expanded content */}
       {expanded && (
         <div className="px-4 pb-4 space-y-4">
-          {/* Dumbbell toggle */}
-          {hasDumbbell && (
-            <div className="flex gap-2">
-              <button
-                onClick={() => setShowDumbbell(false)}
-                className={[
-                  'flex-1 py-2 rounded-lg text-xs font-display font-700 uppercase tracking-widest border transition-all duration-150',
-                  !showDumbbell
-                    ? 'bg-[#E63946] border-[#E63946] text-white'
-                    : 'bg-transparent border-[#2A2A2A] text-[#555] hover:border-[#E63946]/40',
-                ].join(' ')}
-              >
-                Barbell
-              </button>
-              <button
-                onClick={() => setShowDumbbell(true)}
-                className={[
-                  'flex-1 py-2 rounded-lg text-xs font-display font-700 uppercase tracking-widest border transition-all duration-150',
-                  showDumbbell
-                    ? 'bg-[#E63946] border-[#E63946] text-white'
-                    : 'bg-transparent border-[#2A2A2A] text-[#555] hover:border-[#E63946]/40',
-                ].join(' ')}
-              >
-                🏋️ Dumbbell
-              </button>
-            </div>
-          )}
-
           {/* Segments */}
           <div className="space-y-4 divide-y divide-[#2A2A2A]">
             {activeSegments.map((seg, i) => (

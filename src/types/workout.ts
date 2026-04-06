@@ -22,7 +22,6 @@ export interface Workout {
   date: string;         // ISO: YYYY-MM-DD
   title: string;
   segments: Segment[];
-  dumbbell?: Segment[];
   movements: string[];  // unique movement names for filtering
   sourceUrl: string;
 }

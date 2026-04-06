@@ -44,7 +44,7 @@ const SegmentBlock: FC<{ segment: Segment }> = ({ segment }) => (
     <p className="text-sm text-[#CCCCCC] leading-relaxed font-barlow whitespace-pre-line">
       {segment.description}
     </p>
-    {segment.movements.length > 0 && (
+    {segment.movements.some(mv => mv.reps || mv.weightKg || mv.equipment) && (
       <ul className="space-y-1 pt-1">
         {segment.movements.map((mv, i) => (
           <li key={i} className="flex items-start gap-2 text-sm">

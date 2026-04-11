@@ -1,3 +1,5 @@
+'use client';
+
 import type { FC } from 'react';
 import type { CompletedWorkout, Workout } from '../types/workout';
 import WorkoutCard from './WorkoutCard';

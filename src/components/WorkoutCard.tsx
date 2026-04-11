@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, type FC } from 'react';
 import type { Workout, Segment } from '../types/workout';
 import { formatWeight } from '../utils/converter';

@@ -3,3 +3,7 @@ dist
 .DS_Store
 *.local
 src-vite-backup/
+.next
+.vercel
+.env*.local
+next-env.d.ts

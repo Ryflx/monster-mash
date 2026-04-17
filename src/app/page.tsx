@@ -1,7 +1,8 @@
-export default function Home() {
-  return (
-    <main className="p-8">
-      <h1 className="text-3xl font-bold">Monster Mash — migration in progress</h1>
-    </main>
-  );
+import { redirect } from 'next/navigation';
+import { auth } from '@clerk/nextjs/server';
+
+export default async function Home() {
+  const { userId } = await auth();
+  if (userId) redirect('/app');
+  redirect('/sign-in');
 }

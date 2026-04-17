@@ -7,3 +7,4 @@ src-vite-backup/
 .vercel
 .env*.local
 next-env.d.ts
+tsconfig.tsbuildinfo

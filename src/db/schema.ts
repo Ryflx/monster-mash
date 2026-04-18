@@ -8,6 +8,7 @@ import {
   real,
   boolean,
   primaryKey,
+  jsonb,
 } from 'drizzle-orm/pg-core';
 
 export const users = pgTable('users', {
@@ -58,6 +59,36 @@ export const segments = pgTable('segments', {
   description: text('description').notNull(),
 });
 
+export const canonicalMovements = pgTable('canonical_movements', {
+  id: serial('id').primaryKey(),
+  slug: text('slug').notNull().unique(),
+  name: text('name').notNull(),
+  category: text('category').notNull(),
+});
+
+export const movementVariants = pgTable('movement_variants', {
+  id: serial('id').primaryKey(),
+  canonicalId: integer('canonical_id')
+    .notNull()
+    .references(() => canonicalMovements.id, { onDelete: 'cascade' }),
+  name: text('name').notNull(),
+  tier: integer('tier').notNull(),
+  points: integer('points').notNull(),
+  isRx: boolean('is_rx').notNull().default(false),
+  sortOrder: integer('sort_order').notNull(),
+});
+
+export const movementAliases = pgTable(
+  'movement_aliases',
+  {
+    canonicalId: integer('canonical_id')
+      .notNull()
+      .references(() => canonicalMovements.id, { onDelete: 'cascade' }),
+    alias: text('alias').notNull(),
+  },
+  (t) => ({ pk: primaryKey({ columns: [t.canonicalId, t.alias] }) }),
+);
+
 export const movements = pgTable('movements', {
   id: serial('id').primaryKey(),
   segmentId: integer('segment_id')
@@ -70,6 +101,9 @@ export const movements = pgTable('movements', {
   weightKgFemale: real('weight_kg_female'),
   weightOriginal: text('weight_original'),
   equipment: text('equipment'),
+  canonicalId: integer('canonical_id').references(() => canonicalMovements.id, {
+    onDelete: 'set null',
+  }),
 });
 
 export const personalCompletions = pgTable('personal_completions', {
@@ -84,6 +118,10 @@ export const personalCompletions = pgTable('personal_completions', {
   rx: boolean('rx').notNull().default(true),
   scaledWeight: text('scaled_weight'),
   timeSeconds: integer('time_seconds'),
+  rounds: integer('rounds'),
+  extraReps: integer('extra_reps'),
+  scorePct: real('score_pct'),
+  variantsChosen: jsonb('variants_chosen'),
 });
 
 export const teamCompletions = pgTable('team_completions', {
@@ -100,4 +138,8 @@ export const teamCompletions = pgTable('team_completions', {
   rx: boolean('rx').notNull().default(true),
   scaledWeight: text('scaled_weight'),
   timeSeconds: integer('time_seconds'),
+  rounds: integer('rounds'),
+  extraReps: integer('extra_reps'),
+  scorePct: real('score_pct'),
+  variantsChosen: jsonb('variants_chosen'),
 });

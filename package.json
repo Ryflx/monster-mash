@@ -10,7 +10,8 @@
     "db:generate": "drizzle-kit generate",
     "db:push": "drizzle-kit push",
     "db:seed": "npx tsx src/db/seed.ts",
-    "db:sync": "npx tsx scripts/sync-to-db.ts"
+    "db:sync": "npx tsx scripts/sync-to-db.ts",
+    "db:seed-catalog": "npx tsx src/db/seed-catalog.ts"
   },
   "dependencies": {
     "@clerk/nextjs": "^7.0.12",

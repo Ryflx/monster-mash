@@ -18,7 +18,7 @@ interface SpinWheelProps {
   onLog: (
     id: string,
     input: CompletionInput,
-    preview: { scorePct: number; rx: boolean },
+    preview: { scorePct: number | null; rx: boolean },
   ) => void;
   onUnmark: (id: string) => void;
 }

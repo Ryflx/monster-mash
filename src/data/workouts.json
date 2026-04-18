@@ -3552,8 +3552,23 @@
     "title": "MM #504",
     "segments": [
       {
+        "format": "For time",
+        "description": "For time:\n1.5 Mile Run\n100 Wall Ball Shots, 20/14\n50 Burpees\n25 Bar Muscle-ups",
+        "movements": []
+      },
+      {
         "format": "3 Rounds for time",
-        "description": "For time:\n1.5 Mile run\n100 Wall Ball Shots, 20/14\n50 Burpees\n25 Bar Muscle-ups\n3 Rounds for time of:\n100 Double-unders\n25 Power Snatch, 34/25kg\nFor time:\n1 Mile KB Farmer's Carry, 24/16kg\n*Rest 5 minutes between workouts",
+        "description": "3 Rounds for time of:\n100 Double-unders\n25 Power Snatch, 34/25kg",
+        "movements": []
+      },
+      {
+        "format": "For time",
+        "description": "For time:\n1 Mile KB Farmer's Carry, 24/16kg",
+        "movements": []
+      },
+      {
+        "format": "Rest period",
+        "description": "*Rest 5 minutes between workouts",
         "movements": []
       }
     ],

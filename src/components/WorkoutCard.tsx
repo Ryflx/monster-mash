@@ -104,7 +104,9 @@ const WorkoutCard: FC<WorkoutCardProps> = ({
   const [showForm, setShowForm] = useState(false);
 
   const isCompleted = completion != null;
-  const activeSegments = workout.segments;
+  const activeSegments = workout.segments.filter(
+    (s) => s.format.toLowerCase() !== 'rest period',
+  );
 
   const previewDescription = workout.segments[0]?.description ?? '';
   const previewTruncated =

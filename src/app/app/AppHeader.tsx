@@ -16,6 +16,7 @@ const TABS = [
   { href: '/app', label: 'Workouts' },
   { href: '/app/spin', label: 'Spin' },
   { href: '/app/history', label: 'History' },
+  { href: '/app/leaderboard', label: 'Board' },
   { href: '/app/teams', label: 'Teams' },
 ];
 

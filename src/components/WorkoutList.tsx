@@ -9,7 +9,11 @@ const PAGE_SIZE = 20;
 interface WorkoutListProps {
   workouts: Workout[];
   getCompletion: (id: string) => CompletionLog | null;
-  onLog: (id: string, input: CompletionInput) => void;
+  onLog: (
+    id: string,
+    input: CompletionInput,
+    preview: { scorePct: number; rx: boolean },
+  ) => void;
   onUnmark: (id: string) => void;
 }
 
@@ -71,7 +75,7 @@ const WorkoutList: FC<WorkoutListProps> = ({
             key={workout.id}
             workout={workout}
             completion={getCompletion(workout.id)}
-            onLog={(input) => onLog(workout.id, input)}
+            onLog={(input, preview) => onLog(workout.id, input, preview)}
             onUnmark={() => onUnmark(workout.id)}
           />
         ))}

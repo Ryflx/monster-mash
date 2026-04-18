@@ -45,15 +45,23 @@ export default function SpinTab({ pool, totalCount }: Props) {
     },
   );
 
-  const handleLog = (id: string, input: CompletionInput) => {
+  const handleLog = (
+    id: string,
+    input: CompletionInput,
+    preview: { scorePct: number; rx: boolean },
+  ) => {
     startTransition(async () => {
       setCompleted({
         kind: 'log',
         id,
         log: {
-          rx: input.rx,
-          scaledWeight: input.rx ? null : input.scaledWeight ?? null,
+          rx: preview.rx,
+          scaledWeight: null,
           timeSeconds: input.timeSeconds ?? null,
+          rounds: input.rounds ?? null,
+          extraReps: input.extraReps ?? null,
+          scorePct: preview.scorePct,
+          variantsChosen: input.variantsChosen,
           completedAt: new Date().toISOString(),
         },
       });

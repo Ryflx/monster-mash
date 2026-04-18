@@ -36,6 +36,28 @@ function formatCompletedDate(isoString: string): string {
   });
 }
 
+function buildBadges(entry: CompletedWorkout): string[] {
+  const badges: string[] = [];
+  const rx = entry.rx ?? true;
+  if (rx) {
+    badges.push('RX');
+  } else if (entry.scorePct != null) {
+    badges.push(`${Math.round(entry.scorePct)}%`);
+  } else {
+    badges.push('Scaled');
+  }
+  if (entry.rounds != null) {
+    const r = entry.extraReps != null && entry.extraReps > 0
+      ? `${entry.rounds}+${entry.extraReps}`
+      : `${entry.rounds}`;
+    badges.push(`${r} rds`);
+  }
+  if (entry.timeSeconds != null) {
+    badges.push(formatSecondsToTime(entry.timeSeconds));
+  }
+  return badges;
+}
+
 const StatCard: FC<{ value: number | string; label: string; accent?: boolean }> = ({
   value,
   label,
@@ -98,14 +120,7 @@ const HistoryLog: FC<HistoryLogProps> = ({ history, allWorkouts, onUnmark }) => 
       <div className="space-y-3">
         {sorted.map((entry) => {
           const workout = workoutMap.get(entry.workoutId);
-          const rx = entry.rx ?? true;
-          const timeLabel = entry.timeSeconds != null ? formatSecondsToTime(entry.timeSeconds) : null;
-          const scaledLabel = !rx && entry.scaledWeight ? entry.scaledWeight : null;
-
-          const badges: string[] = [];
-          badges.push(rx ? 'RX' : 'Scaled');
-          if (scaledLabel) badges.push(scaledLabel);
-          if (timeLabel) badges.push(timeLabel);
+          const badges = buildBadges(entry);
 
           if (!workout) {
             return (
@@ -132,9 +147,13 @@ const HistoryLog: FC<HistoryLogProps> = ({ history, allWorkouts, onUnmark }) => 
           }
 
           const completion: CompletionLog = {
-            rx,
+            rx: entry.rx ?? true,
             scaledWeight: entry.scaledWeight ?? null,
             timeSeconds: entry.timeSeconds ?? null,
+            rounds: entry.rounds ?? null,
+            extraReps: entry.extraReps ?? null,
+            scorePct: entry.scorePct ?? null,
+            variantsChosen: null,
             completedAt: entry.completedAt,
           };
 

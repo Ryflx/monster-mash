@@ -15,7 +15,11 @@ interface SpinWheelProps {
   workouts: Workout[];
   onSelect: (workouts: Workout[]) => void;
   getCompletion: (id: string) => CompletionLog | null;
-  onLog: (id: string, input: CompletionInput) => void;
+  onLog: (
+    id: string,
+    input: CompletionInput,
+    preview: { scorePct: number; rx: boolean },
+  ) => void;
   onUnmark: (id: string) => void;
 }
 
@@ -356,7 +360,7 @@ const SpinWheel: FC<SpinWheelProps> = ({
               key={workout.id}
               workout={workout}
               completion={getCompletion(workout.id)}
-              onLog={(input) => onLog(workout.id, input)}
+              onLog={(input, preview) => onLog(workout.id, input, preview)}
               onUnmark={() => onUnmark(workout.id)}
               defaultExpanded={true}
             />

@@ -12,6 +12,9 @@ export async function getPersonalHistory(userId: number) {
       rx: personalCompletions.rx,
       scaledWeight: personalCompletions.scaledWeight,
       timeSeconds: personalCompletions.timeSeconds,
+      rounds: personalCompletions.rounds,
+      extraReps: personalCompletions.extraReps,
+      scorePct: personalCompletions.scorePct,
     })
     .from(personalCompletions)
     .where(eq(personalCompletions.userId, userId))
@@ -28,6 +31,9 @@ export async function getTeamHistory(teamId: number) {
       rx: teamCompletions.rx,
       scaledWeight: teamCompletions.scaledWeight,
       timeSeconds: teamCompletions.timeSeconds,
+      rounds: teamCompletions.rounds,
+      extraReps: teamCompletions.extraReps,
+      scorePct: teamCompletions.scorePct,
       loggedByName: users.displayName,
     })
     .from(teamCompletions)

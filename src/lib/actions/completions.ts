@@ -1,12 +1,72 @@
 'use server';
 
-import { and, eq } from 'drizzle-orm';
+import { and, eq, inArray } from 'drizzle-orm';
 import { revalidatePath } from 'next/cache';
 import { db } from '@/db';
-import { personalCompletions, teamCompletions } from '@/db/schema';
+import {
+  personalCompletions,
+  teamCompletions,
+  segments,
+  movements,
+  canonicalMovements,
+  movementVariants,
+} from '@/db/schema';
 import { ensureUser, requireTeamMembership } from '@/lib/auth';
 import { getMode } from '@/lib/mode';
-import type { CompletionInput } from '@/types/workout';
+import { computeScore } from '@/lib/scoring';
+import type { CanonicalMovementForPicker, CompletionInput } from '@/types/workout';
+
+async function loadCanonicalsForWorkout(
+  workoutId: string,
+): Promise<CanonicalMovementForPicker[]> {
+  const segRows = await db
+    .select({ id: segments.id })
+    .from(segments)
+    .where(eq(segments.workoutId, workoutId));
+  if (segRows.length === 0) return [];
+
+  const mvRows = await db
+    .select({ canonicalId: movements.canonicalId })
+    .from(movements)
+    .where(inArray(movements.segmentId, segRows.map((s) => s.id)));
+
+  const canonicalIdSet = new Set<number>();
+  for (const m of mvRows) if (m.canonicalId != null) canonicalIdSet.add(m.canonicalId);
+  if (canonicalIdSet.size === 0) return [];
+
+  const canonicalIds = Array.from(canonicalIdSet);
+
+  const canonRows = await db
+    .select()
+    .from(canonicalMovements)
+    .where(inArray(canonicalMovements.id, canonicalIds));
+
+  const variantRows = await db
+    .select()
+    .from(movementVariants)
+    .where(inArray(movementVariants.canonicalId, canonicalIds));
+
+  const variantsByCanonical = new Map<number, typeof variantRows>();
+  for (const v of variantRows) {
+    const arr = variantsByCanonical.get(v.canonicalId) ?? [];
+    arr.push(v);
+    variantsByCanonical.set(v.canonicalId, arr);
+  }
+
+  return canonRows.map((c) => ({
+    canonicalId: c.id,
+    canonicalName: c.name,
+    category: c.category,
+    variants: (variantsByCanonical.get(c.id) ?? []).map((v) => ({
+      id: v.id,
+      name: v.name,
+      tier: v.tier,
+      points: v.points,
+      isRx: v.isRx,
+      sortOrder: v.sortOrder,
+    })),
+  }));
+}
 
 export async function markComplete(
   workoutId: string,
@@ -15,10 +75,17 @@ export async function markComplete(
   const user = await ensureUser();
   const mode = await getMode();
 
+  const canonicals = await loadCanonicalsForWorkout(workoutId);
+  const { scorePct, rx } = computeScore(canonicals, input.variantsChosen ?? {});
+
   const values = {
-    rx: input.rx,
-    scaledWeight: input.rx ? null : input.scaledWeight?.trim() || null,
+    rx,
+    scaledWeight: null,
     timeSeconds: input.timeSeconds ?? null,
+    rounds: input.rounds ?? null,
+    extraReps: input.extraReps ?? null,
+    scorePct,
+    variantsChosen: input.variantsChosen ?? {},
   };
 
   if (mode.kind === 'solo') {

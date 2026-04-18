@@ -8,12 +8,13 @@ import type {
   CompletionInput,
 } from '../types/workout';
 import { formatWeight } from '../utils/converter';
-import { parseTimeToSeconds, formatSecondsToTime } from '../lib/time';
+import { formatSecondsToTime } from '../lib/time';
+import LogWorkoutForm from './LogWorkoutForm';
 
 interface WorkoutCardProps {
   workout: Workout;
   completion: CompletionLog | null;
-  onLog: (input: CompletionInput) => void;
+  onLog: (input: CompletionInput, preview: { scorePct: number; rx: boolean }) => void;
   onUnmark: () => void;
   defaultExpanded?: boolean;
 }
@@ -63,11 +64,26 @@ const SegmentBlock: FC<{ segment: Segment }> = ({ segment }) => (
   </div>
 );
 
-const chipBase =
-  'px-3 py-1.5 rounded-lg font-display text-[11px] font-700 uppercase tracking-widest border transition-colors';
-const chipRxActive = 'bg-[#E63946] border-[#E63946] text-white';
-const chipScaledActive = 'bg-[#F4A261] border-[#F4A261] text-[#0D0D0D]';
-const chipIdle = 'bg-transparent border-[#2A2A2A] text-[#888] hover:border-[#555]';
+function buildDoneBadges(completion: CompletionLog): string[] {
+  const out: string[] = [];
+  if (completion.rx) {
+    out.push('RX');
+  } else if (completion.scorePct != null) {
+    out.push(`${Math.round(completion.scorePct)}%`);
+  } else {
+    out.push('Scaled');
+  }
+  if (completion.rounds != null) {
+    const r = completion.extraReps != null && completion.extraReps > 0
+      ? `${completion.rounds}+${completion.extraReps}`
+      : `${completion.rounds}`;
+    out.push(`${r} rds`);
+  }
+  if (completion.timeSeconds != null) {
+    out.push(formatSecondsToTime(completion.timeSeconds));
+  }
+  return out;
+}
 
 const WorkoutCard: FC<WorkoutCardProps> = ({
   workout,
@@ -78,10 +94,6 @@ const WorkoutCard: FC<WorkoutCardProps> = ({
 }) => {
   const [expanded, setExpanded] = useState(defaultExpanded);
   const [showForm, setShowForm] = useState(false);
-  const [rx, setRx] = useState(true);
-  const [scaledWeight, setScaledWeight] = useState('');
-  const [timeInput, setTimeInput] = useState('');
-  const [timeError, setTimeError] = useState<string | null>(null);
 
   const isCompleted = completion != null;
   const activeSegments = workout.segments;
@@ -101,42 +113,15 @@ const WorkoutCard: FC<WorkoutCardProps> = ({
     setShowForm((prev) => !prev);
   };
 
-  const resetForm = () => {
+  const handleFormSubmit = (
+    input: CompletionInput,
+    preview: { scorePct: number; rx: boolean },
+  ) => {
+    onLog(input, preview);
     setShowForm(false);
-    setRx(true);
-    setScaledWeight('');
-    setTimeInput('');
-    setTimeError(null);
   };
 
-  const handleSubmit = () => {
-    setTimeError(null);
-    let timeSeconds: number | null = null;
-    const trimmed = timeInput.trim();
-    if (trimmed) {
-      const parsed = parseTimeToSeconds(trimmed);
-      if (parsed == null) {
-        setTimeError('Use MM:SS (e.g. 12:34) or H:MM:SS');
-        return;
-      }
-      timeSeconds = parsed;
-    }
-    onLog({
-      rx,
-      scaledWeight: rx ? null : scaledWeight.trim() || null,
-      timeSeconds,
-    });
-    resetForm();
-  };
-
-  const doneBadges: string[] = [];
-  if (completion) {
-    doneBadges.push(completion.rx ? 'RX' : 'Scaled');
-    if (!completion.rx && completion.scaledWeight) doneBadges.push(completion.scaledWeight);
-    if (completion.timeSeconds != null) {
-      doneBadges.push(formatSecondsToTime(completion.timeSeconds));
-    }
-  }
+  const doneBadges = completion ? buildDoneBadges(completion) : [];
 
   return (
     <div
@@ -253,73 +238,11 @@ const WorkoutCard: FC<WorkoutCardProps> = ({
       </div>
 
       {showForm && !isCompleted && (
-        <div
-          className="px-4 pb-4 pt-1 border-t border-[#2A2A2A] space-y-3 bg-[#121212]"
-          onClick={(e) => e.stopPropagation()}
-        >
-          <div className="font-display text-[10px] font-800 uppercase tracking-widest text-[#888] pt-3">
-            Log this workout
-          </div>
-          <div className="flex gap-2">
-            <button
-              onClick={() => setRx(true)}
-              className={`${chipBase} ${rx ? chipRxActive : chipIdle}`}
-            >
-              RX
-            </button>
-            <button
-              onClick={() => setRx(false)}
-              className={`${chipBase} ${!rx ? chipScaledActive : chipIdle}`}
-            >
-              Scaled
-            </button>
-          </div>
-
-          {!rx && (
-            <label className="block">
-              <span className="font-display text-[10px] font-700 uppercase tracking-widest text-[#888]">
-                Scaled to
-              </span>
-              <input
-                type="text"
-                value={scaledWeight}
-                onChange={(e) => setScaledWeight(e.target.value)}
-                placeholder="e.g. 40kg, DBs 15kg, banded pull-ups"
-                className="mt-1 w-full bg-[#0D0D0D] border border-[#2A2A2A] rounded-lg px-3 py-2 text-white focus:border-[#E63946] outline-none text-sm"
-              />
-            </label>
-          )}
-
-          <label className="block">
-            <span className="font-display text-[10px] font-700 uppercase tracking-widest text-[#888]">
-              Time (optional)
-            </span>
-            <input
-              type="text"
-              value={timeInput}
-              onChange={(e) => setTimeInput(e.target.value)}
-              placeholder="MM:SS (e.g. 12:34)"
-              inputMode="numeric"
-              className="mt-1 w-full bg-[#0D0D0D] border border-[#2A2A2A] rounded-lg px-3 py-2 text-white focus:border-[#E63946] outline-none text-sm font-mono"
-            />
-            {timeError && <p className="text-xs text-[#E63946] mt-1">{timeError}</p>}
-          </label>
-
-          <div className="flex gap-2 pt-1">
-            <button
-              onClick={resetForm}
-              className="flex-1 py-2 rounded-lg border border-[#2A2A2A] text-[#888] font-display font-700 uppercase tracking-widest text-xs hover:text-white hover:border-[#555]"
-            >
-              Cancel
-            </button>
-            <button
-              onClick={handleSubmit}
-              className="flex-[2] py-2 rounded-lg bg-[#E63946] text-white font-display font-800 uppercase tracking-widest text-xs hover:bg-[#d12f3c]"
-            >
-              Log it
-            </button>
-          </div>
-        </div>
+        <LogWorkoutForm
+          workoutId={workout.id}
+          onSubmit={handleFormSubmit}
+          onCancel={() => setShowForm(false)}
+        />
       )}
 
       {expanded && (

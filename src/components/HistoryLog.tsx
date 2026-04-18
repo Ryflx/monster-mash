@@ -1,7 +1,8 @@
 'use client';
 
 import type { FC } from 'react';
-import type { CompletedWorkout, Workout } from '../types/workout';
+import type { CompletedWorkout, Workout, CompletionLog } from '../types/workout';
+import { formatSecondsToTime } from '../lib/time';
 import WorkoutCard from './WorkoutCard';
 
 interface HistoryLogProps {
@@ -57,7 +58,6 @@ const StatCard: FC<{ value: number | string; label: string; accent?: boolean }> 
 const HistoryLog: FC<HistoryLogProps> = ({ history, allWorkouts, onUnmark }) => {
   const workoutMap = new Map(allWorkouts.map((w) => [w.id, w]));
 
-  // Sort newest first
   const sorted = [...history].sort(
     (a, b) => new Date(b.completedAt).getTime() - new Date(a.completedAt).getTime(),
   );
@@ -81,14 +81,12 @@ const HistoryLog: FC<HistoryLogProps> = ({ history, allWorkouts, onUnmark }) => 
 
   return (
     <div className="space-y-5">
-      {/* Stats */}
       <div className="flex gap-3">
         <StatCard value={history.length} label="Total" accent />
         <StatCard value={thisWeekCount} label="This week" />
         <StatCard value={thisMonthCount} label="This month" />
       </div>
 
-      {/* Divider */}
       <div className="flex items-center gap-3">
         <div className="flex-1 h-px bg-[#2A2A2A]" />
         <span className="font-display text-[10px] font-700 uppercase tracking-widest text-[#555]">
@@ -97,12 +95,19 @@ const HistoryLog: FC<HistoryLogProps> = ({ history, allWorkouts, onUnmark }) => 
         <div className="flex-1 h-px bg-[#2A2A2A]" />
       </div>
 
-      {/* History list */}
       <div className="space-y-3">
         {sorted.map((entry) => {
           const workout = workoutMap.get(entry.workoutId);
+          const rx = entry.rx ?? true;
+          const timeLabel = entry.timeSeconds != null ? formatSecondsToTime(entry.timeSeconds) : null;
+          const scaledLabel = !rx && entry.scaledWeight ? entry.scaledWeight : null;
+
+          const badges: string[] = [];
+          badges.push(rx ? 'RX' : 'Scaled');
+          if (scaledLabel) badges.push(scaledLabel);
+          if (timeLabel) badges.push(timeLabel);
+
           if (!workout) {
-            // Workout data not found (may have been removed from dataset)
             return (
               <div
                 key={entry.workoutId}
@@ -126,23 +131,31 @@ const HistoryLog: FC<HistoryLogProps> = ({ history, allWorkouts, onUnmark }) => 
             );
           }
 
+          const completion: CompletionLog = {
+            rx,
+            scaledWeight: entry.scaledWeight ?? null,
+            timeSeconds: entry.timeSeconds ?? null,
+            completedAt: entry.completedAt,
+          };
+
           return (
             <div key={entry.workoutId} className="space-y-1">
-              {/* Completed-on badge */}
-              <div className="flex items-center gap-2 px-1">
+              <div className="flex items-center gap-2 px-1 flex-wrap">
                 <svg className="w-3 h-3 text-[#E63946]" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
                 <span className="font-display text-[10px] font-700 uppercase tracking-widest text-[#555]">
                   Completed {formatCompletedDate(entry.completedAt)}
                 </span>
+                <span className="font-display text-[10px] font-800 uppercase tracking-widest text-[#F4A261] bg-[#F4A261]/10 px-2 py-0.5 rounded-full">
+                  {badges.join(' · ')}
+                </span>
               </div>
               <WorkoutCard
                 workout={workout}
-                isCompleted={true}
-                onMarkComplete={() => {}}
+                completion={completion}
+                onLog={() => {}}
                 onUnmark={() => onUnmark(entry.workoutId)}
-                completedAt={entry.completedAt}
               />
             </div>
           );

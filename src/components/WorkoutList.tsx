@@ -1,22 +1,22 @@
 'use client';
 
 import { useState, type FC } from 'react';
-import type { Workout } from '../types/workout';
+import type { Workout, CompletionInput, CompletionLog } from '../types/workout';
 import WorkoutCard from './WorkoutCard';
 
 const PAGE_SIZE = 20;
 
 interface WorkoutListProps {
   workouts: Workout[];
-  isCompleted: (id: string) => boolean;
-  onMarkComplete: (id: string) => void;
+  getCompletion: (id: string) => CompletionLog | null;
+  onLog: (id: string, input: CompletionInput) => void;
   onUnmark: (id: string) => void;
 }
 
 const WorkoutList: FC<WorkoutListProps> = ({
   workouts,
-  isCompleted,
-  onMarkComplete,
+  getCompletion,
+  onLog,
   onUnmark,
 }) => {
   const [page, setPage] = useState(0);
@@ -70,8 +70,8 @@ const WorkoutList: FC<WorkoutListProps> = ({
           <WorkoutCard
             key={workout.id}
             workout={workout}
-            isCompleted={isCompleted(workout.id)}
-            onMarkComplete={() => onMarkComplete(workout.id)}
+            completion={getCompletion(workout.id)}
+            onLog={(input) => onLog(workout.id, input)}
             onUnmark={() => onUnmark(workout.id)}
           />
         ))}

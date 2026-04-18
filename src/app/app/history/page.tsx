@@ -18,6 +18,9 @@ export default async function HistoryPage() {
           id: String(h.id),
           workoutId: h.workoutId,
           completedAt: h.completedAt.toISOString(),
+          rx: h.rx,
+          scaledWeight: h.scaledWeight,
+          timeSeconds: h.timeSeconds,
           label: 'Solo',
         }))}
         mode="solo"
@@ -33,6 +36,9 @@ export default async function HistoryPage() {
         id: String(h.id),
         workoutId: h.workoutId,
         completedAt: h.completedAt.toISOString(),
+        rx: h.rx,
+        scaledWeight: h.scaledWeight,
+        timeSeconds: h.timeSeconds,
         label: h.loggedByName ?? 'Team',
         notes: h.notes ?? undefined,
       }))}

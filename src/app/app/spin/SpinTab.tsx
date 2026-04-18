@@ -4,7 +4,7 @@ import { useMemo, useOptimistic, useTransition } from 'react';
 import SpinWheel from '@/components/SpinWheel';
 import { markComplete, unmarkComplete } from '@/lib/actions/completions';
 import type { HydratedWorkout } from '@/lib/queries/workouts';
-import type { Workout } from '@/types/workout';
+import type { Workout, CompletionInput, CompletionLog } from '@/types/workout';
 
 function toLegacy(w: HydratedWorkout): Workout {
   return {
@@ -28,24 +28,36 @@ function toLegacy(w: HydratedWorkout): Workout {
 }
 
 type Props = { pool: HydratedWorkout[]; totalCount: number };
+type OptAction =
+  | { kind: 'log'; id: string; log: CompletionLog }
+  | { kind: 'unmark'; id: string };
 
 export default function SpinTab({ pool, totalCount }: Props) {
   const legacy = useMemo(() => pool.map(toLegacy), [pool]);
   const [, startTransition] = useTransition();
   const [completed, setCompleted] = useOptimistic(
-    new Set<string>(),
-    (set: Set<string>, action: { kind: 'mark' | 'unmark'; id: string }) => {
-      const next = new Set(set);
-      if (action.kind === 'mark') next.add(action.id);
+    new Map<string, CompletionLog>(),
+    (current: Map<string, CompletionLog>, action: OptAction) => {
+      const next = new Map(current);
+      if (action.kind === 'log') next.set(action.id, action.log);
       else next.delete(action.id);
       return next;
     },
   );
 
-  const handleMark = (id: string) => {
+  const handleLog = (id: string, input: CompletionInput) => {
     startTransition(async () => {
-      setCompleted({ kind: 'mark', id });
-      await markComplete(id);
+      setCompleted({
+        kind: 'log',
+        id,
+        log: {
+          rx: input.rx,
+          scaledWeight: input.rx ? null : input.scaledWeight ?? null,
+          timeSeconds: input.timeSeconds ?? null,
+          completedAt: new Date().toISOString(),
+        },
+      });
+      await markComplete(id, input);
     });
   };
   const handleUnmark = (id: string) => {
@@ -71,8 +83,8 @@ export default function SpinTab({ pool, totalCount }: Props) {
       <SpinWheel
         workouts={legacy}
         onSelect={() => {}}
-        isCompleted={(id) => completed.has(id)}
-        onMarkComplete={handleMark}
+        getCompletion={(id) => completed.get(id) ?? null}
+        onLog={handleLog}
         onUnmark={handleUnmark}
       />
     </div>

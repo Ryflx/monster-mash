@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-mm-bg: #0D0D0D;
+  --color-mm-red: #E63946;
+  --color-mm-orange: #F4A261;
+  --color-mm-card: #1A1A1A;
+  --color-mm-border: #2A2A2A;
+  --font-display: 'Barlow Condensed', system-ui, sans-serif;
+  --font-barlow: 'Barlow', system-ui, sans-serif;
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out;
+}

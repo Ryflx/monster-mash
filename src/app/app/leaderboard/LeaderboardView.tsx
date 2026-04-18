@@ -11,19 +11,20 @@ type Props = {
 function formatDate(dateStr: string): string {
   const [year, month, day] = dateStr.split('-').map(Number);
   const d = new Date(year, month - 1, day);
-  return d.toLocaleDateString('en-GB', {
-    weekday: 'short',
-    day: 'numeric',
-    month: 'short',
-    year: 'numeric',
-  });
+  return d
+    .toLocaleDateString('en-GB', {
+      weekday: 'short',
+      day: 'numeric',
+      month: 'short',
+    })
+    .toUpperCase();
 }
 
 function formatResult(e: LeaderboardEntry, isAmrap: boolean): string {
   if (isAmrap && e.rounds != null) {
     return e.extraReps != null && e.extraReps > 0
-      ? `${e.rounds}+${e.extraReps} rds`
-      : `${e.rounds} rds`;
+      ? `${e.rounds}+${e.extraReps}`
+      : `${e.rounds}`;
   }
   if (e.timeSeconds != null) return formatSecondsToTime(e.timeSeconds);
   return '—';
@@ -32,23 +33,32 @@ function formatResult(e: LeaderboardEntry, isAmrap: boolean): string {
 function formatScore(e: LeaderboardEntry): string {
   if (e.rx) return 'RX';
   if (e.scorePct != null) return `${Math.round(e.scorePct)}%`;
-  return 'Scaled';
+  return 'SCALED';
 }
-
-const MEDAL = ['🥇', '🥈', '🥉'];
 
 export default function LeaderboardView({ boards, mode }: Props) {
   if (boards.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center py-20 text-center">
-        <div className="text-5xl mb-4">🏆</div>
-        <p className="font-display text-xl font-700 uppercase tracking-widest text-[#333]">
-          No rankings yet
-        </p>
-        <p className="text-sm text-[#444] mt-2 max-w-xs">
+        <div
+          className="uppercase text-monster mb-1"
+          style={{
+            fontFamily: 'var(--font-display)',
+            fontSize: '40px',
+            letterSpacing: '-1.5px',
+            lineHeight: 0.9,
+            textShadow: '3px 3px 0 var(--color-pitch), 3px 3px 0 0 var(--color-slime)',
+          }}
+        >
+          NO<br />RANKINGS
+        </div>
+        <p
+          className="text-bone-3 mt-6 max-w-xs uppercase"
+          style={{ fontFamily: 'var(--font-body)', fontWeight: 700, fontSize: '11px', letterSpacing: '1.5px' }}
+        >
           {mode === 'team'
-            ? 'Log workouts as a team to see who tops the board.'
-            : 'Log workouts solo to track your PRs per WOD.'}
+            ? 'Log as a team to climb the board.'
+            : 'Log workouts solo to track your PRs.'}
         </p>
       </div>
     );
@@ -57,70 +67,152 @@ export default function LeaderboardView({ boards, mode }: Props) {
   const totalEntries = boards.reduce((a, b) => a + b.entries.length, 0);
 
   return (
-    <div className="space-y-5">
-      <div className="flex items-center justify-between">
-        <div>
-          <h2 className="font-display text-lg font-800 uppercase tracking-widest text-white">
-            {mode === 'team' ? 'Team Leaderboard' : 'Your PRs'}
-          </h2>
-          <p className="font-display text-[10px] font-700 uppercase tracking-widest text-[#555] mt-0.5">
-            {boards.length} workouts · {totalEntries} {totalEntries === 1 ? 'entry' : 'entries'}
-          </p>
+    <div className="space-y-6">
+      <div>
+        <div
+          className="uppercase text-monster"
+          style={{
+            fontFamily: 'var(--font-body)',
+            fontWeight: 700,
+            fontSize: '10px',
+            letterSpacing: '2px',
+          }}
+        >
+          Today's Monsters
         </div>
+        <h1
+          className="uppercase text-bone mt-1"
+          style={{
+            fontFamily: 'var(--font-display)',
+            fontSize: '48px',
+            letterSpacing: '-1.5px',
+            lineHeight: 0.9,
+            textShadow: '3px 3px 0 var(--color-pitch), 3px 3px 0 0 var(--color-slime)',
+          }}
+        >
+          BOARD
+        </h1>
+        <p
+          className="uppercase text-bone-3 mt-2"
+          style={{ fontFamily: 'var(--font-mono)', fontSize: '16px' }}
+        >
+          {boards.length} WODS · {totalEntries} {totalEntries === 1 ? 'ENTRY' : 'ENTRIES'}
+        </p>
       </div>
 
       <div className="space-y-4">
         {boards.map((b) => (
           <div
             key={b.workoutId}
-            className="bg-[#1A1A1A] border border-[#2A2A2A] rounded-xl p-4 space-y-3"
+            className="bg-pitch-2 border-2 border-smoke p-4 space-y-3"
+            style={{ borderRadius: '8px', boxShadow: '4px 4px 0 0 var(--color-pitch)' }}
           >
             <div>
-              <div className="font-display text-[10px] font-700 uppercase tracking-widest text-[#555]">
-                {formatDate(b.workoutDate)}{b.isAmrap ? ' · AMRAP' : ''}
+              <div
+                className="uppercase text-monster"
+                style={{
+                  fontFamily: 'var(--font-body)',
+                  fontWeight: 700,
+                  fontSize: '10px',
+                  letterSpacing: '1.5px',
+                }}
+              >
+                {formatDate(b.workoutDate)}
+                {b.isAmrap ? ' · AMRAP' : ''}
               </div>
-              <div className="font-display text-base font-800 uppercase tracking-tight text-white leading-tight mt-0.5">
+              <div
+                className="uppercase text-bone leading-tight mt-0.5"
+                style={{
+                  fontFamily: 'var(--font-display)',
+                  fontSize: '16px',
+                  letterSpacing: '-0.5px',
+                }}
+              >
                 {b.workoutTitle}
               </div>
             </div>
 
             <div className="space-y-1.5">
-              {b.entries.slice(0, 10).map((e, idx) => (
-                <div
-                  key={e.completionId}
-                  className={[
-                    'flex items-center justify-between gap-2 px-3 py-2 rounded-lg',
-                    idx === 0 ? 'bg-[#E63946]/10 border border-[#E63946]/20' : 'bg-[#0D0D0D]',
-                  ].join(' ')}
-                >
-                  <div className="flex items-center gap-3 min-w-0">
-                    <span className="font-display text-sm font-800 text-[#888] w-6 text-center flex-shrink-0">
-                      {idx < 3 ? MEDAL[idx] : `${idx + 1}`}
-                    </span>
-                    <span className="font-display text-sm font-700 text-white truncate">
+              {b.entries.slice(0, 10).map((e, idx) => {
+                const rank = idx + 1;
+                const isTop = idx === 0;
+                return (
+                  <div
+                    key={e.completionId}
+                    className={[
+                      'flex items-center gap-3 px-3 py-2.5 border-2 transition-all duration-[120ms]',
+                      isTop
+                        ? 'bg-pitch border-monster'
+                        : 'bg-pitch border-smoke hover:border-bone-3',
+                    ].join(' ')}
+                    style={{
+                      borderRadius: '6px',
+                      boxShadow: isTop
+                        ? '3px 3px 0 0 var(--color-monster)'
+                        : '3px 3px 0 0 var(--color-pitch)',
+                    }}
+                  >
+                    <div
+                      className="flex-shrink-0 w-8 text-center"
+                      style={{
+                        fontFamily: 'var(--font-display-2)',
+                        fontSize: '22px',
+                        lineHeight: 1,
+                        color: isTop ? 'var(--color-monster)' : 'var(--color-bone)',
+                      }}
+                    >
+                      {String(rank).padStart(2, '0')}
+                    </div>
+                    <div
+                      className="flex-1 min-w-0 uppercase truncate"
+                      style={{
+                        fontFamily: 'var(--font-body)',
+                        fontWeight: 700,
+                        fontSize: '13px',
+                        letterSpacing: '0.5px',
+                        color: 'var(--color-bone)',
+                      }}
+                    >
                       {e.userDisplayName}
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2 flex-shrink-0">
+                    </div>
                     <span
-                      className={[
-                        'font-display text-[10px] font-800 uppercase tracking-widest px-2 py-0.5 rounded-full',
-                        e.rx
-                          ? 'text-[#E63946] bg-[#E63946]/10'
-                          : 'text-[#F4A261] bg-[#F4A261]/10',
-                      ].join(' ')}
+                      className="flex-shrink-0 uppercase border-2 px-2 py-0.5"
+                      style={{
+                        fontFamily: 'var(--font-display)',
+                        fontSize: '10px',
+                        letterSpacing: '0.5px',
+                        borderRadius: '4px',
+                        background: e.rx ? 'var(--color-monster)' : 'var(--color-slime)',
+                        color: 'var(--color-pitch)',
+                        borderColor: 'var(--color-pitch)',
+                      }}
                     >
                       {formatScore(e)}
                     </span>
-                    <span className="font-display text-sm font-800 text-white font-mono w-16 text-right">
+                    <span
+                      className="flex-shrink-0 w-20 text-right tabular-nums"
+                      style={{
+                        fontFamily: 'var(--font-mono)',
+                        fontSize: '20px',
+                        color: 'var(--color-bone)',
+                      }}
+                    >
                       {formatResult(e, b.isAmrap)}
                     </span>
                   </div>
-                </div>
-              ))}
+                );
+              })}
               {b.entries.length > 10 && (
-                <div className="text-xs text-[#555] text-center pt-1">
-                  +{b.entries.length - 10} more entries
+                <div
+                  className="text-center pt-1 uppercase text-bone-muted"
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontWeight: 700,
+                    fontSize: '10px',
+                    letterSpacing: '1.5px',
+                  }}
+                >
+                  +{b.entries.length - 10} more
                 </div>
               )}
             </div>

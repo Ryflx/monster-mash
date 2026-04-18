@@ -4,10 +4,7 @@ import { useEffect, useState, type FC } from 'react';
 import { loadWorkoutVariants } from '@/lib/actions/variants';
 import { computeScore, formatScorePct } from '@/lib/scoring';
 import { parseTimeToSeconds } from '@/lib/time';
-import type {
-  CompletionInput,
-  WorkoutVariantsPayload,
-} from '@/types/workout';
+import type { CompletionInput, WorkoutVariantsPayload } from '@/types/workout';
 
 interface LogWorkoutFormProps {
   workoutId: string;
@@ -16,24 +13,32 @@ interface LogWorkoutFormProps {
 }
 
 const chipBase =
-  'px-2.5 py-1 rounded-md font-display text-[10px] font-700 uppercase tracking-widest border transition-colors whitespace-nowrap';
-const chipActiveRx =
-  'bg-[#E63946] border-[#E63946] text-white';
-const chipActiveTier3 =
-  'bg-[#F4A261] border-[#F4A261] text-[#0D0D0D]';
-const chipActiveTier2 =
-  'bg-[#888] border-[#888] text-white';
-const chipActiveTier1 =
-  'bg-[#555] border-[#555] text-white';
+  'px-2.5 py-1 uppercase border-2 whitespace-nowrap press-collapse transition-all duration-[120ms]';
 const chipIdle =
-  'bg-transparent border-[#2A2A2A] text-[#888] hover:border-[#555]';
+  'bg-transparent border-smoke text-bone-3 hover:border-bone-3 hover:text-bone';
 
 function chipActiveClass(tier: number, isRx: boolean): string {
-  if (isRx) return chipActiveRx;
-  if (tier === 3) return chipActiveTier3;
-  if (tier === 2) return chipActiveTier2;
-  return chipActiveTier1;
+  if (isRx) return 'bg-monster border-pitch text-pitch';
+  if (tier === 3) return 'bg-slime border-pitch text-pitch';
+  if (tier === 2) return 'bg-bone-3 border-pitch text-pitch';
+  return 'bg-smoke border-pitch text-bone';
 }
+
+function inputStyle(): React.CSSProperties {
+  return {
+    fontFamily: 'var(--font-mono)',
+    fontSize: '16px',
+  };
+}
+
+const labelCls =
+  'uppercase text-bone-3';
+const labelStyle: React.CSSProperties = {
+  fontFamily: 'var(--font-body)',
+  fontWeight: 700,
+  fontSize: '10px',
+  letterSpacing: '1.5px',
+};
 
 const LogWorkoutForm: FC<LogWorkoutFormProps> = ({ workoutId, onSubmit, onCancel }) => {
   const [payload, setPayload] = useState<WorkoutVariantsPayload | null>(null);
@@ -82,7 +87,7 @@ const LogWorkoutForm: FC<LogWorkoutFormProps> = ({ workoutId, onSubmit, onCancel
     if (trimTime) {
       const parsed = parseTimeToSeconds(trimTime);
       if (parsed == null) {
-        setFormError('Time must be MM:SS (e.g. 12:34) or H:MM:SS');
+        setFormError('TIME MUST BE MM:SS (E.G. 12:34)');
         return;
       }
       timeSeconds = parsed;
@@ -93,7 +98,7 @@ const LogWorkoutForm: FC<LogWorkoutFormProps> = ({ workoutId, onSubmit, onCancel
     if (trimRounds) {
       const n = Number(trimRounds);
       if (!Number.isFinite(n) || n < 0 || !Number.isInteger(n)) {
-        setFormError('Rounds must be a non-negative integer');
+        setFormError('ROUNDS MUST BE A WHOLE NUMBER');
         return;
       }
       rounds = n;
@@ -104,7 +109,7 @@ const LogWorkoutForm: FC<LogWorkoutFormProps> = ({ workoutId, onSubmit, onCancel
     if (trimReps) {
       const n = Number(trimReps);
       if (!Number.isFinite(n) || n < 0 || !Number.isInteger(n)) {
-        setFormError('Extra reps must be a non-negative integer');
+        setFormError('REPS MUST BE A WHOLE NUMBER');
         return;
       }
       extraReps = n;
@@ -124,41 +129,61 @@ const LogWorkoutForm: FC<LogWorkoutFormProps> = ({ workoutId, onSubmit, onCancel
 
   return (
     <div
-      className="px-4 pb-4 pt-1 border-t border-[#2A2A2A] space-y-4 bg-[#121212]"
+      className="px-4 pb-4 pt-1 border-t-2 border-smoke space-y-4 bg-pitch"
       onClick={(e) => e.stopPropagation()}
     >
       <div className="pt-3 flex items-baseline justify-between">
-        <div className="font-display text-[10px] font-800 uppercase tracking-widest text-[#888]">
-          Log this workout
+        <div className="uppercase text-monster" style={{ fontFamily: 'var(--font-display)', fontSize: '11px', letterSpacing: '1px' }}>
+          Log this mash
         </div>
         {preview && (
-          <div className="font-display text-xs font-800 uppercase tracking-widest text-[#F4A261]">
+          <div
+            className="uppercase"
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontSize: '13px',
+              letterSpacing: '0.5px',
+              color: preview.rx ? 'var(--color-monster)' : 'var(--color-slime)',
+            }}
+          >
             {formatScorePct(preview.scorePct)}{preview.rx ? ' · RX' : ''}
           </div>
         )}
       </div>
 
       {loading && (
-        <div className="font-display text-[10px] uppercase tracking-widest text-[#555] py-4 text-center">
+        <div
+          className="text-bone-muted py-4 text-center uppercase"
+          style={{ fontFamily: 'var(--font-body)', fontSize: '11px', letterSpacing: '1.5px' }}
+        >
           Loading variants…
         </div>
       )}
 
       {error && (
-        <div className="text-xs text-[#E63946]">Failed to load variants: {error}</div>
+        <div className="text-blood text-[11px] uppercase" style={{ fontFamily: 'var(--font-body)', fontWeight: 700, letterSpacing: '1px' }}>
+          Failed to load: {error}
+        </div>
       )}
 
       {!loading && !error && payload && payload.canonicals.length === 0 && (
-        <div className="text-xs text-[#555] italic">
-          No recognised movements in this workout — defaulting to RX.
+        <div className="text-bone-muted text-[11px] italic" style={{ fontFamily: 'var(--font-body)' }}>
+          No recognised movements — defaulting to RX.
         </div>
       )}
 
       {!loading && !error && payload && payload.canonicals.length > 0 && (
-        <div className="space-y-2.5">
+        <div className="space-y-3">
           {payload.canonicals.map((c) => (
-            <div key={c.canonicalId} className="space-y-1">
-              <div className="font-display text-[10px] font-700 uppercase tracking-widest text-[#aaa]">
+            <div key={c.canonicalId} className="space-y-1.5">
+              <div
+                className="uppercase text-bone"
+                style={{
+                  fontFamily: 'var(--font-display-2)',
+                  fontSize: '12px',
+                  letterSpacing: '0.5px',
+                }}
+              >
                 {c.canonicalName}
               </div>
               <div className="flex flex-wrap gap-1.5">
@@ -171,6 +196,14 @@ const LogWorkoutForm: FC<LogWorkoutFormProps> = ({ workoutId, onSubmit, onCancel
                         setChosen((prev) => ({ ...prev, [String(c.canonicalId)]: v.id }))
                       }
                       className={`${chipBase} ${isChosen ? chipActiveClass(v.tier, v.isRx) : chipIdle}`}
+                      style={{
+                        fontFamily: 'var(--font-body)',
+                        fontWeight: 700,
+                        fontSize: '10px',
+                        letterSpacing: '1px',
+                        borderRadius: '4px',
+                        boxShadow: isChosen ? '2px 2px 0 0 var(--color-pitch)' : undefined,
+                      }}
                       title={`Tier ${v.tier} · ${v.points} pts${v.isRx ? ' (RX)' : ''}`}
                     >
                       {v.name}
@@ -187,16 +220,17 @@ const LogWorkoutForm: FC<LogWorkoutFormProps> = ({ workoutId, onSubmit, onCancel
         <div className="grid grid-cols-1 gap-3 pt-1">
           {!payload.isAmrap && (
             <label className="block">
-              <span className="font-display text-[10px] font-700 uppercase tracking-widest text-[#888]">
-                Time {payload.isAmrap ? '' : '(optional)'}
+              <span className={labelCls} style={labelStyle}>
+                Time (optional)
               </span>
               <input
                 type="text"
                 value={timeInput}
                 onChange={(e) => setTimeInput(e.target.value)}
-                placeholder="MM:SS (e.g. 12:34)"
+                placeholder="MM:SS"
                 inputMode="numeric"
-                className="mt-1 w-full bg-[#0D0D0D] border border-[#2A2A2A] rounded-lg px-3 py-2 text-white focus:border-[#E63946] outline-none text-sm font-mono"
+                className="mt-1 w-full bg-pitch-2 border-2 border-smoke text-bone px-3 py-2 focus:border-monster outline-none"
+                style={{ ...inputStyle(), borderRadius: '6px' }}
               />
             </label>
           )}
@@ -204,7 +238,7 @@ const LogWorkoutForm: FC<LogWorkoutFormProps> = ({ workoutId, onSubmit, onCancel
           {payload.isAmrap && (
             <div className="grid grid-cols-2 gap-2">
               <label className="block">
-                <span className="font-display text-[10px] font-700 uppercase tracking-widest text-[#888]">
+                <span className={labelCls} style={labelStyle}>
                   Rounds
                 </span>
                 <input
@@ -213,11 +247,12 @@ const LogWorkoutForm: FC<LogWorkoutFormProps> = ({ workoutId, onSubmit, onCancel
                   value={roundsInput}
                   onChange={(e) => setRoundsInput(e.target.value)}
                   placeholder="14"
-                  className="mt-1 w-full bg-[#0D0D0D] border border-[#2A2A2A] rounded-lg px-3 py-2 text-white focus:border-[#E63946] outline-none text-sm font-mono"
+                  className="mt-1 w-full bg-pitch-2 border-2 border-smoke text-bone px-3 py-2 focus:border-monster outline-none"
+                  style={{ ...inputStyle(), borderRadius: '6px' }}
                 />
               </label>
               <label className="block">
-                <span className="font-display text-[10px] font-700 uppercase tracking-widest text-[#888]">
+                <span className={labelCls} style={labelStyle}>
                   Extra reps
                 </span>
                 <input
@@ -226,7 +261,8 @@ const LogWorkoutForm: FC<LogWorkoutFormProps> = ({ workoutId, onSubmit, onCancel
                   value={extraRepsInput}
                   onChange={(e) => setExtraRepsInput(e.target.value)}
                   placeholder="3"
-                  className="mt-1 w-full bg-[#0D0D0D] border border-[#2A2A2A] rounded-lg px-3 py-2 text-white focus:border-[#E63946] outline-none text-sm font-mono"
+                  className="mt-1 w-full bg-pitch-2 border-2 border-smoke text-bone px-3 py-2 focus:border-monster outline-none"
+                  style={{ ...inputStyle(), borderRadius: '6px' }}
                 />
               </label>
             </div>
@@ -234,19 +270,36 @@ const LogWorkoutForm: FC<LogWorkoutFormProps> = ({ workoutId, onSubmit, onCancel
         </div>
       )}
 
-      {formError && <p className="text-xs text-[#E63946]">{formError}</p>}
+      {formError && (
+        <p className="text-blood uppercase" style={{ fontFamily: 'var(--font-body)', fontWeight: 700, fontSize: '10px', letterSpacing: '1px' }}>
+          {formError}
+        </p>
+      )}
 
       <div className="flex gap-2">
         <button
           onClick={onCancel}
-          className="flex-1 py-2 rounded-lg border border-[#2A2A2A] text-[#888] font-display font-700 uppercase tracking-widest text-xs hover:text-white hover:border-[#555]"
+          className="flex-1 py-2 border-2 border-smoke text-bone-3 uppercase hover:text-bone hover:border-bone-3 press-collapse"
+          style={{
+            fontFamily: 'var(--font-display)',
+            fontSize: '11px',
+            letterSpacing: '1px',
+            borderRadius: '6px',
+          }}
         >
           Cancel
         </button>
         <button
           onClick={handleSubmit}
           disabled={loading || !!error}
-          className="flex-[2] py-2 rounded-lg bg-[#E63946] text-white font-display font-800 uppercase tracking-widest text-xs hover:bg-[#d12f3c] disabled:opacity-30 disabled:cursor-not-allowed"
+          className="flex-[2] py-2 bg-monster border-2 border-pitch text-pitch uppercase disabled:opacity-30 disabled:cursor-not-allowed press-collapse"
+          style={{
+            fontFamily: 'var(--font-display)',
+            fontSize: '12px',
+            letterSpacing: '0.5px',
+            borderRadius: '6px',
+            boxShadow: '4px 4px 0 0 var(--color-pitch)',
+          }}
         >
           Log it
         </button>

@@ -80,12 +80,35 @@ export default function SpinTab({ pool, totalCount }: Props) {
   return (
     <div className="space-y-6">
       <div className="text-center">
-        <h2 className="font-display text-2xl font-900 uppercase tracking-widest text-white mb-1">
-          Spin the Wheel
+        <div
+          className="uppercase text-monster mb-1"
+          style={{
+            fontFamily: 'var(--font-body)',
+            fontWeight: 700,
+            fontSize: '10px',
+            letterSpacing: '2px',
+          }}
+        >
+          PICK A MASH
+        </div>
+        <h2
+          className="uppercase text-bone"
+          style={{
+            fontFamily: 'var(--font-display)',
+            fontSize: '40px',
+            letterSpacing: '-1.5px',
+            lineHeight: 0.9,
+            textShadow: '3px 3px 0 var(--color-pitch), 3px 3px 0 0 var(--color-slime)',
+          }}
+        >
+          SPIN IT
         </h2>
-        <p className="text-sm text-[#555]">
-          {pool.length} workouts in the pool
-          {excluded > 0 && <span className="text-[#444]"> · {excluded} already done</span>}
+        <p
+          className="uppercase text-bone-3 mt-2"
+          style={{ fontFamily: 'var(--font-mono)', fontSize: '15px' }}
+        >
+          {pool.length} WODS IN THE POOL
+          {excluded > 0 && <span className="text-bone-muted"> · {excluded} DONE</span>}
         </p>
       </div>
       <SpinWheel

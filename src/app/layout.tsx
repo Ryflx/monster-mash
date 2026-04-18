@@ -4,13 +4,13 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Monster Mash',
-  description: 'WOD tracker for Monster Mash workouts',
+  description: '3 WODS. 5 MIN REST. ALL HYPE.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-[#0D0D0D] text-white min-h-screen">
+      <body className="mm-app-bg text-bone min-h-screen">
         <ClerkProvider>{children}</ClerkProvider>
       </body>
     </html>

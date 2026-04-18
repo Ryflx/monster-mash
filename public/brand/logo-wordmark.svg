@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" width="600" height="200">
+  
+  
+  <text x="16" y="84" class="mm" fill="#0A0A0A">MONSTER</text>
+  <text x="16" y="164" class="mm" fill="#0A0A0A">MASH</text>
+  
+  <text x="12" y="80" class="mm" fill="#FF5A1F" stroke="#0A0A0A" stroke-width="4" paint-order="stroke">MONSTER</text>
+  <text x="12" y="160" class="mm" fill="#B8FF3C" stroke="#0A0A0A" stroke-width="4" paint-order="stroke">MASH</text>
+</svg>

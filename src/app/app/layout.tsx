@@ -13,7 +13,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
   const headerMode = mode.kind === 'solo' ? ('solo' as const) : { teamId: mode.teamId };
 
   return (
-    <div className="min-h-screen bg-[#0D0D0D] text-white">
+    <div className="min-h-screen bg-pitch text-bone relative" style={{ zIndex: 2 }}>
       <AppHeader teams={teams.map((t) => ({ id: t.id, name: t.name }))} currentMode={headerMode} />
       <main className="px-4 py-5 max-w-2xl mx-auto">{children}</main>
     </div>

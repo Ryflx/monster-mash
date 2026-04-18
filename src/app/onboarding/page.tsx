@@ -25,14 +25,33 @@ export default async function OnboardingPage() {
 
   return (
     <main className="min-h-screen flex items-center justify-center p-4">
-      <div className="w-full max-w-md bg-[#1A1A1A] border border-[#2A2A2A] rounded-2xl p-6 space-y-6">
+      <div
+        className="w-full max-w-md bg-pitch-2 border-2 border-smoke p-6 space-y-6"
+        style={{ borderRadius: '8px', boxShadow: '6px 6px 0 0 var(--color-monster)' }}
+      >
         <div>
-          <h1 className="font-display text-3xl font-900 uppercase tracking-tight">
-            <span className="text-[#E63946]">Welcome</span>
+          <h1
+            className="uppercase text-monster"
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontSize: '48px',
+              letterSpacing: '-1.5px',
+              lineHeight: 0.9,
+              textShadow: '3px 3px 0 var(--color-pitch), 3px 3px 0 0 var(--color-slime)',
+            }}
+          >
+            LETS<br />GO!
           </h1>
-          <p className="text-sm text-[#888] mt-1">
-            Pick a name and either create a team or join one with an invite code. You can
-            also skip and track workouts solo.
+          <p
+            className="text-bone-3 mt-4 uppercase"
+            style={{
+              fontFamily: 'var(--font-body)',
+              fontWeight: 700,
+              fontSize: '11px',
+              letterSpacing: '1.5px',
+            }}
+          >
+            Grab your crew. Mash out a monster. Get after it.
           </p>
         </div>
         <OnboardingForm defaultName={defaultName} />

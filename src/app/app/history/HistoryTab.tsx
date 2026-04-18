@@ -10,6 +10,9 @@ type Entry = {
   id: string;
   workoutId: string;
   completedAt: string;
+  rx: boolean;
+  scaledWeight: string | null;
+  timeSeconds: number | null;
   label: string;
   notes?: string;
 };
@@ -48,6 +51,9 @@ export default function HistoryTab({ workouts, entries, mode }: Props) {
   const history: CompletedWorkout[] = entries.map((e) => ({
     workoutId: e.workoutId,
     completedAt: e.completedAt,
+    rx: e.rx,
+    scaledWeight: e.scaledWeight,
+    timeSeconds: e.timeSeconds,
   }));
 
   const handleUnmark = (workoutId: string) => {

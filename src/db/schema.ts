@@ -6,6 +6,7 @@ import {
   timestamp,
   date,
   real,
+  boolean,
   primaryKey,
 } from 'drizzle-orm/pg-core';
 
@@ -80,6 +81,9 @@ export const personalCompletions = pgTable('personal_completions', {
     .notNull()
     .references(() => workouts.id, { onDelete: 'cascade' }),
   completedAt: timestamp('completed_at', { withTimezone: true }).defaultNow().notNull(),
+  rx: boolean('rx').notNull().default(true),
+  scaledWeight: text('scaled_weight'),
+  timeSeconds: integer('time_seconds'),
 });
 
 export const teamCompletions = pgTable('team_completions', {
@@ -93,4 +97,7 @@ export const teamCompletions = pgTable('team_completions', {
   loggedBy: integer('logged_by').references(() => users.id),
   completedAt: timestamp('completed_at', { withTimezone: true }).defaultNow().notNull(),
   notes: text('notes'),
+  rx: boolean('rx').notNull().default(true),
+  scaledWeight: text('scaled_weight'),
+  timeSeconds: integer('time_seconds'),
 });

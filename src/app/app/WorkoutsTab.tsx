@@ -5,12 +5,12 @@ import SearchBar from '@/components/SearchBar';
 import MovementFilter from '@/components/MovementFilter';
 import WorkoutList from '@/components/WorkoutList';
 import { markComplete, unmarkComplete } from '@/lib/actions/completions';
-import type { HydratedWorkout } from '@/lib/queries/workouts';
-import type { Workout } from '@/types/workout';
+import type { HydratedWorkout, LatestCompletion } from '@/lib/queries/workouts';
+import type { Workout, CompletionInput, CompletionLog } from '@/types/workout';
 
 type Props = {
   workouts: HydratedWorkout[];
-  completedIds: string[];
+  completions: Record<string, LatestCompletion>;
 };
 
 function toLegacy(w: HydratedWorkout): Workout {
@@ -34,15 +34,33 @@ function toLegacy(w: HydratedWorkout): Workout {
   };
 }
 
-export default function WorkoutsTab({ workouts, completedIds }: Props) {
+type OptAction =
+  | { kind: 'log'; id: string; log: CompletionLog }
+  | { kind: 'unmark'; id: string };
+
+export default function WorkoutsTab({ workouts, completions }: Props) {
   const [search, setSearch] = useState('');
   const [selectedMovements, setSelectedMovements] = useState<string[]>([]);
   const [, startTransition] = useTransition();
-  const [optimisticCompleted, setOptimisticCompleted] = useOptimistic(
-    new Set(completedIds),
-    (current: Set<string>, action: { kind: 'mark' | 'unmark'; id: string }) => {
-      const next = new Set(current);
-      if (action.kind === 'mark') next.add(action.id);
+
+  const initialMap = useMemo(() => {
+    const m = new Map<string, CompletionLog>();
+    for (const [id, c] of Object.entries(completions)) {
+      m.set(id, {
+        rx: c.rx,
+        scaledWeight: c.scaledWeight,
+        timeSeconds: c.timeSeconds,
+        completedAt: c.completedAt,
+      });
+    }
+    return m;
+  }, [completions]);
+
+  const [optimistic, applyOptimistic] = useOptimistic(
+    initialMap,
+    (current: Map<string, CompletionLog>, action: OptAction) => {
+      const next = new Map(current);
+      if (action.kind === 'log') next.set(action.id, action.log);
       else next.delete(action.id);
       return next;
     },
@@ -74,16 +92,25 @@ export default function WorkoutsTab({ workouts, completedIds }: Props) {
     });
   }, [search, selectedMovements, legacy]);
 
-  const handleMark = (id: string) => {
+  const handleLog = (id: string, input: CompletionInput) => {
     startTransition(async () => {
-      setOptimisticCompleted({ kind: 'mark', id });
-      await markComplete(id);
+      applyOptimistic({
+        kind: 'log',
+        id,
+        log: {
+          rx: input.rx,
+          scaledWeight: input.rx ? null : input.scaledWeight ?? null,
+          timeSeconds: input.timeSeconds ?? null,
+          completedAt: new Date().toISOString(),
+        },
+      });
+      await markComplete(id, input);
     });
   };
 
   const handleUnmark = (id: string) => {
     startTransition(async () => {
-      setOptimisticCompleted({ kind: 'unmark', id });
+      applyOptimistic({ kind: 'unmark', id });
       await unmarkComplete(id);
     });
   };
@@ -104,8 +131,8 @@ export default function WorkoutsTab({ workouts, completedIds }: Props) {
       )}
       <WorkoutList
         workouts={filtered}
-        isCompleted={(id) => optimisticCompleted.has(id)}
-        onMarkComplete={handleMark}
+        getCompletion={(id) => optimistic.get(id) ?? null}
+        onLog={handleLog}
         onUnmark={handleUnmark}
       />
     </div>

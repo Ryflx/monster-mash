@@ -9,6 +9,9 @@ export async function getPersonalHistory(userId: number) {
       id: personalCompletions.id,
       workoutId: personalCompletions.workoutId,
       completedAt: personalCompletions.completedAt,
+      rx: personalCompletions.rx,
+      scaledWeight: personalCompletions.scaledWeight,
+      timeSeconds: personalCompletions.timeSeconds,
     })
     .from(personalCompletions)
     .where(eq(personalCompletions.userId, userId))
@@ -22,6 +25,9 @@ export async function getTeamHistory(teamId: number) {
       workoutId: teamCompletions.workoutId,
       completedAt: teamCompletions.completedAt,
       notes: teamCompletions.notes,
+      rx: teamCompletions.rx,
+      scaledWeight: teamCompletions.scaledWeight,
+      timeSeconds: teamCompletions.timeSeconds,
       loggedByName: users.displayName,
     })
     .from(teamCompletions)

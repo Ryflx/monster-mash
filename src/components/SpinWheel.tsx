@@ -8,14 +8,14 @@ import {
   useMemo,
   type FC,
 } from 'react';
-import type { Workout } from '../types/workout';
+import type { Workout, CompletionInput, CompletionLog } from '../types/workout';
 import WorkoutCard from './WorkoutCard';
 
 interface SpinWheelProps {
   workouts: Workout[];
   onSelect: (workouts: Workout[]) => void;
-  isCompleted: (id: string) => boolean;
-  onMarkComplete: (id: string) => void;
+  getCompletion: (id: string) => CompletionLog | null;
+  onLog: (id: string, input: CompletionInput) => void;
   onUnmark: (id: string) => void;
 }
 
@@ -163,8 +163,8 @@ function getWinnerIndex(count: number, rotation: number): number {
 const SpinWheel: FC<SpinWheelProps> = ({
   workouts,
   onSelect,
-  isCompleted,
-  onMarkComplete,
+  getCompletion,
+  onLog,
   onUnmark,
 }) => {
   const wheelCanvasRef = useRef<HTMLCanvasElement>(null);
@@ -355,8 +355,8 @@ const SpinWheel: FC<SpinWheelProps> = ({
             <WorkoutCard
               key={workout.id}
               workout={workout}
-              isCompleted={isCompleted(workout.id)}
-              onMarkComplete={() => onMarkComplete(workout.id)}
+              completion={getCompletion(workout.id)}
+              onLog={(input) => onLog(workout.id, input)}
               onUnmark={() => onUnmark(workout.id)}
               defaultExpanded={true}
             />

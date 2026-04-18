@@ -148,3 +148,67 @@ export async function getCompletedWorkoutIds(userId: number, mode: Mode): Promis
 
   return ids;
 }
+
+export type LatestCompletion = {
+  rx: boolean;
+  scaledWeight: string | null;
+  timeSeconds: number | null;
+  completedAt: string;
+};
+
+export async function getLatestCompletionsByWorkout(
+  userId: number,
+  mode: Mode,
+): Promise<Record<string, LatestCompletion>> {
+  const result: Record<string, LatestCompletion> = {};
+
+  const personal = await db
+    .select({
+      workoutId: personalCompletions.workoutId,
+      rx: personalCompletions.rx,
+      scaledWeight: personalCompletions.scaledWeight,
+      timeSeconds: personalCompletions.timeSeconds,
+      completedAt: personalCompletions.completedAt,
+    })
+    .from(personalCompletions)
+    .where(eq(personalCompletions.userId, userId))
+    .orderBy(desc(personalCompletions.completedAt));
+
+  for (const r of personal) {
+    if (!result[r.workoutId]) {
+      result[r.workoutId] = {
+        rx: r.rx,
+        scaledWeight: r.scaledWeight,
+        timeSeconds: r.timeSeconds,
+        completedAt: r.completedAt.toISOString(),
+      };
+    }
+  }
+
+  if (mode.kind === 'team') {
+    const team = await db
+      .select({
+        workoutId: teamCompletions.workoutId,
+        rx: teamCompletions.rx,
+        scaledWeight: teamCompletions.scaledWeight,
+        timeSeconds: teamCompletions.timeSeconds,
+        completedAt: teamCompletions.completedAt,
+      })
+      .from(teamCompletions)
+      .where(eq(teamCompletions.teamId, mode.teamId))
+      .orderBy(desc(teamCompletions.completedAt));
+
+    for (const r of team) {
+      if (!result[r.workoutId]) {
+        result[r.workoutId] = {
+          rx: r.rx,
+          scaledWeight: r.scaledWeight,
+          timeSeconds: r.timeSeconds,
+          completedAt: r.completedAt.toISOString(),
+        };
+      }
+    }
+  }
+
+  return result;
+}

@@ -6,19 +6,34 @@ import { db } from '@/db';
 import { personalCompletions, teamCompletions } from '@/db/schema';
 import { ensureUser, requireTeamMembership } from '@/lib/auth';
 import { getMode } from '@/lib/mode';
+import type { CompletionInput } from '@/types/workout';
 
-export async function markComplete(workoutId: string): Promise<void> {
+export async function markComplete(
+  workoutId: string,
+  input: CompletionInput,
+): Promise<void> {
   const user = await ensureUser();
   const mode = await getMode();
 
+  const values = {
+    rx: input.rx,
+    scaledWeight: input.rx ? null : input.scaledWeight?.trim() || null,
+    timeSeconds: input.timeSeconds ?? null,
+  };
+
   if (mode.kind === 'solo') {
-    await db.insert(personalCompletions).values({ userId: user.id, workoutId });
+    await db.insert(personalCompletions).values({
+      userId: user.id,
+      workoutId,
+      ...values,
+    });
   } else {
     await requireTeamMembership(user.id, mode.teamId);
     await db.insert(teamCompletions).values({
       teamId: mode.teamId,
       workoutId,
       loggedBy: user.id,
+      ...values,
     });
   }
 

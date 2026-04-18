@@ -1,16 +1,21 @@
 'use client';
 
-import { useState, type FC } from 'react';
-import type { Workout, Segment } from '../types/workout';
+import { useState, type FC, type MouseEvent } from 'react';
+import type {
+  Workout,
+  Segment,
+  CompletionLog,
+  CompletionInput,
+} from '../types/workout';
 import { formatWeight } from '../utils/converter';
+import { parseTimeToSeconds, formatSecondsToTime } from '../lib/time';
 
 interface WorkoutCardProps {
   workout: Workout;
-  isCompleted: boolean;
-  onMarkComplete: () => void;
+  completion: CompletionLog | null;
+  onLog: (input: CompletionInput) => void;
   onUnmark: () => void;
   defaultExpanded?: boolean;
-  completedAt?: string;
 }
 
 function formatDate(dateStr: string): string {
@@ -24,18 +29,6 @@ function formatDate(dateStr: string): string {
   });
 }
 
-function formatCompletedDate(isoString: string): string {
-  const d = new Date(isoString);
-  return d.toLocaleDateString('en-GB', {
-    weekday: 'short',
-    day: 'numeric',
-    month: 'short',
-    year: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-  });
-}
-
 const SegmentBlock: FC<{ segment: Segment }> = ({ segment }) => (
   <div className="space-y-2">
     <div className="flex items-center gap-2">
@@ -46,7 +39,7 @@ const SegmentBlock: FC<{ segment: Segment }> = ({ segment }) => (
     <p className="text-sm text-[#CCCCCC] leading-relaxed font-barlow whitespace-pre-line">
       {segment.description}
     </p>
-    {segment.movements.some(mv => mv.reps || mv.weightKg || mv.equipment) && (
+    {segment.movements.some((mv) => mv.reps || mv.weightKg || mv.equipment) && (
       <ul className="space-y-1 pt-1">
         {segment.movements.map((mv, i) => (
           <li key={i} className="flex items-start gap-2 text-sm">
@@ -70,15 +63,27 @@ const SegmentBlock: FC<{ segment: Segment }> = ({ segment }) => (
   </div>
 );
 
+const chipBase =
+  'px-3 py-1.5 rounded-lg font-display text-[11px] font-700 uppercase tracking-widest border transition-colors';
+const chipRxActive = 'bg-[#E63946] border-[#E63946] text-white';
+const chipScaledActive = 'bg-[#F4A261] border-[#F4A261] text-[#0D0D0D]';
+const chipIdle = 'bg-transparent border-[#2A2A2A] text-[#888] hover:border-[#555]';
+
 const WorkoutCard: FC<WorkoutCardProps> = ({
   workout,
-  isCompleted,
-  onMarkComplete,
+  completion,
+  onLog,
   onUnmark,
   defaultExpanded = false,
-  completedAt,
 }) => {
   const [expanded, setExpanded] = useState(defaultExpanded);
+  const [showForm, setShowForm] = useState(false);
+  const [rx, setRx] = useState(true);
+  const [scaledWeight, setScaledWeight] = useState('');
+  const [timeInput, setTimeInput] = useState('');
+  const [timeError, setTimeError] = useState<string | null>(null);
+
+  const isCompleted = completion != null;
   const activeSegments = workout.segments;
 
   const previewDescription = workout.segments[0]?.description ?? '';
@@ -86,6 +91,52 @@ const WorkoutCard: FC<WorkoutCardProps> = ({
     previewDescription.length > 80
       ? previewDescription.slice(0, 80) + '…'
       : previewDescription;
+
+  const handleCircleClick = (e: MouseEvent) => {
+    e.stopPropagation();
+    if (isCompleted) {
+      onUnmark();
+      return;
+    }
+    setShowForm((prev) => !prev);
+  };
+
+  const resetForm = () => {
+    setShowForm(false);
+    setRx(true);
+    setScaledWeight('');
+    setTimeInput('');
+    setTimeError(null);
+  };
+
+  const handleSubmit = () => {
+    setTimeError(null);
+    let timeSeconds: number | null = null;
+    const trimmed = timeInput.trim();
+    if (trimmed) {
+      const parsed = parseTimeToSeconds(trimmed);
+      if (parsed == null) {
+        setTimeError('Use MM:SS (e.g. 12:34) or H:MM:SS');
+        return;
+      }
+      timeSeconds = parsed;
+    }
+    onLog({
+      rx,
+      scaledWeight: rx ? null : scaledWeight.trim() || null,
+      timeSeconds,
+    });
+    resetForm();
+  };
+
+  const doneBadges: string[] = [];
+  if (completion) {
+    doneBadges.push(completion.rx ? 'RX' : 'Scaled');
+    if (!completion.rx && completion.scaledWeight) doneBadges.push(completion.scaledWeight);
+    if (completion.timeSeconds != null) {
+      doneBadges.push(formatSecondsToTime(completion.timeSeconds));
+    }
+  }
 
   return (
     <div
@@ -95,37 +146,42 @@ const WorkoutCard: FC<WorkoutCardProps> = ({
         'animate-slide-up',
       ].join(' ')}
     >
-      {/* Completed accent line at top */}
       {isCompleted && (
         <div className="h-[2px] bg-gradient-to-r from-[#E63946] to-[#F4A261]" />
       )}
 
-      {/* Card header — always visible */}
       <div
         className="flex items-start gap-3 p-4 cursor-pointer select-none"
         onClick={() => setExpanded((v) => !v)}
       >
-        {/* Completion toggle */}
         <button
-          onClick={(e) => {
-            e.stopPropagation();
-            isCompleted ? onUnmark() : onMarkComplete();
-          }}
+          onClick={handleCircleClick}
           className={[
             'flex-shrink-0 w-8 h-8 rounded-full border-2 flex items-center justify-center transition-all duration-200 mt-0.5',
             isCompleted
               ? 'bg-[#E63946] border-[#E63946] text-white'
-              : 'border-[#3A3A3A] text-transparent hover:border-[#E63946]/60',
+              : showForm
+                ? 'border-[#E63946] text-[#E63946]'
+                : 'border-[#3A3A3A] text-transparent hover:border-[#E63946]/60',
           ].join(' ')}
-          aria-label={isCompleted ? 'Unmark complete' : 'Mark complete'}
+          aria-label={isCompleted ? 'Unmark complete' : showForm ? 'Cancel logging' : 'Log this workout'}
         >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
-            <path d="m5 13 4 4L19 7" />
-          </svg>
+          {isCompleted ? (
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+              <path d="m5 13 4 4L19 7" />
+            </svg>
+          ) : showForm ? (
+            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+              <path d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+              <path d="m5 13 4 4L19 7" />
+            </svg>
+          )}
         </button>
 
         <div className="flex-1 min-w-0">
-          {/* Date */}
           <div className="flex items-center justify-between gap-2 mb-1">
             <span className="font-display text-xs font-700 uppercase tracking-widest text-[#555]">
               {formatDate(workout.date)}
@@ -133,10 +189,9 @@ const WorkoutCard: FC<WorkoutCardProps> = ({
             <div className="flex items-center gap-2">
               {isCompleted && (
                 <span className="font-display text-[10px] font-800 uppercase tracking-wider text-[#E63946] bg-[#E63946]/10 px-2 py-0.5 rounded-full">
-                  Done
+                  {doneBadges.length > 0 ? doneBadges.join(' · ') : 'Done'}
                 </span>
               )}
-              {/* Link icon */}
               <a
                 href={workout.sourceUrl}
                 target="_blank"
@@ -151,7 +206,6 @@ const WorkoutCard: FC<WorkoutCardProps> = ({
                   <line x1="10" y1="14" x2="21" y2="3" />
                 </svg>
               </a>
-              {/* Expand chevron */}
               <svg
                 className={`w-4 h-4 text-[#555] transition-transform duration-200 ${expanded ? 'rotate-180' : ''}`}
                 fill="none"
@@ -164,13 +218,11 @@ const WorkoutCard: FC<WorkoutCardProps> = ({
             </div>
           </div>
 
-          {/* Title */}
           <h3 className="font-display text-lg font-800 uppercase tracking-tight text-white leading-tight mb-2">
             {workout.title}
           </h3>
 
-          {/* Collapsed preview */}
-          {!expanded && (
+          {!expanded && !showForm && (
             <>
               {workout.segments[0] && (
                 <p className="text-xs text-[#666] leading-relaxed mb-2 font-barlow">
@@ -180,7 +232,6 @@ const WorkoutCard: FC<WorkoutCardProps> = ({
                   {previewTruncated}
                 </p>
               )}
-              {/* Movement tags */}
               <div className="flex flex-wrap gap-1">
                 {workout.movements.slice(0, 5).map((m) => (
                   <span
@@ -201,10 +252,78 @@ const WorkoutCard: FC<WorkoutCardProps> = ({
         </div>
       </div>
 
-      {/* Expanded content */}
+      {showForm && !isCompleted && (
+        <div
+          className="px-4 pb-4 pt-1 border-t border-[#2A2A2A] space-y-3 bg-[#121212]"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="font-display text-[10px] font-800 uppercase tracking-widest text-[#888] pt-3">
+            Log this workout
+          </div>
+          <div className="flex gap-2">
+            <button
+              onClick={() => setRx(true)}
+              className={`${chipBase} ${rx ? chipRxActive : chipIdle}`}
+            >
+              RX
+            </button>
+            <button
+              onClick={() => setRx(false)}
+              className={`${chipBase} ${!rx ? chipScaledActive : chipIdle}`}
+            >
+              Scaled
+            </button>
+          </div>
+
+          {!rx && (
+            <label className="block">
+              <span className="font-display text-[10px] font-700 uppercase tracking-widest text-[#888]">
+                Scaled to
+              </span>
+              <input
+                type="text"
+                value={scaledWeight}
+                onChange={(e) => setScaledWeight(e.target.value)}
+                placeholder="e.g. 40kg, DBs 15kg, banded pull-ups"
+                className="mt-1 w-full bg-[#0D0D0D] border border-[#2A2A2A] rounded-lg px-3 py-2 text-white focus:border-[#E63946] outline-none text-sm"
+              />
+            </label>
+          )}
+
+          <label className="block">
+            <span className="font-display text-[10px] font-700 uppercase tracking-widest text-[#888]">
+              Time (optional)
+            </span>
+            <input
+              type="text"
+              value={timeInput}
+              onChange={(e) => setTimeInput(e.target.value)}
+              placeholder="MM:SS (e.g. 12:34)"
+              inputMode="numeric"
+              className="mt-1 w-full bg-[#0D0D0D] border border-[#2A2A2A] rounded-lg px-3 py-2 text-white focus:border-[#E63946] outline-none text-sm font-mono"
+            />
+            {timeError && <p className="text-xs text-[#E63946] mt-1">{timeError}</p>}
+          </label>
+
+          <div className="flex gap-2 pt-1">
+            <button
+              onClick={resetForm}
+              className="flex-1 py-2 rounded-lg border border-[#2A2A2A] text-[#888] font-display font-700 uppercase tracking-widest text-xs hover:text-white hover:border-[#555]"
+            >
+              Cancel
+            </button>
+            <button
+              onClick={handleSubmit}
+              className="flex-[2] py-2 rounded-lg bg-[#E63946] text-white font-display font-800 uppercase tracking-widest text-xs hover:bg-[#d12f3c]"
+            >
+              Log it
+            </button>
+          </div>
+        </div>
+      )}
+
       {expanded && (
         <div className="px-4 pb-4 space-y-4">
-          {/* Segments */}
           <div className="space-y-4 divide-y divide-[#2A2A2A]">
             {activeSegments.map((seg, i) => (
               <div key={i} className={i > 0 ? 'pt-4' : ''}>
@@ -213,7 +332,6 @@ const WorkoutCard: FC<WorkoutCardProps> = ({
             ))}
           </div>
 
-          {/* All movement tags in expanded view */}
           <div className="flex flex-wrap gap-1 pt-2 border-t border-[#2A2A2A]">
             {workout.movements.map((m) => (
               <span
@@ -224,13 +342,6 @@ const WorkoutCard: FC<WorkoutCardProps> = ({
               </span>
             ))}
           </div>
-
-          {/* Completed at */}
-          {completedAt && (
-            <p className="text-xs text-[#555] font-display font-600 uppercase tracking-wide">
-              Completed {formatCompletedDate(completedAt)}
-            </p>
-          )}
         </div>
       )}
     </div>

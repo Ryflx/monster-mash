@@ -343,10 +343,32 @@ const WorkoutCard: FC<WorkoutCardProps> = ({
 
       {expanded && (
         <div className="px-4 pb-4 space-y-4">
-          <div className="space-y-4 divide-y-2 divide-smoke">
+          <div className="space-y-0">
             {activeSegments.map((seg, i) => (
-              <div key={i} className={i > 0 ? 'pt-4' : ''}>
-                <SegmentBlock segment={seg} />
+              <div key={i}>
+                {i > 0 && (
+                  <div className="flex items-center gap-3 my-3">
+                    <div className="flex-1 h-px bg-smoke" />
+                    <span
+                      className="uppercase text-bone-muted"
+                      style={{ fontFamily: 'var(--font-body)', fontWeight: 700, fontSize: '9px', letterSpacing: '1.5px' }}
+                    >
+                      Rest · 5 min
+                    </span>
+                    <div className="flex-1 h-px bg-smoke" />
+                  </div>
+                )}
+                <div className="space-y-2">
+                  {activeSegments.length > 1 && (
+                    <span
+                      className="block uppercase text-bone-muted"
+                      style={{ fontFamily: 'var(--font-display)', fontSize: '10px', letterSpacing: '2px' }}
+                    >
+                      Part {i + 1}
+                    </span>
+                  )}
+                  <SegmentBlock segment={seg} />
+                </div>
               </div>
             ))}
           </div>

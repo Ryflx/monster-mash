@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200">
+  
+  <image href="pixels/beast.svg" x="10" y="10" width="180" height="180" style="image-rendering:pixelated"></image>
+  <text x="216" y="90" class="mm" fill="#FF5A1F" stroke="#0A0A0A" stroke-width="4" paint-order="stroke">MONSTER</text>
+  <text x="216" y="158" class="mm" fill="#B8FF3C" stroke="#0A0A0A" stroke-width="4" paint-order="stroke">MASH</text>
+</svg>

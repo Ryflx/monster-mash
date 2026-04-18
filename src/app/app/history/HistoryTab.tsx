@@ -13,6 +13,9 @@ type Entry = {
   rx: boolean;
   scaledWeight: string | null;
   timeSeconds: number | null;
+  rounds: number | null;
+  extraReps: number | null;
+  scorePct: number | null;
   label: string;
   notes?: string;
 };
@@ -54,6 +57,9 @@ export default function HistoryTab({ workouts, entries, mode }: Props) {
     rx: e.rx,
     scaledWeight: e.scaledWeight,
     timeSeconds: e.timeSeconds,
+    rounds: e.rounds,
+    extraReps: e.extraReps,
+    scorePct: e.scorePct,
   }));
 
   const handleUnmark = (workoutId: string) => {

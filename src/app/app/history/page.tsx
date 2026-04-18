@@ -21,6 +21,9 @@ export default async function HistoryPage() {
           rx: h.rx,
           scaledWeight: h.scaledWeight,
           timeSeconds: h.timeSeconds,
+          rounds: h.rounds,
+          extraReps: h.extraReps,
+          scorePct: h.scorePct,
           label: 'Solo',
         }))}
         mode="solo"
@@ -39,6 +42,9 @@ export default async function HistoryPage() {
         rx: h.rx,
         scaledWeight: h.scaledWeight,
         timeSeconds: h.timeSeconds,
+        rounds: h.rounds,
+        extraReps: h.extraReps,
+        scorePct: h.scorePct,
         label: h.loggedByName ?? 'Team',
         notes: h.notes ?? undefined,
       }))}

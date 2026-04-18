@@ -1,20 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Bowlby+One&family=Space+Grotesk:wght@400;500;700&family=VT323&display=swap');
 @import 'tailwindcss';
 
 @theme {
-  --color-mm-bg: #0D0D0D;
-  --color-mm-red: #E63946;
-  --color-mm-orange: #F4A261;
-  --color-mm-card: #1A1A1A;
-  --color-mm-border: #2A2A2A;
-  --font-display: 'Barlow Condensed', system-ui, sans-serif;
-  --font-barlow: 'Barlow', system-ui, sans-serif;
+  /* ── Raw palette ── */
+  --color-pitch: #0A0A0A;
+  --color-pitch-2: #1C1C1C;
+  --color-pitch-3: #2A2A2A;
+  --color-smoke: #3A3A3A;
+
+  --color-bone: #F5F1E8;
+  --color-bone-2: #E8E2D2;
+  --color-bone-3: #C9C2B0;
+  --color-bone-muted: #8A847A;
+
+  --color-monster: #FF5A1F;
+  --color-monster-dk: #E64A10;
+  --color-monster-lt: #FF7A4A;
+
+  --color-slime: #B8FF3C;
+  --color-slime-dk: #8FD11A;
+  --color-slime-lt: #D6FF7A;
+
+  --color-blood: #D42F2F;
+  --color-blood-dk: #A01F1F;
+
+  --color-ghoul: #6B2FB3;
+  --color-ghoul-lt: #9B5FD6;
+
+  --color-crt: #39FF14;
+
+  /* ── Fonts ── */
+  --font-display: 'Rubik Mono One', 'Arial Black', sans-serif;
+  --font-display-2: 'Bowlby One', Impact, sans-serif;
+  --font-body: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'VT323', 'Courier New', monospace;
 }
 
-@keyframes slide-up {
-  from { opacity: 0; transform: translateY(8px); }
+/* ── Base ── */
+html, body {
+  background: var(--color-pitch);
+  color: var(--color-bone);
+}
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: 'tnum' 1;
+}
+
+/* ── Scanlines overlay ─ brand-critical ── */
+.scanlines {
+  position: relative;
+}
+.scanlines::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0) 0px,
+    rgba(255, 255, 255, 0) 2px,
+    rgba(255, 255, 255, 0.04) 2px,
+    rgba(255, 255, 255, 0.04) 3px
+  );
+  z-index: 80;
+}
+.scanlines-light::after {
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 0, 0, 0) 2px,
+    rgba(0, 0, 0, 0.05) 2px,
+    rgba(0, 0, 0, 0.05) 3px
+  );
+}
+
+/* Global scanline under content */
+.mm-app-bg {
+  background: var(--color-pitch);
+  position: relative;
+}
+.mm-app-bg::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0) 0px,
+    rgba(255, 255, 255, 0) 2px,
+    rgba(255, 255, 255, 0.04) 2px,
+    rgba(255, 255, 255, 0.04) 3px
+  );
+  z-index: 1;
+}
+
+/* ── Pixel rendering ── */
+.pixelated {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* ── Hard offset shadows (no blur) ── */
+.shadow-pitch-sm { box-shadow: 2px 2px 0 0 var(--color-pitch); }
+.shadow-pitch { box-shadow: 4px 4px 0 0 var(--color-pitch); }
+.shadow-pitch-lg { box-shadow: 6px 6px 0 0 var(--color-pitch); }
+.shadow-monster-sm { box-shadow: 2px 2px 0 0 var(--color-monster); }
+.shadow-monster { box-shadow: 4px 4px 0 0 var(--color-monster); }
+.shadow-monster-lg { box-shadow: 6px 6px 0 0 var(--color-monster); }
+.shadow-slime { box-shadow: 4px 4px 0 0 var(--color-slime); }
+.shadow-bone { box-shadow: 4px 4px 0 0 var(--color-bone); }
+
+/* ── Tactile press: collapse shadow ── */
+.press-collapse:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 0 transparent !important;
+}
+
+/* ── Retro CRT glow (used on live timers) ── */
+.crt-glow {
+  text-shadow:
+    2px 0 0 rgba(212, 47, 47, 0.6),
+    -2px 0 0 rgba(57, 255, 20, 0.3),
+    0 0 20px rgba(57, 255, 20, 0.3);
+}
+
+/* ── Chromatic aberration on hero type ── */
+.hero-shadow {
+  text-shadow: 3px 3px 0 var(--color-pitch), 3px 3px 0 0 var(--color-slime);
+}
+
+/* ── VHS idle flicker ── */
+@keyframes vhs-flicker {
+  0%, 96%, 100% { opacity: 1; }
+  97% { opacity: 0.85; }
+  98% { opacity: 0.95; transform: translateX(0.5px); }
+  99% { opacity: 1; transform: translateX(-0.5px); }
+}
+.vhs-flicker { animation: vhs-flicker 6s infinite; }
+
+/* ── Reveal (steps-based, not smooth fade) ── */
+@keyframes step-in {
+  from { opacity: 0; transform: translateY(4px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
 .animate-slide-up {
-  animation: slide-up 0.3s ease-out;
+  animation: step-in 120ms steps(4, end);
 }

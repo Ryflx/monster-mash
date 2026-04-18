@@ -15,7 +15,11 @@ interface SpinWheelProps {
   workouts: Workout[];
   onSelect: (workouts: Workout[]) => void;
   getCompletion: (id: string) => CompletionLog | null;
-  onLog: (id: string, input: CompletionInput) => void;
+  onLog: (
+    id: string,
+    input: CompletionInput,
+    preview: { scorePct: number; rx: boolean },
+  ) => void;
   onUnmark: (id: string) => void;
 }
 
@@ -25,7 +29,7 @@ const SEGMENT_FILLS = [
   '#1C1618', '#161C18', '#1A1418', '#181C16',
   '#1C1A14', '#141C1A', '#181416', '#1C181A',
 ];
-const ACCENT_COLORS = ['#E63946', '#F4A261'];
+const ACCENT_COLORS = ['#FF5A1F', '#B8FF3C'];
 const WHEEL_SLOTS = 12;
 
 const DPR = typeof window !== 'undefined' ? Math.min(window.devicePixelRatio || 1, 2) : 1;
@@ -91,7 +95,7 @@ function drawWheel(
     ctx.translate(lx, ly);
     ctx.rotate(midAngle + Math.PI / 2);
     ctx.fillStyle = isHighlighted ? '#FFFFFF' : '#999999';
-    ctx.font = `bold 11px "Barlow Condensed", sans-serif`;
+    ctx.font = `bold 11px "Rubik Mono One", sans-serif`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillText(label, 0, 0);
@@ -100,17 +104,17 @@ function drawWheel(
 
   // Center disc
   const grad = ctx.createRadialGradient(cx, cy, ir * 0.3, cx, cy, ir);
-  grad.addColorStop(0, '#1A1A1A');
-  grad.addColorStop(1, '#0D0D0D');
+  grad.addColorStop(0, '#1C1C1C');
+  grad.addColorStop(1, '#0A0A0A');
   ctx.beginPath();
   ctx.arc(cx, cy, ir, 0, Math.PI * 2);
   ctx.fillStyle = grad;
   ctx.fill();
-  ctx.strokeStyle = '#E63946';
+  ctx.strokeStyle = '#FF5A1F';
   ctx.lineWidth = 2;
   ctx.stroke();
-  ctx.fillStyle = '#E63946';
-  ctx.font = `900 13px "Barlow Condensed", sans-serif`;
+  ctx.fillStyle = '#FF5A1F';
+  ctx.font = `900 13px "Rubik Mono One", sans-serif`;
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
   ctx.fillText('MM', cx, cy);
@@ -118,7 +122,7 @@ function drawWheel(
   // Outer ring
   ctx.beginPath();
   ctx.arc(cx, cy, r, 0, Math.PI * 2);
-  ctx.strokeStyle = '#1A1A1A';
+  ctx.strokeStyle = '#1C1C1C';
   ctx.lineWidth = 3;
   ctx.stroke();
 
@@ -138,7 +142,7 @@ function drawPointer(ctx: CanvasRenderingContext2D) {
   ctx.lineTo(cx - 12, 28);
   ctx.lineTo(cx + 12, 28);
   ctx.closePath();
-  ctx.fillStyle = '#E63946';
+  ctx.fillStyle = '#FF5A1F';
   ctx.fill();
   ctx.shadowBlur = 0;
   ctx.beginPath();
@@ -293,8 +297,8 @@ const SpinWheel: FC<SpinWheelProps> = ({
             className={[
               'px-5 py-2.5 rounded-lg font-display text-sm font-800 uppercase tracking-widest border transition-all duration-200',
               count === n
-                ? 'bg-[#E63946] border-[#E63946] text-white shadow-[0_0_20px_rgba(230,57,70,0.3)]'
-                : 'bg-transparent border-[#2A2A2A] text-[#555] hover:border-[#E63946]/40 hover:text-white',
+                ? 'bg-[#FF5A1F] border-[#FF5A1F] text-white shadow-[0_0_20px_rgba(255,90,31,0.3)]'
+                : 'bg-transparent border-[#2A2A2A] text-[#555] hover:border-[#FF5A1F]/40 hover:text-white',
               spinning ? 'opacity-30 cursor-not-allowed' : '',
             ].join(' ')}
           >
@@ -322,8 +326,8 @@ const SpinWheel: FC<SpinWheelProps> = ({
         className={[
           'w-52 py-4 rounded-xl font-display text-xl font-900 uppercase tracking-[0.2em] transition-all duration-200',
           spinning || workouts.length === 0
-            ? 'bg-[#1A1A1A] text-[#333] cursor-not-allowed border border-[#2A2A2A]'
-            : 'bg-[#E63946] text-white hover:bg-[#c62d39] glow-pulse active:scale-95 shadow-[0_4px_30px_rgba(230,57,70,0.4)]',
+            ? 'bg-[#1C1C1C] text-[#333] cursor-not-allowed border border-[#2A2A2A]'
+            : 'bg-[#FF5A1F] text-white hover:bg-[#E64A10] glow-pulse active:scale-95 shadow-[0_4px_30px_rgba(255,90,31,0.4)]',
         ].join(' ')}
       >
         {spinning ? (
@@ -345,18 +349,18 @@ const SpinWheel: FC<SpinWheelProps> = ({
       {phase === 'done' && selected.length > 0 && (
         <div className="w-full space-y-3 animate-slide-up">
           <div className="flex items-center gap-3">
-            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[#E63946]/40 to-transparent" />
-            <span className="font-display text-xs font-800 uppercase tracking-[0.2em] text-[#E63946]">
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[#FF5A1F]/40 to-transparent" />
+            <span className="font-display text-xs font-800 uppercase tracking-[0.2em] text-[#FF5A1F]">
               {selected.length === 1 ? "Today's WOD" : `Your ${selected.length} WODs`}
             </span>
-            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[#E63946]/40 to-transparent" />
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[#FF5A1F]/40 to-transparent" />
           </div>
           {selected.map((workout) => (
             <WorkoutCard
               key={workout.id}
               workout={workout}
               completion={getCompletion(workout.id)}
-              onLog={(input) => onLog(workout.id, input)}
+              onLog={(input, preview) => onLog(workout.id, input, preview)}
               onUnmark={() => onUnmark(workout.id)}
               defaultExpanded={true}
             />

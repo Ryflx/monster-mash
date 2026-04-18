@@ -38,23 +38,31 @@ type OptAction =
   | { kind: 'log'; id: string; log: CompletionLog }
   | { kind: 'unmark'; id: string };
 
+function initialMapFromCompletions(
+  completions: Record<string, LatestCompletion>,
+): Map<string, CompletionLog> {
+  const m = new Map<string, CompletionLog>();
+  for (const [id, c] of Object.entries(completions)) {
+    m.set(id, {
+      rx: c.rx,
+      scaledWeight: c.scaledWeight,
+      timeSeconds: c.timeSeconds,
+      rounds: c.rounds,
+      extraReps: c.extraReps,
+      scorePct: c.scorePct,
+      variantsChosen: c.variantsChosen,
+      completedAt: c.completedAt,
+    });
+  }
+  return m;
+}
+
 export default function WorkoutsTab({ workouts, completions }: Props) {
   const [search, setSearch] = useState('');
   const [selectedMovements, setSelectedMovements] = useState<string[]>([]);
   const [, startTransition] = useTransition();
 
-  const initialMap = useMemo(() => {
-    const m = new Map<string, CompletionLog>();
-    for (const [id, c] of Object.entries(completions)) {
-      m.set(id, {
-        rx: c.rx,
-        scaledWeight: c.scaledWeight,
-        timeSeconds: c.timeSeconds,
-        completedAt: c.completedAt,
-      });
-    }
-    return m;
-  }, [completions]);
+  const initialMap = useMemo(() => initialMapFromCompletions(completions), [completions]);
 
   const [optimistic, applyOptimistic] = useOptimistic(
     initialMap,
@@ -92,15 +100,23 @@ export default function WorkoutsTab({ workouts, completions }: Props) {
     });
   }, [search, selectedMovements, legacy]);
 
-  const handleLog = (id: string, input: CompletionInput) => {
+  const handleLog = (
+    id: string,
+    input: CompletionInput,
+    preview: { scorePct: number; rx: boolean },
+  ) => {
     startTransition(async () => {
       applyOptimistic({
         kind: 'log',
         id,
         log: {
-          rx: input.rx,
-          scaledWeight: input.rx ? null : input.scaledWeight ?? null,
+          rx: preview.rx,
+          scaledWeight: null,
           timeSeconds: input.timeSeconds ?? null,
+          rounds: input.rounds ?? null,
+          extraReps: input.extraReps ?? null,
+          scorePct: preview.scorePct,
+          variantsChosen: input.variantsChosen,
           completedAt: new Date().toISOString(),
         },
       });

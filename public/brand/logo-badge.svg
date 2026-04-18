@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  
+  <circle cx="150" cy="150" r="140" fill="#0A0A0A" stroke="#FF5A1F" stroke-width="6"></circle>
+  <circle cx="150" cy="150" r="125" fill="none" stroke="#B8FF3C" stroke-width="2"></circle>
+  <path id="topArc" d="M 40 150 A 110 110 0 0 1 260 150" fill="none"></path>
+  <path id="botArc" d="M 50 160 A 100 100 0 0 0 250 160" fill="none"></path>
+  <text class="mm" fill="#FF5A1F"><textPath href="#topArc" startOffset="50%" text-anchor="middle">MONSTER MASH</textPath></text>
+  <text class="sub" fill="#F5F1E8"><textPath href="#botArc" startOffset="50%" text-anchor="middle">3 WODS · 5 MIN REST · ALL HYPE</textPath></text>
+  <image href="pixels/beast.svg" x="95" y="85" width="110" height="110" style="image-rendering:pixelated"></image>
+</svg>

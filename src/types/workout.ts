@@ -32,17 +32,45 @@ export interface CompletedWorkout {
   rx?: boolean;
   scaledWeight?: string | null;
   timeSeconds?: number | null;
+  rounds?: number | null;
+  extraReps?: number | null;
+  scorePct?: number | null;
 }
 
 export interface CompletionLog {
   rx: boolean;
   scaledWeight: string | null;
   timeSeconds: number | null;
-  completedAt: string; // ISO
+  rounds: number | null;
+  extraReps: number | null;
+  scorePct: number | null;
+  variantsChosen: Record<string, number> | null; // "canonicalId" -> variantId
+  completedAt: string;
 }
 
 export interface CompletionInput {
-  rx: boolean;
-  scaledWeight?: string | null;
+  variantsChosen: Record<string, number>; // "canonicalId" -> variantId
   timeSeconds?: number | null;
+  rounds?: number | null;
+  extraReps?: number | null;
+}
+
+export interface CanonicalMovementForPicker {
+  canonicalId: number;
+  canonicalName: string;
+  category: string;
+  variants: Array<{
+    id: number;
+    name: string;
+    tier: number;
+    points: number;
+    isRx: boolean;
+    sortOrder: number;
+  }>;
+}
+
+export interface WorkoutVariantsPayload {
+  workoutId: string;
+  canonicals: CanonicalMovementForPicker[];
+  isAmrap: boolean;
 }

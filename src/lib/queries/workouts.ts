@@ -153,6 +153,10 @@ export type LatestCompletion = {
   rx: boolean;
   scaledWeight: string | null;
   timeSeconds: number | null;
+  rounds: number | null;
+  extraReps: number | null;
+  scorePct: number | null;
+  variantsChosen: Record<string, number> | null;
   completedAt: string;
 };
 
@@ -168,6 +172,10 @@ export async function getLatestCompletionsByWorkout(
       rx: personalCompletions.rx,
       scaledWeight: personalCompletions.scaledWeight,
       timeSeconds: personalCompletions.timeSeconds,
+      rounds: personalCompletions.rounds,
+      extraReps: personalCompletions.extraReps,
+      scorePct: personalCompletions.scorePct,
+      variantsChosen: personalCompletions.variantsChosen,
       completedAt: personalCompletions.completedAt,
     })
     .from(personalCompletions)
@@ -180,6 +188,10 @@ export async function getLatestCompletionsByWorkout(
         rx: r.rx,
         scaledWeight: r.scaledWeight,
         timeSeconds: r.timeSeconds,
+        rounds: r.rounds,
+        extraReps: r.extraReps,
+        scorePct: r.scorePct,
+        variantsChosen: (r.variantsChosen as Record<string, number> | null) ?? null,
         completedAt: r.completedAt.toISOString(),
       };
     }
@@ -192,6 +204,10 @@ export async function getLatestCompletionsByWorkout(
         rx: teamCompletions.rx,
         scaledWeight: teamCompletions.scaledWeight,
         timeSeconds: teamCompletions.timeSeconds,
+        rounds: teamCompletions.rounds,
+        extraReps: teamCompletions.extraReps,
+        scorePct: teamCompletions.scorePct,
+        variantsChosen: teamCompletions.variantsChosen,
         completedAt: teamCompletions.completedAt,
       })
       .from(teamCompletions)
@@ -204,6 +220,10 @@ export async function getLatestCompletionsByWorkout(
           rx: r.rx,
           scaledWeight: r.scaledWeight,
           timeSeconds: r.timeSeconds,
+          rounds: r.rounds,
+          extraReps: r.extraReps,
+          scorePct: r.scorePct,
+          variantsChosen: (r.variantsChosen as Record<string, number> | null) ?? null,
           completedAt: r.completedAt.toISOString(),
         };
       }

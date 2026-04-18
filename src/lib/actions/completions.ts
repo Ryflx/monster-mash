@@ -76,11 +76,23 @@ export async function markComplete(
   const mode = await getMode();
 
   const canonicals = await loadCanonicalsForWorkout(workoutId);
-  const { scorePct, rx } = computeScore(canonicals, input.variantsChosen ?? {});
+
+  let rx: boolean;
+  let scorePct: number | null;
+  if (canonicals.length === 0) {
+    rx = input.rx ?? true;
+    scorePct = rx ? 100 : null;
+  } else {
+    const score = computeScore(canonicals, input.variantsChosen ?? {});
+    rx = score.rx;
+    scorePct = score.scorePct;
+  }
+
+  const scaledWeightTrimmed = input.scaledWeight?.trim() || null;
 
   const values = {
     rx,
-    scaledWeight: null,
+    scaledWeight: rx ? null : scaledWeightTrimmed,
     timeSeconds: input.timeSeconds ?? null,
     rounds: input.rounds ?? null,
     extraReps: input.extraReps ?? null,

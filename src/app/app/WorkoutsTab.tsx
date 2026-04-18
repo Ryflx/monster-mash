@@ -103,7 +103,7 @@ export default function WorkoutsTab({ workouts, completions }: Props) {
   const handleLog = (
     id: string,
     input: CompletionInput,
-    preview: { scorePct: number; rx: boolean },
+    preview: { scorePct: number | null; rx: boolean },
   ) => {
     startTransition(async () => {
       applyOptimistic({
@@ -111,7 +111,7 @@ export default function WorkoutsTab({ workouts, completions }: Props) {
         id,
         log: {
           rx: preview.rx,
-          scaledWeight: null,
+          scaledWeight: preview.rx ? null : input.scaledWeight?.trim() || null,
           timeSeconds: input.timeSeconds ?? null,
           rounds: input.rounds ?? null,
           extraReps: input.extraReps ?? null,

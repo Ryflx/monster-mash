@@ -49,6 +49,9 @@ function buildBadges(entry: CompletedWorkout): { label: string; tone: 'rx' | 'sc
   } else {
     out.push({ label: 'SCALED', tone: 'scaled' });
   }
+  if (!rx && entry.scaledWeight) {
+    out.push({ label: entry.scaledWeight.toUpperCase(), tone });
+  }
   if (entry.rounds != null) {
     const r =
       entry.extraReps != null && entry.extraReps > 0

@@ -14,7 +14,7 @@ import LogWorkoutForm from './LogWorkoutForm';
 interface WorkoutCardProps {
   workout: Workout;
   completion: CompletionLog | null;
-  onLog: (input: CompletionInput, preview: { scorePct: number; rx: boolean }) => void;
+  onLog: (input: CompletionInput, preview: { scorePct: number | null; rx: boolean }) => void;
   onUnmark: () => void;
   defaultExpanded?: boolean;
 }
@@ -77,6 +77,9 @@ function buildDoneBadges(completion: CompletionLog): { label: string; tone: 'rx'
   } else {
     out.push({ label: 'SCALED', tone: 'scaled' });
   }
+  if (!completion.rx && completion.scaledWeight) {
+    out.push({ label: completion.scaledWeight.toUpperCase(), tone });
+  }
   if (completion.rounds != null) {
     const r =
       completion.extraReps != null && completion.extraReps > 0
@@ -118,7 +121,7 @@ const WorkoutCard: FC<WorkoutCardProps> = ({
 
   const handleFormSubmit = (
     input: CompletionInput,
-    preview: { scorePct: number; rx: boolean },
+    preview: { scorePct: number | null; rx: boolean },
   ) => {
     onLog(input, preview);
     setShowForm(false);

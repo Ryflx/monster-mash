@@ -8,7 +8,7 @@ import type { CompletionInput, WorkoutVariantsPayload } from '@/types/workout';
 
 interface LogWorkoutFormProps {
   workoutId: string;
-  onSubmit: (input: CompletionInput, preview: { scorePct: number; rx: boolean }) => void;
+  onSubmit: (input: CompletionInput, preview: { scorePct: number | null; rx: boolean }) => void;
   onCancel: () => void;
 }
 
@@ -24,15 +24,12 @@ function chipActiveClass(tier: number, isRx: boolean): string {
   return 'bg-smoke border-pitch text-bone';
 }
 
-function inputStyle(): React.CSSProperties {
-  return {
-    fontFamily: 'var(--font-mono)',
-    fontSize: '16px',
-  };
-}
+const inputStyle: React.CSSProperties = {
+  fontFamily: 'var(--font-mono)',
+  fontSize: '16px',
+};
 
-const labelCls =
-  'uppercase text-bone-3';
+const labelCls = 'uppercase text-bone-3';
 const labelStyle: React.CSSProperties = {
   fontFamily: 'var(--font-body)',
   fontWeight: 700,
@@ -45,6 +42,8 @@ const LogWorkoutForm: FC<LogWorkoutFormProps> = ({ workoutId, onSubmit, onCancel
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [chosen, setChosen] = useState<Record<string, number>>({});
+  const [fallbackRx, setFallbackRx] = useState(true);
+  const [scaledWeight, setScaledWeight] = useState('');
   const [timeInput, setTimeInput] = useState('');
   const [roundsInput, setRoundsInput] = useState('');
   const [extraRepsInput, setExtraRepsInput] = useState('');
@@ -76,7 +75,14 @@ const LogWorkoutForm: FC<LogWorkoutFormProps> = ({ workoutId, onSubmit, onCancel
     };
   }, [workoutId]);
 
-  const preview = payload ? computeScore(payload.canonicals, chosen) : null;
+  const hasCanonicals = !!payload && payload.canonicals.length > 0;
+  const variantPreview = hasCanonicals ? computeScore(payload!.canonicals, chosen) : null;
+  const previewRx = hasCanonicals ? !!variantPreview && variantPreview.rx : fallbackRx;
+  const previewScorePct: number | null = hasCanonicals
+    ? variantPreview?.scorePct ?? null
+    : fallbackRx
+      ? 100
+      : null;
 
   const handleSubmit = () => {
     setFormError(null);
@@ -115,15 +121,16 @@ const LogWorkoutForm: FC<LogWorkoutFormProps> = ({ workoutId, onSubmit, onCancel
       extraReps = n;
     }
 
-    const score = computeScore(payload.canonicals, chosen);
     onSubmit(
       {
-        variantsChosen: chosen,
+        variantsChosen: hasCanonicals ? chosen : {},
+        rx: hasCanonicals ? undefined : fallbackRx,
+        scaledWeight: scaledWeight.trim() || null,
         timeSeconds,
         rounds,
         extraReps,
       },
-      { scorePct: score.scorePct, rx: score.rx },
+      { scorePct: previewScorePct, rx: previewRx },
     );
   };
 
@@ -133,22 +140,23 @@ const LogWorkoutForm: FC<LogWorkoutFormProps> = ({ workoutId, onSubmit, onCancel
       onClick={(e) => e.stopPropagation()}
     >
       <div className="pt-3 flex items-baseline justify-between">
-        <div className="uppercase text-monster" style={{ fontFamily: 'var(--font-display)', fontSize: '11px', letterSpacing: '1px' }}>
+        <div
+          className="uppercase text-monster"
+          style={{ fontFamily: 'var(--font-display)', fontSize: '11px', letterSpacing: '1px' }}
+        >
           Log this mash
         </div>
-        {preview && (
-          <div
-            className="uppercase"
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: '13px',
-              letterSpacing: '0.5px',
-              color: preview.rx ? 'var(--color-monster)' : 'var(--color-slime)',
-            }}
-          >
-            {formatScorePct(preview.scorePct)}{preview.rx ? ' · RX' : ''}
-          </div>
-        )}
+        <div
+          className="uppercase"
+          style={{
+            fontFamily: 'var(--font-display)',
+            fontSize: '13px',
+            letterSpacing: '0.5px',
+            color: previewRx ? 'var(--color-monster)' : 'var(--color-slime)',
+          }}
+        >
+          {previewScorePct != null ? `${formatScorePct(previewScorePct)}${previewRx ? ' · RX' : ''}` : 'SCALED'}
+        </div>
       </div>
 
       {loading && (
@@ -161,28 +169,21 @@ const LogWorkoutForm: FC<LogWorkoutFormProps> = ({ workoutId, onSubmit, onCancel
       )}
 
       {error && (
-        <div className="text-blood text-[11px] uppercase" style={{ fontFamily: 'var(--font-body)', fontWeight: 700, letterSpacing: '1px' }}>
+        <div
+          className="text-blood uppercase"
+          style={{ fontFamily: 'var(--font-body)', fontWeight: 700, fontSize: '10px', letterSpacing: '1px' }}
+        >
           Failed to load: {error}
         </div>
       )}
 
-      {!loading && !error && payload && payload.canonicals.length === 0 && (
-        <div className="text-bone-muted text-[11px] italic" style={{ fontFamily: 'var(--font-body)' }}>
-          No recognised movements — defaulting to RX.
-        </div>
-      )}
-
-      {!loading && !error && payload && payload.canonicals.length > 0 && (
+      {!loading && !error && hasCanonicals && (
         <div className="space-y-3">
-          {payload.canonicals.map((c) => (
+          {payload!.canonicals.map((c) => (
             <div key={c.canonicalId} className="space-y-1.5">
               <div
                 className="uppercase text-bone"
-                style={{
-                  fontFamily: 'var(--font-display-2)',
-                  fontSize: '12px',
-                  letterSpacing: '0.5px',
-                }}
+                style={{ fontFamily: 'var(--font-display-2)', fontSize: '12px', letterSpacing: '0.5px' }}
               >
                 {c.canonicalName}
               </div>
@@ -216,8 +217,65 @@ const LogWorkoutForm: FC<LogWorkoutFormProps> = ({ workoutId, onSubmit, onCancel
         </div>
       )}
 
+      {!loading && !error && payload && !hasCanonicals && (
+        <div className="space-y-2">
+          <div
+            className="uppercase text-bone"
+            style={{ fontFamily: 'var(--font-display-2)', fontSize: '12px', letterSpacing: '0.5px' }}
+          >
+            Did you RX it?
+          </div>
+          <div className="flex gap-1.5">
+            <button
+              onClick={() => setFallbackRx(true)}
+              className={`${chipBase} ${fallbackRx ? 'bg-monster border-pitch text-pitch' : chipIdle}`}
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontWeight: 700,
+                fontSize: '10px',
+                letterSpacing: '1px',
+                borderRadius: '4px',
+                boxShadow: fallbackRx ? '2px 2px 0 0 var(--color-pitch)' : undefined,
+              }}
+            >
+              RX
+            </button>
+            <button
+              onClick={() => setFallbackRx(false)}
+              className={`${chipBase} ${!fallbackRx ? 'bg-slime border-pitch text-pitch' : chipIdle}`}
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontWeight: 700,
+                fontSize: '10px',
+                letterSpacing: '1px',
+                borderRadius: '4px',
+                boxShadow: !fallbackRx ? '2px 2px 0 0 var(--color-pitch)' : undefined,
+              }}
+            >
+              Scaled
+            </button>
+          </div>
+        </div>
+      )}
+
       {!loading && !error && payload && (
         <div className="grid grid-cols-1 gap-3 pt-1">
+          {!hasCanonicals || !previewRx ? (
+            <label className="block">
+              <span className={labelCls} style={labelStyle}>
+                Scaled to (optional)
+              </span>
+              <input
+                type="text"
+                value={scaledWeight}
+                onChange={(e) => setScaledWeight(e.target.value)}
+                placeholder="e.g. 70kg, banded PU, shorter ROM"
+                className="mt-1 w-full bg-pitch-2 border-2 border-smoke text-bone px-3 py-2 focus:border-monster outline-none"
+                style={{ fontFamily: 'var(--font-body)', fontWeight: 500, fontSize: '14px', borderRadius: '6px' }}
+              />
+            </label>
+          ) : null}
+
           {!payload.isAmrap && (
             <label className="block">
               <span className={labelCls} style={labelStyle}>
@@ -230,7 +288,7 @@ const LogWorkoutForm: FC<LogWorkoutFormProps> = ({ workoutId, onSubmit, onCancel
                 placeholder="MM:SS"
                 inputMode="numeric"
                 className="mt-1 w-full bg-pitch-2 border-2 border-smoke text-bone px-3 py-2 focus:border-monster outline-none"
-                style={{ ...inputStyle(), borderRadius: '6px' }}
+                style={{ ...inputStyle, borderRadius: '6px' }}
               />
             </label>
           )}
@@ -248,7 +306,7 @@ const LogWorkoutForm: FC<LogWorkoutFormProps> = ({ workoutId, onSubmit, onCancel
                   onChange={(e) => setRoundsInput(e.target.value)}
                   placeholder="14"
                   className="mt-1 w-full bg-pitch-2 border-2 border-smoke text-bone px-3 py-2 focus:border-monster outline-none"
-                  style={{ ...inputStyle(), borderRadius: '6px' }}
+                  style={{ ...inputStyle, borderRadius: '6px' }}
                 />
               </label>
               <label className="block">
@@ -262,7 +320,7 @@ const LogWorkoutForm: FC<LogWorkoutFormProps> = ({ workoutId, onSubmit, onCancel
                   onChange={(e) => setExtraRepsInput(e.target.value)}
                   placeholder="3"
                   className="mt-1 w-full bg-pitch-2 border-2 border-smoke text-bone px-3 py-2 focus:border-monster outline-none"
-                  style={{ ...inputStyle(), borderRadius: '6px' }}
+                  style={{ ...inputStyle, borderRadius: '6px' }}
                 />
               </label>
             </div>
@@ -271,7 +329,10 @@ const LogWorkoutForm: FC<LogWorkoutFormProps> = ({ workoutId, onSubmit, onCancel
       )}
 
       {formError && (
-        <p className="text-blood uppercase" style={{ fontFamily: 'var(--font-body)', fontWeight: 700, fontSize: '10px', letterSpacing: '1px' }}>
+        <p
+          className="text-blood uppercase"
+          style={{ fontFamily: 'var(--font-body)', fontWeight: 700, fontSize: '10px', letterSpacing: '1px' }}
+        >
           {formError}
         </p>
       )}
@@ -280,18 +341,13 @@ const LogWorkoutForm: FC<LogWorkoutFormProps> = ({ workoutId, onSubmit, onCancel
         <button
           onClick={onCancel}
           className="flex-1 py-2 border-2 border-smoke text-bone-3 uppercase hover:text-bone hover:border-bone-3 press-collapse"
-          style={{
-            fontFamily: 'var(--font-display)',
-            fontSize: '11px',
-            letterSpacing: '1px',
-            borderRadius: '6px',
-          }}
+          style={{ fontFamily: 'var(--font-display)', fontSize: '11px', letterSpacing: '1px', borderRadius: '6px' }}
         >
           Cancel
         </button>
         <button
           onClick={handleSubmit}
-          disabled={loading || !!error}
+          disabled={loading || !!error || !payload}
           className="flex-[2] py-2 bg-monster border-2 border-pitch text-pitch uppercase disabled:opacity-30 disabled:cursor-not-allowed press-collapse"
           style={{
             fontFamily: 'var(--font-display)',

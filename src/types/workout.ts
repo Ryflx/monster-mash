@@ -49,7 +49,9 @@ export interface CompletionLog {
 }
 
 export interface CompletionInput {
-  variantsChosen: Record<string, number>; // "canonicalId" -> variantId
+  variantsChosen: Record<string, number>; // "canonicalId" -> variantId; empty for no-catalog WODs
+  rx?: boolean; // used when variantsChosen is empty
+  scaledWeight?: string | null; // free-text note ("70kg", "banded PU", etc.)
   timeSeconds?: number | null;
   rounds?: number | null;
   extraReps?: number | null;

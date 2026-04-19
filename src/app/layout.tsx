@@ -4,9 +4,23 @@ import ServiceWorkerRegistrar from '../components/ServiceWorkerRegistrar';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Monster Mash',
+  title: {
+    default: 'Monster Mash',
+    template: '%s | Monster Mash',
+  },
   description: '3 WODS. 5 MIN REST. ALL HYPE.',
   manifest: '/manifest.webmanifest',
+  openGraph: {
+    title: 'Monster Mash',
+    description: '3 WODS. 5 MIN REST. ALL HYPE.',
+    type: 'website',
+    siteName: 'Monster Mash',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Monster Mash',
+    description: '3 WODS. 5 MIN REST. ALL HYPE.',
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',

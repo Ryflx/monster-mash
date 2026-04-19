@@ -5,7 +5,6 @@ import {
   useEffect,
   useState,
   useCallback,
-  useMemo,
   type FC,
 } from 'react';
 import type { Workout, CompletionInput, CompletionLog } from '../types/workout';
@@ -21,6 +20,7 @@ interface SpinWheelProps {
     preview: { scorePct: number | null; rx: boolean },
   ) => void;
   onUnmark: (id: string) => void;
+  canvasSize?: number;
 }
 
 const SEGMENT_FILLS = [
@@ -31,8 +31,6 @@ const SEGMENT_FILLS = [
 const WHEEL_SLOTS = 12;
 
 const DPR = typeof window !== 'undefined' ? Math.min(window.devicePixelRatio || 1, 2) : 1;
-const CANVAS_CSS = 340;
-const CANVAS_PX = Math.round(CANVAS_CSS * DPR);
 
 function easeOutExpo(t: number): number {
   const expo = t === 1 ? 1 : 1 - Math.pow(2, -12 * t);
@@ -44,6 +42,7 @@ function drawWheel(
   ctx: CanvasRenderingContext2D,
   rotation: number,
   highlightIdx: number | null,
+  CANVAS_CSS: number,
 ) {
   ctx.save();
   ctx.scale(DPR, DPR);
@@ -122,7 +121,7 @@ function drawWheel(
   ctx.restore();
 }
 
-function drawPointer(ctx: CanvasRenderingContext2D) {
+function drawPointer(ctx: CanvasRenderingContext2D, CANVAS_CSS: number) {
   ctx.save();
   ctx.scale(DPR, DPR);
   ctx.clearRect(0, 0, CANVAS_CSS, CANVAS_CSS);
@@ -153,7 +152,11 @@ const SpinWheel: FC<SpinWheelProps> = ({
   getCompletion,
   onLog,
   onUnmark,
+  canvasSize = 340,
 }) => {
+  const CANVAS_CSS = canvasSize;
+  const CANVAS_PX = Math.round(CANVAS_CSS * DPR);
+
   const wheelCanvasRef = useRef<HTMLCanvasElement>(null);
   const pointerCanvasRef = useRef<HTMLCanvasElement>(null);
   const animFrameRef = useRef<number>(0);
@@ -170,9 +173,9 @@ const SpinWheel: FC<SpinWheelProps> = ({
       if (!canvas) return;
       const ctx = canvas.getContext('2d');
       if (!ctx) return;
-      drawWheel(ctx, rotation, highlight);
+      drawWheel(ctx, rotation, highlight, CANVAS_CSS);
     },
-    [],
+    [CANVAS_CSS],
   );
 
   // Initial draw + pointer
@@ -184,8 +187,8 @@ const SpinWheel: FC<SpinWheelProps> = ({
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-    drawPointer(ctx);
-  }, []);
+    drawPointer(ctx, CANVAS_CSS);
+  }, [CANVAS_CSS]);
 
   // Idle drift
   useEffect(() => {

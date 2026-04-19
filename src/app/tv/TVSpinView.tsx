@@ -34,7 +34,7 @@ type OptAction =
   | { kind: 'log'; id: string; log: CompletionLog }
   | { kind: 'unmark'; id: string };
 
-export default function SpinTab({ pool, totalCount }: Props) {
+export default function TVSpinView({ pool, totalCount }: Props) {
   const legacy = useMemo(() => pool.map(toLegacy), [pool]);
   const [selectedMovements, setSelectedMovements] = useState<string[]>([]);
   const [, startTransition] = useTransition();
@@ -56,7 +56,10 @@ export default function SpinTab({ pool, totalCount }: Props) {
   }, [legacy, selectedMovements]);
 
   const toggleMovement = (m: string) =>
-    setSelectedMovements((prev) => (prev.includes(m) ? prev.filter((x) => x !== m) : [...prev, m]));
+    setSelectedMovements((prev) =>
+      prev.includes(m) ? prev.filter((x) => x !== m) : [...prev, m],
+    );
+
   const [completed, setCompleted] = useOptimistic(
     new Map<string, CompletionLog>(),
     (current: Map<string, CompletionLog>, action: OptAction) => {
@@ -90,6 +93,7 @@ export default function SpinTab({ pool, totalCount }: Props) {
       await markComplete(id, input);
     });
   };
+
   const handleUnmark = (id: string) => {
     startTransition(async () => {
       setCompleted({ kind: 'unmark', id });
@@ -100,65 +104,103 @@ export default function SpinTab({ pool, totalCount }: Props) {
   const excluded = totalCount - pool.length;
 
   return (
-    <div className="space-y-6">
-      <div className="relative text-center">
+    <div className="flex flex-col min-h-dvh overflow-hidden">
+      {/* ── Top bar ── */}
+      <header
+        className="flex items-center justify-between px-5 py-3 border-b-2 border-smoke flex-shrink-0"
+        style={{ background: 'var(--color-pitch-2)' }}
+      >
         <Link
-          href="/tv"
-          className="absolute right-0 top-0 flex items-center gap-1 text-bone-muted hover:text-bone-3 transition-colors"
-          title="TV view"
-        >
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <rect x="2" y="3" width="20" height="14" rx="2" />
-            <path d="M8 21h8M12 17v4" />
-          </svg>
-          <span style={{ fontFamily: 'var(--font-body)', fontWeight: 700, fontSize: '9px', letterSpacing: '1.5px' }} className="uppercase">TV</span>
-        </Link>
-        <div
-          className="uppercase text-monster mb-1"
+          href="/app/spin"
+          className="flex items-center gap-1.5 transition-opacity hover:opacity-80"
           style={{
             fontFamily: 'var(--font-body)',
             fontWeight: 700,
-            fontSize: '10px',
+            fontSize: '11px',
+            letterSpacing: '1px',
+            color: 'var(--color-bone-3)',
+            textTransform: 'uppercase',
+          }}
+        >
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2.5}
+          >
+            <path d="m15 18-6-6 6-6" />
+          </svg>
+          SPIN
+        </Link>
+
+        <span
+          className="uppercase tracking-widest"
+          style={{
+            fontFamily: 'var(--font-display)',
+            fontSize: '14px',
+            color: 'var(--color-monster)',
             letterSpacing: '2px',
           }}
         >
-          PICK A MASH
-        </div>
-        <h2
-          className="uppercase text-bone"
+          MONSTER MASH
+        </span>
+
+        <span
+          className="px-2 py-0.5 uppercase"
           style={{
             fontFamily: 'var(--font-display)',
-            fontSize: '40px',
-            letterSpacing: '-1.5px',
-            lineHeight: 0.9,
-            textShadow: '3px 3px 0 var(--color-pitch), 3px 3px 0 0 var(--color-slime)',
+            fontSize: '10px',
+            letterSpacing: '1.5px',
+            background: 'var(--color-slime)',
+            color: 'var(--color-pitch)',
+            borderRadius: '4px',
           }}
         >
-          SPIN IT
-        </h2>
-        <p
-          className="uppercase text-bone-3 mt-2"
-          style={{ fontFamily: 'var(--font-mono)', fontSize: '15px' }}
-        >
-          {filtered.length} WODS IN THE POOL
-          {excluded > 0 && <span className="text-bone-muted"> · {excluded} DONE</span>}
-        </p>
-      </div>
+          TV
+        </span>
+      </header>
+
+      {/* ── Movement filter ── */}
       {allMovements.length > 0 && (
-        <MovementFilter
-          movements={allMovements}
-          selected={selectedMovements}
-          onToggle={toggleMovement}
-          onClear={() => setSelectedMovements([])}
-        />
+        <div className="flex-shrink-0 px-5 pt-3 pb-1">
+          <MovementFilter
+            movements={allMovements}
+            selected={selectedMovements}
+            onToggle={toggleMovement}
+            onClear={() => setSelectedMovements([])}
+          />
+        </div>
       )}
-      <SpinWheel
-        workouts={filtered}
-        onSelect={() => {}}
-        getCompletion={(id) => completed.get(id) ?? null}
-        onLog={handleLog}
-        onUnmark={handleUnmark}
-      />
+
+      {/* ── Wheel + controls ── */}
+      <div className="flex flex-col items-center justify-center flex-shrink-0 pt-4 pb-2 gap-4">
+        <SpinWheel
+          workouts={filtered}
+          onSelect={() => {}}
+          getCompletion={(id) => completed.get(id) ?? null}
+          onLog={handleLog}
+          onUnmark={handleUnmark}
+          canvasSize={400}
+        />
+
+        {excluded > 0 && (
+          <p
+            className="uppercase"
+            style={{
+              fontFamily: 'var(--font-mono)',
+              fontSize: '12px',
+              letterSpacing: '1.5px',
+              color: 'var(--color-bone-3)',
+              opacity: 0.6,
+            }}
+          >
+            {excluded} DONE
+          </p>
+        )}
+      </div>
+
     </div>
   );
 }

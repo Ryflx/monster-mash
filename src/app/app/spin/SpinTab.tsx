@@ -1,7 +1,8 @@
 'use client';
 
-import { useMemo, useOptimistic, useTransition } from 'react';
+import { useMemo, useState, useOptimistic, useTransition } from 'react';
 import SpinWheel from '@/components/SpinWheel';
+import MovementFilter from '@/components/MovementFilter';
 import { markComplete, unmarkComplete } from '@/lib/actions/completions';
 import type { HydratedWorkout } from '@/lib/queries/workouts';
 import type { Workout, CompletionInput, CompletionLog } from '@/types/workout';
@@ -34,7 +35,27 @@ type OptAction =
 
 export default function SpinTab({ pool, totalCount }: Props) {
   const legacy = useMemo(() => pool.map(toLegacy), [pool]);
+  const [selectedMovements, setSelectedMovements] = useState<string[]>([]);
   const [, startTransition] = useTransition();
+
+  const allMovements = useMemo(() => {
+    const set = new Set<string>();
+    pool.forEach((w) => w.movementNames.forEach((m) => set.add(m)));
+    return Array.from(set).sort();
+  }, [pool]);
+
+  const filtered = useMemo(() => {
+    if (selectedMovements.length === 0) return legacy;
+    return legacy.filter((w) => {
+      const wMovements = w.movements.map((m) => m.toLowerCase());
+      return selectedMovements.every((m) =>
+        wMovements.some((wm) => wm.includes(m.toLowerCase())),
+      );
+    });
+  }, [legacy, selectedMovements]);
+
+  const toggleMovement = (m: string) =>
+    setSelectedMovements((prev) => (prev.includes(m) ? prev.filter((x) => x !== m) : [...prev, m]));
   const [completed, setCompleted] = useOptimistic(
     new Map<string, CompletionLog>(),
     (current: Map<string, CompletionLog>, action: OptAction) => {
@@ -107,12 +128,20 @@ export default function SpinTab({ pool, totalCount }: Props) {
           className="uppercase text-bone-3 mt-2"
           style={{ fontFamily: 'var(--font-mono)', fontSize: '15px' }}
         >
-          {pool.length} WODS IN THE POOL
+          {filtered.length} WODS IN THE POOL
           {excluded > 0 && <span className="text-bone-muted"> · {excluded} DONE</span>}
         </p>
       </div>
+      {allMovements.length > 0 && (
+        <MovementFilter
+          movements={allMovements}
+          selected={selectedMovements}
+          onToggle={toggleMovement}
+          onClear={() => setSelectedMovements([])}
+        />
+      )}
       <SpinWheel
-        workouts={legacy}
+        workouts={filtered}
         onSelect={() => {}}
         getCompletion={(id) => completed.get(id) ?? null}
         onLog={handleLog}

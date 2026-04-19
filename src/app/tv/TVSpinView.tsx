@@ -4,7 +4,7 @@ import { useMemo, useState, useEffect, useOptimistic, useTransition } from 'reac
 import Link from 'next/link';
 import SpinWheel from '@/components/SpinWheel';
 import MovementFilter from '@/components/MovementFilter';
-import WorkoutCard from '@/components/WorkoutCard';
+import TVWorkoutCard from '@/components/TVWorkoutCard';
 import { markComplete, unmarkComplete } from '@/lib/actions/completions';
 import type { HydratedWorkout } from '@/lib/queries/workouts';
 import type { Workout, CompletionInput, CompletionLog } from '@/types/workout';
@@ -240,13 +240,7 @@ export default function TVSpinView({ pool, totalCount }: Props) {
                   <div className="flex-1 h-[2px] bg-monster/30" />
                 </div>
                 {/* Import WorkoutCard at top of file */}
-                <WorkoutCard
-                  workout={selectedWorkout}
-                  completion={completed.get(selectedWorkout.id) ?? null}
-                  onLog={(input, preview) => handleLog(selectedWorkout.id, input, preview)}
-                  onUnmark={() => handleUnmark(selectedWorkout.id)}
-                  defaultExpanded
-                />
+                <TVWorkoutCard workout={selectedWorkout} />
               </div>
             ) : (
               <div className="flex flex-col items-center justify-center h-full gap-3 opacity-30">

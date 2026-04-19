@@ -6,6 +6,6 @@ export default async function TVLayout({ children }: { children: React.ReactNode
   if (!internal) redirect('/onboarding');
 
   return (
-    <div className="min-h-dvh bg-pitch text-bone">{children}</div>
+    <div className="h-dvh overflow-hidden bg-pitch text-bone">{children}</div>
   );
 }

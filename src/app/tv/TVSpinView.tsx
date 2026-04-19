@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState, useOptimistic, useTransition } from 'react';
+import { useMemo, useState, useEffect, useOptimistic, useTransition } from 'react';
 import Link from 'next/link';
 import SpinWheel from '@/components/SpinWheel';
 import MovementFilter from '@/components/MovementFilter';
@@ -37,6 +37,25 @@ type OptAction =
 export default function TVSpinView({ pool, totalCount }: Props) {
   const legacy = useMemo(() => pool.map(toLegacy), [pool]);
   const [selectedMovements, setSelectedMovements] = useState<string[]>([]);
+  const [canvasSize, setCanvasSize] = useState(340);
+
+  useEffect(() => {
+    function updateSize() {
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      const isLandscape = w > h;
+      if (isLandscape) {
+        // Height is the constraint — leave ~130px for header + filter + button + count
+        setCanvasSize(Math.max(200, Math.min(Math.floor(h - 130), 340)));
+      } else {
+        // Width is the constraint
+        setCanvasSize(Math.min(Math.floor(w - 40), 400));
+      }
+    }
+    updateSize();
+    window.addEventListener('resize', updateSize);
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
   const [, startTransition] = useTransition();
 
   const allMovements = useMemo(() => {
@@ -104,7 +123,7 @@ export default function TVSpinView({ pool, totalCount }: Props) {
   const excluded = totalCount - pool.length;
 
   return (
-    <div className="flex flex-col min-h-dvh overflow-hidden">
+    <div className="flex flex-col h-dvh overflow-hidden">
       {/* ── Top bar ── */}
       <header
         className="flex items-center justify-between px-5 py-3 border-b-2 border-smoke flex-shrink-0"
@@ -175,14 +194,14 @@ export default function TVSpinView({ pool, totalCount }: Props) {
       )}
 
       {/* ── Wheel + controls ── */}
-      <div className="flex flex-col items-center justify-center flex-shrink-0 pt-4 pb-2 gap-4">
+      <div className="flex flex-col items-center justify-center flex-1 overflow-y-auto pt-2 pb-2 gap-2">
         <SpinWheel
           workouts={filtered}
           onSelect={() => {}}
           getCompletion={(id) => completed.get(id) ?? null}
           onLog={handleLog}
           onUnmark={handleUnmark}
-          canvasSize={400}
+          canvasSize={canvasSize}
         />
 
         {excluded > 0 && (

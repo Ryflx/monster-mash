@@ -4,6 +4,7 @@ import { useMemo, useState, useEffect, useOptimistic, useTransition } from 'reac
 import Link from 'next/link';
 import SpinWheel from '@/components/SpinWheel';
 import MovementFilter from '@/components/MovementFilter';
+import WorkoutCard from '@/components/WorkoutCard';
 import { markComplete, unmarkComplete } from '@/lib/actions/completions';
 import type { HydratedWorkout } from '@/lib/queries/workouts';
 import type { Workout, CompletionInput, CompletionLog } from '@/types/workout';
@@ -38,17 +39,20 @@ export default function TVSpinView({ pool, totalCount }: Props) {
   const legacy = useMemo(() => pool.map(toLegacy), [pool]);
   const [selectedMovements, setSelectedMovements] = useState<string[]>([]);
   const [canvasSize, setCanvasSize] = useState(340);
+  const [isLandscape, setIsLandscape] = useState(false);
+  const [selectedWorkout, setSelectedWorkout] = useState<Workout | null>(null);
 
   useEffect(() => {
     function updateSize() {
       const w = window.innerWidth;
       const h = window.innerHeight;
-      const isLandscape = w > h;
-      if (isLandscape) {
-        // Height is the constraint — leave ~130px for header + filter + button + count
-        setCanvasSize(Math.max(200, Math.min(Math.floor(h - 130), 340)));
+      const landscape = w > h;
+      setIsLandscape(landscape);
+      if (landscape) {
+        // Left column is ~half width; height minus header (~48px) and filter (~60px) and button (~60px)
+        const colW = Math.floor(w * 0.45);
+        setCanvasSize(Math.max(200, Math.min(colW - 32, h - 160)));
       } else {
-        // Width is the constraint
         setCanvasSize(Math.min(Math.floor(w - 40), 400));
       }
     }
@@ -181,8 +185,8 @@ export default function TVSpinView({ pool, totalCount }: Props) {
         </span>
       </header>
 
-      {/* ── Movement filter ── */}
-      {allMovements.length > 0 && (
+      {/* ── Movement filter (portrait only — in landscape it moves into left col) ── */}
+      {!isLandscape && allMovements.length > 0 && (
         <div className="flex-shrink-0 px-5 pt-3 pb-1">
           <MovementFilter
             movements={allMovements}
@@ -193,33 +197,88 @@ export default function TVSpinView({ pool, totalCount }: Props) {
         </div>
       )}
 
-      {/* ── Wheel + controls ── */}
-      <div className="flex flex-col items-center justify-center flex-1 overflow-y-auto pt-2 pb-2 gap-2">
-        <SpinWheel
-          workouts={filtered}
-          onSelect={() => {}}
-          getCompletion={(id) => completed.get(id) ?? null}
-          onLog={handleLog}
-          onUnmark={handleUnmark}
-          canvasSize={canvasSize}
-        />
+      {isLandscape ? (
+        /* ── LANDSCAPE: two columns ── */
+        <div className="flex flex-1 overflow-hidden">
+          {/* Left: wheel */}
+          <div className="flex flex-col items-center justify-center flex-shrink-0 px-4 gap-2 border-r-2 border-smoke" style={{ width: '45%' }}>
+            {allMovements.length > 0 && (
+              <div className="w-full">
+                <MovementFilter
+                  movements={allMovements}
+                  selected={selectedMovements}
+                  onToggle={toggleMovement}
+                  onClear={() => setSelectedMovements([])}
+                />
+              </div>
+            )}
+            <SpinWheel
+              workouts={filtered}
+              onSelect={(picks) => setSelectedWorkout(picks[0] ?? null)}
+              getCompletion={(id) => completed.get(id) ?? null}
+              onLog={handleLog}
+              onUnmark={handleUnmark}
+              canvasSize={canvasSize}
+              hideResult
+            />
+            {excluded > 0 && (
+              <p className="uppercase" style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '1.5px', color: 'var(--color-bone-3)', opacity: 0.5 }}>
+                {excluded} DONE
+              </p>
+            )}
+          </div>
 
-        {excluded > 0 && (
-          <p
-            className="uppercase"
-            style={{
-              fontFamily: 'var(--font-mono)',
-              fontSize: '12px',
-              letterSpacing: '1.5px',
-              color: 'var(--color-bone-3)',
-              opacity: 0.6,
-            }}
-          >
-            {excluded} DONE
-          </p>
-        )}
-      </div>
-
+          {/* Right: selected workout */}
+          <div className="flex-1 overflow-y-auto px-5 py-4">
+            {selectedWorkout ? (
+              <div className="space-y-3 animate-slide-up">
+                <div className="flex items-center gap-3">
+                  <div className="flex-1 h-[2px] bg-monster/30" />
+                  <span className="uppercase text-monster" style={{ fontFamily: 'var(--font-display)', fontSize: '12px', letterSpacing: '1px' }}>
+                    Today's WOD
+                  </span>
+                  <div className="flex-1 h-[2px] bg-monster/30" />
+                </div>
+                {/* Import WorkoutCard at top of file */}
+                <WorkoutCard
+                  workout={selectedWorkout}
+                  completion={completed.get(selectedWorkout.id) ?? null}
+                  onLog={(input, preview) => handleLog(selectedWorkout.id, input, preview)}
+                  onUnmark={() => handleUnmark(selectedWorkout.id)}
+                  defaultExpanded
+                />
+              </div>
+            ) : (
+              <div className="flex flex-col items-center justify-center h-full gap-3 opacity-30">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 8v4l3 3" />
+                </svg>
+                <span className="uppercase" style={{ fontFamily: 'var(--font-display)', fontSize: '14px', letterSpacing: '2px', color: 'var(--color-bone-3)' }}>
+                  Spin to reveal
+                </span>
+              </div>
+            )}
+          </div>
+        </div>
+      ) : (
+        /* ── PORTRAIT: single column ── */
+        <div className="flex flex-col items-center justify-center flex-1 overflow-y-auto pt-2 pb-2 gap-2">
+          <SpinWheel
+            workouts={filtered}
+            onSelect={(picks) => setSelectedWorkout(picks[0] ?? null)}
+            getCompletion={(id) => completed.get(id) ?? null}
+            onLog={handleLog}
+            onUnmark={handleUnmark}
+            canvasSize={canvasSize}
+          />
+          {excluded > 0 && (
+            <p className="uppercase" style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', letterSpacing: '1.5px', color: 'var(--color-bone-3)', opacity: 0.6 }}>
+              {excluded} DONE
+            </p>
+          )}
+        </div>
+      )}
     </div>
   );
 }

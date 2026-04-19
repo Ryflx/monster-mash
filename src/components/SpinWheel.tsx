@@ -21,6 +21,7 @@ interface SpinWheelProps {
   ) => void;
   onUnmark: (id: string) => void;
   canvasSize?: number;
+  hideResult?: boolean;
 }
 
 const SEGMENT_FILLS = [
@@ -153,6 +154,7 @@ const SpinWheel: FC<SpinWheelProps> = ({
   onLog,
   onUnmark,
   canvasSize = 340,
+  hideResult = false,
 }) => {
   const CANVAS_CSS = canvasSize;
   const CANVAS_PX = Math.round(CANVAS_CSS * DPR);
@@ -312,7 +314,7 @@ const SpinWheel: FC<SpinWheelProps> = ({
         {workouts.length} WODs IN THE POOL
       </p>
 
-      {phase === 'done' && selected.length > 0 && (
+      {!hideResult && phase === 'done' && selected.length > 0 && (
         <div className="w-full space-y-3 animate-slide-up">
           <div className="flex items-center gap-3">
             <div className="flex-1 h-[2px] bg-monster/30" />

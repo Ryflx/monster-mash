@@ -1,54 +1,19 @@
 import { ImageResponse } from 'next/og';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 
 export const size = { width: 180, height: 180 };
 export const contentType = 'image/png';
 
 export default function AppleIcon() {
+  const svg = readFileSync(join(process.cwd(), 'public/brand/logo-appicon-orange.svg'));
+  const src = `data:image/svg+xml;base64,${svg.toString('base64')}`;
+
   return new ImageResponse(
     (
-      <div
-        style={{
-          background: '#0A0A0A',
-          width: '100%',
-          height: '100%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <div
-            style={{
-              color: '#FF5A1F',
-              fontSize: '78px',
-              fontWeight: 900,
-              fontFamily: 'sans-serif',
-              lineHeight: 1,
-              letterSpacing: '-4px',
-            }}
-          >
-            MM
-          </div>
-          <div
-            style={{
-              color: '#B8FF3C',
-              fontSize: '13px',
-              fontWeight: 700,
-              fontFamily: 'sans-serif',
-              letterSpacing: '4px',
-              marginTop: '-4px',
-            }}
-          >
-            MASH
-          </div>
-        </div>
+      <div style={{ width: '100%', height: '100%', display: 'flex' }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={src} width={180} height={180} alt="" />
       </div>
     ),
     size,

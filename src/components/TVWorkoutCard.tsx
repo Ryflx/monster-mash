@@ -1,6 +1,15 @@
 import type { FC } from 'react';
 import type { Workout } from '../types/workout';
 
+function stripHeader(description: string): string {
+  const lines = description.split('\n');
+  // Drop first line if it ends with ":" (it's a format header, already shown in the badge)
+  if (lines[0]?.trim().endsWith(':')) {
+    return lines.slice(1).join('\n').trim();
+  }
+  return description;
+}
+
 const TVWorkoutCard: FC<{ workout: Workout }> = ({ workout }) => {
   const activeSegments = workout.segments.filter(
     (s) => s.format.toLowerCase() !== 'rest period',
@@ -55,7 +64,7 @@ const TVWorkoutCard: FC<{ workout: Workout }> = ({ workout }) => {
                 className="text-bone leading-snug whitespace-pre-line"
                 style={{ fontFamily: 'var(--font-body)', fontSize: '13px', fontWeight: 500 }}
               >
-                {seg.description}
+                {stripHeader(seg.description)}
               </p>
             </div>
           </div>

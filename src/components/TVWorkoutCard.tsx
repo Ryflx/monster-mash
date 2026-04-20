@@ -1,33 +1,19 @@
 import type { FC } from 'react';
 import type { Workout } from '../types/workout';
 
-function formatDate(dateStr: string): string {
-  const [year, month, day] = dateStr.split('-').map(Number);
-  return new Date(year, month - 1, day)
-    .toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' })
-    .toUpperCase();
-}
-
 const TVWorkoutCard: FC<{ workout: Workout }> = ({ workout }) => {
   const activeSegments = workout.segments.filter(
     (s) => s.format.toLowerCase() !== 'rest period',
   );
-
   return (
     <div className="h-full flex flex-col gap-3">
       {/* Header */}
       <div>
-        <p
-          className="text-monster uppercase mb-1"
-          style={{ fontFamily: 'var(--font-body)', fontWeight: 700, fontSize: '10px', letterSpacing: '1.5px' }}
-        >
-          {formatDate(workout.date)}
-        </p>
         <h2
           className="uppercase text-bone leading-none"
           style={{ fontFamily: 'var(--font-display)', fontSize: '22px', letterSpacing: '-0.5px' }}
         >
-          {workout.title}
+          {workout.title.replace(/^MM #\d+\s*[-—–]\s*/, '')}
         </h2>
       </div>
 

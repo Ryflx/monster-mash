@@ -257,7 +257,7 @@ export default function TVSpinView({ pool, totalCount }: Props) {
         </div>
       ) : (
         /* ── PORTRAIT: single column ── */
-        <div className="flex flex-col items-center justify-center flex-1 overflow-y-auto pt-2 pb-2 gap-2">
+        <div className="flex flex-col items-center flex-1 overflow-y-auto pt-2 pb-4 gap-3">
           <SpinWheel
             workouts={filtered}
             onSelect={(picks) => setSelectedWorkout(picks[0] ?? null)}
@@ -265,11 +265,24 @@ export default function TVSpinView({ pool, totalCount }: Props) {
             onLog={handleLog}
             onUnmark={handleUnmark}
             canvasSize={canvasSize}
+            hideResult
           />
           {excluded > 0 && (
             <p className="uppercase" style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', letterSpacing: '1.5px', color: 'var(--color-bone-3)', opacity: 0.6 }}>
               {excluded} DONE
             </p>
+          )}
+          {selectedWorkout && (
+            <div className="w-full px-5 space-y-3 animate-slide-up">
+              <div className="flex items-center gap-3">
+                <div className="flex-1 h-[2px] bg-monster/30" />
+                <span className="uppercase text-monster" style={{ fontFamily: 'var(--font-display)', fontSize: '12px', letterSpacing: '1px' }}>
+                  Today's WOD
+                </span>
+                <div className="flex-1 h-[2px] bg-monster/30" />
+              </div>
+              <TVWorkoutCard workout={selectedWorkout} />
+            </div>
           )}
         </div>
       )}

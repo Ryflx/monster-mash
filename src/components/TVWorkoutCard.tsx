@@ -1,14 +1,6 @@
 import type { FC } from 'react';
 import type { Workout } from '../types/workout';
-
-function stripHeader(description: string): string {
-  const lines = description.split('\n');
-  // Drop first line if it ends with ":" (it's a format header, already shown in the badge)
-  if (lines[0]?.trim().endsWith(':')) {
-    return lines.slice(1).join('\n').trim();
-  }
-  return description;
-}
+import { displaySegment } from '../lib/segment-display';
 
 const TVWorkoutCard: FC<{ workout: Workout }> = ({ workout }) => {
   const activeSegments = workout.segments.filter(
@@ -29,7 +21,9 @@ const TVWorkoutCard: FC<{ workout: Workout }> = ({ workout }) => {
 
       {/* Segments */}
       <div className="flex flex-col gap-3 flex-1">
-        {activeSegments.map((seg, i) => (
+        {activeSegments.map((seg, i) => {
+          const display = displaySegment(seg.format, seg.description);
+          return (
           <div key={i}>
             {i > 0 && (
               <div className="flex items-center gap-2 mb-3">
@@ -57,18 +51,19 @@ const TVWorkoutCard: FC<{ workout: Workout }> = ({ workout }) => {
                   className="inline-block uppercase text-monster bg-monster/10 border border-monster/30 px-1.5 py-0.5"
                   style={{ fontFamily: 'var(--font-display)', fontSize: '9px', letterSpacing: '0.5px', borderRadius: '3px' }}
                 >
-                  {seg.format}
+                  {display.badge}
                 </span>
               </div>
               <p
                 className="text-bone leading-snug whitespace-pre-line"
                 style={{ fontFamily: 'var(--font-body)', fontSize: '13px', fontWeight: 500 }}
               >
-                {stripHeader(seg.description)}
+                {display.body}
               </p>
             </div>
           </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

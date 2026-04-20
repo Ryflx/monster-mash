@@ -9,6 +9,7 @@ import type {
 } from '../types/workout';
 import { formatWeight } from '../utils/converter';
 import { formatSecondsToTime } from '../lib/time';
+import { displaySegment } from '../lib/segment-display';
 import LogWorkoutForm from './LogWorkoutForm';
 
 interface WorkoutCardProps {
@@ -32,16 +33,18 @@ function formatDate(dateStr: string): string {
     .toUpperCase();
 }
 
-const SegmentBlock: FC<{ segment: Segment }> = ({ segment }) => (
+const SegmentBlock: FC<{ segment: Segment }> = ({ segment }) => {
+  const display = displaySegment(segment.format, segment.description);
+  return (
   <div className="space-y-2">
     <span
       className="inline-block uppercase text-monster bg-monster/10 border-2 border-monster/30 px-2 py-0.5"
       style={{ fontFamily: 'var(--font-display)', fontSize: '10px', letterSpacing: '1px', borderRadius: '4px' }}
     >
-      {segment.format}
+      {display.badge}
     </span>
     <p className="text-bone-3 leading-relaxed whitespace-pre-line text-[13px]" style={{ fontFamily: 'var(--font-body)' }}>
-      {segment.description}
+      {display.body}
     </p>
     {segment.movements.some((mv) => mv.reps || mv.weightKg || mv.equipment) && (
       <ul className="space-y-1 pt-1">
@@ -65,7 +68,8 @@ const SegmentBlock: FC<{ segment: Segment }> = ({ segment }) => (
       </ul>
     )}
   </div>
-);
+  );
+};
 
 function buildDoneBadges(completion: CompletionLog): { label: string; tone: 'rx' | 'scaled' }[] {
   const out: { label: string; tone: 'rx' | 'scaled' }[] = [];

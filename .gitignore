@@ -8,3 +8,4 @@ src-vite-backup/
 .env*.local
 next-env.d.ts
 tsconfig.tsbuildinfo
+scripts/normalized/

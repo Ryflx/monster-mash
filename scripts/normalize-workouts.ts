@@ -23,7 +23,7 @@
  */
 
 import { config } from 'dotenv';
-config({ path: '.env.local' });
+config({ path: '.env.local', override: true });
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -66,7 +66,7 @@ const NormalizedPart = z.object({
 
 const NormalizedWorkout = z.object({
   title: z.string().describe('Short human title without the "MM #NNN — " prefix. If the original title is just "MM #NNN" with no descriptive name, infer a short descriptive name from the workout content (e.g. "Snatch & Wall Balls").'),
-  parts: z.array(NormalizedPart).min(1).max(3).describe('Usually 3 parts (Monster Mash WODs are 3 parts with 5 min rest between). Return fewer ONLY if the source description truly contains fewer distinct workouts — do not invent parts.'),
+  parts: z.array(NormalizedPart).describe('Usually exactly 3 parts (Monster Mash WODs are 3 parts with 5 min rest between). Return fewer (1 or 2) ONLY if the source description truly contains fewer distinct workouts — do not invent parts. Never return more than 3.'),
   confidence: z.enum(['high', 'medium', 'low']).describe('high: source clearly contained 3 distinct parts with format headers. medium: some inference required. low: source incomplete or ambiguous — manual review recommended.'),
 });
 
@@ -166,7 +166,7 @@ async function normalizeOne(client: Anthropic, model: string, w: Workout) {
   };
 }
 
-async function normalize(opts: { ids?: string[]; limit?: number; model: string }) {
+async function normalize(opts: { ids?: string[]; limit?: number; model: string; concurrency: number; force: boolean }) {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
     console.error('ANTHROPIC_API_KEY is not set in .env.local or shell.');
@@ -182,22 +182,35 @@ async function normalize(opts: { ids?: string[]; limit?: number; model: string }
 
   let targets = problems;
   if (opts.ids?.length) targets = problems.filter((p) => opts.ids!.includes(p.w.id));
+
+  // Skip already-processed unless --force
+  if (!opts.force) {
+    const existing = new Set(
+      fs.readdirSync(NORMALIZED_DIR).filter((f) => f.endsWith('.json')).map((f) => f.replace(/\.json$/, '')),
+    );
+    const before = targets.length;
+    targets = targets.filter((p) => !existing.has(p.w.id));
+    if (before !== targets.length) {
+      console.log(`Resuming: ${before - targets.length} already done, ${targets.length} remaining`);
+    }
+  }
+
   if (opts.limit) targets = targets.slice(0, opts.limit);
 
-  console.log(`Normalizing ${targets.length} workouts via ${opts.model}...\n`);
+  console.log(`Normalizing ${targets.length} workouts via ${opts.model} (concurrency=${opts.concurrency})...\n`);
 
   const client = new Anthropic({ apiKey });
   let totalCacheRead = 0;
   let totalInput = 0;
   let totalOutput = 0;
+  let completed = 0;
 
-  for (const [i, p] of targets.entries()) {
-    process.stdout.write(`[${i + 1}/${targets.length}] ${p.w.id}... `);
+  async function worker(p: typeof targets[number]) {
     try {
       const { parsed, usage } = await normalizeOne(client, opts.model, p.w);
       if (!parsed) {
-        console.log('FAIL: no parsed_output');
-        continue;
+        console.log(`[${++completed}/${targets.length}] ${p.w.id}: FAIL (no parsed_output)`);
+        return;
       }
       totalCacheRead += usage.cache_read_input_tokens ?? 0;
       totalInput += usage.input_tokens;
@@ -208,11 +221,21 @@ async function normalize(opts: { ids?: string[]; limit?: number; model: string }
         outPath,
         JSON.stringify({ originalTitle: p.w.title, reason: p.reason, normalized: parsed }, null, 2),
       );
-      console.log(`OK (${parsed.parts.length} parts, cache_read=${usage.cache_read_input_tokens ?? 0})`);
+      console.log(`[${++completed}/${targets.length}] ${p.w.id}: OK (${parsed.parts.length} parts, ${parsed.confidence})`);
     } catch (err) {
-      console.log(`ERROR: ${(err as Error).message}`);
+      console.log(`[${++completed}/${targets.length}] ${p.w.id}: ERROR ${(err as Error).message}`);
     }
   }
+
+  // Simple concurrency pool
+  const queue = [...targets];
+  async function runPool() {
+    while (queue.length) {
+      const next = queue.shift()!;
+      await worker(next);
+    }
+  }
+  await Promise.all(Array.from({ length: opts.concurrency }, () => runPool()));
 
   console.log(`\nTotals: input=${totalInput} cached=${totalCacheRead} output=${totalOutput}`);
   console.log(`Review files in ${path.relative(process.cwd(), NORMALIZED_DIR)}/ then run --apply`);
@@ -297,6 +320,8 @@ function parseArgs() {
     limit: value('--limit') ? parseInt(value('--limit')!, 10) : undefined,
     ids: value('--ids')?.split(',').map((s) => s.trim()),
     model: value('--model') ?? DEFAULT_MODEL,
+    concurrency: value('--concurrency') ? parseInt(value('--concurrency')!, 10) : 5,
+    force: has('--force'),
   };
 }
 

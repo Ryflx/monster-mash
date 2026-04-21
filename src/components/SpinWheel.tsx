@@ -270,20 +270,34 @@ const SpinWheel: FC<SpinWheelProps> = ({
 
   return (
     <div className="flex flex-col items-center gap-5">
-      <div className="relative" style={{ width: CANVAS_CSS, height: CANVAS_CSS }}>
+      <div
+        className="relative w-full"
+        style={{ maxWidth: CANVAS_CSS, aspectRatio: '1 / 1' }}
+      >
         <canvas
           ref={wheelCanvasRef}
           width={CANVAS_PX}
           height={CANVAS_PX}
-          style={{ width: CANVAS_CSS, height: CANVAS_CSS }}
-          className="absolute inset-0"
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+          }}
         />
         <canvas
           ref={pointerCanvasRef}
           width={CANVAS_PX}
           height={CANVAS_PX}
-          style={{ width: CANVAS_CSS, height: CANVAS_CSS }}
-          className="absolute inset-0 pointer-events-none"
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            pointerEvents: 'none',
+          }}
         />
       </div>
 
